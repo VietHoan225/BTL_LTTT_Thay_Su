@@ -1,43 +1,40 @@
-67 88 89 78 85 89 85 78 74 
-2 1 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'XFXWW' là bao nhiêu?
-A. 6
-B. 4
-C. 5
-D. 8
-Đáp án đúng: C
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'IAHLOC':
-Output: 73 | Thêm từ điển: IA (Mã: 256)
-Output: 65 | Thêm từ điển: AH (Mã: 257)
-Output: 72 | Thêm từ điển: HL (Mã: 258)
-Output: 76 | Thêm từ điển: LO (Mã: 259)
-Output: 79 | Thêm từ điển: OC (Mã: 260)
-Output cuối: 67
-=> Dãy mã hóa: 73 65 72 76 79 67 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 73 65 72 76 79 67 
-Đọc 73 -> Xuất: I
-Đọc 65 -> Xuất: A | Thêm từ điển: IA (Mã: 256)
-Đọc 72 -> Xuất: H | Thêm từ điển: AH (Mã: 257)
-Đọc 76 -> Xuất: L | Thêm từ điển: HL (Mã: 258)
-Đọc 79 -> Xuất: O | Thêm từ điển: LO (Mã: 259)
-Đọc 67 -> Xuất: C | Thêm từ điển: OC (Mã: 260)
-=> Chuỗi giải mã thành công: IAHLOC
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 2 bit
-B. 1 bit
-C. 1 bit
-D. 0 bit
+88 79 72 83 84 65 68 81 88 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'ASO'?
+A. 010000
+B. 010011
+C. 01000101
+D. 010001
 Đáp án đúng: D
 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 1 bit
-C. 1 bit
-D. 0 bit
-Đáp án đúng: A
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'MISWHM' là bao nhiêu?
+A. 7
+B. 9
+C. 6
+D. 5
+Đáp án đúng: C
+
+0.705078
+101101001
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.200000)
+- Ký tự 'I': [0.200000, 0.600000)
+- Ký tự 'L': [0.600000, 0.800000)
+- Ký tự 'O': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'ODLII':
+Đọc 'O' -> Khoảng: [0.800000, 1.000000)
+Đọc 'D' -> Khoảng: [0.800000, 0.840000)
+Đọc 'L' -> Khoảng: [0.824000, 0.832000)
+Đọc 'I' -> Khoảng: [0.825600, 0.828800)
+Đọc 'I' -> Khoảng: [0.826240, 0.827520)
+=> Giá trị mã hóa được chọn: 0.826880
+=> Mã nhị phân tương ứng (11 bit): 11010011101
+
+[3] Quá trình giải mã (từ mã nhị phân 11010011101, giá trị 0.826660, độ dài 5):
+Giá trị 0.826660 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.133301 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.666504 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.332520 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.331299 nằm trong khoảng của 'I' -> Giải mã: I
 

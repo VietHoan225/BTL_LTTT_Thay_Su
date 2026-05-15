@@ -1,52 +1,89 @@
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(01110, 10000) = 4
+=> d_min = 4 (Giữa 01110 và 10000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 3 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+73 88 77 75 66 76 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'ZHMA'?
+A. 110110000
+B. 11011000101
+C. 110110011
+D. 110110001
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'UMROQXO' là bao nhiêu?
+A. 6
+B. 10
+C. 7
+D. 8
+Đáp án đúng: C
+
+0.423828
+011011001
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YDQIGIU' là bao nhiêu?
+A. 8
+B. 6
+C. 10
+D. 7
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZKTKXIL' là bao nhiêu?
+A. 7
+B. 8
+C. 10
+D. 6
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QQLDHKEKGF':
+Output: 81 | Thêm từ điển: QQ (Mã: 256)
+Output: 81 | Thêm từ điển: QL (Mã: 257)
+Output: 76 | Thêm từ điển: LD (Mã: 258)
+Output: 68 | Thêm từ điển: DH (Mã: 259)
+Output: 72 | Thêm từ điển: HK (Mã: 260)
+Output: 75 | Thêm từ điển: KE (Mã: 261)
+Output: 69 | Thêm từ điển: EK (Mã: 262)
+Output: 75 | Thêm từ điển: KG (Mã: 263)
+Output: 71 | Thêm từ điển: GF (Mã: 264)
+Output cuối: 70
+=> Dãy mã hóa: 81 81 76 68 72 75 69 75 71 70 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 81 76 68 72 75 69 75 71 70 
+Đọc 81 -> Xuất: Q
+Đọc 81 -> Xuất: Q | Thêm từ điển: QQ (Mã: 256)
+Đọc 76 -> Xuất: L | Thêm từ điển: QL (Mã: 257)
+Đọc 68 -> Xuất: D | Thêm từ điển: LD (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: DH (Mã: 259)
+Đọc 75 -> Xuất: K | Thêm từ điển: HK (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: KE (Mã: 261)
+Đọc 75 -> Xuất: K | Thêm từ điển: EK (Mã: 262)
+Đọc 71 -> Xuất: G | Thêm từ điển: KG (Mã: 263)
+Đọc 70 -> Xuất: F | Thêm từ điển: GF (Mã: 264)
+=> Chuỗi giải mã thành công: QQLDHKEKGF
+
 1 0 0
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'CSMUOWY':
-Output: 67 | Thêm từ điển: CS (Mã: 256)
-Output: 83 | Thêm từ điển: SM (Mã: 257)
-Output: 77 | Thêm từ điển: MU (Mã: 258)
-Output: 85 | Thêm từ điển: UO (Mã: 259)
-Output: 79 | Thêm từ điển: OW (Mã: 260)
-Output: 87 | Thêm từ điển: WY (Mã: 261)
-Output cuối: 89
-=> Dãy mã hóa: 67 83 77 85 79 87 89 
+[1] Quá trình mã hóa chuỗi 'SNPCFL':
+Output: 83 | Thêm từ điển: SN (Mã: 256)
+Output: 78 | Thêm từ điển: NP (Mã: 257)
+Output: 80 | Thêm từ điển: PC (Mã: 258)
+Output: 67 | Thêm từ điển: CF (Mã: 259)
+Output: 70 | Thêm từ điển: FL (Mã: 260)
+Output cuối: 76
+=> Dãy mã hóa: 83 78 80 67 70 76 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 67 83 77 85 79 87 89 
-Đọc 67 -> Xuất: C
-Đọc 83 -> Xuất: S | Thêm từ điển: CS (Mã: 256)
-Đọc 77 -> Xuất: M | Thêm từ điển: SM (Mã: 257)
-Đọc 85 -> Xuất: U | Thêm từ điển: MU (Mã: 258)
-Đọc 79 -> Xuất: O | Thêm từ điển: UO (Mã: 259)
-Đọc 87 -> Xuất: W | Thêm từ điển: OW (Mã: 260)
-Đọc 89 -> Xuất: Y | Thêm từ điển: WY (Mã: 261)
-=> Chuỗi giải mã thành công: CSMUOWY
+Chuỗi mã đầu vào: 83 78 80 67 70 76 
+Đọc 83 -> Xuất: S
+Đọc 78 -> Xuất: N | Thêm từ điển: SN (Mã: 256)
+Đọc 80 -> Xuất: P | Thêm từ điển: NP (Mã: 257)
+Đọc 67 -> Xuất: C | Thêm từ điển: PC (Mã: 258)
+Đọc 70 -> Xuất: F | Thêm từ điển: CF (Mã: 259)
+Đọc 76 -> Xuất: L | Thêm từ điển: FL (Mã: 260)
+=> Chuỗi giải mã thành công: SNPCFL
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'EQFGD':
-Output: 69 | Thêm từ điển: EQ (Mã: 256)
-Output: 81 | Thêm từ điển: QF (Mã: 257)
-Output: 70 | Thêm từ điển: FG (Mã: 258)
-Output: 71 | Thêm từ điển: GD (Mã: 259)
-Output cuối: 68
-=> Dãy mã hóa: 69 81 70 71 68 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 69 81 70 71 68 
-Đọc 69 -> Xuất: E
-Đọc 81 -> Xuất: Q | Thêm từ điển: EQ (Mã: 256)
-Đọc 70 -> Xuất: F | Thêm từ điển: QF (Mã: 257)
-Đọc 71 -> Xuất: G | Thêm từ điển: FG (Mã: 258)
-Đọc 68 -> Xuất: D | Thêm từ điển: GD (Mã: 259)
-=> Chuỗi giải mã thành công: EQFGD
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(101, 011) = 2
-Khoảng cách d(101, 010) = 3
-Khoảng cách d(101, 011) = 2
-Khoảng cách d(011, 010) = 1
-Khoảng cách d(011, 011) = 0
-Khoảng cách d(010, 011) = 1
-=> d_min = 0 (Giữa 011 và 011)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
+0.127218
+00100000100100010
+1 0 0

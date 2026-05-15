@@ -1,30 +1,222 @@
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 0 bit
-C. 1 bit
-D. 1 bit
-Đáp án đúng: A
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'BLAIX' là bao nhiêu?
+A. 8
+B. 5
+C. 4
+D. 6
+Đáp án đúng: B
 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11100, 10110) = 2
-Khoảng cách d(11100, 01010) = 3
-Khoảng cách d(10110, 01010) = 3
-=> d_min = 2 (Giữa 11100 và 10110)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0, 0.166667)
+- Ký tự 'J': [0.166667, 0.333333)
+- Ký tự 'N': [0.333333, 0.5)
+- Ký tự 'S': [0.5, 0.666667)
+- Ký tự 'V': [0.666667, 1)
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JLYO'?
-A. 0.119141
-B. 0.151094
-C. 0.067187
-D. 0.244141
-Đáp án đúng: A
+[2] Quá trình mã hóa chuỗi 'VASNJV':
+Đọc 'V' -> Khoảng: [0.666667, 1.000000)
+Đọc 'A' -> Khoảng: [0.666667, 0.722222)
+Đọc 'S' -> Khoảng: [0.694444, 0.703704)
+Đọc 'N' -> Khoảng: [0.697531, 0.699074)
+Đọc 'J' -> Khoảng: [0.697788, 0.698045)
+Đọc 'V' -> Khoảng: [0.697960, 0.698045)
+=> Giá trị mã hóa được chọn: 0.698002
+=> Mã nhị phân tương ứng (15 bit): 101100101011000
 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. -1 bit
-C. 1 bit
-D. 0 bit
+[3] Quá trình giải mã (từ mã nhị phân 101100101011000, giá trị 0.697998, độ dài 6):
+Giá trị 0.697998 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.093994 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.563965 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.383789 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.302734 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.816406 nằm trong khoảng của 'V' -> Giải mã: V
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'N': [0.000000, 0.166667)
+- Ký tự 'T': [0.166667, 0.333333)
+- Ký tự 'W': [0.333333, 0.500000)
+- Ký tự 'X': [0.500000, 0.666667)
+- Ký tự 'Y': [0.666667, 0.833333)
+- Ký tự 'Z': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'XZYNWT':
+Đọc 'X' -> Khoảng: [0.500000, 0.666667)
+Đọc 'Z' -> Khoảng: [0.638889, 0.666667)
+Đọc 'Y' -> Khoảng: [0.657407, 0.662037)
+Đọc 'N' -> Khoảng: [0.657407, 0.658179)
+Đọc 'W' -> Khoảng: [0.657665, 0.657793)
+Đọc 'T' -> Khoảng: [0.657686, 0.657707)
+=> Giá trị mã hóa được chọn: 0.657697
+=> Mã nhị phân tương ứng (17 bit): 10101000010111101
+
+[3] Quá trình giải mã (từ mã nhị phân 10101000010111101, giá trị 0.657692, độ dài 6):
+Giá trị 0.657692 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.946152 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.676910 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.061462 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.368774 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.212646 nằm trong khoảng của 'T' -> Giải mã: T
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'LJQLYB'?
+A. 01101110011111101
+B. 011011100111110
+C. 011011100111101
+D. 011011100111111
 Đáp án đúng: D
 
-90 68 78 83 75 70 
+3 2 1
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'G': [0.000000, 0.200000)
+- Ký tự 'J': [0.200000, 0.400000)
+- Ký tự 'K': [0.400000, 0.600000)
+- Ký tự 'M': [0.600000, 0.800000)
+- Ký tự 'Q': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'KQMGJ':
+Đọc 'K' -> Khoảng: [0.400000, 0.600000)
+Đọc 'Q' -> Khoảng: [0.560000, 0.600000)
+Đọc 'M' -> Khoảng: [0.584000, 0.592000)
+Đọc 'G' -> Khoảng: [0.584000, 0.585600)
+Đọc 'J' -> Khoảng: [0.584320, 0.584640)
+=> Giá trị mã hóa được chọn: 0.584480
+=> Mã nhị phân tương ứng (13 bit): 1001010110100
+
+[3] Quá trình giải mã (từ mã nhị phân 1001010110100, giá trị 0.584473, độ dài 5):
+Giá trị 0.584473 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.922363 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.611816 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.059082 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.295410 nằm trong khoảng của 'J' -> Giải mã: J
+
+0.212891
+001101101
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'AUMZVF':
+Output: 65 | Thêm từ điển: AU (Mã: 256)
+Output: 85 | Thêm từ điển: UM (Mã: 257)
+Output: 77 | Thêm từ điển: MZ (Mã: 258)
+Output: 90 | Thêm từ điển: ZV (Mã: 259)
+Output: 86 | Thêm từ điển: VF (Mã: 260)
+Output cuối: 70
+=> Dãy mã hóa: 65 85 77 90 86 70 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 65 85 77 90 86 70 
+Đọc 65 -> Xuất: A
+Đọc 85 -> Xuất: U | Thêm từ điển: AU (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: UM (Mã: 257)
+Đọc 90 -> Xuất: Z | Thêm từ điển: MZ (Mã: 258)
+Đọc 86 -> Xuất: V | Thêm từ điển: ZV (Mã: 259)
+Đọc 70 -> Xuất: F | Thêm từ điển: VF (Mã: 260)
+=> Chuỗi giải mã thành công: AUMZVF
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZHKTAGEO' là bao nhiêu?
+A. 9
+B. 11
+C. 8
+D. 7
+Đáp án đúng: C
+
+90 81 71 89 90 65 88 70 72 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0.000000, 0.250000)
+- Ký tự 'C': [0.250000, 0.500000)
+- Ký tự 'K': [0.500000, 0.750000)
+- Ký tự 'P': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'PKCB':
+Đọc 'P' -> Khoảng: [0.750000, 1.000000)
+Đọc 'K' -> Khoảng: [0.875000, 0.937500)
+Đọc 'C' -> Khoảng: [0.890625, 0.906250)
+Đọc 'B' -> Khoảng: [0.890625, 0.894531)
+=> Giá trị mã hóa được chọn: 0.892578
+=> Mã nhị phân tương ứng (9 bit): 111001001
+
+[3] Quá trình giải mã (từ mã nhị phân 111001001, giá trị 0.892578, độ dài 4):
+Giá trị 0.892578 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.570312 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.281250 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.125000 nằm trong khoảng của 'B' -> Giải mã: B
+
+4 3 1
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QXCIQZCMVY':
+Output: 81 | Thêm từ điển: QX (Mã: 256)
+Output: 88 | Thêm từ điển: XC (Mã: 257)
+Output: 67 | Thêm từ điển: CI (Mã: 258)
+Output: 73 | Thêm từ điển: IQ (Mã: 259)
+Output: 81 | Thêm từ điển: QZ (Mã: 260)
+Output: 90 | Thêm từ điển: ZC (Mã: 261)
+Output: 67 | Thêm từ điển: CM (Mã: 262)
+Output: 77 | Thêm từ điển: MV (Mã: 263)
+Output: 86 | Thêm từ điển: VY (Mã: 264)
+Output cuối: 89
+=> Dãy mã hóa: 81 88 67 73 81 90 67 77 86 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 88 67 73 81 90 67 77 86 89 
+Đọc 81 -> Xuất: Q
+Đọc 88 -> Xuất: X | Thêm từ điển: QX (Mã: 256)
+Đọc 67 -> Xuất: C | Thêm từ điển: XC (Mã: 257)
+Đọc 73 -> Xuất: I | Thêm từ điển: CI (Mã: 258)
+Đọc 81 -> Xuất: Q | Thêm từ điển: IQ (Mã: 259)
+Đọc 90 -> Xuất: Z | Thêm từ điển: QZ (Mã: 260)
+Đọc 67 -> Xuất: C | Thêm từ điển: ZC (Mã: 261)
+Đọc 77 -> Xuất: M | Thêm từ điển: CM (Mã: 262)
+Đọc 86 -> Xuất: V | Thêm từ điển: MV (Mã: 263)
+Đọc 89 -> Xuất: Y | Thêm từ điển: VY (Mã: 264)
+=> Chuỗi giải mã thành công: QXCIQZCMVY
+
+0.434720
+0110111101001
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WVSDUW' là bao nhiêu?
+A. 7
+B. 6
+C. 5
+D. 9
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'AYW'?
+A. 010001
+B. 010000
+C. 01000101
+D. 010011
+Đáp án đúng: A
+
+0 -1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'H': [0.000000, 0.333333)
+- Ký tự 'M': [0.333333, 0.500000)
+- Ký tự 'Q': [0.500000, 0.666667)
+- Ký tự 'R': [0.666667, 0.833333)
+- Ký tự 'S': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'HQMRHS':
+Đọc 'H' -> Khoảng: [0.000000, 0.333333)
+Đọc 'Q' -> Khoảng: [0.166667, 0.222222)
+Đọc 'M' -> Khoảng: [0.185185, 0.194444)
+Đọc 'R' -> Khoảng: [0.191358, 0.192901)
+Đọc 'H' -> Khoảng: [0.191358, 0.191872)
+Đọc 'S' -> Khoảng: [0.191787, 0.191872)
+=> Giá trị mã hóa được chọn: 0.191830
+=> Mã nhị phân tương ứng (15 bit): 001100010001101
+
+[3] Quá trình giải mã (từ mã nhị phân 001100010001101, giá trị 0.191803, độ dài 6):
+Giá trị 0.191803 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.575409 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.452454 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.714722 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.288330 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.864990 nằm trong khoảng của 'S' -> Giải mã: S
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'OIPE'?
+A. 100111011
+B. 100111001
+C. 100111000
+D. 10011100101
+Đáp án đúng: B
+

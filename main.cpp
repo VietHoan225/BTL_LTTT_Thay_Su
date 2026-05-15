@@ -46,10 +46,33 @@ void solve_arithmetic(int mode) {
     }
     
     long double encoded_val = (low + high) / 2.0;
+    
+    int k = ceil(-log2(high - low)) + 1;
+    string binary_code = "";
+    long double temp = encoded_val;
+    for (int i = 0; i < k; i++) {
+        temp *= 2.0;
+        if (temp >= 1.0) {
+            binary_code += "1";
+            temp -= 1.0;
+        } else {
+            binary_code += "0";
+        }
+    }
+
     if (mode == 1) {
-        cout << "=> Giá trị mã hóa được chọn: " << encoded_val << "\n\n";
-        cout << "[3] Quá trình giải mã (từ " << encoded_val << ", độ dài " << s.length() << "):\n";
-        long double decode_val = encoded_val;
+        cout << "=> Giá trị mã hóa được chọn: " << encoded_val << "\n";
+        cout << "=> Mã nhị phân tương ứng (" << k << " bit): " << binary_code << "\n\n";
+        
+        long double decoded_bin_val = 0.0;
+        long double p_val = 0.5;
+        for (char bit : binary_code) {
+            if (bit == '1') decoded_bin_val += p_val;
+            p_val /= 2.0;
+        }
+
+        cout << "[3] Quá trình giải mã (từ mã nhị phân " << binary_code << ", giá trị " << decoded_bin_val << ", độ dài " << s.length() << "):\n";
+        long double decode_val = decoded_bin_val;
         for (int i = 0; i < s.length(); i++) {
             for (auto const& [c, range] : prob_range) {
                 if (decode_val >= range.first && decode_val < range.second) {
@@ -61,14 +84,24 @@ void solve_arithmetic(int mode) {
         }
         cout << "\n";
     } else if (mode == 0) {
-        cout << fixed << setprecision(6) << encoded_val << "\n";
+        cout << fixed << setprecision(6) << encoded_val << "\n" << binary_code << "\n";
     } else if (mode == 2) {
-        string q = "Đâu là giá trị mã hóa số học hợp lệ của chuỗi '" + s + "'?";
+        string q = "Đâu là mã nhị phân hợp lệ của chuỗi '" + s + "'?";
         vector<pair<string, bool>> opts;
-        opts.push_back({to_string(encoded_val), true});
-        opts.push_back({to_string(encoded_val + 0.125), false});
-        opts.push_back({to_string(low - 0.05), false}); 
-        opts.push_back({to_string(high + 0.03), false}); 
+        opts.push_back({binary_code, true});
+        
+        string wrong1 = binary_code;
+        if(!wrong1.empty()) wrong1.back() = (wrong1.back() == '1' ? '0' : '1');
+        opts.push_back({wrong1, false});
+        
+        string wrong2 = binary_code + "01";
+        opts.push_back({wrong2, false}); 
+        
+        string wrong3 = binary_code;
+        if(wrong3.length() > 1) wrong3[wrong3.length()-2] = (wrong3[wrong3.length()-2] == '1' ? '0' : '1');
+        else wrong3 += "1";
+        opts.push_back({wrong3, false}); 
+        
         generate_mcq(q, opts);
     }
 }

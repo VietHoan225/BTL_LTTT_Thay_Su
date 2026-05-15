@@ -1,42 +1,169 @@
-0.107040
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0, 0.333333)
+- Ký tự 'Q': [0.333333, 0.666667)
+- Ký tự 'U': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'CUQ':
+Đọc 'C' -> Khoảng: [0.000000, 0.333333)
+Đọc 'U' -> Khoảng: [0.222222, 0.333333)
+Đọc 'Q' -> Khoảng: [0.259259, 0.296296)
+=> Giá trị mã hóa được chọn: 0.277778
+=> Mã nhị phân tương ứng (6 bit): 010001
+
+[3] Quá trình giải mã (từ mã nhị phân 010001, giá trị 0.265625, độ dài 3):
+Giá trị 0.265625 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.796875 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.390625 nằm trong khoảng của 'Q' -> Giải mã: Q
+
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'KYMGLX':
-Output: 75 | Thêm từ điển: KY (Mã: 256)
-Output: 89 | Thêm từ điển: YM (Mã: 257)
-Output: 77 | Thêm từ điển: MG (Mã: 258)
-Output: 71 | Thêm từ điển: GL (Mã: 259)
-Output: 76 | Thêm từ điển: LX (Mã: 260)
-Output cuối: 88
-=> Dãy mã hóa: 75 89 77 71 76 88 
+[1] Quá trình mã hóa chuỗi 'SXHLVAHI':
+Output: 83 | Thêm từ điển: SX (Mã: 256)
+Output: 88 | Thêm từ điển: XH (Mã: 257)
+Output: 72 | Thêm từ điển: HL (Mã: 258)
+Output: 76 | Thêm từ điển: LV (Mã: 259)
+Output: 86 | Thêm từ điển: VA (Mã: 260)
+Output: 65 | Thêm từ điển: AH (Mã: 261)
+Output: 72 | Thêm từ điển: HI (Mã: 262)
+Output cuối: 73
+=> Dãy mã hóa: 83 88 72 76 86 65 72 73 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 75 89 77 71 76 88 
-Đọc 75 -> Xuất: K
-Đọc 89 -> Xuất: Y | Thêm từ điển: KY (Mã: 256)
-Đọc 77 -> Xuất: M | Thêm từ điển: YM (Mã: 257)
-Đọc 71 -> Xuất: G | Thêm từ điển: MG (Mã: 258)
-Đọc 76 -> Xuất: L | Thêm từ điển: GL (Mã: 259)
-Đọc 88 -> Xuất: X | Thêm từ điển: LX (Mã: 260)
-=> Chuỗi giải mã thành công: KYMGLX
+Chuỗi mã đầu vào: 83 88 72 76 86 65 72 73 
+Đọc 83 -> Xuất: S
+Đọc 88 -> Xuất: X | Thêm từ điển: SX (Mã: 256)
+Đọc 72 -> Xuất: H | Thêm từ điển: XH (Mã: 257)
+Đọc 76 -> Xuất: L | Thêm từ điển: HL (Mã: 258)
+Đọc 86 -> Xuất: V | Thêm từ điển: LV (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: VA (Mã: 260)
+Đọc 72 -> Xuất: H | Thêm từ điển: AH (Mã: 261)
+Đọc 73 -> Xuất: I | Thêm từ điển: HI (Mã: 262)
+=> Chuỗi giải mã thành công: SXHLVAHI
 
-88 87 66 67 83 
-0.845600
-0 -1 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'BXNUY' là bao nhiêu?
-A. 6
-B. 8
-C. 4
-D. 5
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0111, 1011) = 2
+Khoảng cách d(0111, 0100) = 2
+Khoảng cách d(0111, 0100) = 2
+Khoảng cách d(1011, 0100) = 4
+Khoảng cách d(1011, 0100) = 4
+Khoảng cách d(0100, 0100) = 0
+=> d_min = 0 (Giữa 0100 và 0100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'KINWX'?
+A. 001110001110001
+B. 0011100011110
+C. 0011100011100
+D. 0011100011101
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'VYYKIA':
+Output: 86 | Thêm từ điển: VY (Mã: 256)
+Output: 89 | Thêm từ điển: YY (Mã: 257)
+Output: 89 | Thêm từ điển: YK (Mã: 258)
+Output: 75 | Thêm từ điển: KI (Mã: 259)
+Output: 73 | Thêm từ điển: IA (Mã: 260)
+Output cuối: 65
+=> Dãy mã hóa: 86 89 89 75 73 65 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 86 89 89 75 73 65 
+Đọc 86 -> Xuất: V
+Đọc 89 -> Xuất: Y | Thêm từ điển: VY (Mã: 256)
+Đọc 89 -> Xuất: Y | Thêm từ điển: YY (Mã: 257)
+Đọc 75 -> Xuất: K | Thêm từ điển: YK (Mã: 258)
+Đọc 73 -> Xuất: I | Thêm từ điển: KI (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: IA (Mã: 260)
+=> Chuỗi giải mã thành công: VYYKIA
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'MGX'?
+A. 01101101
+B. 011001
+C. 011010
+D. 011011
 Đáp án đúng: D
 
-84 84 73 86 87 89 73 
-0.722222
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'RKAV'?
-A. 0.576172
-B. 0.524219
-C. 0.608125
-D. 0.701172
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 3 bit
+C. 2 bit
+D. 2 bit
 Đáp án đúng: A
 
-0 -1 0
-0.693359
+67 65 78 86 87 87 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'G': [0.000000, 0.166667)
+- Ký tự 'I': [0.166667, 0.333333)
+- Ký tự 'P': [0.333333, 0.500000)
+- Ký tự 'T': [0.500000, 0.666667)
+- Ký tự 'U': [0.666667, 0.833333)
+- Ký tự 'Z': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'GTIZPU':
+Đọc 'G' -> Khoảng: [0.000000, 0.166667)
+Đọc 'T' -> Khoảng: [0.083333, 0.111111)
+Đọc 'I' -> Khoảng: [0.087963, 0.092593)
+Đọc 'Z' -> Khoảng: [0.091821, 0.092593)
+Đọc 'P' -> Khoảng: [0.092078, 0.092207)
+Đọc 'U' -> Khoảng: [0.092164, 0.092185)
+=> Giá trị mã hóa được chọn: 0.092175
+=> Mã nhị phân tương ứng (17 bit): 00010111100110001
+
+[3] Quá trình giải mã (từ mã nhị phân 00010111100110001, giá trị 0.092171, độ dài 6):
+Giá trị 0.092171 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.553024 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.318146 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.908875 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.453247 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.719482 nằm trong khoảng của 'U' -> Giải mã: U
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'FIEZW'?
+A. 0100100110010
+B. 0100100110001
+C. 010010011001101
+D. 0100100110011
+Đáp án đúng: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(11100, 10111) = 3
+Khoảng cách d(11100, 10001) = 3
+Khoảng cách d(10111, 10001) = 2
+=> d_min = 2 (Giữa 10111 và 10001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+2 1 0
+2 1 0
+3 2 1
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 2 bit
+D. 0 bit
+Đáp án đúng: D
+
+82 66 87 69 77 88 73 75 85 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'YFPDJK'?
+A. 1110000101000101001
+B. 11100001010001000
+C. 11100001010001010
+D. 11100001010001011
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'GUYVASP' là bao nhiêu?
+A. 8
+B. 6
+C. 10
+D. 7
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'FCPFL'?
+A. 01000101101
+B. 0100010110001
+C. 01000101100
+D. 01000101110
+Đáp án đúng: C
+

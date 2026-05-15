@@ -1,84 +1,26 @@
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 1 bit
-C. 0 bit
-D. 0 bit
-Đáp án đúng: D
-
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(0100, 1110) = 2
-Khoảng cách d(0100, 1110) = 2
-Khoảng cách d(1110, 1110) = 0
-=> d_min = 0 (Giữa 1110 và 1110)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'VXEK'?
-A. 0.693359
-B. 0.725312
-C. 0.641406
-D. 0.818359
-Đáp án đúng: A
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'ASDFFBVLQL':
-Output: 65 | Thêm từ điển: AS (Mã: 256)
-Output: 83 | Thêm từ điển: SD (Mã: 257)
-Output: 68 | Thêm từ điển: DF (Mã: 258)
-Output: 70 | Thêm từ điển: FF (Mã: 259)
-Output: 70 | Thêm từ điển: FB (Mã: 260)
-Output: 66 | Thêm từ điển: BV (Mã: 261)
-Output: 86 | Thêm từ điển: VL (Mã: 262)
-Output: 76 | Thêm từ điển: LQ (Mã: 263)
-Output: 81 | Thêm từ điển: QL (Mã: 264)
-Output cuối: 76
-=> Dãy mã hóa: 65 83 68 70 70 66 86 76 81 76 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 65 83 68 70 70 66 86 76 81 76 
-Đọc 65 -> Xuất: A
-Đọc 83 -> Xuất: S | Thêm từ điển: AS (Mã: 256)
-Đọc 68 -> Xuất: D | Thêm từ điển: SD (Mã: 257)
-Đọc 70 -> Xuất: F | Thêm từ điển: DF (Mã: 258)
-Đọc 70 -> Xuất: F | Thêm từ điển: FF (Mã: 259)
-Đọc 66 -> Xuất: B | Thêm từ điển: FB (Mã: 260)
-Đọc 86 -> Xuất: V | Thêm từ điển: BV (Mã: 261)
-Đọc 76 -> Xuất: L | Thêm từ điển: VL (Mã: 262)
-Đọc 81 -> Xuất: Q | Thêm từ điển: LQ (Mã: 263)
-Đọc 76 -> Xuất: L | Thêm từ điển: QL (Mã: 264)
-=> Chuỗi giải mã thành công: ASDFFBVLQL
-
-0.574074
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 1 bit
-C. 2 bit
-D. 1 bit
-Đáp án đúng: A
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(00111, 10011) = 2
-Khoảng cách d(00111, 00000) = 3
-Khoảng cách d(10011, 00000) = 3
-=> d_min = 2 (Giữa 00111 và 10011)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(110, 111) = 1
-Khoảng cách d(110, 010) = 1
-Khoảng cách d(111, 010) = 2
-=> d_min = 1 (Giữa 110 và 111)
+Khoảng cách d(1101, 0101) = 1
+=> d_min = 1 (Giữa 1101 và 0101)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'IHV'?
-A. 0.425926
-B. 0.357407
-C. 0.474444
-D. 0.550926
-Đáp án đúng: A
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001001, 011010) = 3
+Khoảng cách d(001001, 010100) = 4
+Khoảng cách d(011010, 010100) = 3
+=> d_min = 3 (Giữa 001001 và 011010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 2 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+0.237600
+0011110011010
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 1 bit
 B. 1 bit
@@ -86,10 +28,136 @@ C. 0 bit
 D. 0 bit
 Đáp án đúng: C
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'KJSDJB'?
-A. 0.720576
-B. 0.895619
-C. 0.800662
-D. 0.770619
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'L': [0.000000, 0.250000)
+- Ký tự 'M': [0.250000, 0.500000)
+- Ký tự 'W': [0.500000, 0.750000)
+- Ký tự 'Z': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'LMWZ':
+Đọc 'L' -> Khoảng: [0.000000, 0.250000)
+Đọc 'M' -> Khoảng: [0.062500, 0.125000)
+Đọc 'W' -> Khoảng: [0.093750, 0.109375)
+Đọc 'Z' -> Khoảng: [0.105469, 0.109375)
+=> Giá trị mã hóa được chọn: 0.107422
+=> Mã nhị phân tương ứng (9 bit): 000110111
+
+[3] Quá trình giải mã (từ mã nhị phân 000110111, giá trị 0.107422, độ dài 4):
+Giá trị 0.107422 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.429688 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.718750 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.875000 nằm trong khoảng của 'Z' -> Giải mã: Z
+
+71 84 88 77 87 79 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NHZYWAFXG' là bao nhiêu?
+A. 8
+B. 9
+C. 10
+D. 12
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NEEYOWU' là bao nhiêu?
+A. 8
+B. 6
+C. 7
+D. 10
+Đáp án đúng: C
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'UBHJMQNUK':
+Output: 85 | Thêm từ điển: UB (Mã: 256)
+Output: 66 | Thêm từ điển: BH (Mã: 257)
+Output: 72 | Thêm từ điển: HJ (Mã: 258)
+Output: 74 | Thêm từ điển: JM (Mã: 259)
+Output: 77 | Thêm từ điển: MQ (Mã: 260)
+Output: 81 | Thêm từ điển: QN (Mã: 261)
+Output: 78 | Thêm từ điển: NU (Mã: 262)
+Output: 85 | Thêm từ điển: UK (Mã: 263)
+Output cuối: 75
+=> Dãy mã hóa: 85 66 72 74 77 81 78 85 75 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 85 66 72 74 77 81 78 85 75 
+Đọc 85 -> Xuất: U
+Đọc 66 -> Xuất: B | Thêm từ điển: UB (Mã: 256)
+Đọc 72 -> Xuất: H | Thêm từ điển: BH (Mã: 257)
+Đọc 74 -> Xuất: J | Thêm từ điển: HJ (Mã: 258)
+Đọc 77 -> Xuất: M | Thêm từ điển: JM (Mã: 259)
+Đọc 81 -> Xuất: Q | Thêm từ điển: MQ (Mã: 260)
+Đọc 78 -> Xuất: N | Thêm từ điển: QN (Mã: 261)
+Đọc 85 -> Xuất: U | Thêm từ điển: NU (Mã: 262)
+Đọc 75 -> Xuất: K | Thêm từ điển: UK (Mã: 263)
+=> Chuỗi giải mã thành công: UBHJMQNUK
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'VDF'?
+A. 10111001
+B. 101100
+C. 101110
+D. 101111
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'GZWHVFZDIB' là bao nhiêu?
+A. 9
+B. 13
+C. 11
+D. 10
 Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QGNDLCS':
+Output: 81 | Thêm từ điển: QG (Mã: 256)
+Output: 71 | Thêm từ điển: GN (Mã: 257)
+Output: 78 | Thêm từ điển: ND (Mã: 258)
+Output: 68 | Thêm từ điển: DL (Mã: 259)
+Output: 76 | Thêm từ điển: LC (Mã: 260)
+Output: 67 | Thêm từ điển: CS (Mã: 261)
+Output cuối: 83
+=> Dãy mã hóa: 81 71 78 68 76 67 83 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 71 78 68 76 67 83 
+Đọc 81 -> Xuất: Q
+Đọc 71 -> Xuất: G | Thêm từ điển: QG (Mã: 256)
+Đọc 78 -> Xuất: N | Thêm từ điển: GN (Mã: 257)
+Đọc 68 -> Xuất: D | Thêm từ điển: ND (Mã: 258)
+Đọc 76 -> Xuất: L | Thêm từ điển: DL (Mã: 259)
+Đọc 67 -> Xuất: C | Thêm từ điển: LC (Mã: 260)
+Đọc 83 -> Xuất: S | Thêm từ điển: CS (Mã: 261)
+=> Chuỗi giải mã thành công: QGNDLCS
+
+65 83 86 79 88 90 71 
+81 74 67 76 84 85 67 89 77 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'GHWFAOYAM' là bao nhiêu?
+A. 9
+B. 10
+C. 8
+D. 12
+Đáp án đúng: A
+
+73 76 76 83 73 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0.000000, 0.200000)
+- Ký tự 'E': [0.200000, 0.400000)
+- Ký tự 'J': [0.400000, 0.600000)
+- Ký tự 'L': [0.600000, 0.800000)
+- Ký tự 'Z': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'ZBLJE':
+Đọc 'Z' -> Khoảng: [0.800000, 1.000000)
+Đọc 'B' -> Khoảng: [0.800000, 0.840000)
+Đọc 'L' -> Khoảng: [0.824000, 0.832000)
+Đọc 'J' -> Khoảng: [0.827200, 0.828800)
+Đọc 'E' -> Khoảng: [0.827520, 0.827840)
+=> Giá trị mã hóa được chọn: 0.827680
+=> Mã nhị phân tương ứng (13 bit): 1101001111100
+
+[3] Quá trình giải mã (từ mã nhị phân 1101001111100, giá trị 0.827637, độ dài 5):
+Giá trị 0.827637 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.138184 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.690918 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.454590 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.272949 nằm trong khoảng của 'E' -> Giải mã: E
 

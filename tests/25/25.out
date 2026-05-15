@@ -1,23 +1,43 @@
-0.740741
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'KMBHKVR':
-Output: 75 | Thêm từ điển: KM (Mã: 256)
-Output: 77 | Thêm từ điển: MB (Mã: 257)
-Output: 66 | Thêm từ điển: BH (Mã: 258)
-Output: 72 | Thêm từ điển: HK (Mã: 259)
-Output: 75 | Thêm từ điển: KV (Mã: 260)
-Output: 86 | Thêm từ điển: VR (Mã: 261)
-Output cuối: 82
-=> Dãy mã hóa: 75 77 66 72 75 86 82 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'F': [0, 0.333333)
+- Ký tự 'M': [0.333333, 0.666667)
+- Ký tự 'O': [0.666667, 1)
 
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 75 77 66 72 75 86 82 
-Đọc 75 -> Xuất: K
-Đọc 77 -> Xuất: M | Thêm từ điển: KM (Mã: 256)
-Đọc 66 -> Xuất: B | Thêm từ điển: MB (Mã: 257)
-Đọc 72 -> Xuất: H | Thêm từ điển: BH (Mã: 258)
-Đọc 75 -> Xuất: K | Thêm từ điển: HK (Mã: 259)
-Đọc 86 -> Xuất: V | Thêm từ điển: KV (Mã: 260)
-Đọc 82 -> Xuất: R | Thêm từ điển: VR (Mã: 261)
-=> Chuỗi giải mã thành công: KMBHKVR
+[2] Quá trình mã hóa chuỗi 'MOF':
+Đọc 'M' -> Khoảng: [0.333333, 0.666667)
+Đọc 'O' -> Khoảng: [0.555556, 0.666667)
+Đọc 'F' -> Khoảng: [0.555556, 0.592593)
+=> Giá trị mã hóa được chọn: 0.574074
+=> Mã nhị phân tương ứng (6 bit): 100100
+
+[3] Quá trình giải mã (từ mã nhị phân 100100, giá trị 0.562500, độ dài 3):
+Giá trị 0.562500 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.687500 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.062500 nằm trong khoảng của 'F' -> Giải mã: F
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1011, 0000) = 3
+Khoảng cách d(1011, 1011) = 0
+Khoảng cách d(0000, 1011) = 3
+=> d_min = 0 (Giữa 1011 và 1011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'QCJ'?
+A. 10111001
+B. 101111
+C. 101110
+D. 101100
+Đáp án đúng: C
+
+2 1 0
+0 -1 0
+1 0 0
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'LDDX'?
+A. 1000101
+B. 100011101
+C. 1000111
+D. 1000110
+Đáp án đúng: C
 

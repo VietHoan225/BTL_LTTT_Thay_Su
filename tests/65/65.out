@@ -1,73 +1,110 @@
+0.437280
+0110111111110
+0 -1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'CUXLQV':
+Output: 67 | Thêm từ điển: CU (Mã: 256)
+Output: 85 | Thêm từ điển: UX (Mã: 257)
+Output: 88 | Thêm từ điển: XL (Mã: 258)
+Output: 76 | Thêm từ điển: LQ (Mã: 259)
+Output: 81 | Thêm từ điển: QV (Mã: 260)
+Output cuối: 86
+=> Dãy mã hóa: 67 85 88 76 81 86 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 67 85 88 76 81 86 
+Đọc 67 -> Xuất: C
+Đọc 85 -> Xuất: U | Thêm từ điển: CU (Mã: 256)
+Đọc 88 -> Xuất: X | Thêm từ điển: UX (Mã: 257)
+Đọc 76 -> Xuất: L | Thêm từ điển: XL (Mã: 258)
+Đọc 81 -> Xuất: Q | Thêm từ điển: LQ (Mã: 259)
+Đọc 86 -> Xuất: V | Thêm từ điển: QV (Mã: 260)
+=> Chuỗi giải mã thành công: CUXLQV
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'MIAHE':
+Output: 77 | Thêm từ điển: MI (Mã: 256)
+Output: 73 | Thêm từ điển: IA (Mã: 257)
+Output: 65 | Thêm từ điển: AH (Mã: 258)
+Output: 72 | Thêm từ điển: HE (Mã: 259)
+Output cuối: 69
+=> Dãy mã hóa: 77 73 65 72 69 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 77 73 65 72 69 
+Đọc 77 -> Xuất: M
+Đọc 73 -> Xuất: I | Thêm từ điển: MI (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: IA (Mã: 257)
+Đọc 72 -> Xuất: H | Thêm từ điển: AH (Mã: 258)
+Đọc 69 -> Xuất: E | Thêm từ điển: HE (Mã: 259)
+=> Chuỗi giải mã thành công: MIAHE
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'VQQUH'?
+A. 11100000011
+B. 1110000000101
+C. 11100000000
+D. 11100000001
+Đáp án đúng: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(000101, 110100) = 3
+Khoảng cách d(000101, 111110) = 5
+Khoảng cách d(110100, 111110) = 2
+=> d_min = 2 (Giữa 110100 và 111110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 2 bit
+A. 0 bit
+B. 1 bit
 C. 0 bit
 D. 1 bit
-Đáp án đúng: C
+Đáp án đúng: A
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YHIJX' là bao nhiêu?
-A. 8
-B. 6
-C. 5
-D. 4
-Đáp án đúng: C
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 0 bit
-C. 1 bit
-D. 0 bit
-Đáp án đúng: B
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'VYXC'?
-A. 0.595703
-B. 0.470703
-C. 0.502656
-D. 0.418750
-Đáp án đúng: B
-
-1 0 0
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ASRLY'?
-A. 0.264040
-B. 0.088880
-C. 0.139040
-D. 0.169200
-Đáp án đúng: C
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'HUHMBM'?
-A. 0.493820
-B. 0.463649
-C. 0.413477
-D. 0.588649
-Đáp án đúng: B
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(11011, 00110) = 4
+=> d_min = 4 (Giữa 11011 và 00110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 3 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'D': [0, 0.2)
-- Ký tự 'I': [0.2, 0.4)
-- Ký tự 'R': [0.4, 0.6)
-- Ký tự 'T': [0.6, 0.8)
-- Ký tự 'Y': [0.8, 1)
+- Ký tự 'A': [0.000000, 0.250000)
+- Ký tự 'E': [0.250000, 0.500000)
+- Ký tự 'W': [0.500000, 0.750000)
+- Ký tự 'Y': [0.750000, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'IRTDY':
-Đọc 'I' -> Khoảng: [0.200000, 0.400000)
-Đọc 'R' -> Khoảng: [0.280000, 0.320000)
-Đọc 'T' -> Khoảng: [0.304000, 0.312000)
-Đọc 'D' -> Khoảng: [0.304000, 0.305600)
-Đọc 'Y' -> Khoảng: [0.305280, 0.305600)
-=> Giá trị mã hóa được chọn: 0.305440
+[2] Quá trình mã hóa chuỗi 'YAWE':
+Đọc 'Y' -> Khoảng: [0.750000, 1.000000)
+Đọc 'A' -> Khoảng: [0.750000, 0.812500)
+Đọc 'W' -> Khoảng: [0.781250, 0.796875)
+Đọc 'E' -> Khoảng: [0.785156, 0.789062)
+=> Giá trị mã hóa được chọn: 0.787109
+=> Mã nhị phân tương ứng (9 bit): 110010011
 
-[3] Quá trình giải mã (từ 0.305440, độ dài 5):
-Giá trị 0.305440 nằm trong khoảng của 'I' -> Giải mã: I
-Giá trị 0.527200 nằm trong khoảng của 'R' -> Giải mã: R
-Giá trị 0.636000 nằm trong khoảng của 'T' -> Giải mã: T
-Giá trị 0.180000 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.900000 nằm trong khoảng của 'Y' -> Giải mã: Y
+[3] Quá trình giải mã (từ mã nhị phân 110010011, giá trị 0.787109, độ dài 4):
+Giá trị 0.787109 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.148438 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.593750 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.375000 nằm trong khoảng của 'E' -> Giải mã: E
 
-76 83 88 77 69 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LZXTOHMGQ' là bao nhiêu?
+A. 10
+B. 9
+C. 8
+D. 12
+Đáp án đúng: B
+
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(1100, 0001) = 3
-=> d_min = 3 (Giữa 1100 và 0001)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+Khoảng cách d(1100, 1111) = 2
+=> d_min = 2 (Giữa 1100 và 1111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'QPAGGBZ' là bao nhiêu?
+A. 7
+B. 8
+C. 10
+D. 6
+Đáp án đúng: A
 

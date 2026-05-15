@@ -1,47 +1,80 @@
-2 1 0
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'HIAM'?
+A. 011000110
+B. 011000111
+C. 011000101
+D. 01100011101
+Đáp án đúng: B
+
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
+A. 0 bit
 B. 0 bit
-C. 0 bit
+C. 1 bit
 D. 1 bit
 Đáp án đúng: B
 
-3 2 1
-67 86 88 78 78 67 74 87 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 1 bit
-C. 0 bit
-D. 0 bit
-Đáp án đúng: D
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'LYFBLJERY':
+Output: 76 | Thêm từ điển: LY (Mã: 256)
+Output: 89 | Thêm từ điển: YF (Mã: 257)
+Output: 70 | Thêm từ điển: FB (Mã: 258)
+Output: 66 | Thêm từ điển: BL (Mã: 259)
+Output: 76 | Thêm từ điển: LJ (Mã: 260)
+Output: 74 | Thêm từ điển: JE (Mã: 261)
+Output: 69 | Thêm từ điển: ER (Mã: 262)
+Output: 82 | Thêm từ điển: RY (Mã: 263)
+Output cuối: 89
+=> Dãy mã hóa: 76 89 70 66 76 74 69 82 89 
 
-0.425926
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 76 89 70 66 76 74 69 82 89 
+Đọc 76 -> Xuất: L
+Đọc 89 -> Xuất: Y | Thêm từ điển: LY (Mã: 256)
+Đọc 70 -> Xuất: F | Thêm từ điển: YF (Mã: 257)
+Đọc 66 -> Xuất: B | Thêm từ điển: FB (Mã: 258)
+Đọc 76 -> Xuất: L | Thêm từ điển: BL (Mã: 259)
+Đọc 74 -> Xuất: J | Thêm từ điển: LJ (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: JE (Mã: 261)
+Đọc 82 -> Xuất: R | Thêm từ điển: ER (Mã: 262)
+Đọc 89 -> Xuất: Y | Thêm từ điển: RY (Mã: 263)
+=> Chuỗi giải mã thành công: LYFBLJERY
+
+78 90 73 83 89 79 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'CWJOFG'?
+A. 0010011111110010101
+B. 00100111111100101
+C. 00100111111100100
+D. 00100111111100111
+Đáp án đúng: B
+
+1 0 0
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'C': [0.000000, 0.250000)
-- Ký tự 'K': [0.250000, 0.500000)
-- Ký tự 'R': [0.500000, 0.750000)
-- Ký tự 'X': [0.750000, 1.000000)
+- Ký tự 'J': [0, 0.333333)
+- Ký tự 'Q': [0.333333, 0.666667)
+- Ký tự 'W': [0.666667, 1)
 
-[2] Quá trình mã hóa chuỗi 'XKRC':
-Đọc 'X' -> Khoảng: [0.750000, 1.000000)
-Đọc 'K' -> Khoảng: [0.812500, 0.875000)
-Đọc 'R' -> Khoảng: [0.843750, 0.859375)
-Đọc 'C' -> Khoảng: [0.843750, 0.847656)
-=> Giá trị mã hóa được chọn: 0.845703
+[2] Quá trình mã hóa chuỗi 'JWQ':
+Đọc 'J' -> Khoảng: [0.000000, 0.333333)
+Đọc 'W' -> Khoảng: [0.222222, 0.333333)
+Đọc 'Q' -> Khoảng: [0.259259, 0.296296)
+=> Giá trị mã hóa được chọn: 0.277778
+=> Mã nhị phân tương ứng (6 bit): 010001
 
-[3] Quá trình giải mã (từ 0.845703, độ dài 4):
-Giá trị 0.845703 nằm trong khoảng của 'X' -> Giải mã: X
-Giá trị 0.382812 nằm trong khoảng của 'K' -> Giải mã: K
-Giá trị 0.531250 nằm trong khoảng của 'R' -> Giải mã: R
-Giá trị 0.125000 nằm trong khoảng của 'C' -> Giải mã: C
+[3] Quá trình giải mã (từ mã nhị phân 010001, giá trị 0.265625, độ dài 3):
+Giá trị 0.265625 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.796875 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.390625 nằm trong khoảng của 'Q' -> Giải mã: Q
 
-0.425926
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'TAMLKH'?
-A. 0.854456
-B. 0.979456
-C. 0.804445
-D. 0.884467
-Đáp án đúng: A
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(010, 111) = 2
+=> d_min = 2 (Giữa 010 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-82 65 79 88 73 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'KUEARF'?
+A. 10100100111000100
+B. 1010010011100010101
+C. 10100100111000101
+D. 10100100111000111
+Đáp án đúng: C
+

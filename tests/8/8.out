@@ -1,24 +1,129 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZQBYNHKX' là bao nhiêu?
+A. 9
+B. 7
+C. 11
+D. 8
+Đáp án đúng: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101000, 111101) = 3
+=> d_min = 3 (Giữa 101000 và 111101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'KWW'?
+A. 010001
+B. 0100
+C. 0110
+D. 0101
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001001, 010101) = 3
+Khoảng cách d(001001, 111100) = 4
+Khoảng cách d(010101, 111100) = 3
+=> d_min = 3 (Giữa 001001 và 010101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'XXH'?
+A. 1010
+B. 1000
+C. 101001
+D. 1011
+Đáp án đúng: A
+
+0.705078
+101101001
+0.150400
+00100110100
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 0 bit
 B. 1 bit
-C. 1 bit
-D. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'XHGXN'?
+A. 10110001010
+B. 10110001011
+C. 10110001000
+D. 1011000101001
 Đáp án đúng: A
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'L': [0, 0.333333)
-- Ký tự 'M': [0.333333, 0.666667)
-- Ký tự 'P': [0.666667, 1)
+- Ký tự 'A': [0.000000, 0.333333)
+- Ký tự 'F': [0.333333, 0.666667)
+- Ký tự 'L': [0.666667, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'LMP':
-Đọc 'L' -> Khoảng: [0.000000, 0.333333)
-Đọc 'M' -> Khoảng: [0.111111, 0.222222)
-Đọc 'P' -> Khoảng: [0.185185, 0.222222)
-=> Giá trị mã hóa được chọn: 0.203704
+[2] Quá trình mã hóa chuỗi 'LFA':
+Đọc 'L' -> Khoảng: [0.666667, 1.000000)
+Đọc 'F' -> Khoảng: [0.777778, 0.888889)
+Đọc 'A' -> Khoảng: [0.777778, 0.814815)
+=> Giá trị mã hóa được chọn: 0.796296
+=> Mã nhị phân tương ứng (6 bit): 110010
 
-[3] Quá trình giải mã (từ 0.203704, độ dài 3):
-Giá trị 0.203704 nằm trong khoảng của 'L' -> Giải mã: L
-Giá trị 0.611111 nằm trong khoảng của 'M' -> Giải mã: M
-Giá trị 0.833333 nằm trong khoảng của 'P' -> Giải mã: P
+[3] Quá trình giải mã (từ mã nhị phân 110010, giá trị 0.781250, độ dài 3):
+Giá trị 0.781250 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.343750 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.031250 nằm trong khoảng của 'A' -> Giải mã: A
+
+65 66 65 74 65 
+2 1 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(10100, 10101) = 1
+Khoảng cách d(10100, 00001) = 3
+Khoảng cách d(10101, 00001) = 2
+=> d_min = 1 (Giữa 10100 và 10101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+1 0 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'K': [0.000000, 0.200000)
+- Ký tự 'N': [0.200000, 0.400000)
+- Ký tự 'R': [0.400000, 0.600000)
+- Ký tự 'S': [0.600000, 0.800000)
+- Ký tự 'X': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'SRXNK':
+Đọc 'S' -> Khoảng: [0.600000, 0.800000)
+Đọc 'R' -> Khoảng: [0.680000, 0.720000)
+Đọc 'X' -> Khoảng: [0.712000, 0.720000)
+Đọc 'N' -> Khoảng: [0.713600, 0.715200)
+Đọc 'K' -> Khoảng: [0.713600, 0.713920)
+=> Giá trị mã hóa được chọn: 0.713760
+=> Mã nhị phân tương ứng (13 bit): 1011011010111
+
+[3] Quá trình giải mã (từ mã nhị phân 1011011010111, giá trị 0.713745, độ dài 5):
+Giá trị 0.713745 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.568726 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.843628 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.218140 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.090698 nằm trong khoảng của 'K' -> Giải mã: K
+
+0.824631
+110100110001101
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'MTYDPDQHV' là bao nhiêu?
+A. 9
+B. 8
+C. 12
+D. 10
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 2 bit
+D. 1 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 3 bit
+D. 2 bit
+Đáp án đúng: B
 

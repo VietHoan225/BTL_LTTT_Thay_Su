@@ -1,149 +1,168 @@
-1 0 0
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(00000, 10001) = 2
-Khoảng cách d(00000, 00111) = 3
-Khoảng cách d(10001, 00111) = 3
-=> d_min = 2 (Giữa 00000 và 10001)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+3 2 1
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'IHM'?
+A. 011010
+B. 01101101
+C. 011001
+D. 011011
+Đáp án đúng: D
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LZRFAUSRF' là bao nhiêu?
-A. 11
-B. 7
-C. 8
-D. 9
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'JFEO'?
+A. 100100110
+B. 100100111
+C. 100100101
+D. 10010011101
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'CEHVMG' là bao nhiêu?
+A. 5
+B. 9
+C. 6
+D. 7
 Đáp án đúng: C
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'PLARSV':
-Output: 80 | Thêm từ điển: PL (Mã: 256)
-Output: 76 | Thêm từ điển: LA (Mã: 257)
-Output: 65 | Thêm từ điển: AR (Mã: 258)
-Output: 82 | Thêm từ điển: RS (Mã: 259)
-Output: 83 | Thêm từ điển: SV (Mã: 260)
-Output cuối: 86
-=> Dãy mã hóa: 80 76 65 82 83 86 
+[1] Quá trình mã hóa chuỗi 'SBSICKDL':
+Output: 83 | Thêm từ điển: SB (Mã: 256)
+Output: 66 | Thêm từ điển: BS (Mã: 257)
+Output: 83 | Thêm từ điển: SI (Mã: 258)
+Output: 73 | Thêm từ điển: IC (Mã: 259)
+Output: 67 | Thêm từ điển: CK (Mã: 260)
+Output: 75 | Thêm từ điển: KD (Mã: 261)
+Output: 68 | Thêm từ điển: DL (Mã: 262)
+Output cuối: 76
+=> Dãy mã hóa: 83 66 83 73 67 75 68 76 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 80 76 65 82 83 86 
-Đọc 80 -> Xuất: P
-Đọc 76 -> Xuất: L | Thêm từ điển: PL (Mã: 256)
-Đọc 65 -> Xuất: A | Thêm từ điển: LA (Mã: 257)
-Đọc 82 -> Xuất: R | Thêm từ điển: AR (Mã: 258)
-Đọc 83 -> Xuất: S | Thêm từ điển: RS (Mã: 259)
-Đọc 86 -> Xuất: V | Thêm từ điển: SV (Mã: 260)
-=> Chuỗi giải mã thành công: PLARSV
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(001, 000) = 1
-Khoảng cách d(001, 000) = 1
-Khoảng cách d(000, 000) = 0
-=> d_min = 0 (Giữa 000 và 000)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+Chuỗi mã đầu vào: 83 66 83 73 67 75 68 76 
+Đọc 83 -> Xuất: S
+Đọc 66 -> Xuất: B | Thêm từ điển: SB (Mã: 256)
+Đọc 83 -> Xuất: S | Thêm từ điển: BS (Mã: 257)
+Đọc 73 -> Xuất: I | Thêm từ điển: SI (Mã: 258)
+Đọc 67 -> Xuất: C | Thêm từ điển: IC (Mã: 259)
+Đọc 75 -> Xuất: K | Thêm từ điển: CK (Mã: 260)
+Đọc 68 -> Xuất: D | Thêm từ điển: KD (Mã: 261)
+Đọc 76 -> Xuất: L | Thêm từ điển: DL (Mã: 262)
+=> Chuỗi giải mã thành công: SBSICKDL
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0, 0.166667)
-- Ký tự 'E': [0.166667, 0.333333)
-- Ký tự 'I': [0.333333, 0.5)
-- Ký tự 'J': [0.5, 0.666667)
-- Ký tự 'L': [0.666667, 0.833333)
-- Ký tự 'P': [0.833333, 1)
+- Ký tự 'C': [0, 0.166667)
+- Ký tự 'F': [0.166667, 0.333333)
+- Ký tự 'U': [0.333333, 0.5)
+- Ký tự 'W': [0.5, 0.666667)
+- Ký tự 'X': [0.666667, 0.833333)
+- Ký tự 'Y': [0.833333, 1)
 
-[2] Quá trình mã hóa chuỗi 'JAPLIE':
-Đọc 'J' -> Khoảng: [0.500000, 0.666667)
-Đọc 'A' -> Khoảng: [0.500000, 0.527778)
-Đọc 'P' -> Khoảng: [0.523148, 0.527778)
-Đọc 'L' -> Khoảng: [0.526235, 0.527006)
-Đọc 'I' -> Khoảng: [0.526492, 0.526620)
-Đọc 'E' -> Khoảng: [0.526513, 0.526535)
-=> Giá trị mã hóa được chọn: 0.526524
+[2] Quá trình mã hóa chuỗi 'FCYUXW':
+Đọc 'F' -> Khoảng: [0.166667, 0.333333)
+Đọc 'C' -> Khoảng: [0.166667, 0.194444)
+Đọc 'Y' -> Khoảng: [0.189815, 0.194444)
+Đọc 'U' -> Khoảng: [0.191358, 0.192130)
+Đọc 'X' -> Khoảng: [0.191872, 0.192001)
+Đọc 'W' -> Khoảng: [0.191937, 0.191958)
+=> Giá trị mã hóa được chọn: 0.191947
+=> Mã nhị phân tương ứng (17 bit): 00110001001000110
 
-[3] Quá trình giải mã (từ 0.526524, độ dài 6):
-Giá trị 0.526524 nằm trong khoảng của 'J' -> Giải mã: J
-Giá trị 0.159144 nằm trong khoảng của 'A' -> Giải mã: A
-Giá trị 0.954861 nằm trong khoảng của 'P' -> Giải mã: P
-Giá trị 0.729167 nằm trong khoảng của 'L' -> Giải mã: L
-Giá trị 0.375000 nằm trong khoảng của 'I' -> Giải mã: I
-Giá trị 0.250000 nằm trong khoảng của 'E' -> Giải mã: E
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(000, 101) = 2
-Khoảng cách d(000, 010) = 1
-Khoảng cách d(000, 111) = 3
-Khoảng cách d(101, 010) = 3
-Khoảng cách d(101, 111) = 1
-Khoảng cách d(010, 111) = 2
-=> d_min = 1 (Giữa 000 và 010)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-2 1 0
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0.000000, 0.200000)
-- Ký tự 'M': [0.200000, 0.400000)
-- Ký tự 'S': [0.400000, 0.600000)
-- Ký tự 'W': [0.600000, 0.800000)
-- Ký tự 'Z': [0.800000, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'SZMWA':
-Đọc 'S' -> Khoảng: [0.400000, 0.600000)
-Đọc 'Z' -> Khoảng: [0.560000, 0.600000)
-Đọc 'M' -> Khoảng: [0.568000, 0.576000)
-Đọc 'W' -> Khoảng: [0.572800, 0.574400)
-Đọc 'A' -> Khoảng: [0.572800, 0.573120)
-=> Giá trị mã hóa được chọn: 0.572960
-
-[3] Quá trình giải mã (từ 0.572960, độ dài 5):
-Giá trị 0.572960 nằm trong khoảng của 'S' -> Giải mã: S
-Giá trị 0.864800 nằm trong khoảng của 'Z' -> Giải mã: Z
-Giá trị 0.324000 nằm trong khoảng của 'M' -> Giải mã: M
-Giá trị 0.620000 nằm trong khoảng của 'W' -> Giải mã: W
-Giá trị 0.100000 nằm trong khoảng của 'A' -> Giải mã: A
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(1111, 0101) = 2
-Khoảng cách d(1111, 0011) = 2
-Khoảng cách d(0101, 0011) = 2
-=> d_min = 2 (Giữa 1111 và 0101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-4 3 1
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'CMDHJ':
-Output: 67 | Thêm từ điển: CM (Mã: 256)
-Output: 77 | Thêm từ điển: MD (Mã: 257)
-Output: 68 | Thêm từ điển: DH (Mã: 258)
-Output: 72 | Thêm từ điển: HJ (Mã: 259)
-Output cuối: 74
-=> Dãy mã hóa: 67 77 68 72 74 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 67 77 68 72 74 
-Đọc 67 -> Xuất: C
-Đọc 77 -> Xuất: M | Thêm từ điển: CM (Mã: 256)
-Đọc 68 -> Xuất: D | Thêm từ điển: MD (Mã: 257)
-Đọc 72 -> Xuất: H | Thêm từ điển: DH (Mã: 258)
-Đọc 74 -> Xuất: J | Thêm từ điển: HJ (Mã: 259)
-=> Chuỗi giải mã thành công: CMDHJ
-
-0.272644
-0.873800
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'IYIDZ' là bao nhiêu?
-A. 4
-B. 8
-C. 6
-D. 5
-Đáp án đúng: D
+[3] Quá trình giải mã (từ mã nhị phân 00110001001000110, giá trị 0.191940, độ dài 6):
+Giá trị 0.191940 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.151642 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.909851 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.459106 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.754639 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.527832 nằm trong khoảng của 'W' -> Giải mã: W
 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 1 bit
-B. 1 bit
-C. 2 bit
+B. 2 bit
+C. 1 bit
 D. 0 bit
 Đáp án đúng: D
 
-0.532365
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'K': [0.000000, 0.250000)
+- Ký tự 'Q': [0.250000, 0.750000)
+- Ký tự 'U': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'QUQK':
+Đọc 'Q' -> Khoảng: [0.250000, 0.750000)
+Đọc 'U' -> Khoảng: [0.625000, 0.750000)
+Đọc 'Q' -> Khoảng: [0.656250, 0.718750)
+Đọc 'K' -> Khoảng: [0.656250, 0.671875)
+=> Giá trị mã hóa được chọn: 0.664062
+=> Mã nhị phân tương ứng (7 bit): 1010101
+
+[3] Quá trình giải mã (từ mã nhị phân 1010101, giá trị 0.664062, độ dài 4):
+Giá trị 0.664062 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.828125 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.312500 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.125000 nằm trong khoảng của 'K' -> Giải mã: K
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111110, 000010) = 4
+=> d_min = 4 (Giữa 111110 và 000010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 3 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011, 010) = 1
+=> d_min = 1 (Giữa 011 và 010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZMLPLPXT' là bao nhiêu?
+A. 7
+B. 8
+C. 6
+D. 10
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'MJNFF':
+Output: 77 | Thêm từ điển: MJ (Mã: 256)
+Output: 74 | Thêm từ điển: JN (Mã: 257)
+Output: 78 | Thêm từ điển: NF (Mã: 258)
+Output: 70 | Thêm từ điển: FF (Mã: 259)
+Output cuối: 70
+=> Dãy mã hóa: 77 74 78 70 70 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 77 74 78 70 70 
+Đọc 77 -> Xuất: M
+Đọc 74 -> Xuất: J | Thêm từ điển: MJ (Mã: 256)
+Đọc 78 -> Xuất: N | Thêm từ điển: JN (Mã: 257)
+Đọc 70 -> Xuất: F | Thêm từ điển: NF (Mã: 258)
+Đọc 70 -> Xuất: F | Thêm từ điển: FF (Mã: 259)
+=> Chuỗi giải mã thành công: MJNFF
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'DQNYH':
+Output: 68 | Thêm từ điển: DQ (Mã: 256)
+Output: 81 | Thêm từ điển: QN (Mã: 257)
+Output: 78 | Thêm từ điển: NY (Mã: 258)
+Output: 89 | Thêm từ điển: YH (Mã: 259)
+Output cuối: 72
+=> Dãy mã hóa: 68 81 78 89 72 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 68 81 78 89 72 
+Đọc 68 -> Xuất: D
+Đọc 81 -> Xuất: Q | Thêm từ điển: DQ (Mã: 256)
+Đọc 78 -> Xuất: N | Thêm từ điển: QN (Mã: 257)
+Đọc 89 -> Xuất: Y | Thêm từ điển: NY (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: YH (Mã: 259)
+=> Chuỗi giải mã thành công: DQNYH
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(110, 101) = 2
+=> d_min = 2 (Giữa 110 và 101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: B
+

@@ -1,23 +1,30 @@
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'EDJGQ' là bao nhiêu?
-A. 5
-B. 6
-C. 4
-D. 8
-Đáp án đúng: A
+3 2 1
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0, 0.25)
+- Ký tự 'C': [0.25, 0.5)
+- Ký tự 'G': [0.5, 0.75)
+- Ký tự 'X': [0.75, 1)
 
+[2] Quá trình mã hóa chuỗi 'XBCG':
+Đọc 'X' -> Khoảng: [0.750000, 1.000000)
+Đọc 'B' -> Khoảng: [0.750000, 0.812500)
+Đọc 'C' -> Khoảng: [0.765625, 0.781250)
+Đọc 'G' -> Khoảng: [0.773438, 0.777344)
+=> Giá trị mã hóa được chọn: 0.775391
+=> Mã nhị phân tương ứng (9 bit): 110001101
+
+[3] Quá trình giải mã (từ mã nhị phân 110001101, giá trị 0.775391, độ dài 4):
+Giá trị 0.775391 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.101562 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.406250 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.625000 nằm trong khoảng của 'G' -> Giải mã: G
+
+74 69 88 83 67 74 76 89 81 66 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 1 bit
-C. -1 bit
-D. 0 bit
-Đáp án đúng: D
-
-0.771360
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(111, 010) = 2
-Khoảng cách d(111, 110) = 1
-Khoảng cách d(010, 110) = 1
-=> d_min = 1 (Giữa 111 và 110)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+A. -1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
 

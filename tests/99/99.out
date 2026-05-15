@@ -1,142 +1,31 @@
-0.119141
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'DCPNWZY' là bao nhiêu?
-A. 10
-B. 7
-C. 6
-D. 8
-Đáp án đúng: B
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WVADYKNLQC' là bao nhiêu?
-A. 9
-B. 11
-C. 13
-D. 10
-Đáp án đúng: D
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'ZOMRJIU':
-Output: 90 | Thêm từ điển: ZO (Mã: 256)
-Output: 79 | Thêm từ điển: OM (Mã: 257)
-Output: 77 | Thêm từ điển: MR (Mã: 258)
-Output: 82 | Thêm từ điển: RJ (Mã: 259)
-Output: 74 | Thêm từ điển: JI (Mã: 260)
-Output: 73 | Thêm từ điển: IU (Mã: 261)
-Output cuối: 85
-=> Dãy mã hóa: 90 79 77 82 74 73 85 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 90 79 77 82 74 73 85 
-Đọc 90 -> Xuất: Z
-Đọc 79 -> Xuất: O | Thêm từ điển: ZO (Mã: 256)
-Đọc 77 -> Xuất: M | Thêm từ điển: OM (Mã: 257)
-Đọc 82 -> Xuất: R | Thêm từ điển: MR (Mã: 258)
-Đọc 74 -> Xuất: J | Thêm từ điển: RJ (Mã: 259)
-Đọc 73 -> Xuất: I | Thêm từ điển: JI (Mã: 260)
-Đọc 85 -> Xuất: U | Thêm từ điển: IU (Mã: 261)
-=> Chuỗi giải mã thành công: ZOMRJIU
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0.000000, 0.166667)
-- Ký tự 'R': [0.166667, 0.333333)
-- Ký tự 'S': [0.333333, 0.500000)
-- Ký tự 'T': [0.500000, 0.666667)
-- Ký tự 'V': [0.666667, 0.833333)
-- Ký tự 'Y': [0.833333, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'AVSYRT':
-Đọc 'A' -> Khoảng: [0.000000, 0.166667)
-Đọc 'V' -> Khoảng: [0.111111, 0.138889)
-Đọc 'S' -> Khoảng: [0.120370, 0.125000)
-Đọc 'Y' -> Khoảng: [0.124228, 0.125000)
-Đọc 'R' -> Khoảng: [0.124357, 0.124486)
-Đọc 'T' -> Khoảng: [0.124421, 0.124443)
-=> Giá trị mã hóa được chọn: 0.124432
-
-[3] Quá trình giải mã (từ 0.124432, độ dài 6):
-Giá trị 0.124432 nằm trong khoảng của 'A' -> Giải mã: A
-Giá trị 0.746592 nằm trong khoảng của 'V' -> Giải mã: V
-Giá trị 0.479552 nằm trong khoảng của 'S' -> Giải mã: S
-Giá trị 0.877315 nằm trong khoảng của 'Y' -> Giải mã: Y
-Giá trị 0.263889 nằm trong khoảng của 'R' -> Giải mã: R
-Giá trị 0.583333 nằm trong khoảng của 'T' -> Giải mã: T
-
-2 1 0
-0.768800
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 1 bit
-C. 0 bit
-D. 1 bit
+1 0 0
+0.095520
+0001100001110
+82 77 86 70 66 83 78 87 85 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'FUGPJ' là bao nhiêu?
+A. 6
+B. 8
+C. 5
+D. 4
 Đáp án đúng: C
 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(1000, 1110) = 2
-Khoảng cách d(1000, 1110) = 2
-Khoảng cách d(1110, 1110) = 0
-=> d_min = 0 (Giữa 1110 và 1110)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'B': [0.000000, 0.166667)
-- Ký tự 'J': [0.166667, 0.333333)
-- Ký tự 'R': [0.333333, 0.500000)
-- Ký tự 'T': [0.500000, 0.666667)
-- Ký tự 'U': [0.666667, 0.833333)
-- Ký tự 'W': [0.833333, 1.000000)
+- Ký tự 'K': [0.000000, 0.250000)
+- Ký tự 'P': [0.250000, 0.750000)
+- Ký tự 'W': [0.750000, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'BTJRUW':
-Đọc 'B' -> Khoảng: [0.000000, 0.166667)
-Đọc 'T' -> Khoảng: [0.083333, 0.111111)
-Đọc 'J' -> Khoảng: [0.087963, 0.092593)
-Đọc 'R' -> Khoảng: [0.089506, 0.090278)
-Đọc 'U' -> Khoảng: [0.090021, 0.090149)
-Đọc 'W' -> Khoảng: [0.090128, 0.090149)
-=> Giá trị mã hóa được chọn: 0.090138
+[2] Quá trình mã hóa chuỗi 'PWKP':
+Đọc 'P' -> Khoảng: [0.250000, 0.750000)
+Đọc 'W' -> Khoảng: [0.625000, 0.750000)
+Đọc 'K' -> Khoảng: [0.625000, 0.656250)
+Đọc 'P' -> Khoảng: [0.632812, 0.648438)
+=> Giá trị mã hóa được chọn: 0.640625
+=> Mã nhị phân tương ứng (7 bit): 1010010
 
-[3] Quá trình giải mã (từ 0.090138, độ dài 6):
-Giá trị 0.090138 nằm trong khoảng của 'B' -> Giải mã: B
-Giá trị 0.540831 nằm trong khoảng của 'T' -> Giải mã: T
-Giá trị 0.244985 nằm trong khoảng của 'J' -> Giải mã: J
-Giá trị 0.469907 nằm trong khoảng của 'R' -> Giải mã: R
-Giá trị 0.819444 nằm trong khoảng của 'U' -> Giải mã: U
-Giá trị 0.916667 nằm trong khoảng của 'W' -> Giải mã: W
+[3] Quá trình giải mã (từ mã nhị phân 1010010, giá trị 0.640625, độ dài 4):
+Giá trị 0.640625 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.781250 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.125000 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.500000 nằm trong khoảng của 'P' -> Giải mã: P
 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 3 bit
-B. 2 bit
-C. 2 bit
-D. 1 bit
-Đáp án đúng: D
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(0100, 0100) = 0
-=> d_min = 0 (Giữa 0100 và 0100)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0.000000, 0.200000)
-- Ký tự 'I': [0.200000, 0.600000)
-- Ký tự 'T': [0.600000, 0.800000)
-- Ký tự 'Z': [0.800000, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'TIIAZ':
-Đọc 'T' -> Khoảng: [0.600000, 0.800000)
-Đọc 'I' -> Khoảng: [0.640000, 0.720000)
-Đọc 'I' -> Khoảng: [0.656000, 0.688000)
-Đọc 'A' -> Khoảng: [0.656000, 0.662400)
-Đọc 'Z' -> Khoảng: [0.661120, 0.662400)
-=> Giá trị mã hóa được chọn: 0.661760
-
-[3] Quá trình giải mã (từ 0.661760, độ dài 5):
-Giá trị 0.661760 nằm trong khoảng của 'T' -> Giải mã: T
-Giá trị 0.308800 nằm trong khoảng của 'I' -> Giải mã: I
-Giá trị 0.272000 nằm trong khoảng của 'I' -> Giải mã: I
-Giá trị 0.180000 nằm trong khoảng của 'A' -> Giải mã: A
-Giá trị 0.900000 nằm trong khoảng của 'Z' -> Giải mã: Z
-
-0.076320

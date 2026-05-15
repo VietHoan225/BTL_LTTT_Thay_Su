@@ -1,79 +1,96 @@
+3 2 1
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 0 bit
-B. 0 bit
+B. 1 bit
 C. 1 bit
-D. 1 bit
+D. 0 bit
 Đáp án đúng: A
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'MQIFW'?
-A. 0.559600
-B. 0.654440
-C. 0.529440
-D. 0.479280
-Đáp án đúng: C
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'I': [0, 0.333333)
-- Ký tự 'O': [0.333333, 0.666667)
-- Ký tự 'Q': [0.666667, 1)
-
-[2] Quá trình mã hóa chuỗi 'IQO':
-Đọc 'I' -> Khoảng: [0.000000, 0.333333)
-Đọc 'Q' -> Khoảng: [0.222222, 0.333333)
-Đọc 'O' -> Khoảng: [0.259259, 0.296296)
-=> Giá trị mã hóa được chọn: 0.277778
-
-[3] Quá trình giải mã (từ 0.277778, độ dài 3):
-Giá trị 0.277778 nằm trong khoảng của 'I' -> Giải mã: I
-Giá trị 0.833333 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.500000 nằm trong khoảng của 'O' -> Giải mã: O
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'E': [0.000000, 0.166667)
-- Ký tự 'F': [0.166667, 0.333333)
-- Ký tự 'M': [0.333333, 0.500000)
-- Ký tự 'R': [0.500000, 0.666667)
-- Ký tự 'V': [0.666667, 0.833333)
-- Ký tự 'X': [0.833333, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'FREMXV':
-Đọc 'F' -> Khoảng: [0.166667, 0.333333)
-Đọc 'R' -> Khoảng: [0.250000, 0.277778)
-Đọc 'E' -> Khoảng: [0.250000, 0.254630)
-Đọc 'M' -> Khoảng: [0.251543, 0.252315)
-Đọc 'X' -> Khoảng: [0.252186, 0.252315)
-Đọc 'V' -> Khoảng: [0.252272, 0.252293)
-=> Giá trị mã hóa được chọn: 0.252283
-
-[3] Quá trình giải mã (từ 0.252283, độ dài 6):
-Giá trị 0.252283 nằm trong khoảng của 'F' -> Giải mã: F
-Giá trị 0.513696 nằm trong khoảng của 'R' -> Giải mã: R
-Giá trị 0.082176 nằm trong khoảng của 'E' -> Giải mã: E
-Giá trị 0.493056 nằm trong khoảng của 'M' -> Giải mã: M
-Giá trị 0.958333 nằm trong khoảng của 'X' -> Giải mã: X
-Giá trị 0.750000 nằm trong khoảng của 'V' -> Giải mã: V
-
-2 1 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HQGNFLSWA' là bao nhiêu?
-A. 12
-B. 10
-C. 8
-D. 9
-Đáp án đúng: D
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'PZC'?
-A. 0.699074
-B. 0.574074
-C. 0.505556
-D. 0.622593
-Đáp án đúng: B
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(00010, 10000) = 2
+Khoảng cách d(00010, 01101) = 4
+Khoảng cách d(10000, 01101) = 4
+=> d_min = 2 (Giữa 00010 và 10000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 1 bit
+B. 2 bit
+C. 2 bit
+D. 3 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
 B. 1 bit
-C. 0 bit
+C. -1 bit
 D. 0 bit
 Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LZMARTWHP' là bao nhiêu?
+A. 8
+B. 9
+C. 10
+D. 12
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. -1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'EKSMIYJ':
+Output: 69 | Thêm từ điển: EK (Mã: 256)
+Output: 75 | Thêm từ điển: KS (Mã: 257)
+Output: 83 | Thêm từ điển: SM (Mã: 258)
+Output: 77 | Thêm từ điển: MI (Mã: 259)
+Output: 73 | Thêm từ điển: IY (Mã: 260)
+Output: 89 | Thêm từ điển: YJ (Mã: 261)
+Output cuối: 74
+=> Dãy mã hóa: 69 75 83 77 73 89 74 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 69 75 83 77 73 89 74 
+Đọc 69 -> Xuất: E
+Đọc 75 -> Xuất: K | Thêm từ điển: EK (Mã: 256)
+Đọc 83 -> Xuất: S | Thêm từ điển: KS (Mã: 257)
+Đọc 77 -> Xuất: M | Thêm từ điển: SM (Mã: 258)
+Đọc 73 -> Xuất: I | Thêm từ điển: MI (Mã: 259)
+Đọc 89 -> Xuất: Y | Thêm từ điển: IY (Mã: 260)
+Đọc 74 -> Xuất: J | Thêm từ điển: YJ (Mã: 261)
+=> Chuỗi giải mã thành công: EKSMIYJ
+
+83 84 85 89 85 65 84 90 90 85 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'EZBDZ'?
+A. 1000011010001
+B. 10000110110
+C. 10000110100
+D. 10000110101
+Đáp án đúng: C
+
+0.284422
+010010001100111
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'BBOYPV':
+Output: 66 | Thêm từ điển: BB (Mã: 256)
+Output: 66 | Thêm từ điển: BO (Mã: 257)
+Output: 79 | Thêm từ điển: OY (Mã: 258)
+Output: 89 | Thêm từ điển: YP (Mã: 259)
+Output: 80 | Thêm từ điển: PV (Mã: 260)
+Output cuối: 86
+=> Dãy mã hóa: 66 66 79 89 80 86 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 66 66 79 89 80 86 
+Đọc 66 -> Xuất: B
+Đọc 66 -> Xuất: B | Thêm từ điển: BB (Mã: 256)
+Đọc 79 -> Xuất: O | Thêm từ điển: BO (Mã: 257)
+Đọc 89 -> Xuất: Y | Thêm từ điển: OY (Mã: 258)
+Đọc 80 -> Xuất: P | Thêm từ điển: YP (Mã: 259)
+Đọc 86 -> Xuất: V | Thêm từ điển: PV (Mã: 260)
+=> Chuỗi giải mã thành công: BBOYPV
 

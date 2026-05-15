@@ -1,117 +1,174 @@
-0 -1 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HKWXVJUQH' là bao nhiêu?
-A. 10
-B. 8
-C. 9
-D. 12
-Đáp án đúng: C
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'KLLVXQZ':
+Output: 75 | Thêm từ điển: KL (Mã: 256)
+Output: 76 | Thêm từ điển: LL (Mã: 257)
+Output: 76 | Thêm từ điển: LV (Mã: 258)
+Output: 86 | Thêm từ điển: VX (Mã: 259)
+Output: 88 | Thêm từ điển: XQ (Mã: 260)
+Output: 81 | Thêm từ điển: QZ (Mã: 261)
+Output cuối: 90
+=> Dãy mã hóa: 75 76 76 86 88 81 90 
 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(010, 101) = 3
-=> d_min = 3 (Giữa 010 và 101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 75 76 76 86 88 81 90 
+Đọc 75 -> Xuất: K
+Đọc 76 -> Xuất: L | Thêm từ điển: KL (Mã: 256)
+Đọc 76 -> Xuất: L | Thêm từ điển: LL (Mã: 257)
+Đọc 86 -> Xuất: V | Thêm từ điển: LV (Mã: 258)
+Đọc 88 -> Xuất: X | Thêm từ điển: VX (Mã: 259)
+Đọc 81 -> Xuất: Q | Thêm từ điển: XQ (Mã: 260)
+Đọc 90 -> Xuất: Z | Thêm từ điển: QZ (Mã: 261)
+=> Chuỗi giải mã thành công: KLLVXQZ
 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 0 bit
-C. 0 bit
-D. 1 bit
-Đáp án đúng: C
-
-1 0 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'XQWBX' là bao nhiêu?
-A. 8
-B. 5
-C. 4
-D. 6
-Đáp án đúng: B
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(111, 001) = 2
-Khoảng cách d(111, 101) = 1
-Khoảng cách d(001, 101) = 1
-=> d_min = 1 (Giữa 111 và 101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'TTTTMN'?
-A. 0.935700
-B. 0.810700
-C. 0.843443
-D. 0.757956
-Đáp án đúng: B
-
-0 -1 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WGNWIO' là bao nhiêu?
-A. 6
-B. 7
-C. 5
-D. 9
-Đáp án đúng: A
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NWUPJQJUFN' là bao nhiêu?
-A. 11
-B. 13
-C. 10
-D. 9
-Đáp án đúng: C
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0, 0.333333)
-- Ký tự 'H': [0.333333, 0.666667)
-- Ký tự 'P': [0.666667, 1)
-
-[2] Quá trình mã hóa chuỗi 'HAP':
-Đọc 'H' -> Khoảng: [0.333333, 0.666667)
-Đọc 'A' -> Khoảng: [0.333333, 0.444444)
-Đọc 'P' -> Khoảng: [0.407407, 0.444444)
-=> Giá trị mã hóa được chọn: 0.425926
-
-[3] Quá trình giải mã (từ 0.425926, độ dài 3):
-Giá trị 0.425926 nằm trong khoảng của 'H' -> Giải mã: H
-Giá trị 0.277778 nằm trong khoảng của 'A' -> Giải mã: A
-Giá trị 0.833333 nằm trong khoảng của 'P' -> Giải mã: P
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(111, 101) = 1
-Khoảng cách d(111, 010) = 2
-Khoảng cách d(111, 111) = 0
-Khoảng cách d(101, 010) = 3
-Khoảng cách d(101, 111) = 1
-Khoảng cách d(010, 111) = 2
-=> d_min = 0 (Giữa 111 và 111)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'EZDBFOQO' là bao nhiêu?
-A. 8
-B. 7
-C. 11
-D. 9
-Đáp án đúng: A
-
-0 -1 0
-1 0 0
-0.822266
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11011, 11111) = 1
-=> d_min = 1 (Giữa 11011 và 11111)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PAKRY' là bao nhiêu?
-A. 4
-B. 8
-C. 6
-D. 5
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'RPOA'?
+A. 11100100101
+B. 111001000
+C. 111001011
+D. 111001001
 Đáp án đúng: D
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'SFWHXKKROO' là bao nhiêu?
-A. 10
-B. 11
-C. 13
-D. 9
-Đáp án đúng: A
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'NPMZXAEOH':
+Output: 78 | Thêm từ điển: NP (Mã: 256)
+Output: 80 | Thêm từ điển: PM (Mã: 257)
+Output: 77 | Thêm từ điển: MZ (Mã: 258)
+Output: 90 | Thêm từ điển: ZX (Mã: 259)
+Output: 88 | Thêm từ điển: XA (Mã: 260)
+Output: 65 | Thêm từ điển: AE (Mã: 261)
+Output: 69 | Thêm từ điển: EO (Mã: 262)
+Output: 79 | Thêm từ điển: OH (Mã: 263)
+Output cuối: 72
+=> Dãy mã hóa: 78 80 77 90 88 65 69 79 72 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 78 80 77 90 88 65 69 79 72 
+Đọc 78 -> Xuất: N
+Đọc 80 -> Xuất: P | Thêm từ điển: NP (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: PM (Mã: 257)
+Đọc 90 -> Xuất: Z | Thêm từ điển: MZ (Mã: 258)
+Đọc 88 -> Xuất: X | Thêm từ điển: ZX (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: XA (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: AE (Mã: 261)
+Đọc 79 -> Xuất: O | Thêm từ điển: EO (Mã: 262)
+Đọc 72 -> Xuất: H | Thêm từ điển: OH (Mã: 263)
+=> Chuỗi giải mã thành công: NPMZXAEOH
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'NTLOUIMKUI':
+Output: 78 | Thêm từ điển: NT (Mã: 256)
+Output: 84 | Thêm từ điển: TL (Mã: 257)
+Output: 76 | Thêm từ điển: LO (Mã: 258)
+Output: 79 | Thêm từ điển: OU (Mã: 259)
+Output: 85 | Thêm từ điển: UI (Mã: 260)
+Output: 73 | Thêm từ điển: IM (Mã: 261)
+Output: 77 | Thêm từ điển: MK (Mã: 262)
+Output: 75 | Thêm từ điển: KU (Mã: 263)
+Output cuối: 260
+=> Dãy mã hóa: 78 84 76 79 85 73 77 75 260 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 78 84 76 79 85 73 77 75 260 
+Đọc 78 -> Xuất: N
+Đọc 84 -> Xuất: T | Thêm từ điển: NT (Mã: 256)
+Đọc 76 -> Xuất: L | Thêm từ điển: TL (Mã: 257)
+Đọc 79 -> Xuất: O | Thêm từ điển: LO (Mã: 258)
+Đọc 85 -> Xuất: U | Thêm từ điển: OU (Mã: 259)
+Đọc 73 -> Xuất: I | Thêm từ điển: UI (Mã: 260)
+Đọc 77 -> Xuất: M | Thêm từ điển: IM (Mã: 261)
+Đọc 75 -> Xuất: K | Thêm từ điển: MK (Mã: 262)
+Đọc 260 -> Xuất: UI | Thêm từ điển: KU (Mã: 263)
+=> Chuỗi giải mã thành công: NTLOUIMKUI
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. -1 bit
+D. 0 bit
+Đáp án đúng: D
+
+83 75 90 75 71 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'J': [0, 0.2)
+- Ký tự 'L': [0.2, 0.4)
+- Ký tự 'P': [0.4, 0.6)
+- Ký tự 'X': [0.6, 0.8)
+- Ký tự 'Z': [0.8, 1)
+
+[2] Quá trình mã hóa chuỗi 'XZPJL':
+Đọc 'X' -> Khoảng: [0.600000, 0.800000)
+Đọc 'Z' -> Khoảng: [0.760000, 0.800000)
+Đọc 'P' -> Khoảng: [0.776000, 0.784000)
+Đọc 'J' -> Khoảng: [0.776000, 0.777600)
+Đọc 'L' -> Khoảng: [0.776320, 0.776640)
+=> Giá trị mã hóa được chọn: 0.776480
+=> Mã nhị phân tương ứng (13 bit): 1100011011000
+
+[3] Quá trình giải mã (từ mã nhị phân 1100011011000, giá trị 0.776367, độ dài 5):
+Giá trị 0.776367 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.881836 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.409180 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.045898 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.229492 nằm trong khoảng của 'L' -> Giải mã: L
+
+84 79 80 67 90 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0.000000, 0.200000)
+- Ký tự 'E': [0.200000, 0.400000)
+- Ký tự 'H': [0.400000, 0.600000)
+- Ký tự 'O': [0.600000, 0.800000)
+- Ký tự 'V': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'HEOBV':
+Đọc 'H' -> Khoảng: [0.400000, 0.600000)
+Đọc 'E' -> Khoảng: [0.440000, 0.480000)
+Đọc 'O' -> Khoảng: [0.464000, 0.472000)
+Đọc 'B' -> Khoảng: [0.464000, 0.465600)
+Đọc 'V' -> Khoảng: [0.465280, 0.465600)
+=> Giá trị mã hóa được chọn: 0.465440
+=> Mã nhị phân tương ứng (13 bit): 0111011100100
+
+[3] Quá trình giải mã (từ mã nhị phân 0111011100100, giá trị 0.465332, độ dài 5):
+Giá trị 0.465332 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.326660 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.633301 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.166504 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.832520 nằm trong khoảng của 'V' -> Giải mã: V
+
+0.372900
+010111110111011
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: C
+
+66 69 69 89 80 87 73 75 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'HMVZWWURB':
+Output: 72 | Thêm từ điển: HM (Mã: 256)
+Output: 77 | Thêm từ điển: MV (Mã: 257)
+Output: 86 | Thêm từ điển: VZ (Mã: 258)
+Output: 90 | Thêm từ điển: ZW (Mã: 259)
+Output: 87 | Thêm từ điển: WW (Mã: 260)
+Output: 87 | Thêm từ điển: WU (Mã: 261)
+Output: 85 | Thêm từ điển: UR (Mã: 262)
+Output: 82 | Thêm từ điển: RB (Mã: 263)
+Output cuối: 66
+=> Dãy mã hóa: 72 77 86 90 87 87 85 82 66 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 72 77 86 90 87 87 85 82 66 
+Đọc 72 -> Xuất: H
+Đọc 77 -> Xuất: M | Thêm từ điển: HM (Mã: 256)
+Đọc 86 -> Xuất: V | Thêm từ điển: MV (Mã: 257)
+Đọc 90 -> Xuất: Z | Thêm từ điển: VZ (Mã: 258)
+Đọc 87 -> Xuất: W | Thêm từ điển: ZW (Mã: 259)
+Đọc 87 -> Xuất: W | Thêm từ điển: WW (Mã: 260)
+Đọc 85 -> Xuất: U | Thêm từ điển: WU (Mã: 261)
+Đọc 82 -> Xuất: R | Thêm từ điển: UR (Mã: 262)
+Đọc 66 -> Xuất: B | Thêm từ điển: RB (Mã: 263)
+=> Chuỗi giải mã thành công: HMVZWWURB
 

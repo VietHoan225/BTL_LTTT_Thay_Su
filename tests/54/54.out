@@ -1,20 +1,228 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PTGJU' là bao nhiêu?
+A. 6
+B. 5
+C. 4
+D. 8
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'MMTSOCP':
+Output: 77 | Thêm từ điển: MM (Mã: 256)
+Output: 77 | Thêm từ điển: MT (Mã: 257)
+Output: 84 | Thêm từ điển: TS (Mã: 258)
+Output: 83 | Thêm từ điển: SO (Mã: 259)
+Output: 79 | Thêm từ điển: OC (Mã: 260)
+Output: 67 | Thêm từ điển: CP (Mã: 261)
+Output cuối: 80
+=> Dãy mã hóa: 77 77 84 83 79 67 80 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 77 77 84 83 79 67 80 
+Đọc 77 -> Xuất: M
+Đọc 77 -> Xuất: M | Thêm từ điển: MM (Mã: 256)
+Đọc 84 -> Xuất: T | Thêm từ điển: MT (Mã: 257)
+Đọc 83 -> Xuất: S | Thêm từ điển: TS (Mã: 258)
+Đọc 79 -> Xuất: O | Thêm từ điển: SO (Mã: 259)
+Đọc 67 -> Xuất: C | Thêm từ điển: OC (Mã: 260)
+Đọc 80 -> Xuất: P | Thêm từ điển: CP (Mã: 261)
+=> Chuỗi giải mã thành công: MMTSOCP
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'IFXRYN' là bao nhiêu?
+A. 6
+B. 9
+C. 7
+D. 5
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'JXFMK':
+Output: 74 | Thêm từ điển: JX (Mã: 256)
+Output: 88 | Thêm từ điển: XF (Mã: 257)
+Output: 70 | Thêm từ điển: FM (Mã: 258)
+Output: 77 | Thêm từ điển: MK (Mã: 259)
+Output cuối: 75
+=> Dãy mã hóa: 74 88 70 77 75 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 74 88 70 77 75 
+Đọc 74 -> Xuất: J
+Đọc 88 -> Xuất: X | Thêm từ điển: JX (Mã: 256)
+Đọc 70 -> Xuất: F | Thêm từ điển: XF (Mã: 257)
+Đọc 77 -> Xuất: M | Thêm từ điển: FM (Mã: 258)
+Đọc 75 -> Xuất: K | Thêm từ điển: MK (Mã: 259)
+=> Chuỗi giải mã thành công: JXFMK
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'LGRMC'?
+A. 0111101000010
+B. 0111101000001
+C. 0111101000011
+D. 011110100001101
+Đáp án đúng: C
+
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'B': [0, 0.25)
-- Ký tự 'E': [0.25, 0.5)
-- Ký tự 'N': [0.5, 0.75)
-- Ký tự 'Q': [0.75, 1)
+- Ký tự 'A': [0, 0.333333)
+- Ký tự 'E': [0.333333, 0.666667)
+- Ký tự 'R': [0.666667, 1)
 
-[2] Quá trình mã hóa chuỗi 'QNEB':
-Đọc 'Q' -> Khoảng: [0.750000, 1.000000)
-Đọc 'N' -> Khoảng: [0.875000, 0.937500)
-Đọc 'E' -> Khoảng: [0.890625, 0.906250)
-Đọc 'B' -> Khoảng: [0.890625, 0.894531)
-=> Giá trị mã hóa được chọn: 0.892578
+[2] Quá trình mã hóa chuỗi 'EAR':
+Đọc 'E' -> Khoảng: [0.333333, 0.666667)
+Đọc 'A' -> Khoảng: [0.333333, 0.444444)
+Đọc 'R' -> Khoảng: [0.407407, 0.444444)
+=> Giá trị mã hóa được chọn: 0.425926
+=> Mã nhị phân tương ứng (6 bit): 011011
 
-[3] Quá trình giải mã (từ 0.892578, độ dài 4):
-Giá trị 0.892578 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.570312 nằm trong khoảng của 'N' -> Giải mã: N
-Giá trị 0.281250 nằm trong khoảng của 'E' -> Giải mã: E
-Giá trị 0.125000 nằm trong khoảng của 'B' -> Giải mã: B
+[3] Quá trình giải mã (từ mã nhị phân 011011, giá trị 0.421875, độ dài 3):
+Giá trị 0.421875 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.265625 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.796875 nằm trong khoảng của 'R' -> Giải mã: R
+
+0.425926
+011011
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(01101, 11001) = 2
+Khoảng cách d(01101, 01110) = 2
+Khoảng cách d(01101, 10110) = 4
+Khoảng cách d(11001, 01110) = 4
+Khoảng cách d(11001, 10110) = 4
+Khoảng cách d(01110, 10110) = 2
+=> d_min = 2 (Giữa 01101 và 11001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YDXLUOZP' là bao nhiêu?
+A. 8
+B. 11
+C. 7
+D. 9
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 0 bit
+D. -1 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'M': [0.000000, 0.333333)
+- Ký tự 'O': [0.333333, 0.666667)
+- Ký tự 'Q': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'QOM':
+Đọc 'Q' -> Khoảng: [0.666667, 1.000000)
+Đọc 'O' -> Khoảng: [0.777778, 0.888889)
+Đọc 'M' -> Khoảng: [0.777778, 0.814815)
+=> Giá trị mã hóa được chọn: 0.796296
+=> Mã nhị phân tương ứng (6 bit): 110010
+
+[3] Quá trình giải mã (từ mã nhị phân 110010, giá trị 0.781250, độ dài 3):
+Giá trị 0.781250 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.343750 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.031250 nằm trong khoảng của 'M' -> Giải mã: M
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'Q': [0.000000, 0.333333)
+- Ký tự 'T': [0.333333, 0.666667)
+- Ký tự 'V': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'TVQ':
+Đọc 'T' -> Khoảng: [0.333333, 0.666667)
+Đọc 'V' -> Khoảng: [0.555556, 0.666667)
+Đọc 'Q' -> Khoảng: [0.555556, 0.592593)
+=> Giá trị mã hóa được chọn: 0.574074
+=> Mã nhị phân tương ứng (6 bit): 100100
+
+[3] Quá trình giải mã (từ mã nhị phân 100100, giá trị 0.562500, độ dài 3):
+Giá trị 0.562500 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.687500 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.062500 nằm trong khoảng của 'Q' -> Giải mã: Q
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'IRAKUVAIS':
+Output: 73 | Thêm từ điển: IR (Mã: 256)
+Output: 82 | Thêm từ điển: RA (Mã: 257)
+Output: 65 | Thêm từ điển: AK (Mã: 258)
+Output: 75 | Thêm từ điển: KU (Mã: 259)
+Output: 85 | Thêm từ điển: UV (Mã: 260)
+Output: 86 | Thêm từ điển: VA (Mã: 261)
+Output: 65 | Thêm từ điển: AI (Mã: 262)
+Output: 73 | Thêm từ điển: IS (Mã: 263)
+Output cuối: 83
+=> Dãy mã hóa: 73 82 65 75 85 86 65 73 83 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 73 82 65 75 85 86 65 73 83 
+Đọc 73 -> Xuất: I
+Đọc 82 -> Xuất: R | Thêm từ điển: IR (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: RA (Mã: 257)
+Đọc 75 -> Xuất: K | Thêm từ điển: AK (Mã: 258)
+Đọc 85 -> Xuất: U | Thêm từ điển: KU (Mã: 259)
+Đọc 86 -> Xuất: V | Thêm từ điển: UV (Mã: 260)
+Đọc 65 -> Xuất: A | Thêm từ điển: VA (Mã: 261)
+Đọc 73 -> Xuất: I | Thêm từ điển: AI (Mã: 262)
+Đọc 83 -> Xuất: S | Thêm từ điển: IS (Mã: 263)
+=> Chuỗi giải mã thành công: IRAKUVAIS
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'LDMKDM'?
+A. 100010110100001
+B. 1000101101000
+C. 1000101101010
+D. 1000101101001
+Đáp án đúng: B
+
+0.693359
+101100011
+0.574074
+100100
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1110, 0010) = 2
+Khoảng cách d(1110, 0000) = 3
+Khoảng cách d(1110, 0100) = 2
+Khoảng cách d(0010, 0000) = 1
+Khoảng cách d(0010, 0100) = 2
+Khoảng cách d(0000, 0100) = 1
+=> d_min = 1 (Giữa 0010 và 0000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'AVG'?
+A. 010011
+B. 010001
+C. 01000101
+D. 010000
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'IOLV'?
+A. 001001110
+B. 001001111
+C. 001001101
+D. 00100111101
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'WNGZCEDJ':
+Output: 87 | Thêm từ điển: WN (Mã: 256)
+Output: 78 | Thêm từ điển: NG (Mã: 257)
+Output: 71 | Thêm từ điển: GZ (Mã: 258)
+Output: 90 | Thêm từ điển: ZC (Mã: 259)
+Output: 67 | Thêm từ điển: CE (Mã: 260)
+Output: 69 | Thêm từ điển: ED (Mã: 261)
+Output: 68 | Thêm từ điển: DJ (Mã: 262)
+Output cuối: 74
+=> Dãy mã hóa: 87 78 71 90 67 69 68 74 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 87 78 71 90 67 69 68 74 
+Đọc 87 -> Xuất: W
+Đọc 78 -> Xuất: N | Thêm từ điển: WN (Mã: 256)
+Đọc 71 -> Xuất: G | Thêm từ điển: NG (Mã: 257)
+Đọc 90 -> Xuất: Z | Thêm từ điển: GZ (Mã: 258)
+Đọc 67 -> Xuất: C | Thêm từ điển: ZC (Mã: 259)
+Đọc 69 -> Xuất: E | Thêm từ điển: CE (Mã: 260)
+Đọc 68 -> Xuất: D | Thêm từ điển: ED (Mã: 261)
+Đọc 74 -> Xuất: J | Thêm từ điển: DJ (Mã: 262)
+=> Chuỗi giải mã thành công: WNGZCEDJ
 

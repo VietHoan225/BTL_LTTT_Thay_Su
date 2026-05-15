@@ -1,46 +1,151 @@
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. -1 bit
-C. 0 bit
-D. 1 bit
+0.765989
+110001000001011
+78 84 74 81 89 67 86 
+1 0 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'KTOYMYJLW' là bao nhiêu?
+A. 10
+B. 12
+C. 9
+D. 8
 Đáp án đúng: C
 
-69 70 72 67 88 68 84 66 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'B': [0, 0.333333)
-- Ký tự 'M': [0.333333, 0.666667)
-- Ký tự 'R': [0.666667, 1)
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'XIT'?
+A. 101111
+B. 101100
+C. 101110
+D. 10111001
+Đáp án đúng: C
 
-[2] Quá trình mã hóa chuỗi 'RBM':
-Đọc 'R' -> Khoảng: [0.666667, 1.000000)
-Đọc 'B' -> Khoảng: [0.666667, 0.777778)
-Đọc 'M' -> Khoảng: [0.703704, 0.740741)
-=> Giá trị mã hóa được chọn: 0.722222
-
-[3] Quá trình giải mã (từ 0.722222, độ dài 3):
-Giá trị 0.722222 nằm trong khoảng của 'R' -> Giải mã: R
-Giá trị 0.166667 nằm trong khoảng của 'B' -> Giải mã: B
-Giá trị 0.500000 nằm trong khoảng của 'M' -> Giải mã: M
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 2 bit
-B. 1 bit
-C. 1 bit
-D. 0 bit
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PJXROSXF' là bao nhiêu?
+A. 7
+B. 9
+C. 11
+D. 8
 Đáp án đúng: D
 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PCXSADC' là bao nhiêu?
+A. 8
+B. 7
+C. 10
+D. 6
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.200000)
+- Ký tự 'J': [0.200000, 0.400000)
+- Ký tự 'R': [0.400000, 0.600000)
+- Ký tự 'W': [0.600000, 0.800000)
+- Ký tự 'Z': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'DRZWJ':
+Đọc 'D' -> Khoảng: [0.000000, 0.200000)
+Đọc 'R' -> Khoảng: [0.080000, 0.120000)
+Đọc 'Z' -> Khoảng: [0.112000, 0.120000)
+Đọc 'W' -> Khoảng: [0.116800, 0.118400)
+Đọc 'J' -> Khoảng: [0.117120, 0.117440)
+=> Giá trị mã hóa được chọn: 0.117280
+=> Mã nhị phân tương ứng (13 bit): 0001111000000
+
+[3] Quá trình giải mã (từ mã nhị phân 0001111000000, giá trị 0.117188, độ dài 5):
+Giá trị 0.117188 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.585938 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.929687 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.648437 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.242187 nằm trong khoảng của 'J' -> Giải mã: J
+
+2 1 0
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'MWHZN'?
+A. 010100111100001
+B. 0101001111001
+C. 0101001111010
+D. 0101001111000
+Đáp án đúng: D
+
+90 78 78 86 78 90 74 
+1 0 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0.000000, 0.333333)
+- Ký tự 'D': [0.333333, 0.666667)
+- Ký tự 'N': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'NCD':
+Đọc 'N' -> Khoảng: [0.666667, 1.000000)
+Đọc 'C' -> Khoảng: [0.666667, 0.777778)
+Đọc 'D' -> Khoảng: [0.703704, 0.740741)
+=> Giá trị mã hóa được chọn: 0.722222
+=> Mã nhị phân tương ứng (6 bit): 101110
+
+[3] Quá trình giải mã (từ mã nhị phân 101110, giá trị 0.718750, độ dài 3):
+Giá trị 0.718750 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.156250 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.468750 nằm trong khoảng của 'D' -> Giải mã: D
+
+71 78 79 83 84 71 71 
+66 78 90 88 79 83 73 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 1 bit
-C. 0 bit
+A. 1 bit
+B. 0 bit
+C. 2 bit
 D. 1 bit
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.166667)
+- Ký tự 'D': [0.166667, 0.666667)
+- Ký tự 'J': [0.666667, 0.833333)
+- Ký tự 'Z': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'DAJDZD':
+Đọc 'D' -> Khoảng: [0.166667, 0.666667)
+Đọc 'A' -> Khoảng: [0.166667, 0.250000)
+Đọc 'J' -> Khoảng: [0.222222, 0.236111)
+Đọc 'D' -> Khoảng: [0.224537, 0.231481)
+Đọc 'Z' -> Khoảng: [0.230324, 0.231481)
+Đọc 'D' -> Khoảng: [0.230517, 0.231096)
+=> Giá trị mã hóa được chọn: 0.230806
+=> Mã nhị phân tương ứng (12 bit): 001110110001
+
+[3] Quá trình giải mã (từ mã nhị phân 001110110001, giá trị 0.230713, độ dài 6):
+Giá trị 0.230713 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.128092 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.768555 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.611328 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.889323 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.335937 nằm trong khoảng của 'D' -> Giải mã: D
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'VAF'?
+A. 101110
+B. 101111
+C. 10111001
+D. 101100
 Đáp án đúng: A
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'PFMQZF'?
-A. 0.526020
-B. 0.556063
-C. 0.651020
-D. 0.475977
-Đáp án đúng: A
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ESSAWXDNS':
+Output: 69 | Thêm từ điển: ES (Mã: 256)
+Output: 83 | Thêm từ điển: SS (Mã: 257)
+Output: 83 | Thêm từ điển: SA (Mã: 258)
+Output: 65 | Thêm từ điển: AW (Mã: 259)
+Output: 87 | Thêm từ điển: WX (Mã: 260)
+Output: 88 | Thêm từ điển: XD (Mã: 261)
+Output: 68 | Thêm từ điển: DN (Mã: 262)
+Output: 78 | Thêm từ điển: NS (Mã: 263)
+Output cuối: 83
+=> Dãy mã hóa: 69 83 83 65 87 88 68 78 83 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 69 83 83 65 87 88 68 78 83 
+Đọc 69 -> Xuất: E
+Đọc 83 -> Xuất: S | Thêm từ điển: ES (Mã: 256)
+Đọc 83 -> Xuất: S | Thêm từ điển: SS (Mã: 257)
+Đọc 65 -> Xuất: A | Thêm từ điển: SA (Mã: 258)
+Đọc 87 -> Xuất: W | Thêm từ điển: AW (Mã: 259)
+Đọc 88 -> Xuất: X | Thêm từ điển: WX (Mã: 260)
+Đọc 68 -> Xuất: D | Thêm từ điển: XD (Mã: 261)
+Đọc 78 -> Xuất: N | Thêm từ điển: DN (Mã: 262)
+Đọc 83 -> Xuất: S | Thêm từ điển: NS (Mã: 263)
+=> Chuỗi giải mã thành công: ESSAWXDNS
 

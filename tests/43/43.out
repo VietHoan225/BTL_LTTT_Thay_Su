@@ -1,47 +1,95 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'XWTFBK'?
-A. 0.909148
-B. 1.084159
-C. 0.959159
-D. 0.989169
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.166667)
+- Ký tự 'G': [0.166667, 0.333333)
+- Ký tự 'K': [0.333333, 0.5)
+- Ký tự 'L': [0.5, 0.666667)
+- Ký tự 'Q': [0.666667, 0.833333)
+- Ký tự 'W': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'QGLWKD':
+Đọc 'Q' -> Khoảng: [0.666667, 0.833333)
+Đọc 'G' -> Khoảng: [0.694444, 0.722222)
+Đọc 'L' -> Khoảng: [0.708333, 0.712963)
+Đọc 'W' -> Khoảng: [0.712191, 0.712963)
+Đọc 'K' -> Khoảng: [0.712449, 0.712577)
+Đọc 'D' -> Khoảng: [0.712449, 0.712470)
+=> Giá trị mã hóa được chọn: 0.712459
+=> Mã nhị phân tương ứng (17 bit): 10110110011000111
+
+[3] Quá trình giải mã (từ mã nhị phân 10110110011000111, giá trị 0.712456, độ dài 6):
+Giá trị 0.712456 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.274734 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.648407 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.890442 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.342651 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.055908 nằm trong khoảng của 'D' -> Giải mã: D
+
+4 3 1
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(010111, 110110) = 2
+=> d_min = 2 (Giữa 010111 và 110110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'ZUJQ'?
+A. 111000001
+B. 111000010
+C. 111000011
+D. 11100001101
 Đáp án đúng: C
 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(001100, 100000) = 3
-=> d_min = 3 (Giữa 001100 và 100000)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'VVAXPUE':
+Output: 86 | Thêm từ điển: VV (Mã: 256)
+Output: 86 | Thêm từ điển: VA (Mã: 257)
+Output: 65 | Thêm từ điển: AX (Mã: 258)
+Output: 88 | Thêm từ điển: XP (Mã: 259)
+Output: 80 | Thêm từ điển: PU (Mã: 260)
+Output: 85 | Thêm từ điển: UE (Mã: 261)
+Output cuối: 69
+=> Dãy mã hóa: 86 86 65 88 80 85 69 
 
-1 0 0
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GPRGW'?
-A. 0.338760
-B. 0.244400
-C. 0.213760
-D. 0.163120
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 86 86 65 88 80 85 69 
+Đọc 86 -> Xuất: V
+Đọc 86 -> Xuất: V | Thêm từ điển: VV (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: VA (Mã: 257)
+Đọc 88 -> Xuất: X | Thêm từ điển: AX (Mã: 258)
+Đọc 80 -> Xuất: P | Thêm từ điển: XP (Mã: 259)
+Đọc 85 -> Xuất: U | Thêm từ điển: PU (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: UE (Mã: 261)
+=> Chuỗi giải mã thành công: VVAXPUE
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'XNYGBZ'?
+A. 1001001100110000101
+B. 10010011001100000
+C. 10010011001100001
+D. 10010011001100011
 Đáp án đúng: C
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'B': [0, 0.166667)
-- Ký tự 'O': [0.166667, 0.333333)
-- Ký tự 'P': [0.333333, 0.5)
-- Ký tự 'X': [0.5, 0.833333)
-- Ký tự 'Z': [0.833333, 1)
+- Ký tự 'B': [0.000000, 0.200000)
+- Ký tự 'C': [0.200000, 0.400000)
+- Ký tự 'F': [0.400000, 0.600000)
+- Ký tự 'L': [0.600000, 0.800000)
+- Ký tự 'W': [0.800000, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'OXBPZX':
-Đọc 'O' -> Khoảng: [0.166667, 0.333333)
-Đọc 'X' -> Khoảng: [0.250000, 0.305556)
-Đọc 'B' -> Khoảng: [0.250000, 0.259259)
-Đọc 'P' -> Khoảng: [0.253086, 0.254630)
-Đọc 'Z' -> Khoảng: [0.254372, 0.254630)
-Đọc 'X' -> Khoảng: [0.254501, 0.254587)
-=> Giá trị mã hóa được chọn: 0.254544
+[2] Quá trình mã hóa chuỗi 'WFCBL':
+Đọc 'W' -> Khoảng: [0.800000, 1.000000)
+Đọc 'F' -> Khoảng: [0.880000, 0.920000)
+Đọc 'C' -> Khoảng: [0.888000, 0.896000)
+Đọc 'B' -> Khoảng: [0.888000, 0.889600)
+Đọc 'L' -> Khoảng: [0.888960, 0.889280)
+=> Giá trị mã hóa được chọn: 0.889120
+=> Mã nhị phân tương ứng (13 bit): 1110001110011
 
-[3] Quá trình giải mã (từ 0.254544, độ dài 6):
-Giá trị 0.254544 nằm trong khoảng của 'O' -> Giải mã: O
-Giá trị 0.527263 nằm trong khoảng của 'X' -> Giải mã: X
-Giá trị 0.081790 nằm trong khoảng của 'B' -> Giải mã: B
-Giá trị 0.490741 nằm trong khoảng của 'P' -> Giải mã: P
-Giá trị 0.944444 nằm trong khoảng của 'Z' -> Giải mã: Z
-Giá trị 0.666667 nằm trong khoảng của 'X' -> Giải mã: X
+[3] Quá trình giải mã (từ mã nhị phân 1110001110011, giá trị 0.889038, độ dài 5):
+Giá trị 0.889038 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.445190 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.225952 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.129761 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.648804 nằm trong khoảng của 'L' -> Giải mã: L
 
 2 1 0

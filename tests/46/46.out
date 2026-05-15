@@ -1,95 +1,63 @@
-73 88 81 80 69 75 83 80 78 66 
-80 86 90 67 80 90 78 77 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(100, 001) = 2
-Khoảng cách d(100, 110) = 1
-Khoảng cách d(001, 110) = 3
-=> d_min = 1 (Giữa 100 và 110)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'TCYP'?
+A. 100011010
+B. 100011001
+C. 10001101101
+D. 100011011
+Đáp án đúng: D
 
-3 2 1
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WETHIKKR' là bao nhiêu?
-A. 8
-B. 9
-C. 7
-D. 11
-Đáp án đúng: A
-
-0.741440
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(1010, 0010) = 1
-Khoảng cách d(1010, 1110) = 1
-Khoảng cách d(1010, 0001) = 3
-Khoảng cách d(0010, 1110) = 2
-Khoảng cách d(0010, 0001) = 2
-Khoảng cách d(1110, 0001) = 4
-=> d_min = 1 (Giữa 1010 và 0010)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZNSOKSE' là bao nhiêu?
-A. 8
-B. 6
-C. 7
-D. 10
+0 -1 0
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 3 bit
+B. 2 bit
+C. 1 bit
+D. 2 bit
 Đáp án đúng: C
 
+0.796296
+110010
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(10010, 11111) = 3
-Khoảng cách d(10010, 01011) = 3
-Khoảng cách d(11111, 01011) = 2
-=> d_min = 2 (Giữa 11111 và 01011)
+Khoảng cách d(10000, 11100) = 2
+Khoảng cách d(10000, 10100) = 1
+Khoảng cách d(11100, 10100) = 1
+=> d_min = 1 (Giữa 10000 và 10100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(10100, 00101) = 2
+=> d_min = 2 (Giữa 10100 và 00101)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 0 bit
-C. 0 bit
-D. -1 bit
-Đáp án đúng: B
-
-1 0 0
-75 83 82 82 69 74 73 87 80 69 
-0.740741
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11111, 01111) = 1
-Khoảng cách d(11111, 00001) = 4
-Khoảng cách d(11111, 00101) = 3
-Khoảng cách d(01111, 00001) = 3
-Khoảng cách d(01111, 00101) = 2
-Khoảng cách d(00001, 00101) = 1
-=> d_min = 1 (Giữa 11111 và 01111)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+Khoảng cách d(101, 010) = 3
+=> d_min = 3 (Giữa 101 và 010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JNMK'?
-A. 0.172656
-B. 0.349609
-C. 0.256562
-D. 0.224609
-Đáp án đúng: D
+0.049254
+000011001001101
+87 78 86 70 90 82 85 87 68 85 
+3 2 1
+66 87 89 72 82 80 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'DRUQUMSW' là bao nhiêu?
+A. 9
+B. 7
+C. 8
+D. 11
+Đáp án đúng: C
 
-2 1 0
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'GYRRZZ':
-Output: 71 | Thêm từ điển: GY (Mã: 256)
-Output: 89 | Thêm từ điển: YR (Mã: 257)
-Output: 82 | Thêm từ điển: RR (Mã: 258)
-Output: 82 | Thêm từ điển: RZ (Mã: 259)
-Output: 90 | Thêm từ điển: ZZ (Mã: 260)
-Output cuối: 90
-=> Dãy mã hóa: 71 89 82 82 90 90 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 3 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: C
 
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 71 89 82 82 90 90 
-Đọc 71 -> Xuất: G
-Đọc 89 -> Xuất: Y | Thêm từ điển: GY (Mã: 256)
-Đọc 82 -> Xuất: R | Thêm từ điển: YR (Mã: 257)
-Đọc 82 -> Xuất: R | Thêm từ điển: RR (Mã: 258)
-Đọc 90 -> Xuất: Z | Thêm từ điển: RZ (Mã: 259)
-Đọc 90 -> Xuất: Z | Thêm từ điển: ZZ (Mã: 260)
-=> Chuỗi giải mã thành công: GYRRZZ
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'XQB'?
+A. 11001001
+B. 110000
+C. 110010
+D. 110011
+Đáp án đúng: C
 
-2 1 0

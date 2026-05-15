@@ -1,175 +1,104 @@
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NDWIK' là bao nhiêu?
-A. 4
-B. 6
-C. 8
-D. 5
-Đáp án đúng: D
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ALIRTUTRH':
+Output: 65 | Thêm từ điển: AL (Mã: 256)
+Output: 76 | Thêm từ điển: LI (Mã: 257)
+Output: 73 | Thêm từ điển: IR (Mã: 258)
+Output: 82 | Thêm từ điển: RT (Mã: 259)
+Output: 84 | Thêm từ điển: TU (Mã: 260)
+Output: 85 | Thêm từ điển: UT (Mã: 261)
+Output: 84 | Thêm từ điển: TR (Mã: 262)
+Output: 82 | Thêm từ điển: RH (Mã: 263)
+Output cuối: 72
+=> Dãy mã hóa: 65 76 73 82 84 85 84 82 72 
 
-84 65 87 67 76 65 86 72 90 
-0.388672
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'FJBHWDBG' là bao nhiêu?
-A. 11
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 65 76 73 82 84 85 84 82 72 
+Đọc 65 -> Xuất: A
+Đọc 76 -> Xuất: L | Thêm từ điển: AL (Mã: 256)
+Đọc 73 -> Xuất: I | Thêm từ điển: LI (Mã: 257)
+Đọc 82 -> Xuất: R | Thêm từ điển: IR (Mã: 258)
+Đọc 84 -> Xuất: T | Thêm từ điển: RT (Mã: 259)
+Đọc 85 -> Xuất: U | Thêm từ điển: TU (Mã: 260)
+Đọc 84 -> Xuất: T | Thêm từ điển: UT (Mã: 261)
+Đọc 82 -> Xuất: R | Thêm từ điển: TR (Mã: 262)
+Đọc 72 -> Xuất: H | Thêm từ điển: RH (Mã: 263)
+=> Chuỗi giải mã thành công: ALIRTUTRH
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 3 bit
+B. 2 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: C
+
+72 69 75 84 71 71 77 69 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YCFLDIIKXQ' là bao nhiêu?
+A. 10
 B. 9
-C. 7
-D. 8
-Đáp án đúng: D
+C. 13
+D. 11
+Đáp án đúng: A
 
-0.574074
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(1010, 0001) = 3
-Khoảng cách d(1010, 0001) = 3
-Khoảng cách d(1010, 0111) = 3
-Khoảng cách d(0001, 0001) = 0
-Khoảng cách d(0001, 0111) = 2
-Khoảng cách d(0001, 0111) = 2
-=> d_min = 0 (Giữa 0001 và 0001)
+Khoảng cách d(1011, 1011) = 0
+=> d_min = 0 (Giữa 1011 và 1011)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'QYMJT'?
-A. 0.518960
-B. 0.599280
-C. 0.569120
-D. 0.694120
-Đáp án đúng: C
-
-2 1 0
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'F': [0.000000, 0.333333)
-- Ký tự 'T': [0.333333, 0.666667)
-- Ký tự 'Z': [0.666667, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'TFZ':
-Đọc 'T' -> Khoảng: [0.333333, 0.666667)
-Đọc 'F' -> Khoảng: [0.333333, 0.444444)
-Đọc 'Z' -> Khoảng: [0.407407, 0.444444)
-=> Giá trị mã hóa được chọn: 0.425926
-
-[3] Quá trình giải mã (từ 0.425926, độ dài 3):
-Giá trị 0.425926 nằm trong khoảng của 'T' -> Giải mã: T
-Giá trị 0.277778 nằm trong khoảng của 'F' -> Giải mã: F
-Giá trị 0.833333 nằm trong khoảng của 'Z' -> Giải mã: Z
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'RJNCB':
-Output: 82 | Thêm từ điển: RJ (Mã: 256)
-Output: 74 | Thêm từ điển: JN (Mã: 257)
-Output: 78 | Thêm từ điển: NC (Mã: 258)
-Output: 67 | Thêm từ điển: CB (Mã: 259)
-Output cuối: 66
-=> Dãy mã hóa: 82 74 78 67 66 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 82 74 78 67 66 
-Đọc 82 -> Xuất: R
-Đọc 74 -> Xuất: J | Thêm từ điển: RJ (Mã: 256)
-Đọc 78 -> Xuất: N | Thêm từ điển: JN (Mã: 257)
-Đọc 67 -> Xuất: C | Thêm từ điển: NC (Mã: 258)
-Đọc 66 -> Xuất: B | Thêm từ điển: CB (Mã: 259)
-=> Chuỗi giải mã thành công: RJNCB
-
-0.840235
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'WLO'?
-A. 0.653704
-B. 0.722222
-C. 0.770741
-D. 0.847222
-Đáp án đúng: B
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'RJGGGWN':
-Output: 82 | Thêm từ điển: RJ (Mã: 256)
-Output: 74 | Thêm từ điển: JG (Mã: 257)
-Output: 71 | Thêm từ điển: GG (Mã: 258)
-Output: 258 | Thêm từ điển: GGW (Mã: 259)
-Output: 87 | Thêm từ điển: WN (Mã: 260)
-Output cuối: 78
-=> Dãy mã hóa: 82 74 71 258 87 78 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 82 74 71 258 87 78 
-Đọc 82 -> Xuất: R
-Đọc 74 -> Xuất: J | Thêm từ điển: RJ (Mã: 256)
-Đọc 71 -> Xuất: G | Thêm từ điển: JG (Mã: 257)
-Đọc 258 -> Xuất: GG | Thêm từ điển: GG (Mã: 258)
-Đọc 87 -> Xuất: W | Thêm từ điển: GGW (Mã: 259)
-Đọc 78 -> Xuất: N | Thêm từ điển: WN (Mã: 260)
-=> Chuỗi giải mã thành công: RJGGGWN
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11111, 00000) = 5
-Khoảng cách d(11111, 11011) = 1
-Khoảng cách d(11111, 11110) = 1
-Khoảng cách d(00000, 11011) = 4
-Khoảng cách d(00000, 11110) = 4
-Khoảng cách d(11011, 11110) = 2
-=> d_min = 1 (Giữa 11111 và 11011)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(101, 010) = 3
-=> d_min = 3 (Giữa 101 và 010)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WQWLUVT' là bao nhiêu?
+85 76 70 67 71 74 76 77 
+0.935367
+11101111011101000
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'EGHGCOZ' là bao nhiêu?
 A. 10
 B. 8
 C. 6
 D. 7
 Đáp án đúng: D
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'ZXYWPVPKR':
-Output: 90 | Thêm từ điển: ZX (Mã: 256)
-Output: 88 | Thêm từ điển: XY (Mã: 257)
-Output: 89 | Thêm từ điển: YW (Mã: 258)
-Output: 87 | Thêm từ điển: WP (Mã: 259)
-Output: 80 | Thêm từ điển: PV (Mã: 260)
-Output: 86 | Thêm từ điển: VP (Mã: 261)
-Output: 80 | Thêm từ điển: PK (Mã: 262)
-Output: 75 | Thêm từ điển: KR (Mã: 263)
-Output cuối: 82
-=> Dãy mã hóa: 90 88 89 87 80 86 80 75 82 
+66 86 67 72 75 87 86 86 
+0.526880
+1000011011100
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'EKYUQ'?
+A. 0001001111001
+B. 000100111101101
+C. 0001001111011
+D. 0001001111010
+Đáp án đúng: C
 
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 90 88 89 87 80 86 80 75 82 
-Đọc 90 -> Xuất: Z
-Đọc 88 -> Xuất: X | Thêm từ điển: ZX (Mã: 256)
-Đọc 89 -> Xuất: Y | Thêm từ điển: XY (Mã: 257)
-Đọc 87 -> Xuất: W | Thêm từ điển: YW (Mã: 258)
-Đọc 80 -> Xuất: P | Thêm từ điển: WP (Mã: 259)
-Đọc 86 -> Xuất: V | Thêm từ điển: PV (Mã: 260)
-Đọc 80 -> Xuất: P | Thêm từ điển: VP (Mã: 261)
-Đọc 75 -> Xuất: K | Thêm từ điển: PK (Mã: 262)
-Đọc 82 -> Xuất: R | Thêm từ điển: KR (Mã: 263)
-=> Chuỗi giải mã thành công: ZXYWPVPKR
+2 1 0
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'YLS'?
+A. 101110
+B. 10111001
+C. 101111
+D. 101100
+Đáp án đúng: A
 
+1 0 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'MNIZI' là bao nhiêu?
+A. 5
+B. 8
+C. 6
+D. 4
+Đáp án đúng: A
+
+72 73 72 85 71 80 70 68 88 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'B': [0.000000, 0.166667)
-- Ký tự 'K': [0.166667, 0.333333)
-- Ký tự 'M': [0.333333, 0.500000)
-- Ký tự 'Q': [0.500000, 0.666667)
-- Ký tự 'V': [0.666667, 0.833333)
-- Ký tự 'X': [0.833333, 1.000000)
+- Ký tự 'A': [0.000000, 0.333333)
+- Ký tự 'J': [0.333333, 0.666667)
+- Ký tự 'X': [0.666667, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'XQKBMV':
-Đọc 'X' -> Khoảng: [0.833333, 1.000000)
-Đọc 'Q' -> Khoảng: [0.916667, 0.944444)
-Đọc 'K' -> Khoảng: [0.921296, 0.925926)
-Đọc 'B' -> Khoảng: [0.921296, 0.922068)
-Đọc 'M' -> Khoảng: [0.921553, 0.921682)
-Đọc 'V' -> Khoảng: [0.921639, 0.921661)
-=> Giá trị mã hóa được chọn: 0.921650
+[2] Quá trình mã hóa chuỗi 'JAX':
+Đọc 'J' -> Khoảng: [0.333333, 0.666667)
+Đọc 'A' -> Khoảng: [0.333333, 0.444444)
+Đọc 'X' -> Khoảng: [0.407407, 0.444444)
+=> Giá trị mã hóa được chọn: 0.425926
+=> Mã nhị phân tương ứng (6 bit): 011011
 
-[3] Quá trình giải mã (từ 0.921650, độ dài 6):
-Giá trị 0.921650 nằm trong khoảng của 'X' -> Giải mã: X
-Giá trị 0.529900 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.179398 nằm trong khoảng của 'K' -> Giải mã: K
-Giá trị 0.076389 nằm trong khoảng của 'B' -> Giải mã: B
-Giá trị 0.458333 nằm trong khoảng của 'M' -> Giải mã: M
-Giá trị 0.750000 nằm trong khoảng của 'V' -> Giải mã: V
+[3] Quá trình giải mã (từ mã nhị phân 011011, giá trị 0.421875, độ dài 3):
+Giá trị 0.421875 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.265625 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.796875 nằm trong khoảng của 'X' -> Giải mã: X
 
+0.880859
+111000011

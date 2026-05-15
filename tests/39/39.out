@@ -1,75 +1,43 @@
-0.434720
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'D': [0.000000, 0.250000)
-- Ký tự 'K': [0.250000, 0.500000)
-- Ký tự 'N': [0.500000, 0.750000)
-- Ký tự 'X': [0.750000, 1.000000)
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 3 bit
+C. 2 bit
+D. 4 bit
+Đáp án đúng: A
 
-[2] Quá trình mã hóa chuỗi 'NKDX':
-Đọc 'N' -> Khoảng: [0.500000, 0.750000)
-Đọc 'K' -> Khoảng: [0.562500, 0.625000)
-Đọc 'D' -> Khoảng: [0.562500, 0.578125)
-Đọc 'X' -> Khoảng: [0.574219, 0.578125)
-=> Giá trị mã hóa được chọn: 0.576172
-
-[3] Quá trình giải mã (từ 0.576172, độ dài 4):
-Giá trị 0.576172 nằm trong khoảng của 'N' -> Giải mã: N
-Giá trị 0.304688 nằm trong khoảng của 'K' -> Giải mã: K
-Giá trị 0.218750 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.875000 nằm trong khoảng của 'X' -> Giải mã: X
-
+70 75 72 74 71 76 78 66 69 71 
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(011001, 010110) = 4
-Khoảng cách d(011001, 001010) = 3
-Khoảng cách d(011001, 100010) = 5
-Khoảng cách d(010110, 001010) = 3
-Khoảng cách d(010110, 100010) = 3
-Khoảng cách d(001010, 100010) = 2
-=> d_min = 2 (Giữa 001010 và 100010)
+Khoảng cách d(000, 101) = 2
+=> d_min = 2 (Giữa 000 và 101)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'J': [0.000000, 0.666667)
-- Ký tự 'U': [0.666667, 1.000000)
+- Ký tự 'F': [0, 0.25)
+- Ký tự 'N': [0.25, 0.5)
+- Ký tự 'O': [0.5, 0.75)
+- Ký tự 'Y': [0.75, 1)
 
-[2] Quá trình mã hóa chuỗi 'UJJ':
-Đọc 'U' -> Khoảng: [0.666667, 1.000000)
-Đọc 'J' -> Khoảng: [0.666667, 0.888889)
-Đọc 'J' -> Khoảng: [0.666667, 0.814815)
-=> Giá trị mã hóa được chọn: 0.740741
+[2] Quá trình mã hóa chuỗi 'NYFO':
+Đọc 'N' -> Khoảng: [0.250000, 0.500000)
+Đọc 'Y' -> Khoảng: [0.437500, 0.500000)
+Đọc 'F' -> Khoảng: [0.437500, 0.453125)
+Đọc 'O' -> Khoảng: [0.445312, 0.449219)
+=> Giá trị mã hóa được chọn: 0.447266
+=> Mã nhị phân tương ứng (9 bit): 011100101
 
-[3] Quá trình giải mã (từ 0.740741, độ dài 3):
-Giá trị 0.740741 nằm trong khoảng của 'U' -> Giải mã: U
-Giá trị 0.222222 nằm trong khoảng của 'J' -> Giải mã: J
-Giá trị 0.333333 nằm trong khoảng của 'J' -> Giải mã: J
+[3] Quá trình giải mã (từ mã nhị phân 011100101, giá trị 0.447266, độ dài 4):
+Giá trị 0.447266 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.789062 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.156250 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.625000 nằm trong khoảng của 'O' -> Giải mã: O
 
-69 85 66 76 83 77 86 72 85 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'D': [0.000000, 0.166667)
-- Ký tự 'G': [0.166667, 0.333333)
-- Ký tự 'M': [0.333333, 0.500000)
-- Ký tự 'O': [0.500000, 0.666667)
-- Ký tự 'S': [0.666667, 0.833333)
-- Ký tự 'Z': [0.833333, 1.000000)
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZKIENU' là bao nhiêu?
+A. 5
+B. 6
+C. 7
+D. 9
+Đáp án đúng: B
 
-[2] Quá trình mã hóa chuỗi 'ODZSGM':
-Đọc 'O' -> Khoảng: [0.500000, 0.666667)
-Đọc 'D' -> Khoảng: [0.500000, 0.527778)
-Đọc 'Z' -> Khoảng: [0.523148, 0.527778)
-Đọc 'S' -> Khoảng: [0.526235, 0.527006)
-Đọc 'G' -> Khoảng: [0.526363, 0.526492)
-Đọc 'M' -> Khoảng: [0.526406, 0.526427)
-=> Giá trị mã hóa được chọn: 0.526417
-
-[3] Quá trình giải mã (từ 0.526417, độ dài 6):
-Giá trị 0.526417 nằm trong khoảng của 'O' -> Giải mã: O
-Giá trị 0.158501 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.951003 nằm trong khoảng của 'Z' -> Giải mã: Z
-Giá trị 0.706019 nằm trong khoảng của 'S' -> Giải mã: S
-Giá trị 0.236111 nằm trong khoảng của 'G' -> Giải mã: G
-Giá trị 0.416667 nằm trong khoảng của 'M' -> Giải mã: M
-
+1 0 0

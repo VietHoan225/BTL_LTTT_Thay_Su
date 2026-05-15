@@ -1,34 +1,138 @@
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'BDDKH' là bao nhiêu?
-A. 8
-B. 6
-C. 5
-D. 4
-Đáp án đúng: C
-
-68 74 84 75 84 89 69 79 76 83 
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(101011, 110011) = 2
-Khoảng cách d(101011, 111111) = 2
-Khoảng cách d(101011, 101011) = 0
-Khoảng cách d(110011, 111111) = 2
-Khoảng cách d(110011, 101011) = 2
-Khoảng cách d(111111, 101011) = 2
-=> d_min = 0 (Giữa 101011 và 101011)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+Khoảng cách d(1001, 0111) = 3
+=> d_min = 3 (Giữa 1001 và 0111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'QSOIYZMR' là bao nhiêu?
-A. 8
-B. 7
-C. 9
-D. 11
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'TQUE'?
+A. 100111000
+B. 10011100101
+C. 100111011
+D. 100111001
+Đáp án đúng: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011100, 010011) = 4
+=> d_min = 4 (Giữa 011100 và 010011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 3 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+0.574074
+100100
+0 -1 0
+89 82 70 88 87 88 89 71 67 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'I': [0.000000, 0.250000)
+- Ký tự 'K': [0.250000, 0.500000)
+- Ký tự 'O': [0.500000, 0.750000)
+- Ký tự 'V': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'VKOI':
+Đọc 'V' -> Khoảng: [0.750000, 1.000000)
+Đọc 'K' -> Khoảng: [0.812500, 0.875000)
+Đọc 'O' -> Khoảng: [0.843750, 0.859375)
+Đọc 'I' -> Khoảng: [0.843750, 0.847656)
+=> Giá trị mã hóa được chọn: 0.845703
+=> Mã nhị phân tương ứng (9 bit): 110110001
+
+[3] Quá trình giải mã (từ mã nhị phân 110110001, giá trị 0.845703, độ dài 4):
+Giá trị 0.845703 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.382812 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.531250 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.125000 nằm trong khoảng của 'I' -> Giải mã: I
+
+2 1 0
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. -1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 3 bit
+B. 1 bit
+C. 2 bit
+D. 2 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JHVBVUM' là bao nhiêu?
+A. 7
+B. 8
+C. 10
+D. 6
 Đáp án đúng: A
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'FAOKUEBEY' là bao nhiêu?
-A. 10
-B. 12
-C. 9
-D. 8
-Đáp án đúng: C
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101101, 010110) = 5
+Khoảng cách d(101101, 111100) = 2
+Khoảng cách d(010110, 111100) = 3
+=> d_min = 2 (Giữa 101101 và 111100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-0.253783
+70 79 80 73 84 68 65 69 
+0.644640
+1010010100000
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'U': [0.000000, 0.333333)
+- Ký tự 'V': [0.333333, 0.666667)
+- Ký tự 'W': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'VWU':
+Đọc 'V' -> Khoảng: [0.333333, 0.666667)
+Đọc 'W' -> Khoảng: [0.555556, 0.666667)
+Đọc 'U' -> Khoảng: [0.555556, 0.592593)
+=> Giá trị mã hóa được chọn: 0.574074
+=> Mã nhị phân tương ứng (6 bit): 100100
+
+[3] Quá trình giải mã (từ mã nhị phân 100100, giá trị 0.562500, độ dài 3):
+Giá trị 0.562500 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.687500 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.062500 nằm trong khoảng của 'U' -> Giải mã: U
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0.000000, 0.250000)
+- Ký tự 'G': [0.250000, 0.500000)
+- Ký tự 'S': [0.500000, 0.750000)
+- Ký tự 'U': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'UGSB':
+Đọc 'U' -> Khoảng: [0.750000, 1.000000)
+Đọc 'G' -> Khoảng: [0.812500, 0.875000)
+Đọc 'S' -> Khoảng: [0.843750, 0.859375)
+Đọc 'B' -> Khoảng: [0.843750, 0.847656)
+=> Giá trị mã hóa được chọn: 0.845703
+=> Mã nhị phân tương ứng (9 bit): 110110001
+
+[3] Quá trình giải mã (từ mã nhị phân 110110001, giá trị 0.845703, độ dài 4):
+Giá trị 0.845703 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.382812 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.531250 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.125000 nằm trong khoảng của 'B' -> Giải mã: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LTDZDVG' là bao nhiêu?
+A. 7
+B. 8
+C. 6
+D. 10
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'SQXY'?
+A. 010010111
+B. 01001011101
+C. 010010101
+D. 010010110
+Đáp án đúng: A
+
+90 89 73 71 85 82 71 79 66 88 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'VQEJYAT' là bao nhiêu?
+A. 8
+B. 10
+C. 6
+D. 7
+Đáp án đúng: D
+

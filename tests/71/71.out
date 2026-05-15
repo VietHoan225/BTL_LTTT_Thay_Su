@@ -1,60 +1,115 @@
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JCDFDB' là bao nhiêu?
-A. 5
-B. 6
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'QBX'?
+A. 011001
+B. 011010
+C. 01101101
+D. 011011
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'MEZNJIJFQ':
+Output: 77 | Thêm từ điển: ME (Mã: 256)
+Output: 69 | Thêm từ điển: EZ (Mã: 257)
+Output: 90 | Thêm từ điển: ZN (Mã: 258)
+Output: 78 | Thêm từ điển: NJ (Mã: 259)
+Output: 74 | Thêm từ điển: JI (Mã: 260)
+Output: 73 | Thêm từ điển: IJ (Mã: 261)
+Output: 74 | Thêm từ điển: JF (Mã: 262)
+Output: 70 | Thêm từ điển: FQ (Mã: 263)
+Output cuối: 81
+=> Dãy mã hóa: 77 69 90 78 74 73 74 70 81 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 77 69 90 78 74 73 74 70 81 
+Đọc 77 -> Xuất: M
+Đọc 69 -> Xuất: E | Thêm từ điển: ME (Mã: 256)
+Đọc 90 -> Xuất: Z | Thêm từ điển: EZ (Mã: 257)
+Đọc 78 -> Xuất: N | Thêm từ điển: ZN (Mã: 258)
+Đọc 74 -> Xuất: J | Thêm từ điển: NJ (Mã: 259)
+Đọc 73 -> Xuất: I | Thêm từ điển: JI (Mã: 260)
+Đọc 74 -> Xuất: J | Thêm từ điển: IJ (Mã: 261)
+Đọc 70 -> Xuất: F | Thêm từ điển: JF (Mã: 262)
+Đọc 81 -> Xuất: Q | Thêm từ điển: FQ (Mã: 263)
+=> Chuỗi giải mã thành công: MEZNJIJFQ
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'UGAYR'?
+A. 101001011010101
+B. 1010010110101
+C. 1010010110100
+D. 1010010110111
+Đáp án đúng: B
+
+81 65 78 77 67 90 87 75 76 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.166667)
+- Ký tự 'G': [0.166667, 0.333333)
+- Ký tự 'M': [0.333333, 0.666667)
+- Ký tự 'O': [0.666667, 0.833333)
+- Ký tự 'T': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'TGMDOM':
+Đọc 'T' -> Khoảng: [0.833333, 1.000000)
+Đọc 'G' -> Khoảng: [0.861111, 0.888889)
+Đọc 'M' -> Khoảng: [0.870370, 0.879630)
+Đọc 'D' -> Khoảng: [0.870370, 0.871914)
+Đọc 'O' -> Khoảng: [0.871399, 0.871656)
+Đọc 'M' -> Khoảng: [0.871485, 0.871571)
+=> Giá trị mã hóa được chọn: 0.871528
+=> Mã nhị phân tương ứng (15 bit): 110111110001110
+
+[3] Quá trình giải mã (từ mã nhị phân 110111110001110, giá trị 0.871521, độ dài 6):
+Giá trị 0.871521 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.229126 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.374756 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.124268 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.745605 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.473633 nằm trong khoảng của 'M' -> Giải mã: M
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011, 111) = 1
+Khoảng cách d(011, 001) = 1
+Khoảng cách d(011, 011) = 0
+Khoảng cách d(111, 001) = 2
+Khoảng cách d(111, 011) = 1
+Khoảng cách d(001, 011) = 1
+=> d_min = 0 (Giữa 011 và 011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'IEYKI' là bao nhiêu?
+A. 6
+B. 4
+C. 5
+D. 8
+Đáp án đúng: C
+
+84 88 73 67 78 78 81 
+0 -1 0
+3 2 1
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.666667)
+- Ký tự 'J': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'JDD':
+Đọc 'J' -> Khoảng: [0.666667, 1.000000)
+Đọc 'D' -> Khoảng: [0.666667, 0.888889)
+Đọc 'D' -> Khoảng: [0.666667, 0.814815)
+=> Giá trị mã hóa được chọn: 0.740741
+=> Mã nhị phân tương ứng (4 bit): 1011
+
+[3] Quá trình giải mã (từ mã nhị phân 1011, giá trị 0.687500, độ dài 3):
+Giá trị 0.687500 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.062500 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.093750 nằm trong khoảng của 'D' -> Giải mã: D
+
+1 0 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'BHBNXYSU' là bao nhiêu?
+A. 11
+B. 8
 C. 9
 D. 7
 Đáp án đúng: B
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'D': [0, 0.166667)
-- Ký tự 'F': [0.166667, 0.333333)
-- Ký tự 'M': [0.333333, 0.666667)
-- Ký tự 'Q': [0.666667, 0.833333)
-- Ký tự 'Z': [0.833333, 1)
-
-[2] Quá trình mã hóa chuỗi 'DZMQMF':
-Đọc 'D' -> Khoảng: [0.000000, 0.166667)
-Đọc 'Z' -> Khoảng: [0.138889, 0.166667)
-Đọc 'M' -> Khoảng: [0.148148, 0.157407)
-Đọc 'Q' -> Khoảng: [0.154321, 0.155864)
-Đọc 'M' -> Khoảng: [0.154835, 0.155350)
-Đọc 'F' -> Khoảng: [0.154921, 0.155007)
-=> Giá trị mã hóa được chọn: 0.154964
-
-[3] Quá trình giải mã (từ 0.154964, độ dài 6):
-Giá trị 0.154964 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.929784 nằm trong khoảng của 'Z' -> Giải mã: Z
-Giá trị 0.578704 nằm trong khoảng của 'M' -> Giải mã: M
-Giá trị 0.736111 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.416667 nằm trong khoảng của 'M' -> Giải mã: M
-Giá trị 0.250000 nằm trong khoảng của 'F' -> Giải mã: F
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'IAVHSIY' là bao nhiêu?
-A. 7
-B. 10
-C. 8
-D. 6
-Đáp án đúng: A
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JPCFGKNY' là bao nhiêu?
-A. 11
-B. 7
-C. 9
-D. 8
-Đáp án đúng: D
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GQP'?
-A. 0.209259
-B. 0.326296
-C. 0.402778
-D. 0.277778
-Đáp án đúng: D
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 1 bit
-C. 1 bit
-D. 0 bit
-Đáp án đúng: D
-
+0.722222
+101110

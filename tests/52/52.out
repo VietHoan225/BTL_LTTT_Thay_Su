@@ -1,68 +1,20 @@
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'CKSWU' là bao nhiêu?
-A. 4
-B. 5
-C. 8
-D. 6
-Đáp án đúng: B
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'CCWP'?
+A. 0011111
+B. 001110101
+C. 0011101
+D. 0011100
+Đáp án đúng: C
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'WDYTFIFKR':
-Output: 87 | Thêm từ điển: WD (Mã: 256)
-Output: 68 | Thêm từ điển: DY (Mã: 257)
-Output: 89 | Thêm từ điển: YT (Mã: 258)
-Output: 84 | Thêm từ điển: TF (Mã: 259)
-Output: 70 | Thêm từ điển: FI (Mã: 260)
-Output: 73 | Thêm từ điển: IF (Mã: 261)
-Output: 70 | Thêm từ điển: FK (Mã: 262)
-Output: 75 | Thêm từ điển: KR (Mã: 263)
-Output cuối: 82
-=> Dãy mã hóa: 87 68 89 84 70 73 70 75 82 
+0.487183
+011111001011100
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'CIIIW'?
+A. 0001111001
+B. 00011100
+C. 00011111
+D. 00011110
+Đáp án đúng: D
 
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 87 68 89 84 70 73 70 75 82 
-Đọc 87 -> Xuất: W
-Đọc 68 -> Xuất: D | Thêm từ điển: WD (Mã: 256)
-Đọc 89 -> Xuất: Y | Thêm từ điển: DY (Mã: 257)
-Đọc 84 -> Xuất: T | Thêm từ điển: YT (Mã: 258)
-Đọc 70 -> Xuất: F | Thêm từ điển: TF (Mã: 259)
-Đọc 73 -> Xuất: I | Thêm từ điển: FI (Mã: 260)
-Đọc 70 -> Xuất: F | Thêm từ điển: IF (Mã: 261)
-Đọc 75 -> Xuất: K | Thêm từ điển: FK (Mã: 262)
-Đọc 82 -> Xuất: R | Thêm từ điển: KR (Mã: 263)
-=> Chuỗi giải mã thành công: WDYTFIFKR
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'OJEOZ':
-Output: 79 | Thêm từ điển: OJ (Mã: 256)
-Output: 74 | Thêm từ điển: JE (Mã: 257)
-Output: 69 | Thêm từ điển: EO (Mã: 258)
-Output: 79 | Thêm từ điển: OZ (Mã: 259)
-Output cuối: 90
-=> Dãy mã hóa: 79 74 69 79 90 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 79 74 69 79 90 
-Đọc 79 -> Xuất: O
-Đọc 74 -> Xuất: J | Thêm từ điển: OJ (Mã: 256)
-Đọc 69 -> Xuất: E | Thêm từ điển: JE (Mã: 257)
-Đọc 79 -> Xuất: O | Thêm từ điển: EO (Mã: 258)
-Đọc 90 -> Xuất: Z | Thêm từ điển: OZ (Mã: 259)
-=> Chuỗi giải mã thành công: OJEOZ
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11111, 11100) = 2
-=> d_min = 2 (Giữa 11111 và 11100)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-0.324760
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'IOOKWIA' là bao nhiêu?
-A. 10
-B. 7
-C. 8
-D. 6
-Đáp án đúng: B
-
+75 85 77 79 66 67 76 90 65 69 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 1 bit
 B. 0 bit
@@ -70,105 +22,30 @@ C. 1 bit
 D. 0 bit
 Đáp án đúng: B
 
-65 70 87 71 75 260 75 
-80 80 89 71 84 65 90 82 73 71 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GBBB'?
-A. 0.927734
-B. 0.802734
-C. 0.885469
-D. 0.700000
-Đáp án đúng: B
-
-3 2 1
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. -1 bit
-C. 0 bit
-D. 0 bit
-Đáp án đúng: C
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'BZFCTYU' là bao nhiêu?
-A. 6
-B. 7
-C. 8
-D. 10
-Đáp án đúng: B
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'QFUYDOFV':
-Output: 81 | Thêm từ điển: QF (Mã: 256)
-Output: 70 | Thêm từ điển: FU (Mã: 257)
-Output: 85 | Thêm từ điển: UY (Mã: 258)
-Output: 89 | Thêm từ điển: YD (Mã: 259)
-Output: 68 | Thêm từ điển: DO (Mã: 260)
-Output: 79 | Thêm từ điển: OF (Mã: 261)
-Output: 70 | Thêm từ điển: FV (Mã: 262)
-Output cuối: 86
-=> Dãy mã hóa: 81 70 85 89 68 79 70 86 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 81 70 85 89 68 79 70 86 
-Đọc 81 -> Xuất: Q
-Đọc 70 -> Xuất: F | Thêm từ điển: QF (Mã: 256)
-Đọc 85 -> Xuất: U | Thêm từ điển: FU (Mã: 257)
-Đọc 89 -> Xuất: Y | Thêm từ điển: UY (Mã: 258)
-Đọc 68 -> Xuất: D | Thêm từ điển: YD (Mã: 259)
-Đọc 79 -> Xuất: O | Thêm từ điển: DO (Mã: 260)
-Đọc 70 -> Xuất: F | Thêm từ điển: OF (Mã: 261)
-Đọc 86 -> Xuất: V | Thêm từ điển: FV (Mã: 262)
-=> Chuỗi giải mã thành công: QFUYDOFV
-
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'G': [0.000000, 0.250000)
-- Ký tự 'P': [0.250000, 0.500000)
-- Ký tự 'Q': [0.500000, 0.750000)
-- Ký tự 'W': [0.750000, 1.000000)
+- Ký tự 'E': [0.000000, 0.166667)
+- Ký tự 'H': [0.166667, 0.333333)
+- Ký tự 'K': [0.333333, 0.500000)
+- Ký tự 'N': [0.500000, 0.666667)
+- Ký tự 'Q': [0.666667, 0.833333)
+- Ký tự 'W': [0.833333, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'GPQW':
-Đọc 'G' -> Khoảng: [0.000000, 0.250000)
-Đọc 'P' -> Khoảng: [0.062500, 0.125000)
-Đọc 'Q' -> Khoảng: [0.093750, 0.109375)
-Đọc 'W' -> Khoảng: [0.105469, 0.109375)
-=> Giá trị mã hóa được chọn: 0.107422
+[2] Quá trình mã hóa chuỗi 'EQNHWK':
+Đọc 'E' -> Khoảng: [0.000000, 0.166667)
+Đọc 'Q' -> Khoảng: [0.111111, 0.138889)
+Đọc 'N' -> Khoảng: [0.125000, 0.129630)
+Đọc 'H' -> Khoảng: [0.125772, 0.126543)
+Đọc 'W' -> Khoảng: [0.126415, 0.126543)
+Đọc 'K' -> Khoảng: [0.126457, 0.126479)
+=> Giá trị mã hóa được chọn: 0.126468
+=> Mã nhị phân tương ứng (17 bit): 00100000011000000
 
-[3] Quá trình giải mã (từ 0.107422, độ dài 4):
-Giá trị 0.107422 nằm trong khoảng của 'G' -> Giải mã: G
-Giá trị 0.429688 nằm trong khoảng của 'P' -> Giải mã: P
-Giá trị 0.718750 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.875000 nằm trong khoảng của 'W' -> Giải mã: W
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'F': [0.000000, 0.333333)
-- Ký tự 'W': [0.333333, 0.666667)
-- Ký tự 'X': [0.666667, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'FXW':
-Đọc 'F' -> Khoảng: [0.000000, 0.333333)
-Đọc 'X' -> Khoảng: [0.222222, 0.333333)
-Đọc 'W' -> Khoảng: [0.259259, 0.296296)
-=> Giá trị mã hóa được chọn: 0.277778
-
-[3] Quá trình giải mã (từ 0.277778, độ dài 3):
-Giá trị 0.277778 nằm trong khoảng của 'F' -> Giải mã: F
-Giá trị 0.833333 nằm trong khoảng của 'X' -> Giải mã: X
-Giá trị 0.500000 nằm trong khoảng của 'W' -> Giải mã: W
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11010, 10110) = 2
-Khoảng cách d(11010, 10000) = 2
-Khoảng cách d(11010, 10011) = 2
-Khoảng cách d(10110, 10000) = 2
-Khoảng cách d(10110, 10011) = 2
-Khoảng cách d(10000, 10011) = 2
-=> d_min = 2 (Giữa 11010 và 10110)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(1100, 1101) = 1
-=> d_min = 1 (Giữa 1100 và 1101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+[3] Quá trình giải mã (từ mã nhị phân 00100000011000000, giá trị 0.126465, độ dài 6):
+Giá trị 0.126465 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.758789 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.552734 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.316406 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.898437 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.390625 nằm trong khoảng của 'K' -> Giải mã: K
 

@@ -1,95 +1,35 @@
-0.844320
 2 1 0
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0.000000, 0.166667)
-- Ký tự 'E': [0.166667, 0.500000)
-- Ký tự 'H': [0.500000, 0.666667)
-- Ký tự 'V': [0.666667, 0.833333)
-- Ký tự 'X': [0.833333, 1.000000)
+0.530060
+10000111101100100
+77 65 78 86 79 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1101, 1010) = 3
+Khoảng cách d(1101, 1011) = 2
+Khoảng cách d(1101, 1111) = 1
+Khoảng cách d(1010, 1011) = 1
+Khoảng cách d(1010, 1111) = 2
+Khoảng cách d(1011, 1111) = 1
+=> d_min = 1 (Giữa 1101 và 1111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-[2] Quá trình mã hóa chuỗi 'EAEXHV':
-Đọc 'E' -> Khoảng: [0.166667, 0.500000)
-Đọc 'A' -> Khoảng: [0.166667, 0.222222)
-Đọc 'E' -> Khoảng: [0.175926, 0.194444)
-Đọc 'X' -> Khoảng: [0.191358, 0.194444)
-Đọc 'H' -> Khoảng: [0.192901, 0.193416)
-Đọc 'V' -> Khoảng: [0.193244, 0.193330)
-=> Giá trị mã hóa được chọn: 0.193287
-
-[3] Quá trình giải mã (từ 0.193287, độ dài 6):
-Giá trị 0.193287 nằm trong khoảng của 'E' -> Giải mã: E
-Giá trị 0.079861 nằm trong khoảng của 'A' -> Giải mã: A
-Giá trị 0.479167 nằm trong khoảng của 'E' -> Giải mã: E
-Giá trị 0.937500 nằm trong khoảng của 'X' -> Giải mã: X
-Giá trị 0.625000 nằm trong khoảng của 'H' -> Giải mã: H
-Giá trị 0.750000 nằm trong khoảng của 'V' -> Giải mã: V
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 3 bit
-B. 2 bit
-C. 2 bit
-D. 1 bit
-Đáp án đúng: D
-
-69 65 85 70 84 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'CTIJYCCPK' là bao nhiêu?
-A. 9
-B. 12
-C. 10
-D. 8
-Đáp án đúng: A
-
-84 78 68 79 89 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PXWLB' là bao nhiêu?
-A. 4
-B. 8
-C. 6
-D. 5
-Đáp án đúng: D
-
-89 86 67 73 75 69 77 80 83 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'WYOSHR'?
-A. 0.762543
-B. 0.842564
-C. 0.812554
-D. 0.937554
-Đáp án đúng: C
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'KAKLCV'?
-A. 0.315141
-B. 0.490183
-C. 0.365183
-D. 0.395226
-Đáp án đúng: C
-
-2 1 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'UTOEIVZIN' là bao nhiêu?
-A. 10
-B. 12
-C. 8
-D. 9
-Đáp án đúng: D
-
-0.931360
+78 88 66 71 66 75 73 66 80 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 1 bit
-B. 2 bit
-C. 1 bit
+B. 1 bit
+C. 2 bit
 D. 0 bit
 Đáp án đúng: D
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'LXMRAG'?
-A. 0.614230
-B. 0.439219
-C. 0.519240
-D. 0.489230
-Đáp án đúng: D
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011100, 001101) = 2
+=> d_min = 2 (Giữa 011100 và 001101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LIENUWZJVF' là bao nhiêu?
-A. 11
-B. 10
-C. 9
-D. 13
-Đáp án đúng: B
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(100001, 110010) = 3
+=> d_min = 3 (Giữa 100001 và 110010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
 

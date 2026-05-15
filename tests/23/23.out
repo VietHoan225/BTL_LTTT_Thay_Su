@@ -1,77 +1,117 @@
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NFHCIDFH' là bao nhiêu?
-A. 7
-B. 6
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'DWVAYTR' là bao nhiêu?
+A. 6
+B. 7
 C. 8
 D. 10
-Đáp án đúng: A
+Đáp án đúng: B
 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(00000, 01110) = 3
-Khoảng cách d(00000, 00001) = 1
-Khoảng cách d(00000, 01111) = 4
-Khoảng cách d(01110, 00001) = 4
-Khoảng cách d(01110, 01111) = 1
-Khoảng cách d(00001, 01111) = 3
-=> d_min = 1 (Giữa 00000 và 00001)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(00110, 11010) = 3
-Khoảng cách d(00110, 11111) = 3
-Khoảng cách d(11010, 11111) = 2
-=> d_min = 2 (Giữa 11010 và 11111)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'XHWOECKADV' là bao nhiêu?
-A. 9
-B. 13
-C. 10
-D. 11
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'QXKRLEGDZ' là bao nhiêu?
+A. 10
+B. 12
+C. 9
+D. 8
 Đáp án đúng: C
 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 2 bit
-C. 0 bit
-D. 1 bit
+72 89 81 66 71 72 86 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'SXZGRQ' là bao nhiêu?
+A. 7
+B. 5
+C. 6
+D. 9
 Đáp án đúng: C
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ZRI'?
-A. 0.796296
-B. 0.727778
-C. 0.844815
-D. 0.921296
-Đáp án đúng: A
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'SPNKPKMG' là bao nhiêu?
+A. 11
+B. 9
+C. 8
+D. 7
+Đáp án đúng: C
 
-1 0 0
+84 71 70 82 83 77 67 90 
+85 81 87 79 86 69 73 73 74 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'YLHHJOPQV':
-Output: 89 | Thêm từ điển: YL (Mã: 256)
-Output: 76 | Thêm từ điển: LH (Mã: 257)
-Output: 72 | Thêm từ điển: HH (Mã: 258)
-Output: 72 | Thêm từ điển: HJ (Mã: 259)
-Output: 74 | Thêm từ điển: JO (Mã: 260)
-Output: 79 | Thêm từ điển: OP (Mã: 261)
-Output: 80 | Thêm từ điển: PQ (Mã: 262)
-Output: 81 | Thêm từ điển: QV (Mã: 263)
-Output cuối: 86
-=> Dãy mã hóa: 89 76 72 72 74 79 80 81 86 
+[1] Quá trình mã hóa chuỗi 'DTNKE':
+Output: 68 | Thêm từ điển: DT (Mã: 256)
+Output: 84 | Thêm từ điển: TN (Mã: 257)
+Output: 78 | Thêm từ điển: NK (Mã: 258)
+Output: 75 | Thêm từ điển: KE (Mã: 259)
+Output cuối: 69
+=> Dãy mã hóa: 68 84 78 75 69 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 89 76 72 72 74 79 80 81 86 
-Đọc 89 -> Xuất: Y
-Đọc 76 -> Xuất: L | Thêm từ điển: YL (Mã: 256)
-Đọc 72 -> Xuất: H | Thêm từ điển: LH (Mã: 257)
-Đọc 72 -> Xuất: H | Thêm từ điển: HH (Mã: 258)
-Đọc 74 -> Xuất: J | Thêm từ điển: HJ (Mã: 259)
-Đọc 79 -> Xuất: O | Thêm từ điển: JO (Mã: 260)
-Đọc 80 -> Xuất: P | Thêm từ điển: OP (Mã: 261)
-Đọc 81 -> Xuất: Q | Thêm từ điển: PQ (Mã: 262)
-Đọc 86 -> Xuất: V | Thêm từ điển: QV (Mã: 263)
-=> Chuỗi giải mã thành công: YLHHJOPQV
+Chuỗi mã đầu vào: 68 84 78 75 69 
+Đọc 68 -> Xuất: D
+Đọc 84 -> Xuất: T | Thêm từ điển: DT (Mã: 256)
+Đọc 78 -> Xuất: N | Thêm từ điển: TN (Mã: 257)
+Đọc 75 -> Xuất: K | Thêm từ điển: NK (Mã: 258)
+Đọc 69 -> Xuất: E | Thêm từ điển: KE (Mã: 259)
+=> Chuỗi giải mã thành công: DTNKE
 
-0.352800
-88 68 88 82 83 75 72 86 90 
-90 70 84 73 76 
+86 66 88 256 90 
+2 1 0
+2 1 0
+2 1 0
+1 0 0
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'PGBW'?
+A. 100100110
+B. 10010011101
+C. 100100101
+D. 100100111
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'CZHTTKGVTZ':
+Output: 67 | Thêm từ điển: CZ (Mã: 256)
+Output: 90 | Thêm từ điển: ZH (Mã: 257)
+Output: 72 | Thêm từ điển: HT (Mã: 258)
+Output: 84 | Thêm từ điển: TT (Mã: 259)
+Output: 84 | Thêm từ điển: TK (Mã: 260)
+Output: 75 | Thêm từ điển: KG (Mã: 261)
+Output: 71 | Thêm từ điển: GV (Mã: 262)
+Output: 86 | Thêm từ điển: VT (Mã: 263)
+Output: 84 | Thêm từ điển: TZ (Mã: 264)
+Output cuối: 90
+=> Dãy mã hóa: 67 90 72 84 84 75 71 86 84 90 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 67 90 72 84 84 75 71 86 84 90 
+Đọc 67 -> Xuất: C
+Đọc 90 -> Xuất: Z | Thêm từ điển: CZ (Mã: 256)
+Đọc 72 -> Xuất: H | Thêm từ điển: ZH (Mã: 257)
+Đọc 84 -> Xuất: T | Thêm từ điển: HT (Mã: 258)
+Đọc 84 -> Xuất: T | Thêm từ điển: TT (Mã: 259)
+Đọc 75 -> Xuất: K | Thêm từ điển: TK (Mã: 260)
+Đọc 71 -> Xuất: G | Thêm từ điển: KG (Mã: 261)
+Đọc 86 -> Xuất: V | Thêm từ điển: GV (Mã: 262)
+Đọc 84 -> Xuất: T | Thêm từ điển: VT (Mã: 263)
+Đọc 90 -> Xuất: Z | Thêm từ điển: TZ (Mã: 264)
+=> Chuỗi giải mã thành công: CZHTTKGVTZ
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'IVJQPM':
+Output: 73 | Thêm từ điển: IV (Mã: 256)
+Output: 86 | Thêm từ điển: VJ (Mã: 257)
+Output: 74 | Thêm từ điển: JQ (Mã: 258)
+Output: 81 | Thêm từ điển: QP (Mã: 259)
+Output: 80 | Thêm từ điển: PM (Mã: 260)
+Output cuối: 77
+=> Dãy mã hóa: 73 86 74 81 80 77 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 73 86 74 81 80 77 
+Đọc 73 -> Xuất: I
+Đọc 86 -> Xuất: V | Thêm từ điển: IV (Mã: 256)
+Đọc 74 -> Xuất: J | Thêm từ điển: VJ (Mã: 257)
+Đọc 81 -> Xuất: Q | Thêm từ điển: JQ (Mã: 258)
+Đọc 80 -> Xuất: P | Thêm từ điển: QP (Mã: 259)
+Đọc 77 -> Xuất: M | Thêm từ điển: PM (Mã: 260)
+=> Chuỗi giải mã thành công: IVJQPM
+
+83 71 72 73 80 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZZVKRQ' là bao nhiêu?
+A. 7
+B. 6
+C. 9
+D. 5
+Đáp án đúng: B
+

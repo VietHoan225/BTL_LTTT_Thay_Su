@@ -1,64 +1,85 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'WMMBZL'?
-A. 0.743441
-B. 0.773484
-C. 0.868441
-D. 0.693398
-Đáp án đúng: A
+81 69 80 90 72 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 3 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: C
 
-2 1 0
-79 67 88 81 89 75 79 85 76 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'TPGJBZSZUQ' là bao nhiêu?
-A. 9
-B. 11
-C. 13
-D. 10
-Đáp án đúng: D
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'CYELKSZMFI' là bao nhiêu?
+A. 11
+B. 9
+C. 10
+D. 13
+Đáp án đúng: C
 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(0110, 1100) = 2
-Khoảng cách d(0110, 1010) = 2
-Khoảng cách d(1100, 1010) = 2
-=> d_min = 2 (Giữa 0110 và 1100)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+89 75 85 77 86 75 70 69 75 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.333333)
+- Ký tự 'F': [0.333333, 0.5)
+- Ký tự 'M': [0.5, 0.666667)
+- Ký tự 'N': [0.666667, 0.833333)
+- Ký tự 'O': [0.833333, 1)
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ZQY'?
-A. 0.722222
-B. 0.770741
-C. 0.653704
-D. 0.847222
-Đáp án đúng: A
+[2] Quá trình mã hóa chuỗi 'ODMDFN':
+Đọc 'O' -> Khoảng: [0.833333, 1.000000)
+Đọc 'D' -> Khoảng: [0.833333, 0.888889)
+Đọc 'M' -> Khoảng: [0.861111, 0.870370)
+Đọc 'D' -> Khoảng: [0.861111, 0.864198)
+Đọc 'F' -> Khoảng: [0.862140, 0.862654)
+Đọc 'N' -> Khoảng: [0.862483, 0.862569)
+=> Giá trị mã hóa được chọn: 0.862526
+=> Mã nhị phân tương ứng (15 bit): 110111001100111
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JZHMETG' là bao nhiêu?
-A. 10
-B. 8
-C. 6
-D. 7
-Đáp án đúng: D
+[3] Quá trình giải mã (từ mã nhị phân 110111001100111, giá trị 0.862518, độ dài 6):
+Giá trị 0.862518 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.175110 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.525330 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.151978 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.455933 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.735596 nằm trong khoảng của 'N' -> Giải mã: N
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'B': [0, 0.25)
-- Ký tự 'L': [0.25, 0.75)
-- Ký tự 'S': [0.75, 1)
+- Ký tự 'E': [0.000000, 0.200000)
+- Ký tự 'L': [0.200000, 0.400000)
+- Ký tự 'N': [0.400000, 0.800000)
+- Ký tự 'P': [0.800000, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'LBSL':
-Đọc 'L' -> Khoảng: [0.250000, 0.750000)
-Đọc 'B' -> Khoảng: [0.250000, 0.375000)
-Đọc 'S' -> Khoảng: [0.343750, 0.375000)
-Đọc 'L' -> Khoảng: [0.351562, 0.367188)
-=> Giá trị mã hóa được chọn: 0.359375
+[2] Quá trình mã hóa chuỗi 'NNPLE':
+Đọc 'N' -> Khoảng: [0.400000, 0.800000)
+Đọc 'N' -> Khoảng: [0.560000, 0.720000)
+Đọc 'P' -> Khoảng: [0.688000, 0.720000)
+Đọc 'L' -> Khoảng: [0.694400, 0.700800)
+Đọc 'E' -> Khoảng: [0.694400, 0.695680)
+=> Giá trị mã hóa được chọn: 0.695040
+=> Mã nhị phân tương ứng (11 bit): 10110001111
 
-[3] Quá trình giải mã (từ 0.359375, độ dài 4):
-Giá trị 0.359375 nằm trong khoảng của 'L' -> Giải mã: L
-Giá trị 0.218750 nằm trong khoảng của 'B' -> Giải mã: B
-Giá trị 0.875000 nằm trong khoảng của 'S' -> Giải mã: S
-Giá trị 0.500000 nằm trong khoảng của 'L' -> Giải mã: L
+[3] Quá trình giải mã (từ mã nhị phân 10110001111, giá trị 0.694824, độ dài 5):
+Giá trị 0.694824 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.737061 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.842651 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.213257 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.066284 nằm trong khoảng của 'E' -> Giải mã: E
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'TRBRZLXZWA' là bao nhiêu?
-A. 11
-B. 10
-C. 13
-D. 9
-Đáp án đúng: B
+0 -1 0
+0.546671
+10001011111100101
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: C
 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(000, 000) = 0
+=> d_min = 0 (Giữa 000 và 000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+0.796296
+110010
+0.425926
+011011

@@ -1,128 +1,35 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'SBEM'?
-A. 0.807344
-B. 0.775391
-C. 0.723437
-D. 0.900391
-Đáp án đúng: B
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WJMXQLKOKF' là bao nhiêu?
-A. 11
-B. 10
-C. 13
-D. 9
-Đáp án đúng: B
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'QGWBKVHP':
-Output: 81 | Thêm từ điển: QG (Mã: 256)
-Output: 71 | Thêm từ điển: GW (Mã: 257)
-Output: 87 | Thêm từ điển: WB (Mã: 258)
-Output: 66 | Thêm từ điển: BK (Mã: 259)
-Output: 75 | Thêm từ điển: KV (Mã: 260)
-Output: 86 | Thêm từ điển: VH (Mã: 261)
-Output: 72 | Thêm từ điển: HP (Mã: 262)
-Output cuối: 80
-=> Dãy mã hóa: 81 71 87 66 75 86 72 80 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 81 71 87 66 75 86 72 80 
-Đọc 81 -> Xuất: Q
-Đọc 71 -> Xuất: G | Thêm từ điển: QG (Mã: 256)
-Đọc 87 -> Xuất: W | Thêm từ điển: GW (Mã: 257)
-Đọc 66 -> Xuất: B | Thêm từ điển: WB (Mã: 258)
-Đọc 75 -> Xuất: K | Thêm từ điển: BK (Mã: 259)
-Đọc 86 -> Xuất: V | Thêm từ điển: KV (Mã: 260)
-Đọc 72 -> Xuất: H | Thêm từ điển: VH (Mã: 261)
-Đọc 80 -> Xuất: P | Thêm từ điển: HP (Mã: 262)
-=> Chuỗi giải mã thành công: QGWBKVHP
-
-0.775391
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(1010, 0001) = 3
-Khoảng cách d(1010, 1101) = 3
-Khoảng cách d(1010, 1100) = 2
-Khoảng cách d(0001, 1101) = 2
-Khoảng cách d(0001, 1100) = 3
-Khoảng cách d(1101, 1100) = 1
-=> d_min = 1 (Giữa 1101 và 1100)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'C': [0.000000, 0.250000)
-- Ký tự 'I': [0.250000, 0.500000)
-- Ký tự 'L': [0.500000, 0.750000)
-- Ký tự 'S': [0.750000, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'CLSI':
-Đọc 'C' -> Khoảng: [0.000000, 0.250000)
-Đọc 'L' -> Khoảng: [0.125000, 0.187500)
-Đọc 'S' -> Khoảng: [0.171875, 0.187500)
-Đọc 'I' -> Khoảng: [0.175781, 0.179688)
-=> Giá trị mã hóa được chọn: 0.177734
-
-[3] Quá trình giải mã (từ 0.177734, độ dài 4):
-Giá trị 0.177734 nằm trong khoảng của 'C' -> Giải mã: C
-Giá trị 0.710938 nằm trong khoảng của 'L' -> Giải mã: L
-Giá trị 0.843750 nằm trong khoảng của 'S' -> Giải mã: S
-Giá trị 0.375000 nằm trong khoảng của 'I' -> Giải mã: I
-
-0.203704
-0.425926
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YZDNIGC' là bao nhiêu?
-A. 7
-B. 8
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NMDBJ' là bao nhiêu?
+A. 8
+B. 5
 C. 6
-D. 10
-Đáp án đúng: A
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'VTC'?
-A. 0.844815
-B. 0.796296
-C. 0.921296
-D. 0.727778
+D. 4
 Đáp án đúng: B
 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'O': [0, 0.333333)
+- Ký tự 'S': [0.333333, 0.666667)
+- Ký tự 'X': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'OSX':
+Đọc 'O' -> Khoảng: [0.000000, 0.333333)
+Đọc 'S' -> Khoảng: [0.111111, 0.222222)
+Đọc 'X' -> Khoảng: [0.185185, 0.222222)
+=> Giá trị mã hóa được chọn: 0.203704
+=> Mã nhị phân tương ứng (6 bit): 001101
+
+[3] Quá trình giải mã (từ mã nhị phân 001101, giá trị 0.203125, độ dài 3):
+Giá trị 0.203125 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.609375 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.828125 nằm trong khoảng của 'X' -> Giải mã: X
+
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(1101, 0011) = 3
-Khoảng cách d(1101, 0001) = 2
-Khoảng cách d(1101, 1001) = 1
-Khoảng cách d(0011, 0001) = 1
-Khoảng cách d(0011, 1001) = 2
-Khoảng cách d(0001, 1001) = 1
-=> d_min = 1 (Giữa 1101 và 1001)
+Khoảng cách d(00101, 10101) = 1
+Khoảng cách d(00101, 00000) = 2
+Khoảng cách d(10101, 00000) = 3
+=> d_min = 1 (Giữa 00101 và 10101)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-0.203704
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'C': [0.000000, 0.250000)
-- Ký tự 'I': [0.250000, 0.500000)
-- Ký tự 'K': [0.500000, 0.750000)
-- Ký tự 'Q': [0.750000, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'IQKC':
-Đọc 'I' -> Khoảng: [0.250000, 0.500000)
-Đọc 'Q' -> Khoảng: [0.437500, 0.500000)
-Đọc 'K' -> Khoảng: [0.468750, 0.484375)
-Đọc 'C' -> Khoảng: [0.468750, 0.472656)
-=> Giá trị mã hóa được chọn: 0.470703
-
-[3] Quá trình giải mã (từ 0.470703, độ dài 4):
-Giá trị 0.470703 nằm trong khoảng của 'I' -> Giải mã: I
-Giá trị 0.882812 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.531250 nằm trong khoảng của 'K' -> Giải mã: K
-Giá trị 0.125000 nằm trong khoảng của 'C' -> Giải mã: C
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(1000, 1101) = 2
-Khoảng cách d(1000, 1011) = 2
-Khoảng cách d(1101, 1011) = 2
-=> d_min = 2 (Giữa 1000 và 1101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-0.177734
-76 80 68 84 88 81 
+0.880859
+111000011

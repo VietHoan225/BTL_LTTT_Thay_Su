@@ -1,147 +1,20 @@
-86 90 89 72 77 
-82 81 68 88 79 
-0.420428
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 1 bit
-C. 1 bit
-D. 2 bit
-Đáp án đúng: A
+0.382062
+01100001110011101
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(00110, 11110) = 2
+=> d_min = 2 (Giữa 00110 và 11110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'LRNTFK':
-Output: 76 | Thêm từ điển: LR (Mã: 256)
-Output: 82 | Thêm từ điển: RN (Mã: 257)
-Output: 78 | Thêm từ điển: NT (Mã: 258)
-Output: 84 | Thêm từ điển: TF (Mã: 259)
-Output: 70 | Thêm từ điển: FK (Mã: 260)
-Output cuối: 75
-=> Dãy mã hóa: 76 82 78 84 70 75 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111, 011) = 1
+Khoảng cách d(111, 010) = 2
+Khoảng cách d(111, 000) = 3
+Khoảng cách d(011, 010) = 1
+Khoảng cách d(011, 000) = 2
+Khoảng cách d(010, 000) = 1
+=> d_min = 1 (Giữa 111 và 011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 76 82 78 84 70 75 
-Đọc 76 -> Xuất: L
-Đọc 82 -> Xuất: R | Thêm từ điển: LR (Mã: 256)
-Đọc 78 -> Xuất: N | Thêm từ điển: RN (Mã: 257)
-Đọc 84 -> Xuất: T | Thêm từ điển: NT (Mã: 258)
-Đọc 70 -> Xuất: F | Thêm từ điển: TF (Mã: 259)
-Đọc 75 -> Xuất: K | Thêm từ điển: FK (Mã: 260)
-=> Chuỗi giải mã thành công: LRNTFK
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NAOYWGJYO' là bao nhiêu?
-A. 8
-B. 12
-C. 10
-D. 9
-Đáp án đúng: D
-
-75 75 71 73 86 87 83 70 71 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'D': [0.000000, 0.200000)
-- Ký tự 'F': [0.200000, 0.400000)
-- Ký tự 'J': [0.400000, 0.600000)
-- Ký tự 'K': [0.600000, 0.800000)
-- Ký tự 'Y': [0.800000, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'FYKDJ':
-Đọc 'F' -> Khoảng: [0.200000, 0.400000)
-Đọc 'Y' -> Khoảng: [0.360000, 0.400000)
-Đọc 'K' -> Khoảng: [0.384000, 0.392000)
-Đọc 'D' -> Khoảng: [0.384000, 0.385600)
-Đọc 'J' -> Khoảng: [0.384640, 0.384960)
-=> Giá trị mã hóa được chọn: 0.384800
-
-[3] Quá trình giải mã (từ 0.384800, độ dài 5):
-Giá trị 0.384800 nằm trong khoảng của 'F' -> Giải mã: F
-Giá trị 0.924000 nằm trong khoảng của 'Y' -> Giải mã: Y
-Giá trị 0.620000 nằm trong khoảng của 'K' -> Giải mã: K
-Giá trị 0.100000 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.500000 nằm trong khoảng của 'J' -> Giải mã: J
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PVUZU' là bao nhiêu?
-A. 4
-B. 5
-C. 8
-D. 6
-Đáp án đúng: B
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'F': [0.000000, 0.666667)
-- Ký tự 'V': [0.666667, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'FFV':
-Đọc 'F' -> Khoảng: [0.000000, 0.666667)
-Đọc 'F' -> Khoảng: [0.000000, 0.444444)
-Đọc 'V' -> Khoảng: [0.296296, 0.444444)
-=> Giá trị mã hóa được chọn: 0.370370
-
-[3] Quá trình giải mã (từ 0.370370, độ dài 3):
-Giá trị 0.370370 nằm trong khoảng của 'F' -> Giải mã: F
-Giá trị 0.555556 nằm trong khoảng của 'F' -> Giải mã: F
-Giá trị 0.833333 nằm trong khoảng của 'V' -> Giải mã: V
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YXBYOXMJEP' là bao nhiêu?
-A. 13
-B. 11
-C. 10
-D. 9
-Đáp án đúng: C
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. -1 bit
-B. 1 bit
-C. 0 bit
-D. 0 bit
-Đáp án đúng: D
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. -1 bit
-B. 0 bit
-C. 0 bit
-D. 1 bit
-Đáp án đúng: C
-
-3 2 1
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'JKYXJADBQ':
-Output: 74 | Thêm từ điển: JK (Mã: 256)
-Output: 75 | Thêm từ điển: KY (Mã: 257)
-Output: 89 | Thêm từ điển: YX (Mã: 258)
-Output: 88 | Thêm từ điển: XJ (Mã: 259)
-Output: 74 | Thêm từ điển: JA (Mã: 260)
-Output: 65 | Thêm từ điển: AD (Mã: 261)
-Output: 68 | Thêm từ điển: DB (Mã: 262)
-Output: 66 | Thêm từ điển: BQ (Mã: 263)
-Output cuối: 81
-=> Dãy mã hóa: 74 75 89 88 74 65 68 66 81 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 74 75 89 88 74 65 68 66 81 
-Đọc 74 -> Xuất: J
-Đọc 75 -> Xuất: K | Thêm từ điển: JK (Mã: 256)
-Đọc 89 -> Xuất: Y | Thêm từ điển: KY (Mã: 257)
-Đọc 88 -> Xuất: X | Thêm từ điển: YX (Mã: 258)
-Đọc 74 -> Xuất: J | Thêm từ điển: XJ (Mã: 259)
-Đọc 65 -> Xuất: A | Thêm từ điển: JA (Mã: 260)
-Đọc 68 -> Xuất: D | Thêm từ điển: AD (Mã: 261)
-Đọc 66 -> Xuất: B | Thêm từ điển: DB (Mã: 262)
-Đọc 81 -> Xuất: Q | Thêm từ điển: BQ (Mã: 263)
-=> Chuỗi giải mã thành công: JKYXJADBQ
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JFV'?
-A. 0.474444
-B. 0.425926
-C. 0.357407
-D. 0.550926
-Đáp án đúng: B
-
-77 70 89 75 71 90 76 74 68 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 0 bit
-C. 1 bit
-D. 0 bit
-Đáp án đúng: B
-
+0 -1 0

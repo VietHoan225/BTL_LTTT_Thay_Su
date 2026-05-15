@@ -1,32 +1,107 @@
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WEWRYOCMNE' là bao nhiêu?
-A. 9
-B. 13
-C. 11
-D. 10
-Đáp án đúng: D
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1011, 1111) = 1
+Khoảng cách d(1011, 0101) = 3
+Khoảng cách d(1011, 1010) = 1
+Khoảng cách d(1111, 0101) = 2
+Khoảng cách d(1111, 1010) = 2
+Khoảng cách d(0101, 1010) = 4
+=> d_min = 1 (Giữa 1011 và 1111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-2 1 0
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'J': [0, 0.333333)
-- Ký tự 'L': [0.333333, 0.666667)
-- Ký tự 'R': [0.666667, 1)
+- Ký tự 'L': [0, 0.333333)
+- Ký tự 'T': [0.333333, 0.666667)
+- Ký tự 'X': [0.666667, 1)
 
-[2] Quá trình mã hóa chuỗi 'JLR':
-Đọc 'J' -> Khoảng: [0.000000, 0.333333)
-Đọc 'L' -> Khoảng: [0.111111, 0.222222)
-Đọc 'R' -> Khoảng: [0.185185, 0.222222)
-=> Giá trị mã hóa được chọn: 0.203704
+[2] Quá trình mã hóa chuỗi 'TLX':
+Đọc 'T' -> Khoảng: [0.333333, 0.666667)
+Đọc 'L' -> Khoảng: [0.333333, 0.444444)
+Đọc 'X' -> Khoảng: [0.407407, 0.444444)
+=> Giá trị mã hóa được chọn: 0.425926
+=> Mã nhị phân tương ứng (6 bit): 011011
 
-[3] Quá trình giải mã (từ 0.203704, độ dài 3):
-Giá trị 0.203704 nằm trong khoảng của 'J' -> Giải mã: J
-Giá trị 0.611111 nằm trong khoảng của 'L' -> Giải mã: L
-Giá trị 0.833333 nằm trong khoảng của 'R' -> Giải mã: R
+[3] Quá trình giải mã (từ mã nhị phân 011011, giá trị 0.421875, độ dài 3):
+Giá trị 0.421875 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.265625 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.796875 nằm trong khoảng của 'X' -> Giải mã: X
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'AKHFQC'?
-A. 0.077208
-B. 0.252218
-C. 0.127218
-D. 0.157229
+0.524488
+10000110010001001
+1 0 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'OQDRTO':
+Output: 79 | Thêm từ điển: OQ (Mã: 256)
+Output: 81 | Thêm từ điển: QD (Mã: 257)
+Output: 68 | Thêm từ điển: DR (Mã: 258)
+Output: 82 | Thêm từ điển: RT (Mã: 259)
+Output: 84 | Thêm từ điển: TO (Mã: 260)
+Output cuối: 79
+=> Dãy mã hóa: 79 81 68 82 84 79 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 79 81 68 82 84 79 
+Đọc 79 -> Xuất: O
+Đọc 81 -> Xuất: Q | Thêm từ điển: OQ (Mã: 256)
+Đọc 68 -> Xuất: D | Thêm từ điển: QD (Mã: 257)
+Đọc 82 -> Xuất: R | Thêm từ điển: DR (Mã: 258)
+Đọc 84 -> Xuất: T | Thêm từ điển: RT (Mã: 259)
+Đọc 79 -> Xuất: O | Thêm từ điển: TO (Mã: 260)
+=> Chuỗi giải mã thành công: OQDRTO
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'OMGFVOEJDB':
+Output: 79 | Thêm từ điển: OM (Mã: 256)
+Output: 77 | Thêm từ điển: MG (Mã: 257)
+Output: 71 | Thêm từ điển: GF (Mã: 258)
+Output: 70 | Thêm từ điển: FV (Mã: 259)
+Output: 86 | Thêm từ điển: VO (Mã: 260)
+Output: 79 | Thêm từ điển: OE (Mã: 261)
+Output: 69 | Thêm từ điển: EJ (Mã: 262)
+Output: 74 | Thêm từ điển: JD (Mã: 263)
+Output: 68 | Thêm từ điển: DB (Mã: 264)
+Output cuối: 66
+=> Dãy mã hóa: 79 77 71 70 86 79 69 74 68 66 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 79 77 71 70 86 79 69 74 68 66 
+Đọc 79 -> Xuất: O
+Đọc 77 -> Xuất: M | Thêm từ điển: OM (Mã: 256)
+Đọc 71 -> Xuất: G | Thêm từ điển: MG (Mã: 257)
+Đọc 70 -> Xuất: F | Thêm từ điển: GF (Mã: 258)
+Đọc 86 -> Xuất: V | Thêm từ điển: FV (Mã: 259)
+Đọc 79 -> Xuất: O | Thêm từ điển: VO (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: OE (Mã: 261)
+Đọc 74 -> Xuất: J | Thêm từ điển: EJ (Mã: 262)
+Đọc 68 -> Xuất: D | Thêm từ điển: JD (Mã: 263)
+Đọc 66 -> Xuất: B | Thêm từ điển: DB (Mã: 264)
+=> Chuỗi giải mã thành công: OMGFVOEJDB
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0110, 0001) = 3
+Khoảng cách d(0110, 1011) = 3
+Khoảng cách d(0110, 1000) = 3
+Khoảng cách d(0001, 1011) = 2
+Khoảng cách d(0001, 1000) = 2
+Khoảng cách d(1011, 1000) = 2
+=> d_min = 2 (Giữa 0001 và 1011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+0.569920
+10010001111
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
 Đáp án đúng: C
 

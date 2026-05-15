@@ -1,68 +1,193 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'FZHHQX'?
-A. 0.146991
-B. 0.096948
-C. 0.177034
-D. 0.271991
+0.108571
+00011011110010110
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'WIH'?
+A. 11001001
+B. 110011
+C. 110010
+D. 110000
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
 Đáp án đúng: A
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WEYKUWSZQU' là bao nhiêu?
-A. 13
-B. 9
-C. 11
-D. 10
-Đáp án đúng: D
-
-79 76 86 74 89 69 84 85 86 
-86 77 69 75 79 72 65 85 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'WOLFYMTG':
-Output: 87 | Thêm từ điển: WO (Mã: 256)
-Output: 79 | Thêm từ điển: OL (Mã: 257)
-Output: 76 | Thêm từ điển: LF (Mã: 258)
-Output: 70 | Thêm từ điển: FY (Mã: 259)
-Output: 89 | Thêm từ điển: YM (Mã: 260)
-Output: 77 | Thêm từ điển: MT (Mã: 261)
-Output: 84 | Thêm từ điển: TG (Mã: 262)
-Output cuối: 71
-=> Dãy mã hóa: 87 79 76 70 89 77 84 71 
+[1] Quá trình mã hóa chuỗi 'CACTFDEPV':
+Output: 67 | Thêm từ điển: CA (Mã: 256)
+Output: 65 | Thêm từ điển: AC (Mã: 257)
+Output: 67 | Thêm từ điển: CT (Mã: 258)
+Output: 84 | Thêm từ điển: TF (Mã: 259)
+Output: 70 | Thêm từ điển: FD (Mã: 260)
+Output: 68 | Thêm từ điển: DE (Mã: 261)
+Output: 69 | Thêm từ điển: EP (Mã: 262)
+Output: 80 | Thêm từ điển: PV (Mã: 263)
+Output cuối: 86
+=> Dãy mã hóa: 67 65 67 84 70 68 69 80 86 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 87 79 76 70 89 77 84 71 
-Đọc 87 -> Xuất: W
-Đọc 79 -> Xuất: O | Thêm từ điển: WO (Mã: 256)
-Đọc 76 -> Xuất: L | Thêm từ điển: OL (Mã: 257)
-Đọc 70 -> Xuất: F | Thêm từ điển: LF (Mã: 258)
-Đọc 89 -> Xuất: Y | Thêm từ điển: FY (Mã: 259)
-Đọc 77 -> Xuất: M | Thêm từ điển: YM (Mã: 260)
-Đọc 84 -> Xuất: T | Thêm từ điển: MT (Mã: 261)
-Đọc 71 -> Xuất: G | Thêm từ điển: TG (Mã: 262)
-=> Chuỗi giải mã thành công: WOLFYMTG
+Chuỗi mã đầu vào: 67 65 67 84 70 68 69 80 86 
+Đọc 67 -> Xuất: C
+Đọc 65 -> Xuất: A | Thêm từ điển: CA (Mã: 256)
+Đọc 67 -> Xuất: C | Thêm từ điển: AC (Mã: 257)
+Đọc 84 -> Xuất: T | Thêm từ điển: CT (Mã: 258)
+Đọc 70 -> Xuất: F | Thêm từ điển: TF (Mã: 259)
+Đọc 68 -> Xuất: D | Thêm từ điển: FD (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: DE (Mã: 261)
+Đọc 80 -> Xuất: P | Thêm từ điển: EP (Mã: 262)
+Đọc 86 -> Xuất: V | Thêm từ điển: PV (Mã: 263)
+=> Chuỗi giải mã thành công: CACTFDEPV
 
-86 84 85 89 79 90 72 
-69 66 78 81 86 68 67 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'XNPIUOTRL':
+Output: 88 | Thêm từ điển: XN (Mã: 256)
+Output: 78 | Thêm từ điển: NP (Mã: 257)
+Output: 80 | Thêm từ điển: PI (Mã: 258)
+Output: 73 | Thêm từ điển: IU (Mã: 259)
+Output: 85 | Thêm từ điển: UO (Mã: 260)
+Output: 79 | Thêm từ điển: OT (Mã: 261)
+Output: 84 | Thêm từ điển: TR (Mã: 262)
+Output: 82 | Thêm từ điển: RL (Mã: 263)
+Output cuối: 76
+=> Dãy mã hóa: 88 78 80 73 85 79 84 82 76 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 88 78 80 73 85 79 84 82 76 
+Đọc 88 -> Xuất: X
+Đọc 78 -> Xuất: N | Thêm từ điển: XN (Mã: 256)
+Đọc 80 -> Xuất: P | Thêm từ điển: NP (Mã: 257)
+Đọc 73 -> Xuất: I | Thêm từ điển: PI (Mã: 258)
+Đọc 85 -> Xuất: U | Thêm từ điển: IU (Mã: 259)
+Đọc 79 -> Xuất: O | Thêm từ điển: UO (Mã: 260)
+Đọc 84 -> Xuất: T | Thêm từ điển: OT (Mã: 261)
+Đọc 82 -> Xuất: R | Thêm từ điển: TR (Mã: 262)
+Đọc 76 -> Xuất: L | Thêm từ điển: RL (Mã: 263)
+=> Chuỗi giải mã thành công: XNPIUOTRL
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'K': [0.000000, 0.333333)
+- Ký tự 'O': [0.333333, 0.666667)
+- Ký tự 'S': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'SOK':
+Đọc 'S' -> Khoảng: [0.666667, 1.000000)
+Đọc 'O' -> Khoảng: [0.777778, 0.888889)
+Đọc 'K' -> Khoảng: [0.777778, 0.814815)
+=> Giá trị mã hóa được chọn: 0.796296
+=> Mã nhị phân tương ứng (6 bit): 110010
+
+[3] Quá trình giải mã (từ mã nhị phân 110010, giá trị 0.781250, độ dài 3):
+Giá trị 0.781250 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.343750 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.031250 nằm trong khoảng của 'K' -> Giải mã: K
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LQFVB' là bao nhiêu?
+A. 6
+B. 8
+C. 5
+D. 4
+Đáp án đúng: C
+
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(111001, 001000) = 3
-Khoảng cách d(111001, 101111) = 3
-Khoảng cách d(111001, 001010) = 4
-Khoảng cách d(001000, 101111) = 4
-Khoảng cách d(001000, 001010) = 1
-Khoảng cách d(101111, 001010) = 3
-=> d_min = 1 (Giữa 001000 và 001010)
+Khoảng cách d(000011, 000011) = 0
+=> d_min = 0 (Giữa 000011 và 000011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.333333)
+- Ký tự 'E': [0.333333, 0.666667)
+- Ký tự 'Z': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'EZD':
+Đọc 'E' -> Khoảng: [0.333333, 0.666667)
+Đọc 'Z' -> Khoảng: [0.555556, 0.666667)
+Đọc 'D' -> Khoảng: [0.555556, 0.592593)
+=> Giá trị mã hóa được chọn: 0.574074
+=> Mã nhị phân tương ứng (6 bit): 100100
+
+[3] Quá trình giải mã (từ mã nhị phân 100100, giá trị 0.562500, độ dài 3):
+Giá trị 0.562500 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.687500 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.062500 nằm trong khoảng của 'D' -> Giải mã: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0010, 1011) = 2
+Khoảng cách d(0010, 1010) = 1
+Khoảng cách d(1011, 1010) = 1
+=> d_min = 1 (Giữa 0010 và 1010)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(10100, 11010) = 3
-Khoảng cách d(10100, 10001) = 2
-Khoảng cách d(11010, 10001) = 3
-=> d_min = 2 (Giữa 10100 và 10001)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'G': [0.000000, 0.400000)
+- Ký tự 'H': [0.400000, 0.600000)
+- Ký tự 'J': [0.600000, 0.800000)
+- Ký tự 'Z': [0.800000, 1.000000)
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YUPJVIIE' là bao nhiêu?
-A. 7
-B. 8
-C. 11
-D. 9
-Đáp án đúng: B
+[2] Quá trình mã hóa chuỗi 'JGHZG':
+Đọc 'J' -> Khoảng: [0.600000, 0.800000)
+Đọc 'G' -> Khoảng: [0.600000, 0.680000)
+Đọc 'H' -> Khoảng: [0.632000, 0.648000)
+Đọc 'Z' -> Khoảng: [0.644800, 0.648000)
+Đọc 'G' -> Khoảng: [0.644800, 0.646080)
+=> Giá trị mã hóa được chọn: 0.645440
+=> Mã nhị phân tương ứng (11 bit): 10100101001
+
+[3] Quá trình giải mã (từ mã nhị phân 10100101001, giá trị 0.645020, độ dài 5):
+Giá trị 0.645020 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.225098 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.562744 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.813721 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.068604 nằm trong khoảng của 'G' -> Giải mã: G
+
+75 88 87 68 88 73 65 88 83 
+0 -1 0
+2 1 0
+78 71 68 68 78 74 81 79 80 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'BWNUB':
+Output: 66 | Thêm từ điển: BW (Mã: 256)
+Output: 87 | Thêm từ điển: WN (Mã: 257)
+Output: 78 | Thêm từ điển: NU (Mã: 258)
+Output: 85 | Thêm từ điển: UB (Mã: 259)
+Output cuối: 66
+=> Dãy mã hóa: 66 87 78 85 66 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 66 87 78 85 66 
+Đọc 66 -> Xuất: B
+Đọc 87 -> Xuất: W | Thêm từ điển: BW (Mã: 256)
+Đọc 78 -> Xuất: N | Thêm từ điển: WN (Mã: 257)
+Đọc 85 -> Xuất: U | Thêm từ điển: NU (Mã: 258)
+Đọc 66 -> Xuất: B | Thêm từ điển: UB (Mã: 259)
+=> Chuỗi giải mã thành công: BWNUB
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0.000000, 0.200000)
+- Ký tự 'U': [0.200000, 0.600000)
+- Ký tự 'X': [0.600000, 0.800000)
+- Ký tự 'Z': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'UZUBX':
+Đọc 'U' -> Khoảng: [0.200000, 0.600000)
+Đọc 'Z' -> Khoảng: [0.520000, 0.600000)
+Đọc 'U' -> Khoảng: [0.536000, 0.568000)
+Đọc 'B' -> Khoảng: [0.536000, 0.542400)
+Đọc 'X' -> Khoảng: [0.539840, 0.541120)
+=> Giá trị mã hóa được chọn: 0.540480
+=> Mã nhị phân tương ứng (11 bit): 10001010010
+
+[3] Quá trình giải mã (từ mã nhị phân 10001010010, giá trị 0.540039, độ dài 5):
+Giá trị 0.540039 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.850098 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.250488 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.126221 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.631104 nằm trong khoảng của 'X' -> Giải mã: X
 

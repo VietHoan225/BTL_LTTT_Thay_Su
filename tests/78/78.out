@@ -1,80 +1,48 @@
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 2 bit
-C. 1 bit
-D. 0 bit
-Đáp án đúng: D
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'VDHVD' là bao nhiêu?
+A. 4
+B. 3
+C. 7
+D. 5
+Đáp án đúng: A
 
-65 80 68 79 80 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'ZJGMT':
-Output: 90 | Thêm từ điển: ZJ (Mã: 256)
-Output: 74 | Thêm từ điển: JG (Mã: 257)
-Output: 71 | Thêm từ điển: GM (Mã: 258)
-Output: 77 | Thêm từ điển: MT (Mã: 259)
-Output cuối: 84
-=> Dãy mã hóa: 90 74 71 77 84 
+[1] Quá trình mã hóa chuỗi 'JQYADX':
+Output: 74 | Thêm từ điển: JQ (Mã: 256)
+Output: 81 | Thêm từ điển: QY (Mã: 257)
+Output: 89 | Thêm từ điển: YA (Mã: 258)
+Output: 65 | Thêm từ điển: AD (Mã: 259)
+Output: 68 | Thêm từ điển: DX (Mã: 260)
+Output cuối: 88
+=> Dãy mã hóa: 74 81 89 65 68 88 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 90 74 71 77 84 
-Đọc 90 -> Xuất: Z
-Đọc 74 -> Xuất: J | Thêm từ điển: ZJ (Mã: 256)
-Đọc 71 -> Xuất: G | Thêm từ điển: JG (Mã: 257)
-Đọc 77 -> Xuất: M | Thêm từ điển: GM (Mã: 258)
-Đọc 84 -> Xuất: T | Thêm từ điển: MT (Mã: 259)
-=> Chuỗi giải mã thành công: ZJGMT
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'RWMDN' là bao nhiêu?
-A. 5
-B. 8
-C. 4
-D. 6
-Đáp án đúng: A
-
-83 88 70 72 65 90 67 79 87 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'CLDZKXZOTX' là bao nhiêu?
-A. 10
-B. 13
-C. 9
-D. 11
-Đáp án đúng: A
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'WMGTX'?
-A. 0.644640
-B. 0.594480
-C. 0.769640
-D. 0.674800
-Đáp án đúng: A
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(111101, 111011) = 2
-=> d_min = 2 (Giữa 111101 và 111011)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+Chuỗi mã đầu vào: 74 81 89 65 68 88 
+Đọc 74 -> Xuất: J
+Đọc 81 -> Xuất: Q | Thêm từ điển: JQ (Mã: 256)
+Đọc 89 -> Xuất: Y | Thêm từ điển: QY (Mã: 257)
+Đọc 65 -> Xuất: A | Thêm từ điển: YA (Mã: 258)
+Đọc 68 -> Xuất: D | Thêm từ điển: AD (Mã: 259)
+Đọc 88 -> Xuất: X | Thêm từ điển: DX (Mã: 260)
+=> Chuỗi giải mã thành công: JQYADX
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'H': [0, 0.166667)
-- Ký tự 'N': [0.166667, 0.333333)
-- Ký tự 'Q': [0.333333, 0.5)
-- Ký tự 'V': [0.5, 0.666667)
-- Ký tự 'Y': [0.666667, 0.833333)
-- Ký tự 'Z': [0.833333, 1)
+- Ký tự 'L': [0, 0.25)
+- Ký tự 'Q': [0.25, 0.5)
+- Ký tự 'S': [0.5, 0.75)
+- Ký tự 'W': [0.75, 1)
 
-[2] Quá trình mã hóa chuỗi 'NQYZHV':
-Đọc 'N' -> Khoảng: [0.166667, 0.333333)
-Đọc 'Q' -> Khoảng: [0.222222, 0.250000)
-Đọc 'Y' -> Khoảng: [0.240741, 0.245370)
-Đọc 'Z' -> Khoảng: [0.244599, 0.245370)
-Đọc 'H' -> Khoảng: [0.244599, 0.244727)
-Đọc 'V' -> Khoảng: [0.244663, 0.244684)
-=> Giá trị mã hóa được chọn: 0.244674
+[2] Quá trình mã hóa chuỗi 'WSLQ':
+Đọc 'W' -> Khoảng: [0.750000, 1.000000)
+Đọc 'S' -> Khoảng: [0.875000, 0.937500)
+Đọc 'L' -> Khoảng: [0.875000, 0.890625)
+Đọc 'Q' -> Khoảng: [0.878906, 0.882812)
+=> Giá trị mã hóa được chọn: 0.880859
+=> Mã nhị phân tương ứng (9 bit): 111000011
 
-[3] Quá trình giải mã (từ 0.244674, độ dài 6):
-Giá trị 0.244674 nằm trong khoảng của 'N' -> Giải mã: N
-Giá trị 0.468043 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.808256 nằm trong khoảng của 'Y' -> Giải mã: Y
-Giá trị 0.849537 nằm trong khoảng của 'Z' -> Giải mã: Z
-Giá trị 0.097222 nằm trong khoảng của 'H' -> Giải mã: H
-Giá trị 0.583333 nằm trong khoảng của 'V' -> Giải mã: V
+[3] Quá trình giải mã (từ mã nhị phân 111000011, giá trị 0.880859, độ dài 4):
+Giá trị 0.880859 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.523438 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.093750 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.375000 nằm trong khoảng của 'Q' -> Giải mã: Q
 

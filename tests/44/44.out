@@ -1,7 +1,110 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'CGPS'?
-A. 0.232422
-B. 0.055469
-C. 0.139375
-D. 0.107422
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WQICJXPJ' là bao nhiêu?
+A. 9
+B. 8
+C. 11
+D. 7
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0110, 0001) = 3
+Khoảng cách d(0110, 1010) = 2
+Khoảng cách d(0110, 0011) = 2
+Khoảng cách d(0001, 1010) = 3
+Khoảng cách d(0001, 0011) = 1
+Khoảng cách d(1010, 0011) = 2
+=> d_min = 1 (Giữa 0001 và 0011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011111, 010111) = 1
+=> d_min = 1 (Giữa 011111 và 010111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+66 65 77 72 85 75 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'UGSDJ'?
+A. 110111010110001
+B. 1101110101100
+C. 1101110101101
+D. 1101110101110
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'SYVJQ'?
+A. 1001010110101
+B. 1001010110100
+C. 1001010110110
+D. 100101011010001
+Đáp án đúng: B
+
+0.645587
+10100101010001010
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.333333)
+- Ký tự 'U': [0.333333, 0.666667)
+- Ký tự 'Y': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'AUY':
+Đọc 'A' -> Khoảng: [0.000000, 0.333333)
+Đọc 'U' -> Khoảng: [0.111111, 0.222222)
+Đọc 'Y' -> Khoảng: [0.185185, 0.222222)
+=> Giá trị mã hóa được chọn: 0.203704
+=> Mã nhị phân tương ứng (6 bit): 001101
+
+[3] Quá trình giải mã (từ mã nhị phân 001101, giá trị 0.203125, độ dài 3):
+Giá trị 0.203125 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.609375 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.828125 nằm trong khoảng của 'Y' -> Giải mã: Y
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'SJFMY' là bao nhiêu?
+A. 5
+B. 8
+C. 6
+D. 4
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
 Đáp án đúng: D
+
+1 0 0
+2 1 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'AXDOWNKK' là bao nhiêu?
+A. 7
+B. 11
+C. 9
+D. 8
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LNIBDPY' là bao nhiêu?
+A. 10
+B. 8
+C. 7
+D. 6
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZZLHSYNT' là bao nhiêu?
+A. 7
+B. 8
+C. 11
+D. 9
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'VSYUA'?
+A. 1010110011101
+B. 1010110011110
+C. 1010110011100
+D. 101011001110001
+Đáp án đúng: C
 

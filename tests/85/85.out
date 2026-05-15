@@ -1,176 +1,63 @@
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0, 0.333333)
-- Ký tự 'I': [0.333333, 1)
-
-[2] Quá trình mã hóa chuỗi 'IIA':
-Đọc 'I' -> Khoảng: [0.333333, 1.000000)
-Đọc 'I' -> Khoảng: [0.555556, 1.000000)
-Đọc 'A' -> Khoảng: [0.555556, 0.703704)
-=> Giá trị mã hóa được chọn: 0.629630
-
-[3] Quá trình giải mã (từ 0.629630, độ dài 3):
-Giá trị 0.629630 nằm trong khoảng của 'I' -> Giải mã: I
-Giá trị 0.444444 nằm trong khoảng của 'I' -> Giải mã: I
-Giá trị 0.166667 nằm trong khoảng của 'A' -> Giải mã: A
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ALISOAZ' là bao nhiêu?
-A. 10
-B. 8
-C. 6
-D. 7
-Đáp án đúng: D
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'B': [0.000000, 0.200000)
-- Ký tự 'C': [0.200000, 0.400000)
-- Ký tự 'D': [0.400000, 0.600000)
-- Ký tự 'Y': [0.600000, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'CDBYY':
-Đọc 'C' -> Khoảng: [0.200000, 0.400000)
-Đọc 'D' -> Khoảng: [0.280000, 0.320000)
-Đọc 'B' -> Khoảng: [0.280000, 0.288000)
-Đọc 'Y' -> Khoảng: [0.284800, 0.288000)
-Đọc 'Y' -> Khoảng: [0.286720, 0.288000)
-=> Giá trị mã hóa được chọn: 0.287360
-
-[3] Quá trình giải mã (từ 0.287360, độ dài 5):
-Giá trị 0.287360 nằm trong khoảng của 'C' -> Giải mã: C
-Giá trị 0.436800 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.184000 nằm trong khoảng của 'B' -> Giải mã: B
-Giá trị 0.920000 nằm trong khoảng của 'Y' -> Giải mã: Y
-Giá trị 0.800000 nằm trong khoảng của 'Y' -> Giải mã: Y
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'XWPHPFO':
-Output: 88 | Thêm từ điển: XW (Mã: 256)
-Output: 87 | Thêm từ điển: WP (Mã: 257)
-Output: 80 | Thêm từ điển: PH (Mã: 258)
-Output: 72 | Thêm từ điển: HP (Mã: 259)
-Output: 80 | Thêm từ điển: PF (Mã: 260)
-Output: 70 | Thêm từ điển: FO (Mã: 261)
-Output cuối: 79
-=> Dãy mã hóa: 88 87 80 72 80 70 79 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 88 87 80 72 80 70 79 
-Đọc 88 -> Xuất: X
-Đọc 87 -> Xuất: W | Thêm từ điển: XW (Mã: 256)
-Đọc 80 -> Xuất: P | Thêm từ điển: WP (Mã: 257)
-Đọc 72 -> Xuất: H | Thêm từ điển: PH (Mã: 258)
-Đọc 80 -> Xuất: P | Thêm từ điển: HP (Mã: 259)
-Đọc 70 -> Xuất: F | Thêm từ điển: PF (Mã: 260)
-Đọc 79 -> Xuất: O | Thêm từ điển: FO (Mã: 261)
-=> Chuỗi giải mã thành công: XWPHPFO
-
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11110, 10110) = 1
-Khoảng cách d(11110, 10001) = 4
-Khoảng cách d(10110, 10001) = 3
-=> d_min = 1 (Giữa 11110 và 10110)
+Khoảng cách d(011101, 111101) = 1
+Khoảng cách d(011101, 101101) = 2
+Khoảng cách d(011101, 111100) = 2
+Khoảng cách d(111101, 101101) = 1
+Khoảng cách d(111101, 111100) = 1
+Khoảng cách d(101101, 111100) = 2
+=> d_min = 1 (Giữa 011101 và 111101)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-69 69 90 70 85 90 82 73 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'D': [0.000000, 0.166667)
-- Ký tự 'E': [0.166667, 0.333333)
-- Ký tự 'K': [0.333333, 0.500000)
-- Ký tự 'M': [0.500000, 0.666667)
-- Ký tự 'T': [0.666667, 0.833333)
-- Ký tự 'W': [0.833333, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'TKDWME':
-Đọc 'T' -> Khoảng: [0.666667, 0.833333)
-Đọc 'K' -> Khoảng: [0.722222, 0.750000)
-Đọc 'D' -> Khoảng: [0.722222, 0.726852)
-Đọc 'W' -> Khoảng: [0.726080, 0.726852)
-Đọc 'M' -> Khoảng: [0.726466, 0.726595)
-Đọc 'E' -> Khoảng: [0.726487, 0.726509)
-=> Giá trị mã hóa được chọn: 0.726498
-
-[3] Quá trình giải mã (từ 0.726498, độ dài 6):
-Giá trị 0.726498 nằm trong khoảng của 'T' -> Giải mã: T
-Giá trị 0.358989 nằm trong khoảng của 'K' -> Giải mã: K
-Giá trị 0.153935 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.923611 nằm trong khoảng của 'W' -> Giải mã: W
-Giá trị 0.541667 nằm trong khoảng của 'M' -> Giải mã: M
-Giá trị 0.250000 nằm trong khoảng của 'E' -> Giải mã: E
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'H': [0.000000, 0.333333)
-- Ký tự 'M': [0.333333, 0.666667)
-- Ký tự 'Y': [0.666667, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'HMY':
-Đọc 'H' -> Khoảng: [0.000000, 0.333333)
-Đọc 'M' -> Khoảng: [0.111111, 0.222222)
-Đọc 'Y' -> Khoảng: [0.185185, 0.222222)
-=> Giá trị mã hóa được chọn: 0.203704
-
-[3] Quá trình giải mã (từ 0.203704, độ dài 3):
-Giá trị 0.203704 nằm trong khoảng của 'H' -> Giải mã: H
-Giá trị 0.611111 nằm trong khoảng của 'M' -> Giải mã: M
-Giá trị 0.833333 nằm trong khoảng của 'Y' -> Giải mã: Y
-
-1 0 0
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'KNMRE':
-Output: 75 | Thêm từ điển: KN (Mã: 256)
-Output: 78 | Thêm từ điển: NM (Mã: 257)
-Output: 77 | Thêm từ điển: MR (Mã: 258)
-Output: 82 | Thêm từ điển: RE (Mã: 259)
-Output cuối: 69
-=> Dãy mã hóa: 75 78 77 82 69 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 75 78 77 82 69 
-Đọc 75 -> Xuất: K
-Đọc 78 -> Xuất: N | Thêm từ điển: KN (Mã: 256)
-Đọc 77 -> Xuất: M | Thêm từ điển: NM (Mã: 257)
-Đọc 82 -> Xuất: R | Thêm từ điển: MR (Mã: 258)
-Đọc 69 -> Xuất: E | Thêm từ điển: RE (Mã: 259)
-=> Chuỗi giải mã thành công: KNMRE
-
-0.845703
-81 71 72 73 89 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'VLSUQXGFIU':
-Output: 86 | Thêm từ điển: VL (Mã: 256)
-Output: 76 | Thêm từ điển: LS (Mã: 257)
-Output: 83 | Thêm từ điển: SU (Mã: 258)
-Output: 85 | Thêm từ điển: UQ (Mã: 259)
-Output: 81 | Thêm từ điển: QX (Mã: 260)
-Output: 88 | Thêm từ điển: XG (Mã: 261)
-Output: 71 | Thêm từ điển: GF (Mã: 262)
-Output: 70 | Thêm từ điển: FI (Mã: 263)
-Output: 73 | Thêm từ điển: IU (Mã: 264)
-Output cuối: 85
-=> Dãy mã hóa: 86 76 83 85 81 88 71 70 73 85 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 86 76 83 85 81 88 71 70 73 85 
-Đọc 86 -> Xuất: V
-Đọc 76 -> Xuất: L | Thêm từ điển: VL (Mã: 256)
-Đọc 83 -> Xuất: S | Thêm từ điển: LS (Mã: 257)
-Đọc 85 -> Xuất: U | Thêm từ điển: SU (Mã: 258)
-Đọc 81 -> Xuất: Q | Thêm từ điển: UQ (Mã: 259)
-Đọc 88 -> Xuất: X | Thêm từ điển: QX (Mã: 260)
-Đọc 71 -> Xuất: G | Thêm từ điển: XG (Mã: 261)
-Đọc 70 -> Xuất: F | Thêm từ điển: GF (Mã: 262)
-Đọc 73 -> Xuất: I | Thêm từ điển: FI (Mã: 263)
-Đọc 85 -> Xuất: U | Thêm từ điển: IU (Mã: 264)
-=> Chuỗi giải mã thành công: VLSUQXGFIU
-
-0.634880
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(0111, 0010) = 2
-=> d_min = 2 (Giữa 0111 và 0010)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+Khoảng cách d(1011, 0011) = 1
+=> d_min = 1 (Giữa 1011 và 0011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-1 0 0
+0.529297
+100001111
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'LRYEFTL':
+Output: 76 | Thêm từ điển: LR (Mã: 256)
+Output: 82 | Thêm từ điển: RY (Mã: 257)
+Output: 89 | Thêm từ điển: YE (Mã: 258)
+Output: 69 | Thêm từ điển: EF (Mã: 259)
+Output: 70 | Thêm từ điển: FT (Mã: 260)
+Output: 84 | Thêm từ điển: TL (Mã: 261)
+Output cuối: 76
+=> Dãy mã hóa: 76 82 89 69 70 84 76 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 76 82 89 69 70 84 76 
+Đọc 76 -> Xuất: L
+Đọc 82 -> Xuất: R | Thêm từ điển: LR (Mã: 256)
+Đọc 89 -> Xuất: Y | Thêm từ điển: RY (Mã: 257)
+Đọc 69 -> Xuất: E | Thêm từ điển: YE (Mã: 258)
+Đọc 70 -> Xuất: F | Thêm từ điển: EF (Mã: 259)
+Đọc 84 -> Xuất: T | Thêm từ điển: FT (Mã: 260)
+Đọc 76 -> Xuất: L | Thêm từ điển: TL (Mã: 261)
+=> Chuỗi giải mã thành công: LRYEFTL
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'KFBXPN'?
+A. 01011101100101000
+B. 0101110110010101001
+C. 01011101100101011
+D. 01011101100101010
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'BDLQA' là bao nhiêu?
+A. 4
+B. 8
+C. 6
+D. 5
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 3 bit
+B. 1 bit
+C. 2 bit
+D. 2 bit
+Đáp án đúng: B
+
+80 84 67 87 75 77 

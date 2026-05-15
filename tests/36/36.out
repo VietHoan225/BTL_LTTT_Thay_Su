@@ -1,115 +1,149 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'WDO'?
-A. 0.847222
-B. 0.770741
-C. 0.653704
-D. 0.722222
-Đáp án đúng: D
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
 
+2 1 0
+0.364320
+0101110101000
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'HZPTOHXRMM':
-Output: 72 | Thêm từ điển: HZ (Mã: 256)
-Output: 90 | Thêm từ điển: ZP (Mã: 257)
-Output: 80 | Thêm từ điển: PT (Mã: 258)
-Output: 84 | Thêm từ điển: TO (Mã: 259)
-Output: 79 | Thêm từ điển: OH (Mã: 260)
-Output: 72 | Thêm từ điển: HX (Mã: 261)
-Output: 88 | Thêm từ điển: XR (Mã: 262)
-Output: 82 | Thêm từ điển: RM (Mã: 263)
-Output: 77 | Thêm từ điển: MM (Mã: 264)
-Output cuối: 77
-=> Dãy mã hóa: 72 90 80 84 79 72 88 82 77 77 
+[1] Quá trình mã hóa chuỗi 'BZWYEMS':
+Output: 66 | Thêm từ điển: BZ (Mã: 256)
+Output: 90 | Thêm từ điển: ZW (Mã: 257)
+Output: 87 | Thêm từ điển: WY (Mã: 258)
+Output: 89 | Thêm từ điển: YE (Mã: 259)
+Output: 69 | Thêm từ điển: EM (Mã: 260)
+Output: 77 | Thêm từ điển: MS (Mã: 261)
+Output cuối: 83
+=> Dãy mã hóa: 66 90 87 89 69 77 83 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 72 90 80 84 79 72 88 82 77 77 
-Đọc 72 -> Xuất: H
-Đọc 90 -> Xuất: Z | Thêm từ điển: HZ (Mã: 256)
-Đọc 80 -> Xuất: P | Thêm từ điển: ZP (Mã: 257)
-Đọc 84 -> Xuất: T | Thêm từ điển: PT (Mã: 258)
-Đọc 79 -> Xuất: O | Thêm từ điển: TO (Mã: 259)
-Đọc 72 -> Xuất: H | Thêm từ điển: OH (Mã: 260)
-Đọc 88 -> Xuất: X | Thêm từ điển: HX (Mã: 261)
-Đọc 82 -> Xuất: R | Thêm từ điển: XR (Mã: 262)
-Đọc 77 -> Xuất: M | Thêm từ điển: RM (Mã: 263)
-Đọc 77 -> Xuất: M | Thêm từ điển: MM (Mã: 264)
-=> Chuỗi giải mã thành công: HZPTOHXRMM
+Chuỗi mã đầu vào: 66 90 87 89 69 77 83 
+Đọc 66 -> Xuất: B
+Đọc 90 -> Xuất: Z | Thêm từ điển: BZ (Mã: 256)
+Đọc 87 -> Xuất: W | Thêm từ điển: ZW (Mã: 257)
+Đọc 89 -> Xuất: Y | Thêm từ điển: WY (Mã: 258)
+Đọc 69 -> Xuất: E | Thêm từ điển: YE (Mã: 259)
+Đọc 77 -> Xuất: M | Thêm từ điển: EM (Mã: 260)
+Đọc 83 -> Xuất: S | Thêm từ điển: MS (Mã: 261)
+=> Chuỗi giải mã thành công: BZWYEMS
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'VSYQCODWIQ':
-Output: 86 | Thêm từ điển: VS (Mã: 256)
-Output: 83 | Thêm từ điển: SY (Mã: 257)
-Output: 89 | Thêm từ điển: YQ (Mã: 258)
-Output: 81 | Thêm từ điển: QC (Mã: 259)
-Output: 67 | Thêm từ điển: CO (Mã: 260)
-Output: 79 | Thêm từ điển: OD (Mã: 261)
-Output: 68 | Thêm từ điển: DW (Mã: 262)
-Output: 87 | Thêm từ điển: WI (Mã: 263)
-Output: 73 | Thêm từ điển: IQ (Mã: 264)
+[1] Quá trình mã hóa chuỗi 'JAJSJPO':
+Output: 74 | Thêm từ điển: JA (Mã: 256)
+Output: 65 | Thêm từ điển: AJ (Mã: 257)
+Output: 74 | Thêm từ điển: JS (Mã: 258)
+Output: 83 | Thêm từ điển: SJ (Mã: 259)
+Output: 74 | Thêm từ điển: JP (Mã: 260)
+Output: 80 | Thêm từ điển: PO (Mã: 261)
+Output cuối: 79
+=> Dãy mã hóa: 74 65 74 83 74 80 79 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 74 65 74 83 74 80 79 
+Đọc 74 -> Xuất: J
+Đọc 65 -> Xuất: A | Thêm từ điển: JA (Mã: 256)
+Đọc 74 -> Xuất: J | Thêm từ điển: AJ (Mã: 257)
+Đọc 83 -> Xuất: S | Thêm từ điển: JS (Mã: 258)
+Đọc 74 -> Xuất: J | Thêm từ điển: SJ (Mã: 259)
+Đọc 80 -> Xuất: P | Thêm từ điển: JP (Mã: 260)
+Đọc 79 -> Xuất: O | Thêm từ điển: PO (Mã: 261)
+=> Chuỗi giải mã thành công: JAJSJPO
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ZPIZHQ':
+Output: 90 | Thêm từ điển: ZP (Mã: 256)
+Output: 80 | Thêm từ điển: PI (Mã: 257)
+Output: 73 | Thêm từ điển: IZ (Mã: 258)
+Output: 90 | Thêm từ điển: ZH (Mã: 259)
+Output: 72 | Thêm từ điển: HQ (Mã: 260)
 Output cuối: 81
-=> Dãy mã hóa: 86 83 89 81 67 79 68 87 73 81 
+=> Dãy mã hóa: 90 80 73 90 72 81 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 86 83 89 81 67 79 68 87 73 81 
-Đọc 86 -> Xuất: V
-Đọc 83 -> Xuất: S | Thêm từ điển: VS (Mã: 256)
-Đọc 89 -> Xuất: Y | Thêm từ điển: SY (Mã: 257)
-Đọc 81 -> Xuất: Q | Thêm từ điển: YQ (Mã: 258)
-Đọc 67 -> Xuất: C | Thêm từ điển: QC (Mã: 259)
-Đọc 79 -> Xuất: O | Thêm từ điển: CO (Mã: 260)
-Đọc 68 -> Xuất: D | Thêm từ điển: OD (Mã: 261)
-Đọc 87 -> Xuất: W | Thêm từ điển: DW (Mã: 262)
-Đọc 73 -> Xuất: I | Thêm từ điển: WI (Mã: 263)
-Đọc 81 -> Xuất: Q | Thêm từ điển: IQ (Mã: 264)
-=> Chuỗi giải mã thành công: VSYQCODWIQ
+Chuỗi mã đầu vào: 90 80 73 90 72 81 
+Đọc 90 -> Xuất: Z
+Đọc 80 -> Xuất: P | Thêm từ điển: ZP (Mã: 256)
+Đọc 73 -> Xuất: I | Thêm từ điển: PI (Mã: 257)
+Đọc 90 -> Xuất: Z | Thêm từ điển: IZ (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: ZH (Mã: 259)
+Đọc 81 -> Xuất: Q | Thêm từ điển: HQ (Mã: 260)
+=> Chuỗi giải mã thành công: ZPIZHQ
 
-0.381440
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(110001, 010011) = 2
+=> d_min = 2 (Giữa 110001 và 010011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011, 111) = 1
+Khoảng cách d(011, 110) = 2
+Khoảng cách d(111, 110) = 1
+=> d_min = 1 (Giữa 011 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+0.228640
+0011101010001
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 2 bit
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'WUPBYLY':
+Output: 87 | Thêm từ điển: WU (Mã: 256)
+Output: 85 | Thêm từ điển: UP (Mã: 257)
+Output: 80 | Thêm từ điển: PB (Mã: 258)
+Output: 66 | Thêm từ điển: BY (Mã: 259)
+Output: 89 | Thêm từ điển: YL (Mã: 260)
+Output: 76 | Thêm từ điển: LY (Mã: 261)
+Output cuối: 89
+=> Dãy mã hóa: 87 85 80 66 89 76 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 87 85 80 66 89 76 89 
+Đọc 87 -> Xuất: W
+Đọc 85 -> Xuất: U | Thêm từ điển: WU (Mã: 256)
+Đọc 80 -> Xuất: P | Thêm từ điển: UP (Mã: 257)
+Đọc 66 -> Xuất: B | Thêm từ điển: PB (Mã: 258)
+Đọc 89 -> Xuất: Y | Thêm từ điển: BY (Mã: 259)
+Đọc 76 -> Xuất: L | Thêm từ điển: YL (Mã: 260)
+Đọc 89 -> Xuất: Y | Thêm từ điển: LY (Mã: 261)
+=> Chuỗi giải mã thành công: WUPBYLY
+
+66 71 65 83 79 72 86 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1110, 0010) = 2
+=> d_min = 2 (Giữa 1110 và 0010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'J': [0.000000, 0.166667)
-- Ký tự 'N': [0.166667, 0.333333)
-- Ký tự 'P': [0.333333, 0.500000)
-- Ký tự 'Q': [0.500000, 0.666667)
-- Ký tự 'U': [0.666667, 0.833333)
-- Ký tự 'X': [0.833333, 1.000000)
+- Ký tự 'F': [0.000000, 0.250000)
+- Ký tự 'J': [0.250000, 0.500000)
+- Ký tự 'K': [0.500000, 0.750000)
+- Ký tự 'Y': [0.750000, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'UNXQJP':
-Đọc 'U' -> Khoảng: [0.666667, 0.833333)
-Đọc 'N' -> Khoảng: [0.694444, 0.722222)
-Đọc 'X' -> Khoảng: [0.717593, 0.722222)
-Đọc 'Q' -> Khoảng: [0.719907, 0.720679)
-Đọc 'J' -> Khoảng: [0.719907, 0.720036)
-Đọc 'P' -> Khoảng: [0.719950, 0.719972)
-=> Giá trị mã hóa được chọn: 0.719961
+[2] Quá trình mã hóa chuỗi 'JKYF':
+Đọc 'J' -> Khoảng: [0.250000, 0.500000)
+Đọc 'K' -> Khoảng: [0.375000, 0.437500)
+Đọc 'Y' -> Khoảng: [0.421875, 0.437500)
+Đọc 'F' -> Khoảng: [0.421875, 0.425781)
+=> Giá trị mã hóa được chọn: 0.423828
+=> Mã nhị phân tương ứng (9 bit): 011011001
 
-[3] Quá trình giải mã (từ 0.719961, độ dài 6):
-Giá trị 0.719961 nằm trong khoảng của 'U' -> Giải mã: U
-Giá trị 0.319766 nằm trong khoảng của 'N' -> Giải mã: N
-Giá trị 0.918596 nằm trong khoảng của 'X' -> Giải mã: X
-Giá trị 0.511574 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.069444 nằm trong khoảng của 'J' -> Giải mã: J
-Giá trị 0.416667 nằm trong khoảng của 'P' -> Giải mã: P
+[3] Quá trình giải mã (từ mã nhị phân 011011001, giá trị 0.423828, độ dài 4):
+Giá trị 0.423828 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.695312 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.781250 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.125000 nằm trong khoảng của 'F' -> Giải mã: F
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'ZTCXGAZY':
-Output: 90 | Thêm từ điển: ZT (Mã: 256)
-Output: 84 | Thêm từ điển: TC (Mã: 257)
-Output: 67 | Thêm từ điển: CX (Mã: 258)
-Output: 88 | Thêm từ điển: XG (Mã: 259)
-Output: 71 | Thêm từ điển: GA (Mã: 260)
-Output: 65 | Thêm từ điển: AZ (Mã: 261)
-Output: 90 | Thêm từ điển: ZY (Mã: 262)
-Output cuối: 89
-=> Dãy mã hóa: 90 84 67 88 71 65 90 89 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 90 84 67 88 71 65 90 89 
-Đọc 90 -> Xuất: Z
-Đọc 84 -> Xuất: T | Thêm từ điển: ZT (Mã: 256)
-Đọc 67 -> Xuất: C | Thêm từ điển: TC (Mã: 257)
-Đọc 88 -> Xuất: X | Thêm từ điển: CX (Mã: 258)
-Đọc 71 -> Xuất: G | Thêm từ điển: XG (Mã: 259)
-Đọc 65 -> Xuất: A | Thêm từ điển: GA (Mã: 260)
-Đọc 90 -> Xuất: Z | Thêm từ điển: AZ (Mã: 261)
-Đọc 89 -> Xuất: Y | Thêm từ điển: ZY (Mã: 262)
-=> Chuỗi giải mã thành công: ZTCXGAZY
-
-0.421071
+0.091746
+00010111011111001

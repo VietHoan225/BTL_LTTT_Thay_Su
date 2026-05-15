@@ -1,102 +1,33 @@
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'H': [0, 0.166667)
+- Ký tự 'C': [0, 0.166667)
 - Ký tự 'K': [0.166667, 0.333333)
 - Ký tự 'M': [0.333333, 0.5)
-- Ký tự 'N': [0.5, 0.666667)
-- Ký tự 'O': [0.666667, 1)
+- Ký tự 'Q': [0.5, 0.666667)
+- Ký tự 'R': [0.666667, 0.833333)
+- Ký tự 'U': [0.833333, 1)
 
-[2] Quá trình mã hóa chuỗi 'KHONOM':
-Đọc 'K' -> Khoảng: [0.166667, 0.333333)
-Đọc 'H' -> Khoảng: [0.166667, 0.194444)
-Đọc 'O' -> Khoảng: [0.185185, 0.194444)
-Đọc 'N' -> Khoảng: [0.189815, 0.191358)
-Đọc 'O' -> Khoảng: [0.190844, 0.191358)
-Đọc 'M' -> Khoảng: [0.191015, 0.191101)
-=> Giá trị mã hóa được chọn: 0.191058
+[2] Quá trình mã hóa chuỗi 'MQKUCR':
+Đọc 'M' -> Khoảng: [0.333333, 0.500000)
+Đọc 'Q' -> Khoảng: [0.416667, 0.444444)
+Đọc 'K' -> Khoảng: [0.421296, 0.425926)
+Đọc 'U' -> Khoảng: [0.425154, 0.425926)
+Đọc 'C' -> Khoảng: [0.425154, 0.425283)
+Đọc 'R' -> Khoảng: [0.425240, 0.425261)
+=> Giá trị mã hóa được chọn: 0.425251
+=> Mã nhị phân tương ứng (17 bit): 01101100110111010
 
-[3] Quá trình giải mã (từ 0.191058, độ dài 6):
-Giá trị 0.191058 nằm trong khoảng của 'K' -> Giải mã: K
-Giá trị 0.146348 nằm trong khoảng của 'H' -> Giải mã: H
-Giá trị 0.878086 nằm trong khoảng của 'O' -> Giải mã: O
-Giá trị 0.634259 nằm trong khoảng của 'N' -> Giải mã: N
-Giá trị 0.805556 nằm trong khoảng của 'O' -> Giải mã: O
-Giá trị 0.416667 nằm trong khoảng của 'M' -> Giải mã: M
-
-79 85 87 75 66 256 72 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'HVLZP'?
-A. 0.165360
-B. 0.135200
-C. 0.085040
-D. 0.260200
-Đáp án đúng: B
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'DCZNO'?
-A. 0.266480
-B. 0.236320
-C. 0.361320
-D. 0.186160
-Đáp án đúng: B
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 1 bit
-C. 2 bit
-D. 0 bit
-Đáp án đúng: D
-
-0.425926
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'JZPOWA':
-Output: 74 | Thêm từ điển: JZ (Mã: 256)
-Output: 90 | Thêm từ điển: ZP (Mã: 257)
-Output: 80 | Thêm từ điển: PO (Mã: 258)
-Output: 79 | Thêm từ điển: OW (Mã: 259)
-Output: 87 | Thêm từ điển: WA (Mã: 260)
-Output cuối: 65
-=> Dãy mã hóa: 74 90 80 79 87 65 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 74 90 80 79 87 65 
-Đọc 74 -> Xuất: J
-Đọc 90 -> Xuất: Z | Thêm từ điển: JZ (Mã: 256)
-Đọc 80 -> Xuất: P | Thêm từ điển: ZP (Mã: 257)
-Đọc 79 -> Xuất: O | Thêm từ điển: PO (Mã: 258)
-Đọc 87 -> Xuất: W | Thêm từ điển: OW (Mã: 259)
-Đọc 65 -> Xuất: A | Thêm từ điển: WA (Mã: 260)
-=> Chuỗi giải mã thành công: JZPOWA
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'BUA'?
-A. 0.699074
-B. 0.505556
-C. 0.574074
-D. 0.622593
-Đáp án đúng: C
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'OVSHRW':
-Output: 79 | Thêm từ điển: OV (Mã: 256)
-Output: 86 | Thêm từ điển: VS (Mã: 257)
-Output: 83 | Thêm từ điển: SH (Mã: 258)
-Output: 72 | Thêm từ điển: HR (Mã: 259)
-Output: 82 | Thêm từ điển: RW (Mã: 260)
-Output cuối: 87
-=> Dãy mã hóa: 79 86 83 72 82 87 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 79 86 83 72 82 87 
-Đọc 79 -> Xuất: O
-Đọc 86 -> Xuất: V | Thêm từ điển: OV (Mã: 256)
-Đọc 83 -> Xuất: S | Thêm từ điển: VS (Mã: 257)
-Đọc 72 -> Xuất: H | Thêm từ điển: SH (Mã: 258)
-Đọc 82 -> Xuất: R | Thêm từ điển: HR (Mã: 259)
-Đọc 87 -> Xuất: W | Thêm từ điển: RW (Mã: 260)
-=> Chuỗi giải mã thành công: OVSHRW
+[3] Quá trình giải mã (từ mã nhị phân 01101100110111010, giá trị 0.425247, độ dài 6):
+Giá trị 0.425247 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.551483 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.308899 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.853394 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.120361 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.722168 nằm trong khoảng của 'R' -> Giải mã: R
 
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11101, 00001) = 3
-=> d_min = 3 (Giữa 11101 và 00001)
+Khoảng cách d(1100, 1011) = 3
+=> d_min = 3 (Giữa 1100 và 1011)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
 
-0.154297

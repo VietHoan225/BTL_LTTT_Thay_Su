@@ -1,46 +1,157 @@
-74 82 84 79 75 87 
-83 80 83 75 90 73 
-89 78 79 90 75 90 74 80 90 81 
-1 0 0
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(001110, 101010) = 2
-Khoảng cách d(001110, 001001) = 3
-Khoảng cách d(101010, 001001) = 3
-=> d_min = 2 (Giữa 001110 và 101010)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-84 70 66 89 83 85 87 86 66 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'OOOG'?
-A. 0.755859
-B. 0.528125
-C. 0.630859
-D. 0.713594
-Đáp án đúng: C
-
-4 3 1
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ULJFV'?
-A. 0.814440
-B. 0.689440
-C. 0.719600
-D. 0.639280
-Đáp án đúng: B
-
-2 1 0
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(0110, 1101) = 3
-=> d_min = 3 (Giữa 0110 và 1101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
-
-2 1 0
-0.844320
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 2 bit
+A. 2 bit
+B. 1 bit
 C. 0 bit
 D. 1 bit
 Đáp án đúng: C
 
-89 71 84 66 90 83 81 
-0 -1 0
+85 74 86 73 67 90 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0110, 0001) = 3
+Khoảng cách d(0110, 0000) = 2
+Khoảng cách d(0110, 0011) = 2
+Khoảng cách d(0001, 0000) = 1
+Khoảng cách d(0001, 0011) = 1
+Khoảng cách d(0000, 0011) = 2
+=> d_min = 1 (Giữa 0001 và 0000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'XETGE' là bao nhiêu?
+A. 6
+B. 4
+C. 8
+D. 5
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. -1 bit
+D. 0 bit
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'FXJE'?
+A. 011110011
+B. 01111000101
+C. 011110000
+D. 011110001
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0, 0.166667)
+- Ký tự 'G': [0.166667, 0.333333)
+- Ký tự 'V': [0.333333, 0.666667)
+- Ký tự 'Y': [0.666667, 0.833333)
+- Ký tự 'Z': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'AVZVYG':
+Đọc 'A' -> Khoảng: [0.000000, 0.166667)
+Đọc 'V' -> Khoảng: [0.055556, 0.111111)
+Đọc 'Z' -> Khoảng: [0.101852, 0.111111)
+Đọc 'V' -> Khoảng: [0.104938, 0.108025)
+Đọc 'Y' -> Khoảng: [0.106996, 0.107510)
+Đọc 'G' -> Khoảng: [0.107082, 0.107167)
+=> Giá trị mã hóa được chọn: 0.107124
+=> Mã nhị phân tương ứng (15 bit): 000110110110110
+
+[3] Quá trình giải mã (từ mã nhị phân 000110110110110, giá trị 0.107117, độ dài 6):
+Giá trị 0.107117 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.642700 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.928101 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.568604 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.705811 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.234863 nằm trong khoảng của 'G' -> Giải mã: G
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'YKQQQN'?
+A. 110110011010
+B. 110110011001
+C. 110110011011
+D. 11011001101101
+Đáp án đúng: C
+
+2 1 0
+0.203704
+001101
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0.000000, 0.166667)
+- Ký tự 'M': [0.166667, 0.333333)
+- Ký tự 'N': [0.333333, 0.500000)
+- Ký tự 'T': [0.500000, 0.666667)
+- Ký tự 'V': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'MNVVTB':
+Đọc 'M' -> Khoảng: [0.166667, 0.333333)
+Đọc 'N' -> Khoảng: [0.222222, 0.250000)
+Đọc 'V' -> Khoảng: [0.240741, 0.250000)
+Đọc 'V' -> Khoảng: [0.246914, 0.250000)
+Đọc 'T' -> Khoảng: [0.248457, 0.248971)
+Đọc 'B' -> Khoảng: [0.248457, 0.248543)
+=> Giá trị mã hóa được chọn: 0.248500
+=> Mã nhị phân tương ứng (15 bit): 001111111001110
+
+[3] Quá trình giải mã (từ mã nhị phân 001111111001110, giá trị 0.248474, độ dài 6):
+Giá trị 0.248474 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.490845 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.945068 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.835205 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.505615 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.033691 nằm trong khoảng của 'B' -> Giải mã: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'POLBQQQMVE' là bao nhiêu?
+A. 8
+B. 10
+C. 12
+D. 9
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'VBC'?
+A. 10111001
+B. 101111
+C. 101110
+D. 101100
+Đáp án đúng: C
+
+68 85 70 86 82 
+86 77 88 75 89 68 73 71 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'BCLLZOQQY':
+Output: 66 | Thêm từ điển: BC (Mã: 256)
+Output: 67 | Thêm từ điển: CL (Mã: 257)
+Output: 76 | Thêm từ điển: LL (Mã: 258)
+Output: 76 | Thêm từ điển: LZ (Mã: 259)
+Output: 90 | Thêm từ điển: ZO (Mã: 260)
+Output: 79 | Thêm từ điển: OQ (Mã: 261)
+Output: 81 | Thêm từ điển: QQ (Mã: 262)
+Output: 81 | Thêm từ điển: QY (Mã: 263)
+Output cuối: 89
+=> Dãy mã hóa: 66 67 76 76 90 79 81 81 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 66 67 76 76 90 79 81 81 89 
+Đọc 66 -> Xuất: B
+Đọc 67 -> Xuất: C | Thêm từ điển: BC (Mã: 256)
+Đọc 76 -> Xuất: L | Thêm từ điển: CL (Mã: 257)
+Đọc 76 -> Xuất: L | Thêm từ điển: LL (Mã: 258)
+Đọc 90 -> Xuất: Z | Thêm từ điển: LZ (Mã: 259)
+Đọc 79 -> Xuất: O | Thêm từ điển: ZO (Mã: 260)
+Đọc 81 -> Xuất: Q | Thêm từ điển: OQ (Mã: 261)
+Đọc 81 -> Xuất: Q | Thêm từ điển: QQ (Mã: 262)
+Đọc 89 -> Xuất: Y | Thêm từ điển: QY (Mã: 263)
+=> Chuỗi giải mã thành công: BCLLZOQQY
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(010, 111) = 2
+Khoảng cách d(010, 101) = 3
+Khoảng cách d(010, 011) = 1
+Khoảng cách d(111, 101) = 1
+Khoảng cách d(111, 011) = 1
+Khoảng cách d(101, 011) = 2
+=> d_min = 1 (Giữa 010 và 011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+0.802734
+11001

@@ -1,43 +1,208 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'RWYBT'?
-A. 0.302640
-B. 0.477800
-C. 0.352800
-D. 0.382960
-Đáp án đúng: C
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(001100, 100000) = 3
-=> d_min = 3 (Giữa 001100 và 100000)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
-
-68 87 87 90 72 90 87 71 68 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(010, 000) = 1
-=> d_min = 1 (Giữa 010 và 000)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-0.068640
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(011, 110) = 2
-Khoảng cách d(011, 110) = 2
-Khoảng cách d(110, 110) = 0
-=> d_min = 0 (Giữa 110 và 110)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
+0.657600
+10101000010
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 0 bit
 B. 0 bit
 C. 1 bit
-D. -1 bit
-Đáp án đúng: A
+D. 1 bit
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'F': [0.000000, 0.333333)
+- Ký tự 'K': [0.333333, 0.666667)
+- Ký tự 'R': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'KFR':
+Đọc 'K' -> Khoảng: [0.333333, 0.666667)
+Đọc 'F' -> Khoảng: [0.333333, 0.444444)
+Đọc 'R' -> Khoảng: [0.407407, 0.444444)
+=> Giá trị mã hóa được chọn: 0.425926
+=> Mã nhị phân tương ứng (6 bit): 011011
+
+[3] Quá trình giải mã (từ mã nhị phân 011011, giá trị 0.421875, độ dài 3):
+Giá trị 0.421875 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.265625 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.796875 nằm trong khoảng của 'R' -> Giải mã: R
+
+1 0 0
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'WHOH'?
+A. 1101011
+B. 1101001
+C. 1101000
+D. 110100101
+Đáp án đúng: B
 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 1 bit
+A. 1 bit
+B. 0 bit
+C. -1 bit
+D. 0 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JSIFOFFT' là bao nhiêu?
+A. 7
+B. 8
+C. 9
+D. 11
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
 C. 1 bit
-D. 2 bit
-Đáp án đúng: A
+D. 0 bit
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0001, 0001) = 0
+Khoảng cách d(0001, 0110) = 3
+Khoảng cách d(0001, 1000) = 2
+Khoảng cách d(0001, 0110) = 3
+Khoảng cách d(0001, 1000) = 2
+Khoảng cách d(0110, 1000) = 3
+=> d_min = 0 (Giữa 0001 và 0001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'AKPWY':
+Output: 65 | Thêm từ điển: AK (Mã: 256)
+Output: 75 | Thêm từ điển: KP (Mã: 257)
+Output: 80 | Thêm từ điển: PW (Mã: 258)
+Output: 87 | Thêm từ điển: WY (Mã: 259)
+Output cuối: 89
+=> Dãy mã hóa: 65 75 80 87 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 65 75 80 87 89 
+Đọc 65 -> Xuất: A
+Đọc 75 -> Xuất: K | Thêm từ điển: AK (Mã: 256)
+Đọc 80 -> Xuất: P | Thêm từ điển: KP (Mã: 257)
+Đọc 87 -> Xuất: W | Thêm từ điển: PW (Mã: 258)
+Đọc 89 -> Xuất: Y | Thêm từ điển: WY (Mã: 259)
+=> Chuỗi giải mã thành công: AKPWY
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0.000000, 0.250000)
+- Ký tự 'C': [0.250000, 0.500000)
+- Ký tự 'E': [0.500000, 0.750000)
+- Ký tự 'K': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'BKCE':
+Đọc 'B' -> Khoảng: [0.000000, 0.250000)
+Đọc 'K' -> Khoảng: [0.187500, 0.250000)
+Đọc 'C' -> Khoảng: [0.203125, 0.218750)
+Đọc 'E' -> Khoảng: [0.210938, 0.214844)
+=> Giá trị mã hóa được chọn: 0.212891
+=> Mã nhị phân tương ứng (9 bit): 001101101
+
+[3] Quá trình giải mã (từ mã nhị phân 001101101, giá trị 0.212891, độ dài 4):
+Giá trị 0.212891 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.851562 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.406250 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.625000 nằm trong khoảng của 'E' -> Giải mã: E
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'UVZHZAQA' là bao nhiêu?
+A. 7
+B. 9
+C. 8
+D. 11
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111001, 110111) = 3
+=> d_min = 3 (Giữa 111001 và 110111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.250000)
+- Ký tự 'J': [0.250000, 0.500000)
+- Ký tự 'M': [0.500000, 0.750000)
+- Ký tự 'R': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'RDMJ':
+Đọc 'R' -> Khoảng: [0.750000, 1.000000)
+Đọc 'D' -> Khoảng: [0.750000, 0.812500)
+Đọc 'M' -> Khoảng: [0.781250, 0.796875)
+Đọc 'J' -> Khoảng: [0.785156, 0.789062)
+=> Giá trị mã hóa được chọn: 0.787109
+=> Mã nhị phân tương ứng (9 bit): 110010011
+
+[3] Quá trình giải mã (từ mã nhị phân 110010011, giá trị 0.787109, độ dài 4):
+Giá trị 0.787109 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.148438 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.593750 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.375000 nằm trong khoảng của 'J' -> Giải mã: J
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001, 001) = 0
+Khoảng cách d(001, 110) = 3
+Khoảng cách d(001, 110) = 3
+=> d_min = 0 (Giữa 001 và 001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.166667)
+- Ký tự 'F': [0.166667, 0.333333)
+- Ký tự 'J': [0.333333, 0.500000)
+- Ký tự 'M': [0.500000, 0.666667)
+- Ký tự 'R': [0.666667, 0.833333)
+- Ký tự 'U': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'JRUMDF':
+Đọc 'J' -> Khoảng: [0.333333, 0.500000)
+Đọc 'R' -> Khoảng: [0.444444, 0.472222)
+Đọc 'U' -> Khoảng: [0.467593, 0.472222)
+Đọc 'M' -> Khoảng: [0.469907, 0.470679)
+Đọc 'D' -> Khoảng: [0.469907, 0.470036)
+Đọc 'F' -> Khoảng: [0.469929, 0.469950)
+=> Giá trị mã hóa được chọn: 0.469940
+=> Mã nhị phân tương ứng (17 bit): 01111000010011011
+
+[3] Quá trình giải mã (từ mã nhị phân 01111000010011011, giá trị 0.469933, độ dài 6):
+Giá trị 0.469933 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.819595 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.917572 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.505432 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.032593 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.195557 nằm trong khoảng của 'F' -> Giải mã: F
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'OGIPIDJRL' là bao nhiêu?
+A. 10
+B. 12
+C. 9
+D. 8
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'CMVYHH' là bao nhiêu?
+A. 7
+B. 9
+C. 5
+D. 6
+Đáp án đúng: D
+
+83 71 72 75 66 82 70 65 84 67 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0.000000, 0.333333)
+- Ký tự 'E': [0.333333, 0.666667)
+- Ký tự 'P': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'ECP':
+Đọc 'E' -> Khoảng: [0.333333, 0.666667)
+Đọc 'C' -> Khoảng: [0.333333, 0.444444)
+Đọc 'P' -> Khoảng: [0.407407, 0.444444)
+=> Giá trị mã hóa được chọn: 0.425926
+=> Mã nhị phân tương ứng (6 bit): 011011
+
+[3] Quá trình giải mã (từ mã nhị phân 011011, giá trị 0.421875, độ dài 3):
+Giá trị 0.421875 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.265625 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.796875 nằm trong khoảng của 'P' -> Giải mã: P
 

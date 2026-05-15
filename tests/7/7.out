@@ -1,63 +1,19 @@
-74 78 71 76 68 89 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'HUFREQSJWY':
-Output: 72 | Thêm từ điển: HU (Mã: 256)
-Output: 85 | Thêm từ điển: UF (Mã: 257)
-Output: 70 | Thêm từ điển: FR (Mã: 258)
-Output: 82 | Thêm từ điển: RE (Mã: 259)
-Output: 69 | Thêm từ điển: EQ (Mã: 260)
-Output: 81 | Thêm từ điển: QS (Mã: 261)
-Output: 83 | Thêm từ điển: SJ (Mã: 262)
-Output: 74 | Thêm từ điển: JW (Mã: 263)
-Output: 87 | Thêm từ điển: WY (Mã: 264)
-Output cuối: 89
-=> Dãy mã hóa: 72 85 70 82 69 81 83 74 87 89 
+[1] Quá trình mã hóa chuỗi 'CHKWD':
+Output: 67 | Thêm từ điển: CH (Mã: 256)
+Output: 72 | Thêm từ điển: HK (Mã: 257)
+Output: 75 | Thêm từ điển: KW (Mã: 258)
+Output: 87 | Thêm từ điển: WD (Mã: 259)
+Output cuối: 68
+=> Dãy mã hóa: 67 72 75 87 68 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 72 85 70 82 69 81 83 74 87 89 
-Đọc 72 -> Xuất: H
-Đọc 85 -> Xuất: U | Thêm từ điển: HU (Mã: 256)
-Đọc 70 -> Xuất: F | Thêm từ điển: UF (Mã: 257)
-Đọc 82 -> Xuất: R | Thêm từ điển: FR (Mã: 258)
-Đọc 69 -> Xuất: E | Thêm từ điển: RE (Mã: 259)
-Đọc 81 -> Xuất: Q | Thêm từ điển: EQ (Mã: 260)
-Đọc 83 -> Xuất: S | Thêm từ điển: QS (Mã: 261)
-Đọc 74 -> Xuất: J | Thêm từ điển: SJ (Mã: 262)
-Đọc 87 -> Xuất: W | Thêm từ điển: JW (Mã: 263)
-Đọc 89 -> Xuất: Y | Thêm từ điển: WY (Mã: 264)
-=> Chuỗi giải mã thành công: HUFREQSJWY
+Chuỗi mã đầu vào: 67 72 75 87 68 
+Đọc 67 -> Xuất: C
+Đọc 72 -> Xuất: H | Thêm từ điển: CH (Mã: 256)
+Đọc 75 -> Xuất: K | Thêm từ điển: HK (Mã: 257)
+Đọc 87 -> Xuất: W | Thêm từ điển: KW (Mã: 258)
+Đọc 68 -> Xuất: D | Thêm từ điển: WD (Mã: 259)
+=> Chuỗi giải mã thành công: CHKWD
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'GCRZUZVZ' là bao nhiêu?
-A. 9
-B. 7
-C. 8
-D. 11
-Đáp án đúng: C
-
-81 66 80 73 84 82 85 72 69 
-85 86 88 78 78 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(011, 011) = 0
-Khoảng cách d(011, 110) = 2
-Khoảng cách d(011, 110) = 2
-=> d_min = 0 (Giữa 011 và 011)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0, 0.333333)
-- Ký tự 'C': [0.333333, 0.666667)
-- Ký tự 'F': [0.666667, 1)
-
-[2] Quá trình mã hóa chuỗi 'AFC':
-Đọc 'A' -> Khoảng: [0.000000, 0.333333)
-Đọc 'F' -> Khoảng: [0.222222, 0.333333)
-Đọc 'C' -> Khoảng: [0.259259, 0.296296)
-=> Giá trị mã hóa được chọn: 0.277778
-
-[3] Quá trình giải mã (từ 0.277778, độ dài 3):
-Giá trị 0.277778 nằm trong khoảng của 'A' -> Giải mã: A
-Giá trị 0.833333 nằm trong khoảng của 'F' -> Giải mã: F
-Giá trị 0.500000 nằm trong khoảng của 'C' -> Giải mã: C
-
+88 75 84 71 68 72 

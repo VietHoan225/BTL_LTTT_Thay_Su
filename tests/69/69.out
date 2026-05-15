@@ -1,208 +1,103 @@
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PLDABOXC' là bao nhiêu?
-A. 8
-B. 7
-C. 9
-D. 11
-Đáp án đúng: A
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11000, 10000) = 1
-Khoảng cách d(11000, 11001) = 1
-Khoảng cách d(11000, 11011) = 2
-Khoảng cách d(10000, 11001) = 2
-Khoảng cách d(10000, 11011) = 3
-Khoảng cách d(11001, 11011) = 1
-=> d_min = 1 (Giữa 11000 và 10000)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'C': [0, 0.5)
-- Ký tự 'F': [0.5, 0.666667)
-- Ký tự 'N': [0.666667, 0.833333)
-- Ký tự 'U': [0.833333, 1)
+- Ký tự 'I': [0, 0.25)
+- Ký tự 'L': [0.25, 0.5)
+- Ký tự 'U': [0.5, 1)
 
-[2] Quá trình mã hóa chuỗi 'CFUCCN':
-Đọc 'C' -> Khoảng: [0.000000, 0.500000)
-Đọc 'F' -> Khoảng: [0.250000, 0.333333)
-Đọc 'U' -> Khoảng: [0.319444, 0.333333)
-Đọc 'C' -> Khoảng: [0.319444, 0.326389)
-Đọc 'C' -> Khoảng: [0.319444, 0.322917)
-Đọc 'N' -> Khoảng: [0.321759, 0.322338)
-=> Giá trị mã hóa được chọn: 0.322049
+[2] Quá trình mã hóa chuỗi 'IUUL':
+Đọc 'I' -> Khoảng: [0.000000, 0.250000)
+Đọc 'U' -> Khoảng: [0.125000, 0.250000)
+Đọc 'U' -> Khoảng: [0.187500, 0.250000)
+Đọc 'L' -> Khoảng: [0.203125, 0.218750)
+=> Giá trị mã hóa được chọn: 0.210938
+=> Mã nhị phân tương ứng (7 bit): 0011011
 
-[3] Quá trình giải mã (từ 0.322049, độ dài 6):
-Giá trị 0.322049 nằm trong khoảng của 'C' -> Giải mã: C
-Giá trị 0.644097 nằm trong khoảng của 'F' -> Giải mã: F
-Giá trị 0.864583 nằm trong khoảng của 'U' -> Giải mã: U
-Giá trị 0.187500 nằm trong khoảng của 'C' -> Giải mã: C
-Giá trị 0.375000 nằm trong khoảng của 'C' -> Giải mã: C
-Giá trị 0.750000 nằm trong khoảng của 'N' -> Giải mã: N
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'WXYLBQEMMY':
-Output: 87 | Thêm từ điển: WX (Mã: 256)
-Output: 88 | Thêm từ điển: XY (Mã: 257)
-Output: 89 | Thêm từ điển: YL (Mã: 258)
-Output: 76 | Thêm từ điển: LB (Mã: 259)
-Output: 66 | Thêm từ điển: BQ (Mã: 260)
-Output: 81 | Thêm từ điển: QE (Mã: 261)
-Output: 69 | Thêm từ điển: EM (Mã: 262)
-Output: 77 | Thêm từ điển: MM (Mã: 263)
-Output: 77 | Thêm từ điển: MY (Mã: 264)
-Output cuối: 89
-=> Dãy mã hóa: 87 88 89 76 66 81 69 77 77 89 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 87 88 89 76 66 81 69 77 77 89 
-Đọc 87 -> Xuất: W
-Đọc 88 -> Xuất: X | Thêm từ điển: WX (Mã: 256)
-Đọc 89 -> Xuất: Y | Thêm từ điển: XY (Mã: 257)
-Đọc 76 -> Xuất: L | Thêm từ điển: YL (Mã: 258)
-Đọc 66 -> Xuất: B | Thêm từ điển: LB (Mã: 259)
-Đọc 81 -> Xuất: Q | Thêm từ điển: BQ (Mã: 260)
-Đọc 69 -> Xuất: E | Thêm từ điển: QE (Mã: 261)
-Đọc 77 -> Xuất: M | Thêm từ điển: EM (Mã: 262)
-Đọc 77 -> Xuất: M | Thêm từ điển: MM (Mã: 263)
-Đọc 89 -> Xuất: Y | Thêm từ điển: MY (Mã: 264)
-=> Chuỗi giải mã thành công: WXYLBQEMMY
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0.000000, 0.200000)
-- Ký tự 'D': [0.200000, 0.400000)
-- Ký tự 'J': [0.400000, 0.600000)
-- Ký tự 'M': [0.600000, 0.800000)
-- Ký tự 'Y': [0.800000, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'DAMYJ':
-Đọc 'D' -> Khoảng: [0.200000, 0.400000)
-Đọc 'A' -> Khoảng: [0.200000, 0.240000)
-Đọc 'M' -> Khoảng: [0.224000, 0.232000)
-Đọc 'Y' -> Khoảng: [0.230400, 0.232000)
-Đọc 'J' -> Khoảng: [0.231040, 0.231360)
-=> Giá trị mã hóa được chọn: 0.231200
-
-[3] Quá trình giải mã (từ 0.231200, độ dài 5):
-Giá trị 0.231200 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.156000 nằm trong khoảng của 'A' -> Giải mã: A
-Giá trị 0.780000 nằm trong khoảng của 'M' -> Giải mã: M
-Giá trị 0.900000 nằm trong khoảng của 'Y' -> Giải mã: Y
-Giá trị 0.500000 nằm trong khoảng của 'J' -> Giải mã: J
+[3] Quá trình giải mã (từ mã nhị phân 0011011, giá trị 0.210938, độ dài 4):
+Giá trị 0.210938 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.843750 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.687500 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.375000 nằm trong khoảng của 'L' -> Giải mã: L
 
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(111, 010) = 2
-Khoảng cách d(111, 001) = 2
-Khoảng cách d(010, 001) = 2
-=> d_min = 2 (Giữa 111 và 010)
+Khoảng cách d(0010, 0100) = 2
+Khoảng cách d(0010, 0001) = 2
+Khoảng cách d(0010, 1101) = 4
+Khoảng cách d(0100, 0001) = 2
+Khoảng cách d(0100, 1101) = 2
+Khoảng cách d(0001, 1101) = 2
+=> d_min = 2 (Giữa 0010 và 0100)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'O': [0.000000, 0.333333)
-- Ký tự 'P': [0.333333, 0.666667)
-- Ký tự 'U': [0.666667, 1.000000)
+- Ký tự 'Q': [0.000000, 0.200000)
+- Ký tự 'R': [0.200000, 0.600000)
+- Ký tự 'X': [0.600000, 0.800000)
+- Ký tự 'Y': [0.800000, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'UOP':
-Đọc 'U' -> Khoảng: [0.666667, 1.000000)
-Đọc 'O' -> Khoảng: [0.666667, 0.777778)
-Đọc 'P' -> Khoảng: [0.703704, 0.740741)
-=> Giá trị mã hóa được chọn: 0.722222
+[2] Quá trình mã hóa chuỗi 'QRYRX':
+Đọc 'Q' -> Khoảng: [0.000000, 0.200000)
+Đọc 'R' -> Khoảng: [0.040000, 0.120000)
+Đọc 'Y' -> Khoảng: [0.104000, 0.120000)
+Đọc 'R' -> Khoảng: [0.107200, 0.113600)
+Đọc 'X' -> Khoảng: [0.111040, 0.112320)
+=> Giá trị mã hóa được chọn: 0.111680
+=> Mã nhị phân tương ứng (11 bit): 00011100100
 
-[3] Quá trình giải mã (từ 0.722222, độ dài 3):
-Giá trị 0.722222 nằm trong khoảng của 'U' -> Giải mã: U
-Giá trị 0.166667 nằm trong khoảng của 'O' -> Giải mã: O
-Giá trị 0.500000 nằm trong khoảng của 'P' -> Giải mã: P
+[3] Quá trình giải mã (từ mã nhị phân 00011100100, giá trị 0.111328, độ dài 5):
+Giá trị 0.111328 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.556641 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.891602 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.458008 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.645020 nằm trong khoảng của 'X' -> Giải mã: X
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'PPUPRPVRU':
-Output: 80 | Thêm từ điển: PP (Mã: 256)
-Output: 80 | Thêm từ điển: PU (Mã: 257)
-Output: 85 | Thêm từ điển: UP (Mã: 258)
-Output: 80 | Thêm từ điển: PR (Mã: 259)
-Output: 82 | Thêm từ điển: RP (Mã: 260)
-Output: 80 | Thêm từ điển: PV (Mã: 261)
-Output: 86 | Thêm từ điển: VR (Mã: 262)
-Output: 82 | Thêm từ điển: RU (Mã: 263)
-Output cuối: 85
-=> Dãy mã hóa: 80 80 85 80 82 80 86 82 85 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 80 80 85 80 82 80 86 82 85 
-Đọc 80 -> Xuất: P
-Đọc 80 -> Xuất: P | Thêm từ điển: PP (Mã: 256)
-Đọc 85 -> Xuất: U | Thêm từ điển: PU (Mã: 257)
-Đọc 80 -> Xuất: P | Thêm từ điển: UP (Mã: 258)
-Đọc 82 -> Xuất: R | Thêm từ điển: PR (Mã: 259)
-Đọc 80 -> Xuất: P | Thêm từ điển: RP (Mã: 260)
-Đọc 86 -> Xuất: V | Thêm từ điển: PV (Mã: 261)
-Đọc 82 -> Xuất: R | Thêm từ điển: VR (Mã: 262)
-Đọc 85 -> Xuất: U | Thêm từ điển: RU (Mã: 263)
-=> Chuỗi giải mã thành công: PPUPRPVRU
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'DDG'?
-A. 0.246296
-B. 0.495370
-C. 0.474444
-D. 0.370370
-Đáp án đúng: D
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101, 000) = 2
+Khoảng cách d(101, 111) = 1
+Khoảng cách d(101, 000) = 2
+Khoảng cách d(000, 111) = 3
+Khoảng cách d(000, 000) = 0
+Khoảng cách d(111, 000) = 3
+=> d_min = 0 (Giữa 000 và 000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
+A. 1 bit
 B. 0 bit
 C. 1 bit
+D. 0 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
 D. 1 bit
 Đáp án đúng: B
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'OQBGVEBWE':
-Output: 79 | Thêm từ điển: OQ (Mã: 256)
-Output: 81 | Thêm từ điển: QB (Mã: 257)
-Output: 66 | Thêm từ điển: BG (Mã: 258)
-Output: 71 | Thêm từ điển: GV (Mã: 259)
-Output: 86 | Thêm từ điển: VE (Mã: 260)
-Output: 69 | Thêm từ điển: EB (Mã: 261)
-Output: 66 | Thêm từ điển: BW (Mã: 262)
-Output: 87 | Thêm từ điển: WE (Mã: 263)
-Output cuối: 69
-=> Dãy mã hóa: 79 81 66 71 86 69 66 87 69 
+69 79 77 65 72 75 90 68 
+75 65 71 68 88 76 78 84 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'XLYA'?
+A. 100111011
+B. 100111000
+C. 100111001
+D. 10011100101
+Đáp án đúng: C
 
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 79 81 66 71 86 69 66 87 69 
-Đọc 79 -> Xuất: O
-Đọc 81 -> Xuất: Q | Thêm từ điển: OQ (Mã: 256)
-Đọc 66 -> Xuất: B | Thêm từ điển: QB (Mã: 257)
-Đọc 71 -> Xuất: G | Thêm từ điển: BG (Mã: 258)
-Đọc 86 -> Xuất: V | Thêm từ điển: GV (Mã: 259)
-Đọc 69 -> Xuất: E | Thêm từ điển: VE (Mã: 260)
-Đọc 66 -> Xuất: B | Thêm từ điển: EB (Mã: 261)
-Đọc 87 -> Xuất: W | Thêm từ điển: BW (Mã: 262)
-Đọc 69 -> Xuất: E | Thêm từ điển: WE (Mã: 263)
-=> Chuỗi giải mã thành công: OQBGVEBWE
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'INVUY'?
+A. 000100011001001
+B. 0001000110000
+C. 0001000110010
+D. 0001000110011
+Đáp án đúng: C
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'VNTJXEED':
-Output: 86 | Thêm từ điển: VN (Mã: 256)
-Output: 78 | Thêm từ điển: NT (Mã: 257)
-Output: 84 | Thêm từ điển: TJ (Mã: 258)
-Output: 74 | Thêm từ điển: JX (Mã: 259)
-Output: 88 | Thêm từ điển: XE (Mã: 260)
-Output: 69 | Thêm từ điển: EE (Mã: 261)
-Output: 69 | Thêm từ điển: ED (Mã: 262)
-Output cuối: 68
-=> Dãy mã hóa: 86 78 84 74 88 69 69 68 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 86 78 84 74 88 69 69 68 
-Đọc 86 -> Xuất: V
-Đọc 78 -> Xuất: N | Thêm từ điển: VN (Mã: 256)
-Đọc 84 -> Xuất: T | Thêm từ điển: NT (Mã: 257)
-Đọc 74 -> Xuất: J | Thêm từ điển: TJ (Mã: 258)
-Đọc 88 -> Xuất: X | Thêm từ điển: JX (Mã: 259)
-Đọc 69 -> Xuất: E | Thêm từ điển: XE (Mã: 260)
-Đọc 69 -> Xuất: E | Thêm từ điển: EE (Mã: 261)
-Đọc 68 -> Xuất: D | Thêm từ điển: ED (Mã: 262)
-=> Chuỗi giải mã thành công: VNTJXEED
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0010, 1100) = 3
+Khoảng cách d(0010, 1110) = 2
+Khoảng cách d(1100, 1110) = 1
+=> d_min = 1 (Giữa 1100 và 1110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 

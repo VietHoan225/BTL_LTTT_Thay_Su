@@ -1,55 +1,52 @@
+0.237440
+001111001100100
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(00100, 11110) = 3
-Khoảng cách d(00100, 01101) = 2
-Khoảng cách d(11110, 01101) = 3
-=> d_min = 2 (Giữa 00100 và 01101)
+Khoảng cách d(011, 000) = 2
+=> d_min = 2 (Giữa 011 và 000)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 0 bit
-C. 1 bit
-D. 1 bit
-Đáp án đúng: A
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'NAHQA':
+Output: 78 | Thêm từ điển: NA (Mã: 256)
+Output: 65 | Thêm từ điển: AH (Mã: 257)
+Output: 72 | Thêm từ điển: HQ (Mã: 258)
+Output: 81 | Thêm từ điển: QA (Mã: 259)
+Output cuối: 65
+=> Dãy mã hóa: 78 65 72 81 65 
 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(110100, 010101) = 2
-=> d_min = 2 (Giữa 110100 và 010101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 78 65 72 81 65 
+Đọc 78 -> Xuất: N
+Đọc 65 -> Xuất: A | Thêm từ điển: NA (Mã: 256)
+Đọc 72 -> Xuất: H | Thêm từ điển: AH (Mã: 257)
+Đọc 81 -> Xuất: Q | Thêm từ điển: HQ (Mã: 258)
+Đọc 65 -> Xuất: A | Thêm từ điển: QA (Mã: 259)
+=> Chuỗi giải mã thành công: NAHQA
 
-2 1 0
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JSQFDI'?
-A. 0.658233
-B. 0.688243
-C. 0.608222
-D. 0.783233
-Đáp án đúng: A
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.166667)
+- Ký tự 'D': [0.166667, 0.333333)
+- Ký tự 'J': [0.333333, 0.500000)
+- Ký tự 'N': [0.500000, 0.666667)
+- Ký tự 'S': [0.666667, 1.000000)
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HMHJFTQKH' là bao nhiêu?
-A. 8
-B. 10
-C. 9
-D. 12
-Đáp án đúng: C
+[2] Quá trình mã hóa chuỗi 'DJNASS':
+Đọc 'D' -> Khoảng: [0.166667, 0.333333)
+Đọc 'J' -> Khoảng: [0.222222, 0.250000)
+Đọc 'N' -> Khoảng: [0.236111, 0.240741)
+Đọc 'A' -> Khoảng: [0.236111, 0.236883)
+Đọc 'S' -> Khoảng: [0.236626, 0.236883)
+Đọc 'S' -> Khoảng: [0.236797, 0.236883)
+=> Giá trị mã hóa được chọn: 0.236840
+=> Mã nhị phân tương ứng (15 bit): 001111001010000
 
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 4 bit
-B. 2 bit
-C. 3 bit
-D. 1 bit
-Đáp án đúng: D
-
-1 0 0
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(11110, 10111) = 2
-Khoảng cách d(11110, 10101) = 3
-Khoảng cách d(11110, 01110) = 1
-Khoảng cách d(10111, 10101) = 1
-Khoảng cách d(10111, 01110) = 3
-Khoảng cách d(10101, 01110) = 4
-=> d_min = 1 (Giữa 11110 và 01110)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+[3] Quá trình giải mã (từ mã nhị phân 001111001010000, giá trị 0.236816, độ dài 6):
+Giá trị 0.236816 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.420898 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.525391 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.152344 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.914062 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.742187 nằm trong khoảng của 'S' -> Giải mã: S
 

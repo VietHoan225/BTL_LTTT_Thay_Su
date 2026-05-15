@@ -1,41 +1,42 @@
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(01111, 11000) = 4
-Khoảng cách d(01111, 10111) = 2
-Khoảng cách d(01111, 00000) = 4
-Khoảng cách d(11000, 10111) = 4
-Khoảng cách d(11000, 00000) = 2
-Khoảng cách d(10111, 00000) = 4
-=> d_min = 2 (Giữa 01111 và 10111)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'TWZUKC'?
+A. 01111000010101000
+B. 0111100001010100101
+C. 01111000010101011
+D. 01111000010101001
+Đáp án đúng: D
 
+0.693359
+101100011
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 1 bit
-C. 0 bit
-D. 0 bit
+A. 0 bit
+B. 2 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'EFYOY':
+Output: 69 | Thêm từ điển: EF (Mã: 256)
+Output: 70 | Thêm từ điển: FY (Mã: 257)
+Output: 89 | Thêm từ điển: YO (Mã: 258)
+Output: 79 | Thêm từ điển: OY (Mã: 259)
+Output cuối: 89
+=> Dãy mã hóa: 69 70 89 79 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 69 70 89 79 89 
+Đọc 69 -> Xuất: E
+Đọc 70 -> Xuất: F | Thêm từ điển: EF (Mã: 256)
+Đọc 89 -> Xuất: Y | Thêm từ điển: FY (Mã: 257)
+Đọc 79 -> Xuất: O | Thêm từ điển: YO (Mã: 258)
+Đọc 89 -> Xuất: Y | Thêm từ điển: OY (Mã: 259)
+=> Chuỗi giải mã thành công: EFYOY
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'PQEM'?
+A. 101100001
+B. 101100010
+C. 101100011
+D. 10110001101
 Đáp án đúng: C
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'BZCENV'?
-A. 0.175555
-B. 0.095533
-C. 0.145544
-D. 0.270544
-Đáp án đúng: C
-
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(10011, 01110) = 4
-Khoảng cách d(10011, 10101) = 2
-Khoảng cách d(01110, 10101) = 4
-=> d_min = 2 (Giữa 10011 và 10101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'EFFPC' là bao nhiêu?
-A. 4
-B. 5
-C. 6
-D. 8
-Đáp án đúng: B
-
-81 88 65 90 74 
+2 1 0

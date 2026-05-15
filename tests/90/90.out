@@ -1,50 +1,47 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GPTU'?
-A. 0.055469
-B. 0.232422
-C. 0.139375
-D. 0.107422
-Đáp án đúng: D
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0, 0.333333)
+- Ký tự 'F': [0.333333, 0.666667)
+- Ký tự 'L': [0.666667, 1)
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'VEJIMKMCB':
-Output: 86 | Thêm từ điển: VE (Mã: 256)
-Output: 69 | Thêm từ điển: EJ (Mã: 257)
-Output: 74 | Thêm từ điển: JI (Mã: 258)
-Output: 73 | Thêm từ điển: IM (Mã: 259)
-Output: 77 | Thêm từ điển: MK (Mã: 260)
-Output: 75 | Thêm từ điển: KM (Mã: 261)
-Output: 77 | Thêm từ điển: MC (Mã: 262)
-Output: 67 | Thêm từ điển: CB (Mã: 263)
-Output cuối: 66
-=> Dãy mã hóa: 86 69 74 73 77 75 77 67 66 
+[2] Quá trình mã hóa chuỗi 'ALF':
+Đọc 'A' -> Khoảng: [0.000000, 0.333333)
+Đọc 'L' -> Khoảng: [0.222222, 0.333333)
+Đọc 'F' -> Khoảng: [0.259259, 0.296296)
+=> Giá trị mã hóa được chọn: 0.277778
+=> Mã nhị phân tương ứng (6 bit): 010001
 
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 86 69 74 73 77 75 77 67 66 
-Đọc 86 -> Xuất: V
-Đọc 69 -> Xuất: E | Thêm từ điển: VE (Mã: 256)
-Đọc 74 -> Xuất: J | Thêm từ điển: EJ (Mã: 257)
-Đọc 73 -> Xuất: I | Thêm từ điển: JI (Mã: 258)
-Đọc 77 -> Xuất: M | Thêm từ điển: IM (Mã: 259)
-Đọc 75 -> Xuất: K | Thêm từ điển: MK (Mã: 260)
-Đọc 77 -> Xuất: M | Thêm từ điển: KM (Mã: 261)
-Đọc 67 -> Xuất: C | Thêm từ điển: MC (Mã: 262)
-Đọc 66 -> Xuất: B | Thêm từ điển: CB (Mã: 263)
-=> Chuỗi giải mã thành công: VEJIMKMCB
+[3] Quá trình giải mã (từ mã nhị phân 010001, giá trị 0.265625, độ dài 3):
+Giá trị 0.265625 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.796875 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.390625 nằm trong khoảng của 'F' -> Giải mã: F
 
-1 0 0
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'NHAPEF'?
+A. 11000001000010011
+B. 11000001000010001
+C. 1100000100001000101
+D. 11000001000010000
+Đáp án đúng: B
+
+88 90 83 68 89 83 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'LEA'?
+A. 110011
+B. 110000
+C. 110010
+D. 11001001
+Đáp án đúng: C
+
+0.414062
+0110101
+75 83 75 72 79 84 69 
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(110000, 111101) = 3
-Khoảng cách d(110000, 011110) = 4
-Khoảng cách d(111101, 011110) = 3
-=> d_min = 3 (Giữa 110000 và 111101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+Khoảng cách d(001111, 001000) = 3
+Khoảng cách d(001111, 001100) = 2
+Khoảng cách d(001111, 111010) = 4
+Khoảng cách d(001000, 001100) = 1
+Khoảng cách d(001000, 111010) = 3
+Khoảng cách d(001100, 111010) = 4
+=> d_min = 1 (Giữa 001000 và 001100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'KWILF'?
-A. 0.572960
-B. 0.603120
-C. 0.697960
-D. 0.522800
-Đáp án đúng: A
-
-0.226027

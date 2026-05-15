@@ -1,87 +1,58 @@
-89 77 87 85 85 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'TUHZBQ':
-Output: 84 | Thêm từ điển: TU (Mã: 256)
-Output: 85 | Thêm từ điển: UH (Mã: 257)
-Output: 72 | Thêm từ điển: HZ (Mã: 258)
-Output: 90 | Thêm từ điển: ZB (Mã: 259)
-Output: 66 | Thêm từ điển: BQ (Mã: 260)
-Output cuối: 81
-=> Dãy mã hóa: 84 85 72 90 66 81 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WFWSWTX' là bao nhiêu?
+A. 7
+B. 8
+C. 6
+D. 10
+Đáp án đúng: A
 
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 84 85 72 90 66 81 
-Đọc 84 -> Xuất: T
-Đọc 85 -> Xuất: U | Thêm từ điển: TU (Mã: 256)
-Đọc 72 -> Xuất: H | Thêm từ điển: UH (Mã: 257)
-Đọc 90 -> Xuất: Z | Thêm từ điển: HZ (Mã: 258)
-Đọc 66 -> Xuất: B | Thêm từ điển: ZB (Mã: 259)
-Đọc 81 -> Xuất: Q | Thêm từ điển: BQ (Mã: 260)
-=> Chuỗi giải mã thành công: TUHZBQ
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'YEV'?
+A. 101110
+B. 101111
+C. 10111001
+D. 101100
+Đáp án đúng: A
 
 2 1 0
-81 79 73 72 69 81 75 85 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 0 bit
-C. 1 bit
-D. 0 bit
+A. 0 bit
+B. 1 bit
+C. 2 bit
+D. 1 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'KSW'?
+A. 001100
+B. 001111
+C. 001101
+D. 00110101
+Đáp án đúng: C
+
+0.781250
+1100100
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'PFWI'?
+A. 10001101101
+B. 100011011
+C. 100011001
+D. 100011010
 Đáp án đúng: B
 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'UXHEDCIQNP' là bao nhiêu?
+A. 10
+B. 9
+C. 11
+D. 13
+Đáp án đúng: A
+
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(101, 111) = 1
-Khoảng cách d(101, 010) = 3
-Khoảng cách d(111, 010) = 2
-=> d_min = 1 (Giữa 101 và 111)
+Khoảng cách d(00101, 00001) = 1
+Khoảng cách d(00101, 10111) = 2
+Khoảng cách d(00101, 10000) = 3
+Khoảng cách d(00001, 10111) = 3
+Khoảng cách d(00001, 10000) = 2
+Khoảng cách d(10111, 10000) = 3
+=> d_min = 1 (Giữa 00101 và 00001)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-2 1 0
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'AEVSANBL':
-Output: 65 | Thêm từ điển: AE (Mã: 256)
-Output: 69 | Thêm từ điển: EV (Mã: 257)
-Output: 86 | Thêm từ điển: VS (Mã: 258)
-Output: 83 | Thêm từ điển: SA (Mã: 259)
-Output: 65 | Thêm từ điển: AN (Mã: 260)
-Output: 78 | Thêm từ điển: NB (Mã: 261)
-Output: 66 | Thêm từ điển: BL (Mã: 262)
-Output cuối: 76
-=> Dãy mã hóa: 65 69 86 83 65 78 66 76 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 65 69 86 83 65 78 66 76 
-Đọc 65 -> Xuất: A
-Đọc 69 -> Xuất: E | Thêm từ điển: AE (Mã: 256)
-Đọc 86 -> Xuất: V | Thêm từ điển: EV (Mã: 257)
-Đọc 83 -> Xuất: S | Thêm từ điển: VS (Mã: 258)
-Đọc 65 -> Xuất: A | Thêm từ điển: SA (Mã: 259)
-Đọc 78 -> Xuất: N | Thêm từ điển: AN (Mã: 260)
-Đọc 66 -> Xuất: B | Thêm từ điển: NB (Mã: 261)
-Đọc 76 -> Xuất: L | Thêm từ điển: BL (Mã: 262)
-=> Chuỗi giải mã thành công: AEVSANBL
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'AIACLJT':
-Output: 65 | Thêm từ điển: AI (Mã: 256)
-Output: 73 | Thêm từ điển: IA (Mã: 257)
-Output: 65 | Thêm từ điển: AC (Mã: 258)
-Output: 67 | Thêm từ điển: CL (Mã: 259)
-Output: 76 | Thêm từ điển: LJ (Mã: 260)
-Output: 74 | Thêm từ điển: JT (Mã: 261)
-Output cuối: 84
-=> Dãy mã hóa: 65 73 65 67 76 74 84 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 65 73 65 67 76 74 84 
-Đọc 65 -> Xuất: A
-Đọc 73 -> Xuất: I | Thêm từ điển: AI (Mã: 256)
-Đọc 65 -> Xuất: A | Thêm từ điển: IA (Mã: 257)
-Đọc 67 -> Xuất: C | Thêm từ điển: AC (Mã: 258)
-Đọc 76 -> Xuất: L | Thêm từ điển: CL (Mã: 259)
-Đọc 74 -> Xuất: J | Thêm từ điển: LJ (Mã: 260)
-Đọc 84 -> Xuất: T | Thêm từ điển: JT (Mã: 261)
-=> Chuỗi giải mã thành công: AIACLJT
 
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 0 bit
@@ -91,16 +62,57 @@ D. 0 bit
 Đáp án đúng: D
 
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(0011, 1110) = 3
-Khoảng cách d(0011, 1100) = 4
-Khoảng cách d(1110, 1100) = 1
-=> d_min = 1 (Giữa 1110 và 1100)
+Khoảng cách d(000010, 100010) = 1
+Khoảng cách d(000010, 101000) = 3
+Khoảng cách d(100010, 101000) = 2
+=> d_min = 1 (Giữa 000010 và 100010)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(111, 001) = 2
-=> d_min = 2 (Giữa 111 và 001)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'QQIT'?
+A. 0110111
+B. 011011101
+C. 0110101
+D. 0110110
+Đáp án đúng: A
 
+71 86 86 78 75 79 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.166667)
+- Ký tự 'H': [0.166667, 0.333333)
+- Ký tự 'O': [0.333333, 0.500000)
+- Ký tự 'V': [0.500000, 0.666667)
+- Ký tự 'W': [0.666667, 0.833333)
+- Ký tự 'X': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'HOWXAV':
+Đọc 'H' -> Khoảng: [0.166667, 0.333333)
+Đọc 'O' -> Khoảng: [0.222222, 0.250000)
+Đọc 'W' -> Khoảng: [0.240741, 0.245370)
+Đọc 'X' -> Khoảng: [0.244599, 0.245370)
+Đọc 'A' -> Khoảng: [0.244599, 0.244727)
+Đọc 'V' -> Khoảng: [0.244663, 0.244684)
+=> Giá trị mã hóa được chọn: 0.244674
+=> Mã nhị phân tương ứng (17 bit): 00111110101000101
+
+[3] Quá trình giải mã (từ mã nhị phân 00111110101000101, giá trị 0.244667, độ dài 6):
+Giá trị 0.244667 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.468002 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.808014 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.848083 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.088501 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.531006 nằm trong khoảng của 'V' -> Giải mã: V
+
+0 -1 0
+0.949460
+111100110000111
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'SKDKM' là bao nhiêu?
+A. 5
+B. 4
+C. 6
+D. 8
+Đáp án đúng: A
+
+0.119141
+000111101

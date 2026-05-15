@@ -1,27 +1,80 @@
-0 -1 0
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'VWIWHNRNP':
-Output: 86 | Thêm từ điển: VW (Mã: 256)
-Output: 87 | Thêm từ điển: WI (Mã: 257)
-Output: 73 | Thêm từ điển: IW (Mã: 258)
-Output: 87 | Thêm từ điển: WH (Mã: 259)
-Output: 72 | Thêm từ điển: HN (Mã: 260)
-Output: 78 | Thêm từ điển: NR (Mã: 261)
-Output: 82 | Thêm từ điển: RN (Mã: 262)
-Output: 78 | Thêm từ điển: NP (Mã: 263)
-Output cuối: 80
-=> Dãy mã hóa: 86 87 73 87 72 78 82 78 80 
+[1] Quá trình mã hóa chuỗi 'KAAWITX':
+Output: 75 | Thêm từ điển: KA (Mã: 256)
+Output: 65 | Thêm từ điển: AA (Mã: 257)
+Output: 65 | Thêm từ điển: AW (Mã: 258)
+Output: 87 | Thêm từ điển: WI (Mã: 259)
+Output: 73 | Thêm từ điển: IT (Mã: 260)
+Output: 84 | Thêm từ điển: TX (Mã: 261)
+Output cuối: 88
+=> Dãy mã hóa: 75 65 65 87 73 84 88 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 86 87 73 87 72 78 82 78 80 
-Đọc 86 -> Xuất: V
-Đọc 87 -> Xuất: W | Thêm từ điển: VW (Mã: 256)
-Đọc 73 -> Xuất: I | Thêm từ điển: WI (Mã: 257)
-Đọc 87 -> Xuất: W | Thêm từ điển: IW (Mã: 258)
-Đọc 72 -> Xuất: H | Thêm từ điển: WH (Mã: 259)
-Đọc 78 -> Xuất: N | Thêm từ điển: HN (Mã: 260)
-Đọc 82 -> Xuất: R | Thêm từ điển: NR (Mã: 261)
-Đọc 78 -> Xuất: N | Thêm từ điển: RN (Mã: 262)
-Đọc 80 -> Xuất: P | Thêm từ điển: NP (Mã: 263)
-=> Chuỗi giải mã thành công: VWIWHNRNP
+Chuỗi mã đầu vào: 75 65 65 87 73 84 88 
+Đọc 75 -> Xuất: K
+Đọc 65 -> Xuất: A | Thêm từ điển: KA (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: AA (Mã: 257)
+Đọc 87 -> Xuất: W | Thêm từ điển: AW (Mã: 258)
+Đọc 73 -> Xuất: I | Thêm từ điển: WI (Mã: 259)
+Đọc 84 -> Xuất: T | Thêm từ điển: IT (Mã: 260)
+Đọc 88 -> Xuất: X | Thêm từ điển: TX (Mã: 261)
+=> Chuỗi giải mã thành công: KAAWITX
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'DMXNSJBVN':
+Output: 68 | Thêm từ điển: DM (Mã: 256)
+Output: 77 | Thêm từ điển: MX (Mã: 257)
+Output: 88 | Thêm từ điển: XN (Mã: 258)
+Output: 78 | Thêm từ điển: NS (Mã: 259)
+Output: 83 | Thêm từ điển: SJ (Mã: 260)
+Output: 74 | Thêm từ điển: JB (Mã: 261)
+Output: 66 | Thêm từ điển: BV (Mã: 262)
+Output: 86 | Thêm từ điển: VN (Mã: 263)
+Output cuối: 78
+=> Dãy mã hóa: 68 77 88 78 83 74 66 86 78 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 68 77 88 78 83 74 66 86 78 
+Đọc 68 -> Xuất: D
+Đọc 77 -> Xuất: M | Thêm từ điển: DM (Mã: 256)
+Đọc 88 -> Xuất: X | Thêm từ điển: MX (Mã: 257)
+Đọc 78 -> Xuất: N | Thêm từ điển: XN (Mã: 258)
+Đọc 83 -> Xuất: S | Thêm từ điển: NS (Mã: 259)
+Đọc 74 -> Xuất: J | Thêm từ điển: SJ (Mã: 260)
+Đọc 66 -> Xuất: B | Thêm từ điển: JB (Mã: 261)
+Đọc 86 -> Xuất: V | Thêm từ điển: BV (Mã: 262)
+Đọc 78 -> Xuất: N | Thêm từ điển: VN (Mã: 263)
+=> Chuỗi giải mã thành công: DMXNSJBVN
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0, 0.333333)
+- Ký tự 'W': [0.333333, 0.666667)
+- Ký tự 'Y': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'CWY':
+Đọc 'C' -> Khoảng: [0.000000, 0.333333)
+Đọc 'W' -> Khoảng: [0.111111, 0.222222)
+Đọc 'Y' -> Khoảng: [0.185185, 0.222222)
+=> Giá trị mã hóa được chọn: 0.203704
+=> Mã nhị phân tương ứng (6 bit): 001101
+
+[3] Quá trình giải mã (từ mã nhị phân 001101, giá trị 0.203125, độ dài 3):
+Giá trị 0.203125 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.609375 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.828125 nằm trong khoảng của 'Y' -> Giải mã: Y
 

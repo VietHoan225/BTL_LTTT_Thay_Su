@@ -1,99 +1,57 @@
-2 1 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'SSHLNMJEQ' là bao nhiêu?
-A. 10
-B. 9
-C. 8
-D. 12
-Đáp án đúng: B
+0.179688
+0010111
+4 3 1
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'F': [0.000000, 0.250000)
+- Ký tự 'J': [0.250000, 0.500000)
+- Ký tự 'P': [0.500000, 0.750000)
+- Ký tự 'S': [0.750000, 1.000000)
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'RZHWL' là bao nhiêu?
-A. 6
-B. 4
-C. 5
-D. 8
-Đáp án đúng: C
+[2] Quá trình mã hóa chuỗi 'JPSF':
+Đọc 'J' -> Khoảng: [0.250000, 0.500000)
+Đọc 'P' -> Khoảng: [0.375000, 0.437500)
+Đọc 'S' -> Khoảng: [0.421875, 0.437500)
+Đọc 'F' -> Khoảng: [0.421875, 0.425781)
+=> Giá trị mã hóa được chọn: 0.423828
+=> Mã nhị phân tương ứng (9 bit): 011011001
 
+[3] Quá trình giải mã (từ mã nhị phân 011011001, giá trị 0.423828, độ dài 4):
+Giá trị 0.423828 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.695312 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.781250 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.125000 nằm trong khoảng của 'F' -> Giải mã: F
+
+81 71 84 73 74 
+0.245960
+00111110111101110
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'G': [0.000000, 0.250000)
+- Ký tự 'K': [0.250000, 0.500000)
+- Ký tự 'L': [0.500000, 0.750000)
+- Ký tự 'S': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'GSKL':
+Đọc 'G' -> Khoảng: [0.000000, 0.250000)
+Đọc 'S' -> Khoảng: [0.187500, 0.250000)
+Đọc 'K' -> Khoảng: [0.203125, 0.218750)
+Đọc 'L' -> Khoảng: [0.210938, 0.214844)
+=> Giá trị mã hóa được chọn: 0.212891
+=> Mã nhị phân tương ứng (9 bit): 001101101
+
+[3] Quá trình giải mã (từ mã nhị phân 001101101, giá trị 0.212891, độ dài 4):
+Giá trị 0.212891 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.851562 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.406250 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.625000 nằm trong khoảng của 'L' -> Giải mã: L
+
+1 0 0
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 1 bit
 B. 0 bit
 C. 0 bit
-D. -1 bit
+D. 1 bit
 Đáp án đúng: C
 
-0.550422
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'K': [0.000000, 0.333333)
-- Ký tự 'Q': [0.333333, 0.666667)
-- Ký tự 'T': [0.666667, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'TQK':
-Đọc 'T' -> Khoảng: [0.666667, 1.000000)
-Đọc 'Q' -> Khoảng: [0.777778, 0.888889)
-Đọc 'K' -> Khoảng: [0.777778, 0.814815)
-=> Giá trị mã hóa được chọn: 0.796296
-
-[3] Quá trình giải mã (từ 0.796296, độ dài 3):
-Giá trị 0.796296 nằm trong khoảng của 'T' -> Giải mã: T
-Giá trị 0.388889 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.166667 nằm trong khoảng của 'K' -> Giải mã: K
-
-72 77 74 69 71 81 86 80 75 65 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'GNFKPH' là bao nhiêu?
-A. 7
-B. 5
-C. 6
-D. 9
-Đáp án đúng: C
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'LWPGJCRFYN':
-Output: 76 | Thêm từ điển: LW (Mã: 256)
-Output: 87 | Thêm từ điển: WP (Mã: 257)
-Output: 80 | Thêm từ điển: PG (Mã: 258)
-Output: 71 | Thêm từ điển: GJ (Mã: 259)
-Output: 74 | Thêm từ điển: JC (Mã: 260)
-Output: 67 | Thêm từ điển: CR (Mã: 261)
-Output: 82 | Thêm từ điển: RF (Mã: 262)
-Output: 70 | Thêm từ điển: FY (Mã: 263)
-Output: 89 | Thêm từ điển: YN (Mã: 264)
-Output cuối: 78
-=> Dãy mã hóa: 76 87 80 71 74 67 82 70 89 78 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 76 87 80 71 74 67 82 70 89 78 
-Đọc 76 -> Xuất: L
-Đọc 87 -> Xuất: W | Thêm từ điển: LW (Mã: 256)
-Đọc 80 -> Xuất: P | Thêm từ điển: WP (Mã: 257)
-Đọc 71 -> Xuất: G | Thêm từ điển: PG (Mã: 258)
-Đọc 74 -> Xuất: J | Thêm từ điển: GJ (Mã: 259)
-Đọc 67 -> Xuất: C | Thêm từ điển: JC (Mã: 260)
-Đọc 82 -> Xuất: R | Thêm từ điển: CR (Mã: 261)
-Đọc 70 -> Xuất: F | Thêm từ điển: RF (Mã: 262)
-Đọc 89 -> Xuất: Y | Thêm từ điển: FY (Mã: 263)
-Đọc 78 -> Xuất: N | Thêm từ điển: YN (Mã: 264)
-=> Chuỗi giải mã thành công: LWPGJCRFYN
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 0 bit
-B. 1 bit
-C. 1 bit
-D. 0 bit
-Đáp án đúng: D
-
-2 1 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'DGYKGZRGYJ' là bao nhiêu?
-A. 9
-B. 12
-C. 10
-D. 8
-Đáp án đúng: A
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HVEDQNWWB' là bao nhiêu?
-A. 10
-B. 8
-C. 12
-D. 9
-Đáp án đúng: D
-
-0.904480
+1 0 0

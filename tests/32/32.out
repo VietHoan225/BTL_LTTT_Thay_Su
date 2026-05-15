@@ -1,187 +1,39 @@
-3 2 1
+0.142880
+0010010010010
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'EZVNJXJZVI':
-Output: 69 | Thêm từ điển: EZ (Mã: 256)
-Output: 90 | Thêm từ điển: ZV (Mã: 257)
-Output: 86 | Thêm từ điển: VN (Mã: 258)
-Output: 78 | Thêm từ điển: NJ (Mã: 259)
-Output: 74 | Thêm từ điển: JX (Mã: 260)
-Output: 88 | Thêm từ điển: XJ (Mã: 261)
-Output: 74 | Thêm từ điển: JZ (Mã: 262)
-Output: 257 | Thêm từ điển: ZVI (Mã: 263)
-Output cuối: 73
-=> Dãy mã hóa: 69 90 86 78 74 88 74 257 73 
+[1] Quá trình mã hóa chuỗi 'KTIBHAUWS':
+Output: 75 | Thêm từ điển: KT (Mã: 256)
+Output: 84 | Thêm từ điển: TI (Mã: 257)
+Output: 73 | Thêm từ điển: IB (Mã: 258)
+Output: 66 | Thêm từ điển: BH (Mã: 259)
+Output: 72 | Thêm từ điển: HA (Mã: 260)
+Output: 65 | Thêm từ điển: AU (Mã: 261)
+Output: 85 | Thêm từ điển: UW (Mã: 262)
+Output: 87 | Thêm từ điển: WS (Mã: 263)
+Output cuối: 83
+=> Dãy mã hóa: 75 84 73 66 72 65 85 87 83 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 69 90 86 78 74 88 74 257 73 
-Đọc 69 -> Xuất: E
-Đọc 90 -> Xuất: Z | Thêm từ điển: EZ (Mã: 256)
-Đọc 86 -> Xuất: V | Thêm từ điển: ZV (Mã: 257)
-Đọc 78 -> Xuất: N | Thêm từ điển: VN (Mã: 258)
-Đọc 74 -> Xuất: J | Thêm từ điển: NJ (Mã: 259)
-Đọc 88 -> Xuất: X | Thêm từ điển: JX (Mã: 260)
-Đọc 74 -> Xuất: J | Thêm từ điển: XJ (Mã: 261)
-Đọc 257 -> Xuất: ZV | Thêm từ điển: JZ (Mã: 262)
-Đọc 73 -> Xuất: I | Thêm từ điển: ZVI (Mã: 263)
-=> Chuỗi giải mã thành công: EZVNJXJZVI
+Chuỗi mã đầu vào: 75 84 73 66 72 65 85 87 83 
+Đọc 75 -> Xuất: K
+Đọc 84 -> Xuất: T | Thêm từ điển: KT (Mã: 256)
+Đọc 73 -> Xuất: I | Thêm từ điển: TI (Mã: 257)
+Đọc 66 -> Xuất: B | Thêm từ điển: IB (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: BH (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: HA (Mã: 260)
+Đọc 85 -> Xuất: U | Thêm từ điển: AU (Mã: 261)
+Đọc 87 -> Xuất: W | Thêm từ điển: UW (Mã: 262)
+Đọc 83 -> Xuất: S | Thêm từ điển: WS (Mã: 263)
+=> Chuỗi giải mã thành công: KTIBHAUWS
 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'DVMFPUVTG' là bao nhiêu?
-A. 9
-B. 12
-C. 8
-D. 10
+0.203704
+001101
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'PCGUW'?
+A. 0110101000001
+B. 011010100000101
+C. 0110101000011
+D. 0110101000000
 Đáp án đúng: A
 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'DAZQHBZLY':
-Output: 68 | Thêm từ điển: DA (Mã: 256)
-Output: 65 | Thêm từ điển: AZ (Mã: 257)
-Output: 90 | Thêm từ điển: ZQ (Mã: 258)
-Output: 81 | Thêm từ điển: QH (Mã: 259)
-Output: 72 | Thêm từ điển: HB (Mã: 260)
-Output: 66 | Thêm từ điển: BZ (Mã: 261)
-Output: 90 | Thêm từ điển: ZL (Mã: 262)
-Output: 76 | Thêm từ điển: LY (Mã: 263)
-Output cuối: 89
-=> Dãy mã hóa: 68 65 90 81 72 66 90 76 89 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 68 65 90 81 72 66 90 76 89 
-Đọc 68 -> Xuất: D
-Đọc 65 -> Xuất: A | Thêm từ điển: DA (Mã: 256)
-Đọc 90 -> Xuất: Z | Thêm từ điển: AZ (Mã: 257)
-Đọc 81 -> Xuất: Q | Thêm từ điển: ZQ (Mã: 258)
-Đọc 72 -> Xuất: H | Thêm từ điển: QH (Mã: 259)
-Đọc 66 -> Xuất: B | Thêm từ điển: HB (Mã: 260)
-Đọc 90 -> Xuất: Z | Thêm từ điển: BZ (Mã: 261)
-Đọc 76 -> Xuất: L | Thêm từ điển: ZL (Mã: 262)
-Đọc 89 -> Xuất: Y | Thêm từ điển: LY (Mã: 263)
-=> Chuỗi giải mã thành công: DAZQHBZLY
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'QPJOGVURL':
-Output: 81 | Thêm từ điển: QP (Mã: 256)
-Output: 80 | Thêm từ điển: PJ (Mã: 257)
-Output: 74 | Thêm từ điển: JO (Mã: 258)
-Output: 79 | Thêm từ điển: OG (Mã: 259)
-Output: 71 | Thêm từ điển: GV (Mã: 260)
-Output: 86 | Thêm từ điển: VU (Mã: 261)
-Output: 85 | Thêm từ điển: UR (Mã: 262)
-Output: 82 | Thêm từ điển: RL (Mã: 263)
-Output cuối: 76
-=> Dãy mã hóa: 81 80 74 79 71 86 85 82 76 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 81 80 74 79 71 86 85 82 76 
-Đọc 81 -> Xuất: Q
-Đọc 80 -> Xuất: P | Thêm từ điển: QP (Mã: 256)
-Đọc 74 -> Xuất: J | Thêm từ điển: PJ (Mã: 257)
-Đọc 79 -> Xuất: O | Thêm từ điển: JO (Mã: 258)
-Đọc 71 -> Xuất: G | Thêm từ điển: OG (Mã: 259)
-Đọc 86 -> Xuất: V | Thêm từ điển: GV (Mã: 260)
-Đọc 85 -> Xuất: U | Thêm từ điển: VU (Mã: 261)
-Đọc 82 -> Xuất: R | Thêm từ điển: UR (Mã: 262)
-Đọc 76 -> Xuất: L | Thêm từ điển: RL (Mã: 263)
-=> Chuỗi giải mã thành công: QPJOGVURL
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'UUEEMGMM':
-Output: 85 | Thêm từ điển: UU (Mã: 256)
-Output: 85 | Thêm từ điển: UE (Mã: 257)
-Output: 69 | Thêm từ điển: EE (Mã: 258)
-Output: 69 | Thêm từ điển: EM (Mã: 259)
-Output: 77 | Thêm từ điển: MG (Mã: 260)
-Output: 71 | Thêm từ điển: GM (Mã: 261)
-Output: 77 | Thêm từ điển: MM (Mã: 262)
-Output cuối: 77
-=> Dãy mã hóa: 85 85 69 69 77 71 77 77 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 85 85 69 69 77 71 77 77 
-Đọc 85 -> Xuất: U
-Đọc 85 -> Xuất: U | Thêm từ điển: UU (Mã: 256)
-Đọc 69 -> Xuất: E | Thêm từ điển: UE (Mã: 257)
-Đọc 69 -> Xuất: E | Thêm từ điển: EE (Mã: 258)
-Đọc 77 -> Xuất: M | Thêm từ điển: EM (Mã: 259)
-Đọc 71 -> Xuất: G | Thêm từ điển: MG (Mã: 260)
-Đọc 77 -> Xuất: M | Thêm từ điển: GM (Mã: 261)
-Đọc 77 -> Xuất: M | Thêm từ điển: MM (Mã: 262)
-=> Chuỗi giải mã thành công: UUEEMGMM
-
-1 0 0
-0.796296
-83 71 81 79 67 75 89 
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(0100, 0110) = 1
-=> d_min = 1 (Giữa 0100 và 0110)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 1 bit
-C. 0 bit
-D. 0 bit
-Đáp án đúng: C
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'TLMWYIJ' là bao nhiêu?
-A. 10
-B. 8
-C. 7
-D. 6
-Đáp án đúng: C
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'YXMCQM':
-Output: 89 | Thêm từ điển: YX (Mã: 256)
-Output: 88 | Thêm từ điển: XM (Mã: 257)
-Output: 77 | Thêm từ điển: MC (Mã: 258)
-Output: 67 | Thêm từ điển: CQ (Mã: 259)
-Output: 81 | Thêm từ điển: QM (Mã: 260)
-Output cuối: 77
-=> Dãy mã hóa: 89 88 77 67 81 77 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 89 88 77 67 81 77 
-Đọc 89 -> Xuất: Y
-Đọc 88 -> Xuất: X | Thêm từ điển: YX (Mã: 256)
-Đọc 77 -> Xuất: M | Thêm từ điển: XM (Mã: 257)
-Đọc 67 -> Xuất: C | Thêm từ điển: MC (Mã: 258)
-Đọc 81 -> Xuất: Q | Thêm từ điển: CQ (Mã: 259)
-Đọc 77 -> Xuất: M | Thêm từ điển: QM (Mã: 260)
-=> Chuỗi giải mã thành công: YXMCQM
-
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 2 bit
-C. 1 bit
-D. 0 bit
-Đáp án đúng: D
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0.000000, 0.166667)
-- Ký tự 'D': [0.166667, 0.333333)
-- Ký tự 'G': [0.333333, 0.500000)
-- Ký tự 'H': [0.500000, 0.666667)
-- Ký tự 'L': [0.666667, 0.833333)
-- Ký tự 'O': [0.833333, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'ADGLOH':
-Đọc 'A' -> Khoảng: [0.000000, 0.166667)
-Đọc 'D' -> Khoảng: [0.027778, 0.055556)
-Đọc 'G' -> Khoảng: [0.037037, 0.041667)
-Đọc 'L' -> Khoảng: [0.040123, 0.040895)
-Đọc 'O' -> Khoảng: [0.040766, 0.040895)
-Đọc 'H' -> Khoảng: [0.040831, 0.040852)
-=> Giá trị mã hóa được chọn: 0.040841
-
-[3] Quá trình giải mã (từ 0.040841, độ dài 6):
-Giá trị 0.040841 nằm trong khoảng của 'A' -> Giải mã: A
-Giá trị 0.245049 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.470293 nằm trong khoảng của 'G' -> Giải mã: G
-Giá trị 0.821759 nằm trong khoảng của 'L' -> Giải mã: L
-Giá trị 0.930556 nằm trong khoảng của 'O' -> Giải mã: O
-Giá trị 0.583333 nằm trong khoảng của 'H' -> Giải mã: H
-
-82 82 68 73 88 73 69 76 79 
+0 -1 0
+3 2 1

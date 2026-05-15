@@ -1,107 +1,127 @@
-0.922400
-[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
-A. 1 bit
-B. 0 bit
-C. 0 bit
-D. 1 bit
-Đáp án đúng: B
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'IWKHT':
+Output: 73 | Thêm từ điển: IW (Mã: 256)
+Output: 87 | Thêm từ điển: WK (Mã: 257)
+Output: 75 | Thêm từ điển: KH (Mã: 258)
+Output: 72 | Thêm từ điển: HT (Mã: 259)
+Output cuối: 84
+=> Dãy mã hóa: 73 87 75 72 84 
 
-69 78 84 86 72 
-84 79 89 81 86 75 86 89 74 
-2 1 0
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 73 87 75 72 84 
+Đọc 73 -> Xuất: I
+Đọc 87 -> Xuất: W | Thêm từ điển: IW (Mã: 256)
+Đọc 75 -> Xuất: K | Thêm từ điển: WK (Mã: 257)
+Đọc 72 -> Xuất: H | Thêm từ điển: KH (Mã: 258)
+Đọc 84 -> Xuất: T | Thêm từ điển: HT (Mã: 259)
+=> Chuỗi giải mã thành công: IWKHT
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'SSEWFUJR':
+Output: 83 | Thêm từ điển: SS (Mã: 256)
+Output: 83 | Thêm từ điển: SE (Mã: 257)
+Output: 69 | Thêm từ điển: EW (Mã: 258)
+Output: 87 | Thêm từ điển: WF (Mã: 259)
+Output: 70 | Thêm từ điển: FU (Mã: 260)
+Output: 85 | Thêm từ điển: UJ (Mã: 261)
+Output: 74 | Thêm từ điển: JR (Mã: 262)
+Output cuối: 82
+=> Dãy mã hóa: 83 83 69 87 70 85 74 82 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 83 83 69 87 70 85 74 82 
+Đọc 83 -> Xuất: S
+Đọc 83 -> Xuất: S | Thêm từ điển: SS (Mã: 256)
+Đọc 69 -> Xuất: E | Thêm từ điển: SE (Mã: 257)
+Đọc 87 -> Xuất: W | Thêm từ điển: EW (Mã: 258)
+Đọc 70 -> Xuất: F | Thêm từ điển: WF (Mã: 259)
+Đọc 85 -> Xuất: U | Thêm từ điển: FU (Mã: 260)
+Đọc 74 -> Xuất: J | Thêm từ điển: UJ (Mã: 261)
+Đọc 82 -> Xuất: R | Thêm từ điển: JR (Mã: 262)
+=> Chuỗi giải mã thành công: SSEWFUJR
+
+0.180373
+00101110001011001
 [Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
 A. 1 bit
-B. 2 bit
-C. 1 bit
-D. 0 bit
+B. 1 bit
+C. 0 bit
+D. 2 bit
+Đáp án đúng: C
+
+0.425926
+011011
+0.425926
+011011
+0.437280
+0110111111110
+83 75 76 77 82 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'FCWHZ'?
+A. 0011101010000
+B. 0011101010011
+C. 001110101000101
+D. 0011101010001
 Đáp án đúng: D
 
-89 73 65 65 89 89 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'TXYSVD'?
-A. 0.593761
-B. 0.468761
-C. 0.418750
-D. 0.498771
-Đáp án đúng: B
-
 --- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(01000, 01011) = 2
-Khoảng cách d(01000, 01101) = 2
-Khoảng cách d(01000, 11011) = 3
-Khoảng cách d(01011, 01101) = 2
-Khoảng cách d(01011, 11011) = 1
-Khoảng cách d(01101, 11011) = 3
-=> d_min = 1 (Giữa 01011 và 11011)
+Khoảng cách d(00110, 11001) = 5
+Khoảng cách d(00110, 11011) = 4
+Khoảng cách d(00110, 00000) = 2
+Khoảng cách d(11001, 11011) = 1
+Khoảng cách d(11001, 00000) = 3
+Khoảng cách d(11011, 00000) = 4
+=> d_min = 1 (Giữa 11001 và 11011)
 => Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
 => Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-0 -1 0
-85 68 70 72 78 78 67 
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WYFRIAWCA' là bao nhiêu?
-A. 8
-B. 9
-C. 10
-D. 12
-Đáp án đúng: B
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'OQAUROLF' là bao nhiêu?
-A. 9
-B. 11
-C. 8
-D. 7
-Đáp án đúng: C
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
-[1] Bảng phân bổ xác suất:
-- Ký tự 'C': [0.000000, 0.333333)
-- Ký tự 'I': [0.333333, 0.666667)
-- Ký tự 'Q': [0.666667, 1.000000)
-
-[2] Quá trình mã hóa chuỗi 'QIC':
-Đọc 'Q' -> Khoảng: [0.666667, 1.000000)
-Đọc 'I' -> Khoảng: [0.777778, 0.888889)
-Đọc 'C' -> Khoảng: [0.777778, 0.814815)
-=> Giá trị mã hóa được chọn: 0.796296
-
-[3] Quá trình giải mã (từ 0.796296, độ dài 3):
-Giá trị 0.796296 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.388889 nằm trong khoảng của 'I' -> Giải mã: I
-Giá trị 0.166667 nằm trong khoảng của 'C' -> Giải mã: C
-
-0.689920
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'MEBURYLJQQ':
-Output: 77 | Thêm từ điển: ME (Mã: 256)
-Output: 69 | Thêm từ điển: EB (Mã: 257)
-Output: 66 | Thêm từ điển: BU (Mã: 258)
-Output: 85 | Thêm từ điển: UR (Mã: 259)
-Output: 82 | Thêm từ điển: RY (Mã: 260)
-Output: 89 | Thêm từ điển: YL (Mã: 261)
-Output: 76 | Thêm từ điển: LJ (Mã: 262)
-Output: 74 | Thêm từ điển: JQ (Mã: 263)
-Output: 81 | Thêm từ điển: QQ (Mã: 264)
-Output cuối: 81
-=> Dãy mã hóa: 77 69 66 85 82 89 76 74 81 81 
+[1] Quá trình mã hóa chuỗi 'OMLYAFWFKI':
+Output: 79 | Thêm từ điển: OM (Mã: 256)
+Output: 77 | Thêm từ điển: ML (Mã: 257)
+Output: 76 | Thêm từ điển: LY (Mã: 258)
+Output: 89 | Thêm từ điển: YA (Mã: 259)
+Output: 65 | Thêm từ điển: AF (Mã: 260)
+Output: 70 | Thêm từ điển: FW (Mã: 261)
+Output: 87 | Thêm từ điển: WF (Mã: 262)
+Output: 70 | Thêm từ điển: FK (Mã: 263)
+Output: 75 | Thêm từ điển: KI (Mã: 264)
+Output cuối: 73
+=> Dãy mã hóa: 79 77 76 89 65 70 87 70 75 73 
 
 [2] Quá trình giải mã:
-Chuỗi mã đầu vào: 77 69 66 85 82 89 76 74 81 81 
-Đọc 77 -> Xuất: M
-Đọc 69 -> Xuất: E | Thêm từ điển: ME (Mã: 256)
-Đọc 66 -> Xuất: B | Thêm từ điển: EB (Mã: 257)
-Đọc 85 -> Xuất: U | Thêm từ điển: BU (Mã: 258)
-Đọc 82 -> Xuất: R | Thêm từ điển: UR (Mã: 259)
-Đọc 89 -> Xuất: Y | Thêm từ điển: RY (Mã: 260)
-Đọc 76 -> Xuất: L | Thêm từ điển: YL (Mã: 261)
-Đọc 74 -> Xuất: J | Thêm từ điển: LJ (Mã: 262)
-Đọc 81 -> Xuất: Q | Thêm từ điển: JQ (Mã: 263)
-Đọc 81 -> Xuất: Q | Thêm từ điển: QQ (Mã: 264)
-=> Chuỗi giải mã thành công: MEBURYLJQQ
+Chuỗi mã đầu vào: 79 77 76 89 65 70 87 70 75 73 
+Đọc 79 -> Xuất: O
+Đọc 77 -> Xuất: M | Thêm từ điển: OM (Mã: 256)
+Đọc 76 -> Xuất: L | Thêm từ điển: ML (Mã: 257)
+Đọc 89 -> Xuất: Y | Thêm từ điển: LY (Mã: 258)
+Đọc 65 -> Xuất: A | Thêm từ điển: YA (Mã: 259)
+Đọc 70 -> Xuất: F | Thêm từ điển: AF (Mã: 260)
+Đọc 87 -> Xuất: W | Thêm từ điển: FW (Mã: 261)
+Đọc 70 -> Xuất: F | Thêm từ điển: WF (Mã: 262)
+Đọc 75 -> Xuất: K | Thêm từ điển: FK (Mã: 263)
+Đọc 73 -> Xuất: I | Thêm từ điển: KI (Mã: 264)
+=> Chuỗi giải mã thành công: OMLYAFWFKI
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'HHP'?
-A. 0.370370
-B. 0.474444
-C. 0.246296
-D. 0.495370
-Đáp án đúng: A
+1 0 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'K': [0.000000, 0.250000)
+- Ký tự 'L': [0.250000, 0.750000)
+- Ký tự 'T': [0.750000, 1.000000)
 
-2 1 0
+[2] Quá trình mã hóa chuỗi 'LLKT':
+Đọc 'L' -> Khoảng: [0.250000, 0.750000)
+Đọc 'L' -> Khoảng: [0.375000, 0.625000)
+Đọc 'K' -> Khoảng: [0.375000, 0.437500)
+Đọc 'T' -> Khoảng: [0.421875, 0.437500)
+=> Giá trị mã hóa được chọn: 0.429688
+=> Mã nhị phân tương ứng (7 bit): 0110111
+
+[3] Quá trình giải mã (từ mã nhị phân 0110111, giá trị 0.429688, độ dài 4):
+Giá trị 0.429688 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.359375 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.218750 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.875000 nằm trong khoảng của 'T' -> Giải mã: T
+
+0.729820
+10111010110101011

@@ -1,14 +1,160 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'OCNWSZ'?
-A. 0.341553
-B. 0.466553
-C. 0.291542
-D. 0.371564
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'OMERI'?
+A. 1010111111010
+B. 1010111111011
+C. 1010111111000
+D. 101011111101001
 Đáp án đúng: A
 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'YOEV'?
-A. 0.822266
-B. 0.854219
-C. 0.947266
-D. 0.770312
+83 89 85 68 78 
+67 87 67 72 68 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0000, 0111) = 3
+Khoảng cách d(0000, 0000) = 0
+Khoảng cách d(0000, 0101) = 2
+Khoảng cách d(0111, 0000) = 3
+Khoảng cách d(0111, 0101) = 1
+Khoảng cách d(0000, 0101) = 2
+=> d_min = 0 (Giữa 0000 và 0000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(000, 010) = 1
+Khoảng cách d(000, 100) = 1
+Khoảng cách d(000, 110) = 2
+Khoảng cách d(010, 100) = 2
+Khoảng cách d(010, 110) = 1
+Khoảng cách d(100, 110) = 1
+=> d_min = 1 (Giữa 000 và 010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZKYIIM' là bao nhiêu?
+A. 6
+B. 7
+C. 9
+D. 5
 Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 2 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0011, 0110) = 2
+Khoảng cách d(0011, 0000) = 2
+Khoảng cách d(0011, 1010) = 2
+Khoảng cách d(0110, 0000) = 2
+Khoảng cách d(0110, 1010) = 2
+Khoảng cách d(0000, 1010) = 2
+=> d_min = 2 (Giữa 0011 và 0110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'TIEOZPWJJ':
+Output: 84 | Thêm từ điển: TI (Mã: 256)
+Output: 73 | Thêm từ điển: IE (Mã: 257)
+Output: 69 | Thêm từ điển: EO (Mã: 258)
+Output: 79 | Thêm từ điển: OZ (Mã: 259)
+Output: 90 | Thêm từ điển: ZP (Mã: 260)
+Output: 80 | Thêm từ điển: PW (Mã: 261)
+Output: 87 | Thêm từ điển: WJ (Mã: 262)
+Output: 74 | Thêm từ điển: JJ (Mã: 263)
+Output cuối: 74
+=> Dãy mã hóa: 84 73 69 79 90 80 87 74 74 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 84 73 69 79 90 80 87 74 74 
+Đọc 84 -> Xuất: T
+Đọc 73 -> Xuất: I | Thêm từ điển: TI (Mã: 256)
+Đọc 69 -> Xuất: E | Thêm từ điển: IE (Mã: 257)
+Đọc 79 -> Xuất: O | Thêm từ điển: EO (Mã: 258)
+Đọc 90 -> Xuất: Z | Thêm từ điển: OZ (Mã: 259)
+Đọc 80 -> Xuất: P | Thêm từ điển: ZP (Mã: 260)
+Đọc 87 -> Xuất: W | Thêm từ điển: PW (Mã: 261)
+Đọc 74 -> Xuất: J | Thêm từ điển: WJ (Mã: 262)
+Đọc 74 -> Xuất: J | Thêm từ điển: JJ (Mã: 263)
+=> Chuỗi giải mã thành công: TIEOZPWJJ
+
+0.926740
+111011010011111
+1 0 0
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'NYLBF'?
+A. 110001101100001
+B. 1100011011010
+C. 1100011011001
+D. 1100011011000
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'LNWGJDPBS':
+Output: 76 | Thêm từ điển: LN (Mã: 256)
+Output: 78 | Thêm từ điển: NW (Mã: 257)
+Output: 87 | Thêm từ điển: WG (Mã: 258)
+Output: 71 | Thêm từ điển: GJ (Mã: 259)
+Output: 74 | Thêm từ điển: JD (Mã: 260)
+Output: 68 | Thêm từ điển: DP (Mã: 261)
+Output: 80 | Thêm từ điển: PB (Mã: 262)
+Output: 66 | Thêm từ điển: BS (Mã: 263)
+Output cuối: 83
+=> Dãy mã hóa: 76 78 87 71 74 68 80 66 83 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 76 78 87 71 74 68 80 66 83 
+Đọc 76 -> Xuất: L
+Đọc 78 -> Xuất: N | Thêm từ điển: LN (Mã: 256)
+Đọc 87 -> Xuất: W | Thêm từ điển: NW (Mã: 257)
+Đọc 71 -> Xuất: G | Thêm từ điển: WG (Mã: 258)
+Đọc 74 -> Xuất: J | Thêm từ điển: GJ (Mã: 259)
+Đọc 68 -> Xuất: D | Thêm từ điển: JD (Mã: 260)
+Đọc 80 -> Xuất: P | Thêm từ điển: DP (Mã: 261)
+Đọc 66 -> Xuất: B | Thêm từ điển: PB (Mã: 262)
+Đọc 83 -> Xuất: S | Thêm từ điển: BS (Mã: 263)
+=> Chuỗi giải mã thành công: LNWGJDPBS
+
+71 81 84 79 84 74 80 262 73 
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'PAP'?
+A. 0111
+B. 0110
+C. 0101
+D. 011101
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'I': [0.000000, 0.166667)
+- Ký tự 'K': [0.166667, 0.333333)
+- Ký tự 'P': [0.333333, 0.500000)
+- Ký tự 'U': [0.500000, 0.666667)
+- Ký tự 'X': [0.666667, 0.833333)
+- Ký tự 'Y': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'UXPYIK':
+Đọc 'U' -> Khoảng: [0.500000, 0.666667)
+Đọc 'X' -> Khoảng: [0.611111, 0.638889)
+Đọc 'P' -> Khoảng: [0.620370, 0.625000)
+Đọc 'Y' -> Khoảng: [0.624228, 0.625000)
+Đọc 'I' -> Khoảng: [0.624228, 0.624357)
+Đọc 'K' -> Khoảng: [0.624250, 0.624271)
+=> Giá trị mã hóa được chọn: 0.624261
+=> Mã nhị phân tương ứng (17 bit): 10011111110011111
+
+[3] Quá trình giải mã (từ mã nhị phân 10011111110011111, giá trị 0.624260, độ dài 6):
+Giá trị 0.624260 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.745560 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.473358 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.840149 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.040894 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.245361 nằm trong khoảng của 'K' -> Giải mã: K
+
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'TNEF'?
+A. 111000010
+B. 111000001
+C. 111000011
+D. 11100001101
+Đáp án đúng: C
 

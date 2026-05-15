@@ -1,67 +1,104 @@
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'C': [0, 0.333333)
-- Ký tự 'D': [0.333333, 0.5)
-- Ký tự 'Q': [0.5, 0.666667)
-- Ký tự 'U': [0.666667, 0.833333)
-- Ký tự 'V': [0.833333, 1)
+- Ký tự 'A': [0, 0.2)
+- Ký tự 'F': [0.2, 0.4)
+- Ký tự 'L': [0.4, 0.6)
+- Ký tự 'W': [0.6, 0.8)
+- Ký tự 'Z': [0.8, 1)
 
-[2] Quá trình mã hóa chuỗi 'CUQCDV':
-Đọc 'C' -> Khoảng: [0.000000, 0.333333)
-Đọc 'U' -> Khoảng: [0.222222, 0.277778)
-Đọc 'Q' -> Khoảng: [0.250000, 0.259259)
-Đọc 'C' -> Khoảng: [0.250000, 0.253086)
-Đọc 'D' -> Khoảng: [0.251029, 0.251543)
-Đọc 'V' -> Khoảng: [0.251457, 0.251543)
-=> Giá trị mã hóa được chọn: 0.251500
+[2] Quá trình mã hóa chuỗi 'ZLFWA':
+Đọc 'Z' -> Khoảng: [0.800000, 1.000000)
+Đọc 'L' -> Khoảng: [0.880000, 0.920000)
+Đọc 'F' -> Khoảng: [0.888000, 0.896000)
+Đọc 'W' -> Khoảng: [0.892800, 0.894400)
+Đọc 'A' -> Khoảng: [0.892800, 0.893120)
+=> Giá trị mã hóa được chọn: 0.892960
+=> Mã nhị phân tương ứng (13 bit): 1110010010011
 
-[3] Quá trình giải mã (từ 0.251500, độ dài 6):
-Giá trị 0.251500 nằm trong khoảng của 'C' -> Giải mã: C
-Giá trị 0.754501 nằm trong khoảng của 'U' -> Giải mã: U
-Giá trị 0.527006 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.162037 nằm trong khoảng của 'C' -> Giải mã: C
-Giá trị 0.486111 nằm trong khoảng của 'D' -> Giải mã: D
-Giá trị 0.916667 nằm trong khoảng của 'V' -> Giải mã: V
+[3] Quá trình giải mã (từ mã nhị phân 1110010010011, giá trị 0.892944, độ dài 5):
+Giá trị 0.892944 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.464722 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.323608 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.618042 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.090210 nằm trong khoảng của 'A' -> Giải mã: A
 
-2 1 0
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'VICLA':
-Output: 86 | Thêm từ điển: VI (Mã: 256)
-Output: 73 | Thêm từ điển: IC (Mã: 257)
-Output: 67 | Thêm từ điển: CL (Mã: 258)
-Output: 76 | Thêm từ điển: LA (Mã: 259)
-Output cuối: 65
-=> Dãy mã hóa: 86 73 67 76 65 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(000110, 010010) = 2
+Khoảng cách d(000110, 111010) = 4
+Khoảng cách d(000110, 101111) = 3
+Khoảng cách d(010010, 111010) = 2
+Khoảng cách d(010010, 101111) = 5
+Khoảng cách d(111010, 101111) = 3
+=> d_min = 2 (Giữa 000110 và 010010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 86 73 67 76 65 
-Đọc 86 -> Xuất: V
-Đọc 73 -> Xuất: I | Thêm từ điển: VI (Mã: 256)
-Đọc 67 -> Xuất: C | Thêm từ điển: IC (Mã: 257)
-Đọc 76 -> Xuất: L | Thêm từ điển: CL (Mã: 258)
-Đọc 65 -> Xuất: A | Thêm từ điển: LA (Mã: 259)
-=> Chuỗi giải mã thành công: VICLA
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'LUETLO'?
+A. 011100111000001
+B. 011100111000000
+C. 011100111000010
+D. 01110011100000001
+Đáp án đúng: B
+
+0.180373
+00101110001011001
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'VNRZUICM' là bao nhiêu?
+A. 7
+B. 9
+C. 11
+D. 8
+Đáp án đúng: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(100101, 000010) = 4
+=> d_min = 4 (Giữa 100101 và 000010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 3 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
 
 --- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
 [1] Bảng phân bổ xác suất:
-- Ký tự 'A': [0.000000, 0.200000)
-- Ký tự 'P': [0.200000, 0.400000)
-- Ký tự 'Q': [0.400000, 0.600000)
-- Ký tự 'T': [0.600000, 0.800000)
-- Ký tự 'W': [0.800000, 1.000000)
+- Ký tự 'D': [0.000000, 0.250000)
+- Ký tự 'F': [0.250000, 0.500000)
+- Ký tự 'I': [0.500000, 0.750000)
+- Ký tự 'Z': [0.750000, 1.000000)
 
-[2] Quá trình mã hóa chuỗi 'QTAPW':
-Đọc 'Q' -> Khoảng: [0.400000, 0.600000)
-Đọc 'T' -> Khoảng: [0.520000, 0.560000)
-Đọc 'A' -> Khoảng: [0.520000, 0.528000)
-Đọc 'P' -> Khoảng: [0.521600, 0.523200)
-Đọc 'W' -> Khoảng: [0.522880, 0.523200)
-=> Giá trị mã hóa được chọn: 0.523040
+[2] Quá trình mã hóa chuỗi 'DZIF':
+Đọc 'D' -> Khoảng: [0.000000, 0.250000)
+Đọc 'Z' -> Khoảng: [0.187500, 0.250000)
+Đọc 'I' -> Khoảng: [0.218750, 0.234375)
+Đọc 'F' -> Khoảng: [0.222656, 0.226562)
+=> Giá trị mã hóa được chọn: 0.224609
+=> Mã nhị phân tương ứng (9 bit): 001110011
 
-[3] Quá trình giải mã (từ 0.523040, độ dài 5):
-Giá trị 0.523040 nằm trong khoảng của 'Q' -> Giải mã: Q
-Giá trị 0.615200 nằm trong khoảng của 'T' -> Giải mã: T
-Giá trị 0.076000 nằm trong khoảng của 'A' -> Giải mã: A
-Giá trị 0.380000 nằm trong khoảng của 'P' -> Giải mã: P
-Giá trị 0.900000 nằm trong khoảng của 'W' -> Giải mã: W
+[3] Quá trình giải mã (từ mã nhị phân 001110011, giá trị 0.224609, độ dài 4):
+Giá trị 0.224609 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.898438 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.593750 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.375000 nằm trong khoảng của 'F' -> Giải mã: F
 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'T': [0.000000, 0.333333)
+- Ký tự 'U': [0.333333, 0.666667)
+- Ký tự 'Z': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'TZU':
+Đọc 'T' -> Khoảng: [0.000000, 0.333333)
+Đọc 'Z' -> Khoảng: [0.222222, 0.333333)
+Đọc 'U' -> Khoảng: [0.259259, 0.296296)
+=> Giá trị mã hóa được chọn: 0.277778
+=> Mã nhị phân tương ứng (6 bit): 010001
+
+[3] Quá trình giải mã (từ mã nhị phân 010001, giá trị 0.265625, độ dài 3):
+Giá trị 0.265625 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.796875 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.390625 nằm trong khoảng của 'U' -> Giải mã: U
+
+0 -1 0

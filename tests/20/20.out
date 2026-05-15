@@ -1,128 +1,53 @@
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'UQGE'?
-A. 0.840625
-B. 0.924531
-C. 0.892578
-D. 1.017578
+[Câu hỏi MCQ] Đâu là mã nhị phân hợp lệ của chuỗi 'QDYZZL'?
+A. 010110011111101
+B. 01011001111110001
+C. 010110011111110
+D. 010110011111100
+Đáp án đúng: D
+
+85 82 83 82 80 77 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0, 0.2)
+- Ký tự 'N': [0.2, 0.4)
+- Ký tự 'V': [0.4, 0.6)
+- Ký tự 'W': [0.6, 1)
+
+[2] Quá trình mã hóa chuỗi 'VWANW':
+Đọc 'V' -> Khoảng: [0.400000, 0.600000)
+Đọc 'W' -> Khoảng: [0.520000, 0.600000)
+Đọc 'A' -> Khoảng: [0.520000, 0.536000)
+Đọc 'N' -> Khoảng: [0.523200, 0.526400)
+Đọc 'W' -> Khoảng: [0.525120, 0.526400)
+=> Giá trị mã hóa được chọn: 0.525760
+=> Mã nhị phân tương ứng (11 bit): 10000110100
+
+[3] Quá trình giải mã (từ mã nhị phân 10000110100, giá trị 0.525391, độ dài 5):
+Giá trị 0.525391 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.626953 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.067383 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.336914 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.684570 nằm trong khoảng của 'W' -> Giải mã: W
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: A
+
+87 70 88 75 79 74 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. -1 bit
+D. 0 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 0 bit
+D. 1 bit
 Đáp án đúng: C
-
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'AILTR' là bao nhiêu?
-A. 5
-B. 8
-C. 4
-D. 6
-Đáp án đúng: A
-
-4 3 1
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'FIAGKUD' là bao nhiêu?
-A. 7
-B. 10
-C. 6
-D. 8
-Đáp án đúng: A
-
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'EIKLQW'?
-A. 0.164984
-B. 0.039984
-C. 0.069995
-D. -0.010027
-Đáp án đúng: B
-
-0.191915
-1 0 0
-[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'TJZPL' là bao nhiêu?
-A. 5
-B. 6
-C. 8
-D. 4
-Đáp án đúng: A
-
-72 69 75 68 75 74 75 82 
-80 74 82 84 76 65 
-[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'QCPN'?
-A. 0.787109
-B. 0.735156
-C. 0.819062
-D. 0.912109
-Đáp án đúng: A
-
-71 73 81 85 65 
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'DGXOEYOJ':
-Output: 68 | Thêm từ điển: DG (Mã: 256)
-Output: 71 | Thêm từ điển: GX (Mã: 257)
-Output: 88 | Thêm từ điển: XO (Mã: 258)
-Output: 79 | Thêm từ điển: OE (Mã: 259)
-Output: 69 | Thêm từ điển: EY (Mã: 260)
-Output: 89 | Thêm từ điển: YO (Mã: 261)
-Output: 79 | Thêm từ điển: OJ (Mã: 262)
-Output cuối: 74
-=> Dãy mã hóa: 68 71 88 79 69 89 79 74 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 68 71 88 79 69 89 79 74 
-Đọc 68 -> Xuất: D
-Đọc 71 -> Xuất: G | Thêm từ điển: DG (Mã: 256)
-Đọc 88 -> Xuất: X | Thêm từ điển: GX (Mã: 257)
-Đọc 79 -> Xuất: O | Thêm từ điển: XO (Mã: 258)
-Đọc 69 -> Xuất: E | Thêm từ điển: OE (Mã: 259)
-Đọc 89 -> Xuất: Y | Thêm từ điển: EY (Mã: 260)
-Đọc 79 -> Xuất: O | Thêm từ điển: YO (Mã: 261)
-Đọc 74 -> Xuất: J | Thêm từ điển: OJ (Mã: 262)
-=> Chuỗi giải mã thành công: DGXOEYOJ
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'ZIUHUG':
-Output: 90 | Thêm từ điển: ZI (Mã: 256)
-Output: 73 | Thêm từ điển: IU (Mã: 257)
-Output: 85 | Thêm từ điển: UH (Mã: 258)
-Output: 72 | Thêm từ điển: HU (Mã: 259)
-Output: 85 | Thêm từ điển: UG (Mã: 260)
-Output cuối: 71
-=> Dãy mã hóa: 90 73 85 72 85 71 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 90 73 85 72 85 71 
-Đọc 90 -> Xuất: Z
-Đọc 73 -> Xuất: I | Thêm từ điển: ZI (Mã: 256)
-Đọc 85 -> Xuất: U | Thêm từ điển: IU (Mã: 257)
-Đọc 72 -> Xuất: H | Thêm từ điển: UH (Mã: 258)
-Đọc 85 -> Xuất: U | Thêm từ điển: HU (Mã: 259)
-Đọc 71 -> Xuất: G | Thêm từ điển: UG (Mã: 260)
-=> Chuỗi giải mã thành công: ZIUHUG
-
---- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
-[1] Quá trình mã hóa chuỗi 'YTSTAOFLH':
-Output: 89 | Thêm từ điển: YT (Mã: 256)
-Output: 84 | Thêm từ điển: TS (Mã: 257)
-Output: 83 | Thêm từ điển: ST (Mã: 258)
-Output: 84 | Thêm từ điển: TA (Mã: 259)
-Output: 65 | Thêm từ điển: AO (Mã: 260)
-Output: 79 | Thêm từ điển: OF (Mã: 261)
-Output: 70 | Thêm từ điển: FL (Mã: 262)
-Output: 76 | Thêm từ điển: LH (Mã: 263)
-Output cuối: 72
-=> Dãy mã hóa: 89 84 83 84 65 79 70 76 72 
-
-[2] Quá trình giải mã:
-Chuỗi mã đầu vào: 89 84 83 84 65 79 70 76 72 
-Đọc 89 -> Xuất: Y
-Đọc 84 -> Xuất: T | Thêm từ điển: YT (Mã: 256)
-Đọc 83 -> Xuất: S | Thêm từ điển: TS (Mã: 257)
-Đọc 84 -> Xuất: T | Thêm từ điển: ST (Mã: 258)
-Đọc 65 -> Xuất: A | Thêm từ điển: TA (Mã: 259)
-Đọc 79 -> Xuất: O | Thêm từ điển: AO (Mã: 260)
-Đọc 70 -> Xuất: F | Thêm từ điển: OF (Mã: 261)
-Đọc 76 -> Xuất: L | Thêm từ điển: FL (Mã: 262)
-Đọc 72 -> Xuất: H | Thêm từ điển: LH (Mã: 263)
-=> Chuỗi giải mã thành công: YTSTAOFLH
-
-89 90 70 73 71 
-0.574074
---- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
-Khoảng cách d(101, 101) = 0
-Khoảng cách d(101, 100) = 1
-Khoảng cách d(101, 100) = 1
-=> d_min = 0 (Giữa 101 và 101)
-=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
-=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
 
