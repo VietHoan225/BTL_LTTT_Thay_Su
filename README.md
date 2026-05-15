@@ -4,8 +4,7 @@ Dự án triển khai các thuật toán mã hóa, giải mã và kiểm tra mã
 
 ## Cấu trúc thư mục
 - `main.cpp`: Mã nguồn chính.
-- `gen_tests.py`: Script tự động sinh dữ liệu mẫu và kết quả.
-- `tests/`: Thư mục chứa 50 bộ testcase.
+- `tests/`: Thư mục chứa 100 bộ testcase.
   - `{ID}/`: Thư mục chứa testcase thứ ID.
     - `{ID}.in`: Dữ liệu đầu vào.
     - `{ID}.out`: Đáp án tương ứng (bao gồm cả lời giải tự luận/trắc nghiệm).
