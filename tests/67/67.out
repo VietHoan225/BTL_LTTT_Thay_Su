@@ -1,0 +1,200 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'VIQHQN' là bao nhiêu?
+A. 9
+B. 6
+C. 7
+D. 5
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 2 bit
+D. 3 bit
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'JMSUIVWF':
+Output: 74 | Thêm từ điển: JM (Mã: 256)
+Output: 77 | Thêm từ điển: MS (Mã: 257)
+Output: 83 | Thêm từ điển: SU (Mã: 258)
+Output: 85 | Thêm từ điển: UI (Mã: 259)
+Output: 73 | Thêm từ điển: IV (Mã: 260)
+Output: 86 | Thêm từ điển: VW (Mã: 261)
+Output: 87 | Thêm từ điển: WF (Mã: 262)
+Output cuối: 70
+=> Dãy mã hóa: 74 77 83 85 73 86 87 70 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 74 77 83 85 73 86 87 70 
+Đọc 74 -> Xuất: J
+Đọc 77 -> Xuất: M | Thêm từ điển: JM (Mã: 256)
+Đọc 83 -> Xuất: S | Thêm từ điển: MS (Mã: 257)
+Đọc 85 -> Xuất: U | Thêm từ điển: SU (Mã: 258)
+Đọc 73 -> Xuất: I | Thêm từ điển: UI (Mã: 259)
+Đọc 86 -> Xuất: V | Thêm từ điển: IV (Mã: 260)
+Đọc 87 -> Xuất: W | Thêm từ điển: VW (Mã: 261)
+Đọc 70 -> Xuất: F | Thêm từ điển: WF (Mã: 262)
+=> Chuỗi giải mã thành công: JMSUIVWF
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HKAFOPIYJ' là bao nhiêu?
+A. 8
+B. 12
+C. 10
+D. 9
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HOWHRANIM' là bao nhiêu?
+A. 12
+B. 8
+C. 10
+D. 9
+Đáp án đúng: D
+
+0 -1 0
+77 81 85 80 82 78 67 
+70 88 257 70 75 82 89 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0, 0.2)
+- Ký tự 'I': [0.2, 0.4)
+- Ký tự 'L': [0.4, 0.6)
+- Ký tự 'S': [0.6, 0.8)
+- Ký tự 'X': [0.8, 1)
+
+[2] Quá trình mã hóa chuỗi 'SBLIX':
+Đọc 'S' -> Khoảng: [0.600000, 0.800000)
+Đọc 'B' -> Khoảng: [0.600000, 0.640000)
+Đọc 'L' -> Khoảng: [0.616000, 0.624000)
+Đọc 'I' -> Khoảng: [0.617600, 0.619200)
+Đọc 'X' -> Khoảng: [0.618880, 0.619200)
+=> Giá trị mã hóa được chọn: 0.619040
+
+[3] Quá trình giải mã (từ 0.619040, độ dài 5):
+Giá trị 0.619040 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.095200 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.476000 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.380000 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.900000 nằm trong khoảng của 'X' -> Giải mã: X
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'QAVSGRYZPI' là bao nhiêu?
+A. 9
+B. 11
+C. 13
+D. 10
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QWUYBN':
+Output: 81 | Thêm từ điển: QW (Mã: 256)
+Output: 87 | Thêm từ điển: WU (Mã: 257)
+Output: 85 | Thêm từ điển: UY (Mã: 258)
+Output: 89 | Thêm từ điển: YB (Mã: 259)
+Output: 66 | Thêm từ điển: BN (Mã: 260)
+Output cuối: 78
+=> Dãy mã hóa: 81 87 85 89 66 78 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 87 85 89 66 78 
+Đọc 81 -> Xuất: Q
+Đọc 87 -> Xuất: W | Thêm từ điển: QW (Mã: 256)
+Đọc 85 -> Xuất: U | Thêm từ điển: WU (Mã: 257)
+Đọc 89 -> Xuất: Y | Thêm từ điển: UY (Mã: 258)
+Đọc 66 -> Xuất: B | Thêm từ điển: YB (Mã: 259)
+Đọc 78 -> Xuất: N | Thêm từ điển: BN (Mã: 260)
+=> Chuỗi giải mã thành công: QWUYBN
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(100, 100) = 0
+=> d_min = 0 (Giữa 100 và 100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+1 0 0
+0.928800
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'M': [0.000000, 0.333333)
+- Ký tự 'S': [0.333333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'SSM':
+Đọc 'S' -> Khoảng: [0.333333, 1.000000)
+Đọc 'S' -> Khoảng: [0.555556, 1.000000)
+Đọc 'M' -> Khoảng: [0.555556, 0.703704)
+=> Giá trị mã hóa được chọn: 0.629630
+
+[3] Quá trình giải mã (từ 0.629630, độ dài 3):
+Giá trị 0.629630 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.444444 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.166667 nằm trong khoảng của 'M' -> Giải mã: M
+
+1 0 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'JCWOMI':
+Output: 74 | Thêm từ điển: JC (Mã: 256)
+Output: 67 | Thêm từ điển: CW (Mã: 257)
+Output: 87 | Thêm từ điển: WO (Mã: 258)
+Output: 79 | Thêm từ điển: OM (Mã: 259)
+Output: 77 | Thêm từ điển: MI (Mã: 260)
+Output cuối: 73
+=> Dãy mã hóa: 74 67 87 79 77 73 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 74 67 87 79 77 73 
+Đọc 74 -> Xuất: J
+Đọc 67 -> Xuất: C | Thêm từ điển: JC (Mã: 256)
+Đọc 87 -> Xuất: W | Thêm từ điển: CW (Mã: 257)
+Đọc 79 -> Xuất: O | Thêm từ điển: WO (Mã: 258)
+Đọc 77 -> Xuất: M | Thêm từ điển: OM (Mã: 259)
+Đọc 73 -> Xuất: I | Thêm từ điển: MI (Mã: 260)
+=> Chuỗi giải mã thành công: JCWOMI
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'K': [0.000000, 0.333333)
+- Ký tự 'Q': [0.333333, 0.666667)
+- Ký tự 'R': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'QRK':
+Đọc 'Q' -> Khoảng: [0.333333, 0.666667)
+Đọc 'R' -> Khoảng: [0.555556, 0.666667)
+Đọc 'K' -> Khoảng: [0.555556, 0.592593)
+=> Giá trị mã hóa được chọn: 0.574074
+
+[3] Quá trình giải mã (từ 0.574074, độ dài 3):
+Giá trị 0.574074 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.722222 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.166667 nằm trong khoảng của 'K' -> Giải mã: K
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.166667)
+- Ký tự 'J': [0.166667, 0.333333)
+- Ký tự 'K': [0.333333, 0.500000)
+- Ký tự 'R': [0.500000, 0.666667)
+- Ký tự 'U': [0.666667, 0.833333)
+- Ký tự 'X': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'KXDRUJ':
+Đọc 'K' -> Khoảng: [0.333333, 0.500000)
+Đọc 'X' -> Khoảng: [0.472222, 0.500000)
+Đọc 'D' -> Khoảng: [0.472222, 0.476852)
+Đọc 'R' -> Khoảng: [0.474537, 0.475309)
+Đọc 'U' -> Khoảng: [0.475051, 0.475180)
+Đọc 'J' -> Khoảng: [0.475073, 0.475094)
+=> Giá trị mã hóa được chọn: 0.475084
+
+[3] Quá trình giải mã (từ 0.475084, độ dài 6):
+Giá trị 0.475084 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.850502 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.103009 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.618056 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.708333 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.250000 nằm trong khoảng của 'J' -> Giải mã: J
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 2 bit
+D. 1 bit
+Đáp án đúng: A
+

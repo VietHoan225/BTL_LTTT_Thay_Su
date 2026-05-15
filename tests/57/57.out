@@ -1,0 +1,172 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: A
+
+3 2 1
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001, 100) = 2
+Khoảng cách d(001, 100) = 2
+Khoảng cách d(001, 001) = 0
+Khoảng cách d(100, 100) = 0
+Khoảng cách d(100, 001) = 2
+Khoảng cách d(100, 001) = 2
+=> d_min = 0 (Giữa 001 và 001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101100, 101100) = 0
+Khoảng cách d(101100, 001010) = 3
+Khoảng cách d(101100, 101000) = 1
+Khoảng cách d(101100, 001010) = 3
+Khoảng cách d(101100, 101000) = 1
+Khoảng cách d(001010, 101000) = 2
+=> d_min = 0 (Giữa 101100 và 101100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'VQUENP' là bao nhiêu?
+A. 5
+B. 7
+C. 6
+D. 9
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'XAXFFKCO' là bao nhiêu?
+A. 9
+B. 8
+C. 7
+D. 11
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'KCUPC':
+Output: 75 | Thêm từ điển: KC (Mã: 256)
+Output: 67 | Thêm từ điển: CU (Mã: 257)
+Output: 85 | Thêm từ điển: UP (Mã: 258)
+Output: 80 | Thêm từ điển: PC (Mã: 259)
+Output cuối: 67
+=> Dãy mã hóa: 75 67 85 80 67 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 75 67 85 80 67 
+Đọc 75 -> Xuất: K
+Đọc 67 -> Xuất: C | Thêm từ điển: KC (Mã: 256)
+Đọc 85 -> Xuất: U | Thêm từ điển: CU (Mã: 257)
+Đọc 80 -> Xuất: P | Thêm từ điển: UP (Mã: 258)
+Đọc 67 -> Xuất: C | Thêm từ điển: PC (Mã: 259)
+=> Chuỗi giải mã thành công: KCUPC
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0, 0.333333)
+- Ký tự 'J': [0.333333, 0.666667)
+- Ký tự 'S': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'SCJ':
+Đọc 'S' -> Khoảng: [0.666667, 1.000000)
+Đọc 'C' -> Khoảng: [0.666667, 0.777778)
+Đọc 'J' -> Khoảng: [0.703704, 0.740741)
+=> Giá trị mã hóa được chọn: 0.722222
+
+[3] Quá trình giải mã (từ 0.722222, độ dài 3):
+Giá trị 0.722222 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.166667 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.500000 nằm trong khoảng của 'J' -> Giải mã: J
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'E': [0.000000, 0.250000)
+- Ký tự 'J': [0.250000, 0.500000)
+- Ký tự 'S': [0.500000, 0.750000)
+- Ký tự 'V': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'VEJS':
+Đọc 'V' -> Khoảng: [0.750000, 1.000000)
+Đọc 'E' -> Khoảng: [0.750000, 0.812500)
+Đọc 'J' -> Khoảng: [0.765625, 0.781250)
+Đọc 'S' -> Khoảng: [0.773438, 0.777344)
+=> Giá trị mã hóa được chọn: 0.775391
+
+[3] Quá trình giải mã (từ 0.775391, độ dài 4):
+Giá trị 0.775391 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.101562 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.406250 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.625000 nằm trong khoảng của 'S' -> Giải mã: S
+
+74 83 67 69 82 82 78 70 89 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'CIGKADXQUK':
+Output: 67 | Thêm từ điển: CI (Mã: 256)
+Output: 73 | Thêm từ điển: IG (Mã: 257)
+Output: 71 | Thêm từ điển: GK (Mã: 258)
+Output: 75 | Thêm từ điển: KA (Mã: 259)
+Output: 65 | Thêm từ điển: AD (Mã: 260)
+Output: 68 | Thêm từ điển: DX (Mã: 261)
+Output: 88 | Thêm từ điển: XQ (Mã: 262)
+Output: 81 | Thêm từ điển: QU (Mã: 263)
+Output: 85 | Thêm từ điển: UK (Mã: 264)
+Output cuối: 75
+=> Dãy mã hóa: 67 73 71 75 65 68 88 81 85 75 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 67 73 71 75 65 68 88 81 85 75 
+Đọc 67 -> Xuất: C
+Đọc 73 -> Xuất: I | Thêm từ điển: CI (Mã: 256)
+Đọc 71 -> Xuất: G | Thêm từ điển: IG (Mã: 257)
+Đọc 75 -> Xuất: K | Thêm từ điển: GK (Mã: 258)
+Đọc 65 -> Xuất: A | Thêm từ điển: KA (Mã: 259)
+Đọc 68 -> Xuất: D | Thêm từ điển: AD (Mã: 260)
+Đọc 88 -> Xuất: X | Thêm từ điển: DX (Mã: 261)
+Đọc 81 -> Xuất: Q | Thêm từ điển: XQ (Mã: 262)
+Đọc 85 -> Xuất: U | Thêm từ điển: QU (Mã: 263)
+Đọc 75 -> Xuất: K | Thêm từ điển: UK (Mã: 264)
+=> Chuỗi giải mã thành công: CIGKADXQUK
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'IVB'?
+A. 0.699074
+B. 0.622593
+C. 0.505556
+D. 0.574074
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'UGPYX' là bao nhiêu?
+A. 6
+B. 4
+C. 8
+D. 5
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'TERZRKRI' là bao nhiêu?
+A. 8
+B. 11
+C. 7
+D. 9
+Đáp án đúng: A
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'BDRKXMM':
+Output: 66 | Thêm từ điển: BD (Mã: 256)
+Output: 68 | Thêm từ điển: DR (Mã: 257)
+Output: 82 | Thêm từ điển: RK (Mã: 258)
+Output: 75 | Thêm từ điển: KX (Mã: 259)
+Output: 88 | Thêm từ điển: XM (Mã: 260)
+Output: 77 | Thêm từ điển: MM (Mã: 261)
+Output cuối: 77
+=> Dãy mã hóa: 66 68 82 75 88 77 77 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 66 68 82 75 88 77 77 
+Đọc 66 -> Xuất: B
+Đọc 68 -> Xuất: D | Thêm từ điển: BD (Mã: 256)
+Đọc 82 -> Xuất: R | Thêm từ điển: DR (Mã: 257)
+Đọc 75 -> Xuất: K | Thêm từ điển: RK (Mã: 258)
+Đọc 88 -> Xuất: X | Thêm từ điển: KX (Mã: 259)
+Đọc 77 -> Xuất: M | Thêm từ điển: XM (Mã: 260)
+Đọc 77 -> Xuất: M | Thêm từ điển: MM (Mã: 261)
+=> Chuỗi giải mã thành công: BDRKXMM
+

@@ -1,0 +1,47 @@
+2 1 0
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: B
+
+3 2 1
+67 86 88 78 78 67 74 87 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: D
+
+0.425926
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0.000000, 0.250000)
+- Ký tự 'K': [0.250000, 0.500000)
+- Ký tự 'R': [0.500000, 0.750000)
+- Ký tự 'X': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'XKRC':
+Đọc 'X' -> Khoảng: [0.750000, 1.000000)
+Đọc 'K' -> Khoảng: [0.812500, 0.875000)
+Đọc 'R' -> Khoảng: [0.843750, 0.859375)
+Đọc 'C' -> Khoảng: [0.843750, 0.847656)
+=> Giá trị mã hóa được chọn: 0.845703
+
+[3] Quá trình giải mã (từ 0.845703, độ dài 4):
+Giá trị 0.845703 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.382812 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.531250 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.125000 nằm trong khoảng của 'C' -> Giải mã: C
+
+0.425926
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'TAMLKH'?
+A. 0.854456
+B. 0.979456
+C. 0.804445
+D. 0.884467
+Đáp án đúng: A
+
+82 65 79 88 73 

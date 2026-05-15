@@ -1,0 +1,129 @@
+84 71 70 79 80 81 78 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'TGQBBROA':
+Output: 84 | Thêm từ điển: TG (Mã: 256)
+Output: 71 | Thêm từ điển: GQ (Mã: 257)
+Output: 81 | Thêm từ điển: QB (Mã: 258)
+Output: 66 | Thêm từ điển: BB (Mã: 259)
+Output: 66 | Thêm từ điển: BR (Mã: 260)
+Output: 82 | Thêm từ điển: RO (Mã: 261)
+Output: 79 | Thêm từ điển: OA (Mã: 262)
+Output cuối: 65
+=> Dãy mã hóa: 84 71 81 66 66 82 79 65 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 84 71 81 66 66 82 79 65 
+Đọc 84 -> Xuất: T
+Đọc 71 -> Xuất: G | Thêm từ điển: TG (Mã: 256)
+Đọc 81 -> Xuất: Q | Thêm từ điển: GQ (Mã: 257)
+Đọc 66 -> Xuất: B | Thêm từ điển: QB (Mã: 258)
+Đọc 66 -> Xuất: B | Thêm từ điển: BB (Mã: 259)
+Đọc 82 -> Xuất: R | Thêm từ điển: BR (Mã: 260)
+Đọc 79 -> Xuất: O | Thêm từ điển: RO (Mã: 261)
+Đọc 65 -> Xuất: A | Thêm từ điển: OA (Mã: 262)
+=> Chuỗi giải mã thành công: TGQBBROA
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'GXTQZA':
+Output: 71 | Thêm từ điển: GX (Mã: 256)
+Output: 88 | Thêm từ điển: XT (Mã: 257)
+Output: 84 | Thêm từ điển: TQ (Mã: 258)
+Output: 81 | Thêm từ điển: QZ (Mã: 259)
+Output: 90 | Thêm từ điển: ZA (Mã: 260)
+Output cuối: 65
+=> Dãy mã hóa: 71 88 84 81 90 65 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 71 88 84 81 90 65 
+Đọc 71 -> Xuất: G
+Đọc 88 -> Xuất: X | Thêm từ điển: GX (Mã: 256)
+Đọc 84 -> Xuất: T | Thêm từ điển: XT (Mã: 257)
+Đọc 81 -> Xuất: Q | Thêm từ điển: TQ (Mã: 258)
+Đọc 90 -> Xuất: Z | Thêm từ điển: QZ (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: ZA (Mã: 260)
+=> Chuỗi giải mã thành công: GXTQZA
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'H': [0, 0.25)
+- Ký tự 'P': [0.25, 0.5)
+- Ký tự 'R': [0.5, 0.75)
+- Ký tự 'V': [0.75, 1)
+
+[2] Quá trình mã hóa chuỗi 'PRVH':
+Đọc 'P' -> Khoảng: [0.250000, 0.500000)
+Đọc 'R' -> Khoảng: [0.375000, 0.437500)
+Đọc 'V' -> Khoảng: [0.421875, 0.437500)
+Đọc 'H' -> Khoảng: [0.421875, 0.425781)
+=> Giá trị mã hóa được chọn: 0.423828
+
+[3] Quá trình giải mã (từ 0.423828, độ dài 4):
+Giá trị 0.423828 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.695312 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.781250 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.125000 nằm trong khoảng của 'H' -> Giải mã: H
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101001, 111001) = 1
+=> d_min = 1 (Giữa 101001 và 111001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'E': [0.000000, 0.166667)
+- Ký tự 'J': [0.166667, 0.500000)
+- Ký tự 'M': [0.500000, 0.666667)
+- Ký tự 'S': [0.666667, 0.833333)
+- Ký tự 'W': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'SJMJEW':
+Đọc 'S' -> Khoảng: [0.666667, 0.833333)
+Đọc 'J' -> Khoảng: [0.694444, 0.750000)
+Đọc 'M' -> Khoảng: [0.722222, 0.731481)
+Đọc 'J' -> Khoảng: [0.723765, 0.726852)
+Đọc 'E' -> Khoảng: [0.723765, 0.724280)
+Đọc 'W' -> Khoảng: [0.724194, 0.724280)
+=> Giá trị mã hóa được chọn: 0.724237
+
+[3] Quá trình giải mã (từ 0.724237, độ dài 6):
+Giá trị 0.724237 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.345422 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.536265 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.217593 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.152778 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.916667 nằm trong khoảng của 'W' -> Giải mã: W
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'J': [0.000000, 0.200000)
+- Ký tự 'M': [0.200000, 0.400000)
+- Ký tự 'O': [0.400000, 0.600000)
+- Ký tự 'Q': [0.600000, 0.800000)
+- Ký tự 'T': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'TJOQM':
+Đọc 'T' -> Khoảng: [0.800000, 1.000000)
+Đọc 'J' -> Khoảng: [0.800000, 0.840000)
+Đọc 'O' -> Khoảng: [0.816000, 0.824000)
+Đọc 'Q' -> Khoảng: [0.820800, 0.822400)
+Đọc 'M' -> Khoảng: [0.821120, 0.821440)
+=> Giá trị mã hóa được chọn: 0.821280
+
+[3] Quá trình giải mã (từ 0.821280, độ dài 5):
+Giá trị 0.821280 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.106400 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.532000 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.660000 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.300000 nằm trong khoảng của 'M' -> Giải mã: M
+
+0.203704
+3 2 1
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+

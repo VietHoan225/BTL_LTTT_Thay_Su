@@ -1,0 +1,75 @@
+1 0 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101, 000) = 2
+Khoảng cách d(101, 111) = 1
+Khoảng cách d(000, 111) = 3
+=> d_min = 1 (Giữa 101 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LUYANQTCF' là bao nhiêu?
+A. 10
+B. 8
+C. 12
+D. 9
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'EHCYHAYIDM':
+Output: 69 | Thêm từ điển: EH (Mã: 256)
+Output: 72 | Thêm từ điển: HC (Mã: 257)
+Output: 67 | Thêm từ điển: CY (Mã: 258)
+Output: 89 | Thêm từ điển: YH (Mã: 259)
+Output: 72 | Thêm từ điển: HA (Mã: 260)
+Output: 65 | Thêm từ điển: AY (Mã: 261)
+Output: 89 | Thêm từ điển: YI (Mã: 262)
+Output: 73 | Thêm từ điển: ID (Mã: 263)
+Output: 68 | Thêm từ điển: DM (Mã: 264)
+Output cuối: 77
+=> Dãy mã hóa: 69 72 67 89 72 65 89 73 68 77 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 69 72 67 89 72 65 89 73 68 77 
+Đọc 69 -> Xuất: E
+Đọc 72 -> Xuất: H | Thêm từ điển: EH (Mã: 256)
+Đọc 67 -> Xuất: C | Thêm từ điển: HC (Mã: 257)
+Đọc 89 -> Xuất: Y | Thêm từ điển: CY (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: YH (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: HA (Mã: 260)
+Đọc 89 -> Xuất: Y | Thêm từ điển: AY (Mã: 261)
+Đọc 73 -> Xuất: I | Thêm từ điển: YI (Mã: 262)
+Đọc 68 -> Xuất: D | Thêm từ điển: ID (Mã: 263)
+Đọc 77 -> Xuất: M | Thêm từ điển: DM (Mã: 264)
+=> Chuỗi giải mã thành công: EHCYHAYIDM
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'QEBK'?
+A. 0.947266
+B. 0.854219
+C. 0.822266
+D. 0.770312
+Đáp án đúng: C
+
+2 1 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0101, 1010) = 4
+=> d_min = 4 (Giữa 0101 và 1010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 3 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 2 bit
+D. 1 bit
+Đáp án đúng: B
+
+82 88 73 83 71 80 87 89 
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'CPV'?
+A. 0.252222
+B. 0.328704
+C. 0.203704
+D. 0.135185
+Đáp án đúng: C
+
+3 2 1
+0.880859

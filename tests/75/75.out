@@ -1,0 +1,99 @@
+0.722222
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'SEKPBG':
+Output: 83 | Thêm từ điển: SE (Mã: 256)
+Output: 69 | Thêm từ điển: EK (Mã: 257)
+Output: 75 | Thêm từ điển: KP (Mã: 258)
+Output: 80 | Thêm từ điển: PB (Mã: 259)
+Output: 66 | Thêm từ điển: BG (Mã: 260)
+Output cuối: 71
+=> Dãy mã hóa: 83 69 75 80 66 71 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 83 69 75 80 66 71 
+Đọc 83 -> Xuất: S
+Đọc 69 -> Xuất: E | Thêm từ điển: SE (Mã: 256)
+Đọc 75 -> Xuất: K | Thêm từ điển: EK (Mã: 257)
+Đọc 80 -> Xuất: P | Thêm từ điển: KP (Mã: 258)
+Đọc 66 -> Xuất: B | Thêm từ điển: PB (Mã: 259)
+Đọc 71 -> Xuất: G | Thêm từ điển: BG (Mã: 260)
+=> Chuỗi giải mã thành công: SEKPBG
+
+88 67 71 65 72 73 84 76 76 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(110101, 101100) = 3
+Khoảng cách d(110101, 000011) = 4
+Khoảng cách d(101100, 000011) = 5
+=> d_min = 3 (Giữa 110101 và 101100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. -1 bit
+D. 0 bit
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'AQLD'?
+A. 0.349609
+B. 0.224609
+C. 0.256562
+D. 0.172656
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HJDJDAET' là bao nhiêu?
+A. 8
+B. 7
+C. 6
+D. 10
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'DZHKW'?
+A. 0.202480
+B. 0.122160
+C. 0.297320
+D. 0.172320
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HTQOIUIDQB' là bao nhiêu?
+A. 10
+B. 9
+C. 13
+D. 11
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GETJ'?
+A. 0.306641
+B. 0.338594
+C. 0.431641
+D. 0.254687
+Đáp án đúng: A
+
+3 2 1
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'IMXJHOVTH':
+Output: 73 | Thêm từ điển: IM (Mã: 256)
+Output: 77 | Thêm từ điển: MX (Mã: 257)
+Output: 88 | Thêm từ điển: XJ (Mã: 258)
+Output: 74 | Thêm từ điển: JH (Mã: 259)
+Output: 72 | Thêm từ điển: HO (Mã: 260)
+Output: 79 | Thêm từ điển: OV (Mã: 261)
+Output: 86 | Thêm từ điển: VT (Mã: 262)
+Output: 84 | Thêm từ điển: TH (Mã: 263)
+Output cuối: 72
+=> Dãy mã hóa: 73 77 88 74 72 79 86 84 72 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 73 77 88 74 72 79 86 84 72 
+Đọc 73 -> Xuất: I
+Đọc 77 -> Xuất: M | Thêm từ điển: IM (Mã: 256)
+Đọc 88 -> Xuất: X | Thêm từ điển: MX (Mã: 257)
+Đọc 74 -> Xuất: J | Thêm từ điển: XJ (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: JH (Mã: 259)
+Đọc 79 -> Xuất: O | Thêm từ điển: HO (Mã: 260)
+Đọc 86 -> Xuất: V | Thêm từ điển: OV (Mã: 261)
+Đọc 84 -> Xuất: T | Thêm từ điển: VT (Mã: 262)
+Đọc 72 -> Xuất: H | Thêm từ điển: TH (Mã: 263)
+=> Chuỗi giải mã thành công: IMXJHOVTH
+

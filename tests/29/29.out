@@ -1,0 +1,85 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'XJCDI'?
+A. 0.952560
+B. 0.872240
+C. 0.922400
+D. 1.047400
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'NXQRT'?
+A. 0.202480
+B. 0.172320
+C. 0.122160
+D. 0.297320
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'QCQIL'?
+A. 0.606960
+B. 0.657600
+C. 0.688240
+D. 0.782600
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YEKKLELOA' là bao nhiêu?
+A. 10
+B. 12
+C. 8
+D. 9
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'BNHDO'?
+A. 0.088880
+B. 0.169200
+C. 0.264040
+D. 0.139040
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'FDXBP' là bao nhiêu?
+A. 6
+B. 5
+C. 8
+D. 4
+Đáp án đúng: B
+
+73 76 69 79 73 75 77 85 65 66 
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'FTHGAY'?
+A. 0.243317
+B. 0.323338
+C. 0.293328
+D. 0.418328
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011, 110) = 2
+Khoảng cách d(011, 011) = 0
+Khoảng cách d(011, 000) = 2
+Khoảng cách d(110, 011) = 2
+Khoảng cách d(110, 000) = 2
+Khoảng cách d(011, 000) = 2
+=> d_min = 0 (Giữa 011 và 011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+67 74 70 76 72 88 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0, 0.2)
+- Ký tự 'B': [0.2, 0.4)
+- Ký tự 'Q': [0.4, 0.6)
+- Ký tự 'R': [0.6, 0.8)
+- Ký tự 'V': [0.8, 1)
+
+[2] Quá trình mã hóa chuỗi 'BRAQV':
+Đọc 'B' -> Khoảng: [0.200000, 0.400000)
+Đọc 'R' -> Khoảng: [0.320000, 0.360000)
+Đọc 'A' -> Khoảng: [0.320000, 0.328000)
+Đọc 'Q' -> Khoảng: [0.323200, 0.324800)
+Đọc 'V' -> Khoảng: [0.324480, 0.324800)
+=> Giá trị mã hóa được chọn: 0.324640
+
+[3] Quá trình giải mã (từ 0.324640, độ dài 5):
+Giá trị 0.324640 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.623200 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.116000 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.580000 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.900000 nằm trong khoảng của 'V' -> Giải mã: V
+

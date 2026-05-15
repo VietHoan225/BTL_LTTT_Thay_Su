@@ -1,0 +1,84 @@
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(10110, 10001) = 3
+Khoảng cách d(10110, 00101) = 3
+Khoảng cách d(10001, 00101) = 2
+=> d_min = 2 (Giữa 10001 và 00101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'E': [0, 0.25)
+- Ký tự 'L': [0.25, 0.5)
+- Ký tự 'N': [0.5, 0.75)
+- Ký tự 'U': [0.75, 1)
+
+[2] Quá trình mã hóa chuỗi 'NUEL':
+Đọc 'N' -> Khoảng: [0.500000, 0.750000)
+Đọc 'U' -> Khoảng: [0.687500, 0.750000)
+Đọc 'E' -> Khoảng: [0.687500, 0.703125)
+Đọc 'L' -> Khoảng: [0.691406, 0.695312)
+=> Giá trị mã hóa được chọn: 0.693359
+
+[3] Quá trình giải mã (từ 0.693359, độ dài 4):
+Giá trị 0.693359 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.773438 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.093750 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.375000 nằm trong khoảng của 'L' -> Giải mã: L
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'GMCZM':
+Output: 71 | Thêm từ điển: GM (Mã: 256)
+Output: 77 | Thêm từ điển: MC (Mã: 257)
+Output: 67 | Thêm từ điển: CZ (Mã: 258)
+Output: 90 | Thêm từ điển: ZM (Mã: 259)
+Output cuối: 77
+=> Dãy mã hóa: 71 77 67 90 77 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 71 77 67 90 77 
+Đọc 71 -> Xuất: G
+Đọc 77 -> Xuất: M | Thêm từ điển: GM (Mã: 256)
+Đọc 67 -> Xuất: C | Thêm từ điển: MC (Mã: 257)
+Đọc 90 -> Xuất: Z | Thêm từ điển: CZ (Mã: 258)
+Đọc 77 -> Xuất: M | Thêm từ điển: ZM (Mã: 259)
+=> Chuỗi giải mã thành công: GMCZM
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'HYGYTD'?
+A. 0.491505
+B. 0.461463
+C. 0.411420
+D. 0.586463
+Đáp án đúng: B
+
+75 76 90 86 69 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'G': [0.000000, 0.250000)
+- Ký tự 'P': [0.250000, 0.500000)
+- Ký tự 'W': [0.500000, 0.750000)
+- Ký tự 'Y': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'PWYG':
+Đọc 'P' -> Khoảng: [0.250000, 0.500000)
+Đọc 'W' -> Khoảng: [0.375000, 0.437500)
+Đọc 'Y' -> Khoảng: [0.421875, 0.437500)
+Đọc 'G' -> Khoảng: [0.421875, 0.425781)
+=> Giá trị mã hóa được chọn: 0.423828
+
+[3] Quá trình giải mã (từ 0.423828, độ dài 4):
+Giá trị 0.423828 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.695312 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.781250 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.125000 nằm trong khoảng của 'G' -> Giải mã: G
+
+0.882212
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111, 111) = 0
+Khoảng cách d(111, 100) = 2
+Khoảng cách d(111, 100) = 2
+=> d_min = 0 (Giữa 111 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+73 65 72 68 73 80 87 

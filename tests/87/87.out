@@ -1,0 +1,75 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. -1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'FAENJ'?
+A. 0.365360
+B. 0.445680
+C. 0.540520
+D. 0.415520
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JWDTXA'?
+A. 0.402032
+B. 0.482053
+C. 0.577043
+D. 0.452043
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. -1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: D
+
+0.203704
+0.643808
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(100, 011) = 3
+Khoảng cách d(100, 101) = 1
+Khoảng cách d(011, 101) = 2
+=> d_min = 1 (Giữa 100 và 101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'QUO'?
+A. 0.505556
+B. 0.622593
+C. 0.699074
+D. 0.574074
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(01110, 01101) = 2
+Khoảng cách d(01110, 00000) = 3
+Khoảng cách d(01101, 00000) = 3
+=> d_min = 2 (Giữa 01110 và 01101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+85 73 78 72 69 70 73 71 86 72 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+

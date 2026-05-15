@@ -1,0 +1,64 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'WMMBZL'?
+A. 0.743441
+B. 0.773484
+C. 0.868441
+D. 0.693398
+Đáp án đúng: A
+
+2 1 0
+79 67 88 81 89 75 79 85 76 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'TPGJBZSZUQ' là bao nhiêu?
+A. 9
+B. 11
+C. 13
+D. 10
+Đáp án đúng: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0110, 1100) = 2
+Khoảng cách d(0110, 1010) = 2
+Khoảng cách d(1100, 1010) = 2
+=> d_min = 2 (Giữa 0110 và 1100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ZQY'?
+A. 0.722222
+B. 0.770741
+C. 0.653704
+D. 0.847222
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JZHMETG' là bao nhiêu?
+A. 10
+B. 8
+C. 6
+D. 7
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0, 0.25)
+- Ký tự 'L': [0.25, 0.75)
+- Ký tự 'S': [0.75, 1)
+
+[2] Quá trình mã hóa chuỗi 'LBSL':
+Đọc 'L' -> Khoảng: [0.250000, 0.750000)
+Đọc 'B' -> Khoảng: [0.250000, 0.375000)
+Đọc 'S' -> Khoảng: [0.343750, 0.375000)
+Đọc 'L' -> Khoảng: [0.351562, 0.367188)
+=> Giá trị mã hóa được chọn: 0.359375
+
+[3] Quá trình giải mã (từ 0.359375, độ dài 4):
+Giá trị 0.359375 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.218750 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.875000 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.500000 nằm trong khoảng của 'L' -> Giải mã: L
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'TRBRZLXZWA' là bao nhiêu?
+A. 11
+B. 10
+C. 13
+D. 9
+Đáp án đúng: B
+

@@ -1,0 +1,43 @@
+67 88 89 78 85 89 85 78 74 
+2 1 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'XFXWW' là bao nhiêu?
+A. 6
+B. 4
+C. 5
+D. 8
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'IAHLOC':
+Output: 73 | Thêm từ điển: IA (Mã: 256)
+Output: 65 | Thêm từ điển: AH (Mã: 257)
+Output: 72 | Thêm từ điển: HL (Mã: 258)
+Output: 76 | Thêm từ điển: LO (Mã: 259)
+Output: 79 | Thêm từ điển: OC (Mã: 260)
+Output cuối: 67
+=> Dãy mã hóa: 73 65 72 76 79 67 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 73 65 72 76 79 67 
+Đọc 73 -> Xuất: I
+Đọc 65 -> Xuất: A | Thêm từ điển: IA (Mã: 256)
+Đọc 72 -> Xuất: H | Thêm từ điển: AH (Mã: 257)
+Đọc 76 -> Xuất: L | Thêm từ điển: HL (Mã: 258)
+Đọc 79 -> Xuất: O | Thêm từ điển: LO (Mã: 259)
+Đọc 67 -> Xuất: C | Thêm từ điển: OC (Mã: 260)
+=> Chuỗi giải mã thành công: IAHLOC
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: A
+

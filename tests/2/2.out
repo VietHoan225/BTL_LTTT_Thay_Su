@@ -1,0 +1,43 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'RWYBT'?
+A. 0.302640
+B. 0.477800
+C. 0.352800
+D. 0.382960
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001100, 100000) = 3
+=> d_min = 3 (Giữa 001100 và 100000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+68 87 87 90 72 90 87 71 68 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(010, 000) = 1
+=> d_min = 1 (Giữa 010 và 000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+0.068640
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011, 110) = 2
+Khoảng cách d(011, 110) = 2
+Khoảng cách d(110, 110) = 0
+=> d_min = 0 (Giữa 110 và 110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. -1 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: A
+

@@ -1,0 +1,130 @@
+0.601562
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'RPQ'?
+A. 0.722222
+B. 0.770741
+C. 0.847222
+D. 0.653704
+Đáp án đúng: A
+
+0.722222
+0.203704
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'KKONSN'?
+A. 0.085905
+B. 0.116077
+C. 0.035734
+D. 0.210905
+Đáp án đúng: A
+
+0.081061
+1 0 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'RJISGQA' là bao nhiêu?
+A. 8
+B. 10
+C. 7
+D. 6
+Đáp án đúng: C
+
+68 66 83 72 73 90 82 88 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'O': [0.000000, 0.333333)
+- Ký tự 'W': [0.333333, 0.666667)
+- Ký tự 'Z': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'WZO':
+Đọc 'W' -> Khoảng: [0.333333, 0.666667)
+Đọc 'Z' -> Khoảng: [0.555556, 0.666667)
+Đọc 'O' -> Khoảng: [0.555556, 0.592593)
+=> Giá trị mã hóa được chọn: 0.574074
+
+[3] Quá trình giải mã (từ 0.574074, độ dài 3):
+Giá trị 0.574074 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.722222 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.166667 nằm trong khoảng của 'O' -> Giải mã: O
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.166667)
+- Ký tự 'C': [0.166667, 0.333333)
+- Ký tự 'M': [0.333333, 0.500000)
+- Ký tự 'O': [0.500000, 0.666667)
+- Ký tự 'P': [0.666667, 0.833333)
+- Ký tự 'T': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'OMACPT':
+Đọc 'O' -> Khoảng: [0.500000, 0.666667)
+Đọc 'M' -> Khoảng: [0.555556, 0.583333)
+Đọc 'A' -> Khoảng: [0.555556, 0.560185)
+Đọc 'C' -> Khoảng: [0.556327, 0.557099)
+Đọc 'P' -> Khoảng: [0.556842, 0.556970)
+Đọc 'T' -> Khoảng: [0.556949, 0.556970)
+=> Giá trị mã hóa được chọn: 0.556959
+
+[3] Quá trình giải mã (từ 0.556959, độ dài 6):
+Giá trị 0.556959 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.341757 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.050540 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.303241 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.819444 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.916667 nằm trong khoảng của 'T' -> Giải mã: T
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.400000)
+- Ký tự 'H': [0.400000, 0.600000)
+- Ký tự 'O': [0.600000, 0.800000)
+- Ký tự 'U': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'OAAHU':
+Đọc 'O' -> Khoảng: [0.600000, 0.800000)
+Đọc 'A' -> Khoảng: [0.600000, 0.680000)
+Đọc 'A' -> Khoảng: [0.600000, 0.632000)
+Đọc 'H' -> Khoảng: [0.612800, 0.619200)
+Đọc 'U' -> Khoảng: [0.617920, 0.619200)
+=> Giá trị mã hóa được chọn: 0.618560
+
+[3] Quá trình giải mã (từ 0.618560, độ dài 5):
+Giá trị 0.618560 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.092800 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.232000 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.580000 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.900000 nằm trong khoảng của 'U' -> Giải mã: U
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0110, 1100) = 2
+Khoảng cách d(0110, 0111) = 1
+Khoảng cách d(0110, 0111) = 1
+Khoảng cách d(1100, 0111) = 3
+Khoảng cách d(1100, 0111) = 3
+Khoảng cách d(0111, 0111) = 0
+=> d_min = 0 (Giữa 0111 và 0111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'KRDYJ':
+Output: 75 | Thêm từ điển: KR (Mã: 256)
+Output: 82 | Thêm từ điển: RD (Mã: 257)
+Output: 68 | Thêm từ điển: DY (Mã: 258)
+Output: 89 | Thêm từ điển: YJ (Mã: 259)
+Output cuối: 74
+=> Dãy mã hóa: 75 82 68 89 74 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 75 82 68 89 74 
+Đọc 75 -> Xuất: K
+Đọc 82 -> Xuất: R | Thêm từ điển: KR (Mã: 256)
+Đọc 68 -> Xuất: D | Thêm từ điển: RD (Mã: 257)
+Đọc 89 -> Xuất: Y | Thêm từ điển: DY (Mã: 258)
+Đọc 74 -> Xuất: J | Thêm từ điển: YJ (Mã: 259)
+=> Chuỗi giải mã thành công: KRDYJ
+
+1 0 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(11000, 11101) = 2
+Khoảng cách d(11000, 10101) = 3
+Khoảng cách d(11101, 10101) = 1
+=> d_min = 1 (Giữa 11101 và 10101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+

@@ -1,0 +1,77 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011, 000) = 2
+=> d_min = 2 (Giữa 011 và 000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HMZOQKADO' là bao nhiêu?
+A. 12
+B. 9
+C. 8
+D. 10
+Đáp án đúng: B
+
+1 0 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'OYLINSRBXO' là bao nhiêu?
+A. 9
+B. 13
+C. 11
+D. 10
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'E': [0, 0.166667)
+- Ký tự 'F': [0.166667, 0.333333)
+- Ký tự 'H': [0.333333, 0.5)
+- Ký tự 'M': [0.5, 0.666667)
+- Ký tự 'S': [0.666667, 0.833333)
+- Ký tự 'Z': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'MFSZEH':
+Đọc 'M' -> Khoảng: [0.500000, 0.666667)
+Đọc 'F' -> Khoảng: [0.527778, 0.555556)
+Đọc 'S' -> Khoảng: [0.546296, 0.550926)
+Đọc 'Z' -> Khoảng: [0.550154, 0.550926)
+Đọc 'E' -> Khoảng: [0.550154, 0.550283)
+Đọc 'H' -> Khoảng: [0.550197, 0.550219)
+=> Giá trị mã hóa được chọn: 0.550208
+
+[3] Quá trình giải mã (từ 0.550208, độ dài 6):
+Giá trị 0.550208 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.301247 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.807485 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.844907 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.069444 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.416667 nằm trong khoảng của 'H' -> Giải mã: H
+
+74 71 80 90 66 
+0.777760
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 3 bit
+C. 2 bit
+D. 2 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. -1 bit
+D. 0 bit
+Đáp án đúng: D
+

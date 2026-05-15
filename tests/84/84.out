@@ -1,0 +1,52 @@
+1 0 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'CSMUOWY':
+Output: 67 | Thêm từ điển: CS (Mã: 256)
+Output: 83 | Thêm từ điển: SM (Mã: 257)
+Output: 77 | Thêm từ điển: MU (Mã: 258)
+Output: 85 | Thêm từ điển: UO (Mã: 259)
+Output: 79 | Thêm từ điển: OW (Mã: 260)
+Output: 87 | Thêm từ điển: WY (Mã: 261)
+Output cuối: 89
+=> Dãy mã hóa: 67 83 77 85 79 87 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 67 83 77 85 79 87 89 
+Đọc 67 -> Xuất: C
+Đọc 83 -> Xuất: S | Thêm từ điển: CS (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: SM (Mã: 257)
+Đọc 85 -> Xuất: U | Thêm từ điển: MU (Mã: 258)
+Đọc 79 -> Xuất: O | Thêm từ điển: UO (Mã: 259)
+Đọc 87 -> Xuất: W | Thêm từ điển: OW (Mã: 260)
+Đọc 89 -> Xuất: Y | Thêm từ điển: WY (Mã: 261)
+=> Chuỗi giải mã thành công: CSMUOWY
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'EQFGD':
+Output: 69 | Thêm từ điển: EQ (Mã: 256)
+Output: 81 | Thêm từ điển: QF (Mã: 257)
+Output: 70 | Thêm từ điển: FG (Mã: 258)
+Output: 71 | Thêm từ điển: GD (Mã: 259)
+Output cuối: 68
+=> Dãy mã hóa: 69 81 70 71 68 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 69 81 70 71 68 
+Đọc 69 -> Xuất: E
+Đọc 81 -> Xuất: Q | Thêm từ điển: EQ (Mã: 256)
+Đọc 70 -> Xuất: F | Thêm từ điển: QF (Mã: 257)
+Đọc 71 -> Xuất: G | Thêm từ điển: FG (Mã: 258)
+Đọc 68 -> Xuất: D | Thêm từ điển: GD (Mã: 259)
+=> Chuỗi giải mã thành công: EQFGD
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101, 011) = 2
+Khoảng cách d(101, 010) = 3
+Khoảng cách d(101, 011) = 2
+Khoảng cách d(011, 010) = 1
+Khoảng cách d(011, 011) = 0
+Khoảng cách d(010, 011) = 1
+=> d_min = 0 (Giữa 011 và 011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+

@@ -1,0 +1,154 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0, 0.166667)
+- Ký tự 'D': [0.166667, 0.333333)
+- Ký tự 'E': [0.333333, 0.5)
+- Ký tự 'F': [0.5, 0.666667)
+- Ký tự 'G': [0.666667, 0.833333)
+- Ký tự 'Q': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'DAQEFG':
+Đọc 'D' -> Khoảng: [0.166667, 0.333333)
+Đọc 'A' -> Khoảng: [0.166667, 0.194444)
+Đọc 'Q' -> Khoảng: [0.189815, 0.194444)
+Đọc 'E' -> Khoảng: [0.191358, 0.192130)
+Đọc 'F' -> Khoảng: [0.191744, 0.191872)
+Đọc 'G' -> Khoảng: [0.191830, 0.191851)
+=> Giá trị mã hóa được chọn: 0.191840
+
+[3] Quá trình giải mã (từ 0.191840, độ dài 6):
+Giá trị 0.191840 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.151042 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.906250 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.437500 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.625000 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.750000 nằm trong khoảng của 'G' -> Giải mã: G
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'FUQBPUK' là bao nhiêu?
+A. 8
+B. 10
+C. 7
+D. 6
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'BMQKJCVPL' là bao nhiêu?
+A. 10
+B. 8
+C. 12
+D. 9
+Đáp án đúng: D
+
+0.552734
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(100, 111) = 2
+Khoảng cách d(100, 111) = 2
+Khoảng cách d(111, 111) = 0
+=> d_min = 0 (Giữa 111 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LGLOJIZVL' là bao nhiêu?
+A. 9
+B. 12
+C. 10
+D. 8
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: A
+
+86 72 71 82 81 85 81 81 
+0 -1 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011111, 000111) = 2
+=> d_min = 2 (Giữa 011111 và 000111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+0.880859
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'KKMWUME':
+Output: 75 | Thêm từ điển: KK (Mã: 256)
+Output: 75 | Thêm từ điển: KM (Mã: 257)
+Output: 77 | Thêm từ điển: MW (Mã: 258)
+Output: 87 | Thêm từ điển: WU (Mã: 259)
+Output: 85 | Thêm từ điển: UM (Mã: 260)
+Output: 77 | Thêm từ điển: ME (Mã: 261)
+Output cuối: 69
+=> Dãy mã hóa: 75 75 77 87 85 77 69 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 75 75 77 87 85 77 69 
+Đọc 75 -> Xuất: K
+Đọc 75 -> Xuất: K | Thêm từ điển: KK (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: KM (Mã: 257)
+Đọc 87 -> Xuất: W | Thêm từ điển: MW (Mã: 258)
+Đọc 85 -> Xuất: U | Thêm từ điển: WU (Mã: 259)
+Đọc 77 -> Xuất: M | Thêm từ điển: UM (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: ME (Mã: 261)
+=> Chuỗi giải mã thành công: KKMWUME
+
+0.307656
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LZLTMPLYLE' là bao nhiêu?
+A. 10
+B. 11
+C. 9
+D. 13
+Đáp án đúng: A
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(100, 000) = 1
+Khoảng cách d(100, 111) = 2
+Khoảng cách d(000, 111) = 3
+=> d_min = 1 (Giữa 100 và 000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+0.415360
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'XXUHSAZ':
+Output: 88 | Thêm từ điển: XX (Mã: 256)
+Output: 88 | Thêm từ điển: XU (Mã: 257)
+Output: 85 | Thêm từ điển: UH (Mã: 258)
+Output: 72 | Thêm từ điển: HS (Mã: 259)
+Output: 83 | Thêm từ điển: SA (Mã: 260)
+Output: 65 | Thêm từ điển: AZ (Mã: 261)
+Output cuối: 90
+=> Dãy mã hóa: 88 88 85 72 83 65 90 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 88 88 85 72 83 65 90 
+Đọc 88 -> Xuất: X
+Đọc 88 -> Xuất: X | Thêm từ điển: XX (Mã: 256)
+Đọc 85 -> Xuất: U | Thêm từ điển: XU (Mã: 257)
+Đọc 72 -> Xuất: H | Thêm từ điển: UH (Mã: 258)
+Đọc 83 -> Xuất: S | Thêm từ điển: HS (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: SA (Mã: 260)
+Đọc 90 -> Xuất: Z | Thêm từ điển: AZ (Mã: 261)
+=> Chuỗi giải mã thành công: XXUHSAZ
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'CTYFO'?
+A. 0.279400
+B. 0.154400
+C. 0.184560
+D. 0.104240
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'RPNI'?
+A. 0.924531
+B. 0.840625
+C. 0.892578
+D. 1.017578
+Đáp án đúng: C
+

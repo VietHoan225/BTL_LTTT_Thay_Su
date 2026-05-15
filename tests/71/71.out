@@ -1,0 +1,60 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JCDFDB' là bao nhiêu?
+A. 5
+B. 6
+C. 9
+D. 7
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.166667)
+- Ký tự 'F': [0.166667, 0.333333)
+- Ký tự 'M': [0.333333, 0.666667)
+- Ký tự 'Q': [0.666667, 0.833333)
+- Ký tự 'Z': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'DZMQMF':
+Đọc 'D' -> Khoảng: [0.000000, 0.166667)
+Đọc 'Z' -> Khoảng: [0.138889, 0.166667)
+Đọc 'M' -> Khoảng: [0.148148, 0.157407)
+Đọc 'Q' -> Khoảng: [0.154321, 0.155864)
+Đọc 'M' -> Khoảng: [0.154835, 0.155350)
+Đọc 'F' -> Khoảng: [0.154921, 0.155007)
+=> Giá trị mã hóa được chọn: 0.154964
+
+[3] Quá trình giải mã (từ 0.154964, độ dài 6):
+Giá trị 0.154964 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.929784 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.578704 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.736111 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.416667 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.250000 nằm trong khoảng của 'F' -> Giải mã: F
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'IAVHSIY' là bao nhiêu?
+A. 7
+B. 10
+C. 8
+D. 6
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JPCFGKNY' là bao nhiêu?
+A. 11
+B. 7
+C. 9
+D. 8
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GQP'?
+A. 0.209259
+B. 0.326296
+C. 0.402778
+D. 0.277778
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+

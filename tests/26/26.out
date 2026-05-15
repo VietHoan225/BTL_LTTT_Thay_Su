@@ -1,0 +1,46 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. -1 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+69 70 72 67 88 68 84 66 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0, 0.333333)
+- Ký tự 'M': [0.333333, 0.666667)
+- Ký tự 'R': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'RBM':
+Đọc 'R' -> Khoảng: [0.666667, 1.000000)
+Đọc 'B' -> Khoảng: [0.666667, 0.777778)
+Đọc 'M' -> Khoảng: [0.703704, 0.740741)
+=> Giá trị mã hóa được chọn: 0.722222
+
+[3] Quá trình giải mã (từ 0.722222, độ dài 3):
+Giá trị 0.722222 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.166667 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.500000 nằm trong khoảng của 'M' -> Giải mã: M
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'PFMQZF'?
+A. 0.526020
+B. 0.556063
+C. 0.651020
+D. 0.475977
+Đáp án đúng: A
+

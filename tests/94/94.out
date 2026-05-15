@@ -1,0 +1,42 @@
+0.107040
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'KYMGLX':
+Output: 75 | Thêm từ điển: KY (Mã: 256)
+Output: 89 | Thêm từ điển: YM (Mã: 257)
+Output: 77 | Thêm từ điển: MG (Mã: 258)
+Output: 71 | Thêm từ điển: GL (Mã: 259)
+Output: 76 | Thêm từ điển: LX (Mã: 260)
+Output cuối: 88
+=> Dãy mã hóa: 75 89 77 71 76 88 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 75 89 77 71 76 88 
+Đọc 75 -> Xuất: K
+Đọc 89 -> Xuất: Y | Thêm từ điển: KY (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: YM (Mã: 257)
+Đọc 71 -> Xuất: G | Thêm từ điển: MG (Mã: 258)
+Đọc 76 -> Xuất: L | Thêm từ điển: GL (Mã: 259)
+Đọc 88 -> Xuất: X | Thêm từ điển: LX (Mã: 260)
+=> Chuỗi giải mã thành công: KYMGLX
+
+88 87 66 67 83 
+0.845600
+0 -1 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'BXNUY' là bao nhiêu?
+A. 6
+B. 8
+C. 4
+D. 5
+Đáp án đúng: D
+
+84 84 73 86 87 89 73 
+0.722222
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'RKAV'?
+A. 0.576172
+B. 0.524219
+C. 0.608125
+D. 0.701172
+Đáp án đúng: A
+
+0 -1 0
+0.693359

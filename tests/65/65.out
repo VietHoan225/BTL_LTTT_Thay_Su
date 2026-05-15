@@ -1,0 +1,73 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 2 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YHIJX' là bao nhiêu?
+A. 8
+B. 6
+C. 5
+D. 4
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'VYXC'?
+A. 0.595703
+B. 0.470703
+C. 0.502656
+D. 0.418750
+Đáp án đúng: B
+
+1 0 0
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ASRLY'?
+A. 0.264040
+B. 0.088880
+C. 0.139040
+D. 0.169200
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'HUHMBM'?
+A. 0.493820
+B. 0.463649
+C. 0.413477
+D. 0.588649
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.2)
+- Ký tự 'I': [0.2, 0.4)
+- Ký tự 'R': [0.4, 0.6)
+- Ký tự 'T': [0.6, 0.8)
+- Ký tự 'Y': [0.8, 1)
+
+[2] Quá trình mã hóa chuỗi 'IRTDY':
+Đọc 'I' -> Khoảng: [0.200000, 0.400000)
+Đọc 'R' -> Khoảng: [0.280000, 0.320000)
+Đọc 'T' -> Khoảng: [0.304000, 0.312000)
+Đọc 'D' -> Khoảng: [0.304000, 0.305600)
+Đọc 'Y' -> Khoảng: [0.305280, 0.305600)
+=> Giá trị mã hóa được chọn: 0.305440
+
+[3] Quá trình giải mã (từ 0.305440, độ dài 5):
+Giá trị 0.305440 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.527200 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.636000 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.180000 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.900000 nằm trong khoảng của 'Y' -> Giải mã: Y
+
+76 83 88 77 69 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1100, 0001) = 3
+=> d_min = 3 (Giữa 1100 và 0001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+

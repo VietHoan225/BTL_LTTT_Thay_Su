@@ -1,0 +1,135 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'SKKAXSZYB':
+Output: 83 | Thêm từ điển: SK (Mã: 256)
+Output: 75 | Thêm từ điển: KK (Mã: 257)
+Output: 75 | Thêm từ điển: KA (Mã: 258)
+Output: 65 | Thêm từ điển: AX (Mã: 259)
+Output: 88 | Thêm từ điển: XS (Mã: 260)
+Output: 83 | Thêm từ điển: SZ (Mã: 261)
+Output: 90 | Thêm từ điển: ZY (Mã: 262)
+Output: 89 | Thêm từ điển: YB (Mã: 263)
+Output cuối: 66
+=> Dãy mã hóa: 83 75 75 65 88 83 90 89 66 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 83 75 75 65 88 83 90 89 66 
+Đọc 83 -> Xuất: S
+Đọc 75 -> Xuất: K | Thêm từ điển: SK (Mã: 256)
+Đọc 75 -> Xuất: K | Thêm từ điển: KK (Mã: 257)
+Đọc 65 -> Xuất: A | Thêm từ điển: KA (Mã: 258)
+Đọc 88 -> Xuất: X | Thêm từ điển: AX (Mã: 259)
+Đọc 83 -> Xuất: S | Thêm từ điển: XS (Mã: 260)
+Đọc 90 -> Xuất: Z | Thêm từ điển: SZ (Mã: 261)
+Đọc 89 -> Xuất: Y | Thêm từ điển: ZY (Mã: 262)
+Đọc 66 -> Xuất: B | Thêm từ điển: YB (Mã: 263)
+=> Chuỗi giải mã thành công: SKKAXSZYB
+
+75 88 87 68 66 71 65 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'LLAMS':
+Output: 76 | Thêm từ điển: LL (Mã: 256)
+Output: 76 | Thêm từ điển: LA (Mã: 257)
+Output: 65 | Thêm từ điển: AM (Mã: 258)
+Output: 77 | Thêm từ điển: MS (Mã: 259)
+Output cuối: 83
+=> Dãy mã hóa: 76 76 65 77 83 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 76 76 65 77 83 
+Đọc 76 -> Xuất: L
+Đọc 76 -> Xuất: L | Thêm từ điển: LL (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: LA (Mã: 257)
+Đọc 77 -> Xuất: M | Thêm từ điển: AM (Mã: 258)
+Đọc 83 -> Xuất: S | Thêm từ điển: MS (Mã: 259)
+=> Chuỗi giải mã thành công: LLAMS
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'YKJDOBVV':
+Output: 89 | Thêm từ điển: YK (Mã: 256)
+Output: 75 | Thêm từ điển: KJ (Mã: 257)
+Output: 74 | Thêm từ điển: JD (Mã: 258)
+Output: 68 | Thêm từ điển: DO (Mã: 259)
+Output: 79 | Thêm từ điển: OB (Mã: 260)
+Output: 66 | Thêm từ điển: BV (Mã: 261)
+Output: 86 | Thêm từ điển: VV (Mã: 262)
+Output cuối: 86
+=> Dãy mã hóa: 89 75 74 68 79 66 86 86 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 89 75 74 68 79 66 86 86 
+Đọc 89 -> Xuất: Y
+Đọc 75 -> Xuất: K | Thêm từ điển: YK (Mã: 256)
+Đọc 74 -> Xuất: J | Thêm từ điển: KJ (Mã: 257)
+Đọc 68 -> Xuất: D | Thêm từ điển: JD (Mã: 258)
+Đọc 79 -> Xuất: O | Thêm từ điển: DO (Mã: 259)
+Đọc 66 -> Xuất: B | Thêm từ điển: OB (Mã: 260)
+Đọc 86 -> Xuất: V | Thêm từ điển: BV (Mã: 261)
+Đọc 86 -> Xuất: V | Thêm từ điển: VV (Mã: 262)
+=> Chuỗi giải mã thành công: YKJDOBVV
+
+66 73 257 86 85 
+0.722222
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.333333)
+- Ký tự 'E': [0.333333, 0.666667)
+- Ký tự 'F': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'FDE':
+Đọc 'F' -> Khoảng: [0.666667, 1.000000)
+Đọc 'D' -> Khoảng: [0.666667, 0.777778)
+Đọc 'E' -> Khoảng: [0.703704, 0.740741)
+=> Giá trị mã hóa được chọn: 0.722222
+
+[3] Quá trình giải mã (từ 0.722222, độ dài 3):
+Giá trị 0.722222 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.166667 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.500000 nằm trong khoảng của 'E' -> Giải mã: E
+
+0.076320
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'FHYLRAMU':
+Output: 70 | Thêm từ điển: FH (Mã: 256)
+Output: 72 | Thêm từ điển: HY (Mã: 257)
+Output: 89 | Thêm từ điển: YL (Mã: 258)
+Output: 76 | Thêm từ điển: LR (Mã: 259)
+Output: 82 | Thêm từ điển: RA (Mã: 260)
+Output: 65 | Thêm từ điển: AM (Mã: 261)
+Output: 77 | Thêm từ điển: MU (Mã: 262)
+Output cuối: 85
+=> Dãy mã hóa: 70 72 89 76 82 65 77 85 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 70 72 89 76 82 65 77 85 
+Đọc 70 -> Xuất: F
+Đọc 72 -> Xuất: H | Thêm từ điển: FH (Mã: 256)
+Đọc 89 -> Xuất: Y | Thêm từ điển: HY (Mã: 257)
+Đọc 76 -> Xuất: L | Thêm từ điển: YL (Mã: 258)
+Đọc 82 -> Xuất: R | Thêm từ điển: LR (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: RA (Mã: 260)
+Đọc 77 -> Xuất: M | Thêm từ điển: AM (Mã: 261)
+Đọc 85 -> Xuất: U | Thêm từ điển: MU (Mã: 262)
+=> Chuỗi giải mã thành công: FHYLRAMU
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101, 110) = 2
+Khoảng cách d(101, 010) = 3
+Khoảng cách d(110, 010) = 1
+=> d_min = 1 (Giữa 110 và 010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+

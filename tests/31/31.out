@@ -1,0 +1,128 @@
+71 65 86 76 82 
+0.306641
+2 1 0
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JIZCEU'?
+A. 0.578929
+B. 0.703929
+C. 0.528918
+D. 0.608939
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'UWMBDYCDUW':
+Output: 85 | Thêm từ điển: UW (Mã: 256)
+Output: 87 | Thêm từ điển: WM (Mã: 257)
+Output: 77 | Thêm từ điển: MB (Mã: 258)
+Output: 66 | Thêm từ điển: BD (Mã: 259)
+Output: 68 | Thêm từ điển: DY (Mã: 260)
+Output: 89 | Thêm từ điển: YC (Mã: 261)
+Output: 67 | Thêm từ điển: CD (Mã: 262)
+Output: 68 | Thêm từ điển: DU (Mã: 263)
+Output cuối: 256
+=> Dãy mã hóa: 85 87 77 66 68 89 67 68 256 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 85 87 77 66 68 89 67 68 256 
+Đọc 85 -> Xuất: U
+Đọc 87 -> Xuất: W | Thêm từ điển: UW (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: WM (Mã: 257)
+Đọc 66 -> Xuất: B | Thêm từ điển: MB (Mã: 258)
+Đọc 68 -> Xuất: D | Thêm từ điển: BD (Mã: 259)
+Đọc 89 -> Xuất: Y | Thêm từ điển: DY (Mã: 260)
+Đọc 67 -> Xuất: C | Thêm từ điển: YC (Mã: 261)
+Đọc 68 -> Xuất: D | Thêm từ điển: CD (Mã: 262)
+Đọc 256 -> Xuất: UW | Thêm từ điển: DU (Mã: 263)
+=> Chuỗi giải mã thành công: UWMBDYCDUW
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(110, 111) = 1
+Khoảng cách d(110, 101) = 2
+Khoảng cách d(110, 001) = 3
+Khoảng cách d(111, 101) = 1
+Khoảng cách d(111, 001) = 2
+Khoảng cách d(101, 001) = 1
+=> d_min = 1 (Giữa 110 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'VFUDIOIMCT':
+Output: 86 | Thêm từ điển: VF (Mã: 256)
+Output: 70 | Thêm từ điển: FU (Mã: 257)
+Output: 85 | Thêm từ điển: UD (Mã: 258)
+Output: 68 | Thêm từ điển: DI (Mã: 259)
+Output: 73 | Thêm từ điển: IO (Mã: 260)
+Output: 79 | Thêm từ điển: OI (Mã: 261)
+Output: 73 | Thêm từ điển: IM (Mã: 262)
+Output: 77 | Thêm từ điển: MC (Mã: 263)
+Output: 67 | Thêm từ điển: CT (Mã: 264)
+Output cuối: 84
+=> Dãy mã hóa: 86 70 85 68 73 79 73 77 67 84 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 86 70 85 68 73 79 73 77 67 84 
+Đọc 86 -> Xuất: V
+Đọc 70 -> Xuất: F | Thêm từ điển: VF (Mã: 256)
+Đọc 85 -> Xuất: U | Thêm từ điển: FU (Mã: 257)
+Đọc 68 -> Xuất: D | Thêm từ điển: UD (Mã: 258)
+Đọc 73 -> Xuất: I | Thêm từ điển: DI (Mã: 259)
+Đọc 79 -> Xuất: O | Thêm từ điển: IO (Mã: 260)
+Đọc 73 -> Xuất: I | Thêm từ điển: OI (Mã: 261)
+Đọc 77 -> Xuất: M | Thêm từ điển: IM (Mã: 262)
+Đọc 67 -> Xuất: C | Thêm từ điển: MC (Mã: 263)
+Đọc 84 -> Xuất: T | Thêm từ điển: CT (Mã: 264)
+=> Chuỗi giải mã thành công: VFUDIOIMCT
+
+1 0 0
+69 71 79 76 77 67 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'SMXKAS':
+Output: 83 | Thêm từ điển: SM (Mã: 256)
+Output: 77 | Thêm từ điển: MX (Mã: 257)
+Output: 88 | Thêm từ điển: XK (Mã: 258)
+Output: 75 | Thêm từ điển: KA (Mã: 259)
+Output: 65 | Thêm từ điển: AS (Mã: 260)
+Output cuối: 83
+=> Dãy mã hóa: 83 77 88 75 65 83 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 83 77 88 75 65 83 
+Đọc 83 -> Xuất: S
+Đọc 77 -> Xuất: M | Thêm từ điển: SM (Mã: 256)
+Đọc 88 -> Xuất: X | Thêm từ điển: MX (Mã: 257)
+Đọc 75 -> Xuất: K | Thêm từ điển: XK (Mã: 258)
+Đọc 65 -> Xuất: A | Thêm từ điển: KA (Mã: 259)
+Đọc 83 -> Xuất: S | Thêm từ điển: AS (Mã: 260)
+=> Chuỗi giải mã thành công: SMXKAS
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'BYODNNV':
+Output: 66 | Thêm từ điển: BY (Mã: 256)
+Output: 89 | Thêm từ điển: YO (Mã: 257)
+Output: 79 | Thêm từ điển: OD (Mã: 258)
+Output: 68 | Thêm từ điển: DN (Mã: 259)
+Output: 78 | Thêm từ điển: NN (Mã: 260)
+Output: 78 | Thêm từ điển: NV (Mã: 261)
+Output cuối: 86
+=> Dãy mã hóa: 66 89 79 68 78 78 86 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 66 89 79 68 78 78 86 
+Đọc 66 -> Xuất: B
+Đọc 89 -> Xuất: Y | Thêm từ điển: BY (Mã: 256)
+Đọc 79 -> Xuất: O | Thêm từ điển: YO (Mã: 257)
+Đọc 68 -> Xuất: D | Thêm từ điển: OD (Mã: 258)
+Đọc 78 -> Xuất: N | Thêm từ điển: DN (Mã: 259)
+Đọc 78 -> Xuất: N | Thêm từ điển: NN (Mã: 260)
+Đọc 86 -> Xuất: V | Thêm từ điển: NV (Mã: 261)
+=> Chuỗi giải mã thành công: BYODNNV
+
+80 74 69 77 67 
+0 -1 0
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 2 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+

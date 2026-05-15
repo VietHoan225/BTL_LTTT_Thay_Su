@@ -1,0 +1,214 @@
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001, 110) = 3
+Khoảng cách d(001, 000) = 1
+Khoảng cách d(110, 000) = 2
+=> d_min = 1 (Giữa 001 và 000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1001, 1010) = 2
+Khoảng cách d(1001, 0100) = 3
+Khoảng cách d(1010, 0100) = 3
+=> d_min = 2 (Giữa 1001 và 1010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.2)
+- Ký tự 'M': [0.2, 0.4)
+- Ký tự 'T': [0.4, 0.6)
+- Ký tự 'U': [0.6, 0.8)
+- Ký tự 'W': [0.8, 1)
+
+[2] Quá trình mã hóa chuỗi 'DWUTM':
+Đọc 'D' -> Khoảng: [0.000000, 0.200000)
+Đọc 'W' -> Khoảng: [0.160000, 0.200000)
+Đọc 'U' -> Khoảng: [0.184000, 0.192000)
+Đọc 'T' -> Khoảng: [0.187200, 0.188800)
+Đọc 'M' -> Khoảng: [0.187520, 0.187840)
+=> Giá trị mã hóa được chọn: 0.187680
+
+[3] Quá trình giải mã (từ 0.187680, độ dài 5):
+Giá trị 0.187680 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.938400 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.692000 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.460000 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.300000 nằm trong khoảng của 'M' -> Giải mã: M
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'F': [0.000000, 0.166667)
+- Ký tự 'M': [0.166667, 0.333333)
+- Ký tự 'P': [0.333333, 0.500000)
+- Ký tự 'S': [0.500000, 0.666667)
+- Ký tự 'T': [0.666667, 0.833333)
+- Ký tự 'W': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'FTPSMW':
+Đọc 'F' -> Khoảng: [0.000000, 0.166667)
+Đọc 'T' -> Khoảng: [0.111111, 0.138889)
+Đọc 'P' -> Khoảng: [0.120370, 0.125000)
+Đọc 'S' -> Khoảng: [0.122685, 0.123457)
+Đọc 'M' -> Khoảng: [0.122814, 0.122942)
+Đọc 'W' -> Khoảng: [0.122921, 0.122942)
+=> Giá trị mã hóa được chọn: 0.122932
+
+[3] Quá trình giải mã (từ 0.122932, độ dài 6):
+Giá trị 0.122932 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.737590 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.425540 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.553241 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.319444 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.916667 nằm trong khoảng của 'W' -> Giải mã: W
+
+65 88 72 72 79 84 87 72 68 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'PWPFOG':
+Output: 80 | Thêm từ điển: PW (Mã: 256)
+Output: 87 | Thêm từ điển: WP (Mã: 257)
+Output: 80 | Thêm từ điển: PF (Mã: 258)
+Output: 70 | Thêm từ điển: FO (Mã: 259)
+Output: 79 | Thêm từ điển: OG (Mã: 260)
+Output cuối: 71
+=> Dãy mã hóa: 80 87 80 70 79 71 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 80 87 80 70 79 71 
+Đọc 80 -> Xuất: P
+Đọc 87 -> Xuất: W | Thêm từ điển: PW (Mã: 256)
+Đọc 80 -> Xuất: P | Thêm từ điển: WP (Mã: 257)
+Đọc 70 -> Xuất: F | Thêm từ điển: PF (Mã: 258)
+Đọc 79 -> Xuất: O | Thêm từ điển: FO (Mã: 259)
+Đọc 71 -> Xuất: G | Thêm từ điển: OG (Mã: 260)
+=> Chuỗi giải mã thành công: PWPFOG
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'KPUKR' là bao nhiêu?
+A. 5
+B. 6
+C. 8
+D. 4
+Đáp án đúng: A
+
+0.117188
+0.075349
+5 4 2
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'PORFX':
+Output: 80 | Thêm từ điển: PO (Mã: 256)
+Output: 79 | Thêm từ điển: OR (Mã: 257)
+Output: 82 | Thêm từ điển: RF (Mã: 258)
+Output: 70 | Thêm từ điển: FX (Mã: 259)
+Output cuối: 88
+=> Dãy mã hóa: 80 79 82 70 88 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 80 79 82 70 88 
+Đọc 80 -> Xuất: P
+Đọc 79 -> Xuất: O | Thêm từ điển: PO (Mã: 256)
+Đọc 82 -> Xuất: R | Thêm từ điển: OR (Mã: 257)
+Đọc 70 -> Xuất: F | Thêm từ điển: RF (Mã: 258)
+Đọc 88 -> Xuất: X | Thêm từ điển: FX (Mã: 259)
+=> Chuỗi giải mã thành công: PORFX
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'BOV'?
+A. 0.252222
+B. 0.203704
+C. 0.135185
+D. 0.328704
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.333333)
+- Ký tự 'C': [0.333333, 0.500000)
+- Ký tự 'E': [0.500000, 0.666667)
+- Ký tự 'H': [0.666667, 0.833333)
+- Ký tự 'I': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'CAIHEA':
+Đọc 'C' -> Khoảng: [0.333333, 0.500000)
+Đọc 'A' -> Khoảng: [0.333333, 0.388889)
+Đọc 'I' -> Khoảng: [0.379630, 0.388889)
+Đọc 'H' -> Khoảng: [0.385802, 0.387346)
+Đọc 'E' -> Khoảng: [0.386574, 0.386831)
+Đọc 'A' -> Khoảng: [0.386574, 0.386660)
+=> Giá trị mã hóa được chọn: 0.386617
+
+[3] Quá trình giải mã (từ 0.386617, độ dài 6):
+Giá trị 0.386617 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.319702 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.959105 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.754630 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.527778 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.166667 nằm trong khoảng của 'A' -> Giải mã: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'NVYDE':
+Output: 78 | Thêm từ điển: NV (Mã: 256)
+Output: 86 | Thêm từ điển: VY (Mã: 257)
+Output: 89 | Thêm từ điển: YD (Mã: 258)
+Output: 68 | Thêm từ điển: DE (Mã: 259)
+Output cuối: 69
+=> Dãy mã hóa: 78 86 89 68 69 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 78 86 89 68 69 
+Đọc 78 -> Xuất: N
+Đọc 86 -> Xuất: V | Thêm từ điển: NV (Mã: 256)
+Đọc 89 -> Xuất: Y | Thêm từ điển: VY (Mã: 257)
+Đọc 68 -> Xuất: D | Thêm từ điển: YD (Mã: 258)
+Đọc 69 -> Xuất: E | Thêm từ điển: DE (Mã: 259)
+=> Chuỗi giải mã thành công: NVYDE
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'OAYIYN':
+Output: 79 | Thêm từ điển: OA (Mã: 256)
+Output: 65 | Thêm từ điển: AY (Mã: 257)
+Output: 89 | Thêm từ điển: YI (Mã: 258)
+Output: 73 | Thêm từ điển: IY (Mã: 259)
+Output: 89 | Thêm từ điển: YN (Mã: 260)
+Output cuối: 78
+=> Dãy mã hóa: 79 65 89 73 89 78 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 79 65 89 73 89 78 
+Đọc 79 -> Xuất: O
+Đọc 65 -> Xuất: A | Thêm từ điển: OA (Mã: 256)
+Đọc 89 -> Xuất: Y | Thêm từ điển: AY (Mã: 257)
+Đọc 73 -> Xuất: I | Thêm từ điển: YI (Mã: 258)
+Đọc 89 -> Xuất: Y | Thêm từ điển: IY (Mã: 259)
+Đọc 78 -> Xuất: N | Thêm từ điển: YN (Mã: 260)
+=> Chuỗi giải mã thành công: OAYIYN
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'OGDYLWD':
+Output: 79 | Thêm từ điển: OG (Mã: 256)
+Output: 71 | Thêm từ điển: GD (Mã: 257)
+Output: 68 | Thêm từ điển: DY (Mã: 258)
+Output: 89 | Thêm từ điển: YL (Mã: 259)
+Output: 76 | Thêm từ điển: LW (Mã: 260)
+Output: 87 | Thêm từ điển: WD (Mã: 261)
+Output cuối: 68
+=> Dãy mã hóa: 79 71 68 89 76 87 68 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 79 71 68 89 76 87 68 
+Đọc 79 -> Xuất: O
+Đọc 71 -> Xuất: G | Thêm từ điển: OG (Mã: 256)
+Đọc 68 -> Xuất: D | Thêm từ điển: GD (Mã: 257)
+Đọc 89 -> Xuất: Y | Thêm từ điển: DY (Mã: 258)
+Đọc 76 -> Xuất: L | Thêm từ điển: YL (Mã: 259)
+Đọc 87 -> Xuất: W | Thêm từ điển: LW (Mã: 260)
+Đọc 68 -> Xuất: D | Thêm từ điển: WD (Mã: 261)
+=> Chuỗi giải mã thành công: OGDYLWD
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LHRDFSWO' là bao nhiêu?
+A. 11
+B. 8
+C. 7
+D. 9
+Đáp án đúng: B
+
+2 1 0

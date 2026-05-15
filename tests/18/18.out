@@ -1,0 +1,30 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(11100, 10110) = 2
+Khoảng cách d(11100, 01010) = 3
+Khoảng cách d(10110, 01010) = 3
+=> d_min = 2 (Giữa 11100 và 10110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JLYO'?
+A. 0.119141
+B. 0.151094
+C. 0.067187
+D. 0.244141
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. -1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+90 68 78 83 75 70 

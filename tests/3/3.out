@@ -1,0 +1,174 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'PTZCMH'?
+A. 0.584538
+B. 0.634549
+C. 0.759549
+D. 0.664559
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'DMJKRCJBIT':
+Output: 68 | Thêm từ điển: DM (Mã: 256)
+Output: 77 | Thêm từ điển: MJ (Mã: 257)
+Output: 74 | Thêm từ điển: JK (Mã: 258)
+Output: 75 | Thêm từ điển: KR (Mã: 259)
+Output: 82 | Thêm từ điển: RC (Mã: 260)
+Output: 67 | Thêm từ điển: CJ (Mã: 261)
+Output: 74 | Thêm từ điển: JB (Mã: 262)
+Output: 66 | Thêm từ điển: BI (Mã: 263)
+Output: 73 | Thêm từ điển: IT (Mã: 264)
+Output cuối: 84
+=> Dãy mã hóa: 68 77 74 75 82 67 74 66 73 84 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 68 77 74 75 82 67 74 66 73 84 
+Đọc 68 -> Xuất: D
+Đọc 77 -> Xuất: M | Thêm từ điển: DM (Mã: 256)
+Đọc 74 -> Xuất: J | Thêm từ điển: MJ (Mã: 257)
+Đọc 75 -> Xuất: K | Thêm từ điển: JK (Mã: 258)
+Đọc 82 -> Xuất: R | Thêm từ điển: KR (Mã: 259)
+Đọc 67 -> Xuất: C | Thêm từ điển: RC (Mã: 260)
+Đọc 74 -> Xuất: J | Thêm từ điển: CJ (Mã: 261)
+Đọc 66 -> Xuất: B | Thêm từ điển: JB (Mã: 262)
+Đọc 73 -> Xuất: I | Thêm từ điển: BI (Mã: 263)
+Đọc 84 -> Xuất: T | Thêm từ điển: IT (Mã: 264)
+=> Chuỗi giải mã thành công: DMJKRCJBIT
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ZYNOGGAPQT':
+Output: 90 | Thêm từ điển: ZY (Mã: 256)
+Output: 89 | Thêm từ điển: YN (Mã: 257)
+Output: 78 | Thêm từ điển: NO (Mã: 258)
+Output: 79 | Thêm từ điển: OG (Mã: 259)
+Output: 71 | Thêm từ điển: GG (Mã: 260)
+Output: 71 | Thêm từ điển: GA (Mã: 261)
+Output: 65 | Thêm từ điển: AP (Mã: 262)
+Output: 80 | Thêm từ điển: PQ (Mã: 263)
+Output: 81 | Thêm từ điển: QT (Mã: 264)
+Output cuối: 84
+=> Dãy mã hóa: 90 89 78 79 71 71 65 80 81 84 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 90 89 78 79 71 71 65 80 81 84 
+Đọc 90 -> Xuất: Z
+Đọc 89 -> Xuất: Y | Thêm từ điển: ZY (Mã: 256)
+Đọc 78 -> Xuất: N | Thêm từ điển: YN (Mã: 257)
+Đọc 79 -> Xuất: O | Thêm từ điển: NO (Mã: 258)
+Đọc 71 -> Xuất: G | Thêm từ điển: OG (Mã: 259)
+Đọc 71 -> Xuất: G | Thêm từ điển: GG (Mã: 260)
+Đọc 65 -> Xuất: A | Thêm từ điển: GA (Mã: 261)
+Đọc 80 -> Xuất: P | Thêm từ điển: AP (Mã: 262)
+Đọc 81 -> Xuất: Q | Thêm từ điển: PQ (Mã: 263)
+Đọc 84 -> Xuất: T | Thêm từ điển: QT (Mã: 264)
+=> Chuỗi giải mã thành công: ZYNOGGAPQT
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'VRAQPY':
+Output: 86 | Thêm từ điển: VR (Mã: 256)
+Output: 82 | Thêm từ điển: RA (Mã: 257)
+Output: 65 | Thêm từ điển: AQ (Mã: 258)
+Output: 81 | Thêm từ điển: QP (Mã: 259)
+Output: 80 | Thêm từ điển: PY (Mã: 260)
+Output cuối: 89
+=> Dãy mã hóa: 86 82 65 81 80 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 86 82 65 81 80 89 
+Đọc 86 -> Xuất: V
+Đọc 82 -> Xuất: R | Thêm từ điển: VR (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: RA (Mã: 257)
+Đọc 81 -> Xuất: Q | Thêm từ điển: AQ (Mã: 258)
+Đọc 80 -> Xuất: P | Thêm từ điển: QP (Mã: 259)
+Đọc 89 -> Xuất: Y | Thêm từ điển: PY (Mã: 260)
+=> Chuỗi giải mã thành công: VRAQPY
+
+65 79 77 85 70 88 73 65 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. -1 bit
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NNASYOD' là bao nhiêu?
+A. 10
+B. 7
+C. 6
+D. 8
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001, 101) = 1
+=> d_min = 1 (Giữa 001 và 101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'IZFCLH':
+Output: 73 | Thêm từ điển: IZ (Mã: 256)
+Output: 90 | Thêm từ điển: ZF (Mã: 257)
+Output: 70 | Thêm từ điển: FC (Mã: 258)
+Output: 67 | Thêm từ điển: CL (Mã: 259)
+Output: 76 | Thêm từ điển: LH (Mã: 260)
+Output cuối: 72
+=> Dãy mã hóa: 73 90 70 67 76 72 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 73 90 70 67 76 72 
+Đọc 73 -> Xuất: I
+Đọc 90 -> Xuất: Z | Thêm từ điển: IZ (Mã: 256)
+Đọc 70 -> Xuất: F | Thêm từ điển: ZF (Mã: 257)
+Đọc 67 -> Xuất: C | Thêm từ điển: FC (Mã: 258)
+Đọc 76 -> Xuất: L | Thêm từ điển: CL (Mã: 259)
+Đọc 72 -> Xuất: H | Thêm từ điển: LH (Mã: 260)
+=> Chuỗi giải mã thành công: IZFCLH
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'KHCYQCKI' là bao nhiêu?
+A. 9
+B. 8
+C. 11
+D. 7
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 2 bit
+Đáp án đúng: C
+
+0.552734
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'G': [0.000000, 0.250000)
+- Ký tự 'H': [0.250000, 0.500000)
+- Ký tự 'Q': [0.500000, 0.750000)
+- Ký tự 'Y': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'GHYQ':
+Đọc 'G' -> Khoảng: [0.000000, 0.250000)
+Đọc 'H' -> Khoảng: [0.062500, 0.125000)
+Đọc 'Y' -> Khoảng: [0.109375, 0.125000)
+Đọc 'Q' -> Khoảng: [0.117188, 0.121094)
+=> Giá trị mã hóa được chọn: 0.119141
+
+[3] Quá trình giải mã (từ 0.119141, độ dài 4):
+Giá trị 0.119141 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.476562 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.906250 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.625000 nằm trong khoảng của 'Q' -> Giải mã: Q
+
+0.518519
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1110, 0110) = 1
+=> d_min = 1 (Giữa 1110 và 0110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+1 0 0

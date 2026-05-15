@@ -1,0 +1,67 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0, 0.333333)
+- Ký tự 'D': [0.333333, 0.5)
+- Ký tự 'Q': [0.5, 0.666667)
+- Ký tự 'U': [0.666667, 0.833333)
+- Ký tự 'V': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'CUQCDV':
+Đọc 'C' -> Khoảng: [0.000000, 0.333333)
+Đọc 'U' -> Khoảng: [0.222222, 0.277778)
+Đọc 'Q' -> Khoảng: [0.250000, 0.259259)
+Đọc 'C' -> Khoảng: [0.250000, 0.253086)
+Đọc 'D' -> Khoảng: [0.251029, 0.251543)
+Đọc 'V' -> Khoảng: [0.251457, 0.251543)
+=> Giá trị mã hóa được chọn: 0.251500
+
+[3] Quá trình giải mã (từ 0.251500, độ dài 6):
+Giá trị 0.251500 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.754501 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.527006 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.162037 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.486111 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.916667 nằm trong khoảng của 'V' -> Giải mã: V
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'VICLA':
+Output: 86 | Thêm từ điển: VI (Mã: 256)
+Output: 73 | Thêm từ điển: IC (Mã: 257)
+Output: 67 | Thêm từ điển: CL (Mã: 258)
+Output: 76 | Thêm từ điển: LA (Mã: 259)
+Output cuối: 65
+=> Dãy mã hóa: 86 73 67 76 65 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 86 73 67 76 65 
+Đọc 86 -> Xuất: V
+Đọc 73 -> Xuất: I | Thêm từ điển: VI (Mã: 256)
+Đọc 67 -> Xuất: C | Thêm từ điển: IC (Mã: 257)
+Đọc 76 -> Xuất: L | Thêm từ điển: CL (Mã: 258)
+Đọc 65 -> Xuất: A | Thêm từ điển: LA (Mã: 259)
+=> Chuỗi giải mã thành công: VICLA
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.200000)
+- Ký tự 'P': [0.200000, 0.400000)
+- Ký tự 'Q': [0.400000, 0.600000)
+- Ký tự 'T': [0.600000, 0.800000)
+- Ký tự 'W': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'QTAPW':
+Đọc 'Q' -> Khoảng: [0.400000, 0.600000)
+Đọc 'T' -> Khoảng: [0.520000, 0.560000)
+Đọc 'A' -> Khoảng: [0.520000, 0.528000)
+Đọc 'P' -> Khoảng: [0.521600, 0.523200)
+Đọc 'W' -> Khoảng: [0.522880, 0.523200)
+=> Giá trị mã hóa được chọn: 0.523040
+
+[3] Quá trình giải mã (từ 0.523040, độ dài 5):
+Giá trị 0.523040 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.615200 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.076000 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.380000 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.900000 nằm trong khoảng của 'W' -> Giải mã: W
+

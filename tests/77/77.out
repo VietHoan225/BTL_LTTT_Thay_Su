@@ -1,0 +1,46 @@
+74 82 84 79 75 87 
+83 80 83 75 90 73 
+89 78 79 90 75 90 74 80 90 81 
+1 0 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001110, 101010) = 2
+Khoảng cách d(001110, 001001) = 3
+Khoảng cách d(101010, 001001) = 3
+=> d_min = 2 (Giữa 001110 và 101010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+84 70 66 89 83 85 87 86 66 
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'OOOG'?
+A. 0.755859
+B. 0.528125
+C. 0.630859
+D. 0.713594
+Đáp án đúng: C
+
+4 3 1
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ULJFV'?
+A. 0.814440
+B. 0.689440
+C. 0.719600
+D. 0.639280
+Đáp án đúng: B
+
+2 1 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0110, 1101) = 3
+=> d_min = 3 (Giữa 0110 và 1101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+2 1 0
+0.844320
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 2 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+89 71 84 66 90 83 81 
+0 -1 0

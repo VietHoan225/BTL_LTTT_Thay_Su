@@ -1,0 +1,80 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 2 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+65 80 68 79 80 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ZJGMT':
+Output: 90 | Thêm từ điển: ZJ (Mã: 256)
+Output: 74 | Thêm từ điển: JG (Mã: 257)
+Output: 71 | Thêm từ điển: GM (Mã: 258)
+Output: 77 | Thêm từ điển: MT (Mã: 259)
+Output cuối: 84
+=> Dãy mã hóa: 90 74 71 77 84 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 90 74 71 77 84 
+Đọc 90 -> Xuất: Z
+Đọc 74 -> Xuất: J | Thêm từ điển: ZJ (Mã: 256)
+Đọc 71 -> Xuất: G | Thêm từ điển: JG (Mã: 257)
+Đọc 77 -> Xuất: M | Thêm từ điển: GM (Mã: 258)
+Đọc 84 -> Xuất: T | Thêm từ điển: MT (Mã: 259)
+=> Chuỗi giải mã thành công: ZJGMT
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'RWMDN' là bao nhiêu?
+A. 5
+B. 8
+C. 4
+D. 6
+Đáp án đúng: A
+
+83 88 70 72 65 90 67 79 87 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'CLDZKXZOTX' là bao nhiêu?
+A. 10
+B. 13
+C. 9
+D. 11
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'WMGTX'?
+A. 0.644640
+B. 0.594480
+C. 0.769640
+D. 0.674800
+Đáp án đúng: A
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111101, 111011) = 2
+=> d_min = 2 (Giữa 111101 và 111011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'H': [0, 0.166667)
+- Ký tự 'N': [0.166667, 0.333333)
+- Ký tự 'Q': [0.333333, 0.5)
+- Ký tự 'V': [0.5, 0.666667)
+- Ký tự 'Y': [0.666667, 0.833333)
+- Ký tự 'Z': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'NQYZHV':
+Đọc 'N' -> Khoảng: [0.166667, 0.333333)
+Đọc 'Q' -> Khoảng: [0.222222, 0.250000)
+Đọc 'Y' -> Khoảng: [0.240741, 0.245370)
+Đọc 'Z' -> Khoảng: [0.244599, 0.245370)
+Đọc 'H' -> Khoảng: [0.244599, 0.244727)
+Đọc 'V' -> Khoảng: [0.244663, 0.244684)
+=> Giá trị mã hóa được chọn: 0.244674
+
+[3] Quá trình giải mã (từ 0.244674, độ dài 6):
+Giá trị 0.244674 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.468043 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.808256 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.849537 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.097222 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.583333 nằm trong khoảng của 'V' -> Giải mã: V
+

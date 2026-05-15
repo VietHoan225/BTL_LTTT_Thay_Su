@@ -1,0 +1,60 @@
+85 67 89 65 87 70 81 65 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. -1 bit
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(11001, 01000) = 2
+=> d_min = 2 (Giữa 11001 và 01000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(10100, 00001) = 3
+=> d_min = 3 (Giữa 10100 và 00001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+3 2 1
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'DSVAA' là bao nhiêu?
+A. 5
+B. 4
+C. 8
+D. 6
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'VPTHZQPTW':
+Output: 86 | Thêm từ điển: VP (Mã: 256)
+Output: 80 | Thêm từ điển: PT (Mã: 257)
+Output: 84 | Thêm từ điển: TH (Mã: 258)
+Output: 72 | Thêm từ điển: HZ (Mã: 259)
+Output: 90 | Thêm từ điển: ZQ (Mã: 260)
+Output: 81 | Thêm từ điển: QP (Mã: 261)
+Output: 257 | Thêm từ điển: PTW (Mã: 262)
+Output cuối: 87
+=> Dãy mã hóa: 86 80 84 72 90 81 257 87 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 86 80 84 72 90 81 257 87 
+Đọc 86 -> Xuất: V
+Đọc 80 -> Xuất: P | Thêm từ điển: VP (Mã: 256)
+Đọc 84 -> Xuất: T | Thêm từ điển: PT (Mã: 257)
+Đọc 72 -> Xuất: H | Thêm từ điển: TH (Mã: 258)
+Đọc 90 -> Xuất: Z | Thêm từ điển: HZ (Mã: 259)
+Đọc 81 -> Xuất: Q | Thêm từ điển: ZQ (Mã: 260)
+Đọc 257 -> Xuất: PT | Thêm từ điển: QP (Mã: 261)
+Đọc 87 -> Xuất: W | Thêm từ điển: PTW (Mã: 262)
+=> Chuỗi giải mã thành công: VPTHZQPTW
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1100, 1100) = 0
+Khoảng cách d(1100, 0010) = 3
+Khoảng cách d(1100, 0010) = 3
+=> d_min = 0 (Giữa 1100 và 1100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+

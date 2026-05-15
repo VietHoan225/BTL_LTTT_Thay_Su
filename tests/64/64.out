@@ -1,0 +1,55 @@
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(00100, 11110) = 3
+Khoảng cách d(00100, 01101) = 2
+Khoảng cách d(11110, 01101) = 3
+=> d_min = 2 (Giữa 00100 và 01101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(110100, 010101) = 2
+=> d_min = 2 (Giữa 110100 và 010101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+2 1 0
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JSQFDI'?
+A. 0.658233
+B. 0.688243
+C. 0.608222
+D. 0.783233
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HMHJFTQKH' là bao nhiêu?
+A. 8
+B. 10
+C. 9
+D. 12
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 4 bit
+B. 2 bit
+C. 3 bit
+D. 1 bit
+Đáp án đúng: D
+
+1 0 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(11110, 10111) = 2
+Khoảng cách d(11110, 10101) = 3
+Khoảng cách d(11110, 01110) = 1
+Khoảng cách d(10111, 10101) = 1
+Khoảng cách d(10111, 01110) = 3
+Khoảng cách d(10101, 01110) = 4
+=> d_min = 1 (Giữa 11110 và 01110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+

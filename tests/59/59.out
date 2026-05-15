@@ -1,0 +1,103 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0, 0.166667)
+- Ký tự 'D': [0.166667, 0.5)
+- Ký tự 'H': [0.5, 0.666667)
+- Ký tự 'M': [0.666667, 0.833333)
+- Ký tự 'Z': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'ZADDHM':
+Đọc 'Z' -> Khoảng: [0.833333, 1.000000)
+Đọc 'A' -> Khoảng: [0.833333, 0.861111)
+Đọc 'D' -> Khoảng: [0.837963, 0.847222)
+Đọc 'D' -> Khoảng: [0.839506, 0.842593)
+Đọc 'H' -> Khoảng: [0.841049, 0.841564)
+Đọc 'M' -> Khoảng: [0.841392, 0.841478)
+=> Giá trị mã hóa được chọn: 0.841435
+
+[3] Quá trình giải mã (từ 0.841435, độ dài 6):
+Giá trị 0.841435 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.048611 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.291667 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.375000 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.625000 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.750000 nằm trong khoảng của 'M' -> Giải mã: M
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0000, 0011) = 2
+Khoảng cách d(0000, 1111) = 4
+Khoảng cách d(0011, 1111) = 2
+=> d_min = 2 (Giữa 0000 và 0011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'XJQAH' là bao nhiêu?
+A. 4
+B. 5
+C. 8
+D. 6
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'KKHETEWTDN' là bao nhiêu?
+A. 10
+B. 11
+C. 13
+D. 9
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'H': [0.000000, 0.400000)
+- Ký tự 'K': [0.400000, 0.600000)
+- Ký tự 'N': [0.600000, 0.800000)
+- Ký tự 'Z': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'HZNHK':
+Đọc 'H' -> Khoảng: [0.000000, 0.400000)
+Đọc 'Z' -> Khoảng: [0.320000, 0.400000)
+Đọc 'N' -> Khoảng: [0.368000, 0.384000)
+Đọc 'H' -> Khoảng: [0.368000, 0.374400)
+Đọc 'K' -> Khoảng: [0.370560, 0.371840)
+=> Giá trị mã hóa được chọn: 0.371200
+
+[3] Quá trình giải mã (từ 0.371200, độ dài 5):
+Giá trị 0.371200 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.928000 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.640000 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.200000 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.500000 nằm trong khoảng của 'K' -> Giải mã: K
+
+79 87 73 80 77 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ZZJRNGFYG':
+Output: 90 | Thêm từ điển: ZZ (Mã: 256)
+Output: 90 | Thêm từ điển: ZJ (Mã: 257)
+Output: 74 | Thêm từ điển: JR (Mã: 258)
+Output: 82 | Thêm từ điển: RN (Mã: 259)
+Output: 78 | Thêm từ điển: NG (Mã: 260)
+Output: 71 | Thêm từ điển: GF (Mã: 261)
+Output: 70 | Thêm từ điển: FY (Mã: 262)
+Output: 89 | Thêm từ điển: YG (Mã: 263)
+Output cuối: 71
+=> Dãy mã hóa: 90 90 74 82 78 71 70 89 71 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 90 90 74 82 78 71 70 89 71 
+Đọc 90 -> Xuất: Z
+Đọc 90 -> Xuất: Z | Thêm từ điển: ZZ (Mã: 256)
+Đọc 74 -> Xuất: J | Thêm từ điển: ZJ (Mã: 257)
+Đọc 82 -> Xuất: R | Thêm từ điển: JR (Mã: 258)
+Đọc 78 -> Xuất: N | Thêm từ điển: RN (Mã: 259)
+Đọc 71 -> Xuất: G | Thêm từ điển: NG (Mã: 260)
+Đọc 70 -> Xuất: F | Thêm từ điển: GF (Mã: 261)
+Đọc 89 -> Xuất: Y | Thêm từ điển: FY (Mã: 262)
+Đọc 71 -> Xuất: G | Thêm từ điển: YG (Mã: 263)
+=> Chuỗi giải mã thành công: ZZJRNGFYG
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: A
+

@@ -1,0 +1,23 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'EDJGQ' là bao nhiêu?
+A. 5
+B. 6
+C. 4
+D. 8
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. -1 bit
+D. 0 bit
+Đáp án đúng: D
+
+0.771360
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111, 010) = 2
+Khoảng cách d(111, 110) = 1
+Khoảng cách d(010, 110) = 1
+=> d_min = 1 (Giữa 111 và 110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+

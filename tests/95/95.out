@@ -1,0 +1,149 @@
+1 0 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(00000, 10001) = 2
+Khoảng cách d(00000, 00111) = 3
+Khoảng cách d(10001, 00111) = 3
+=> d_min = 2 (Giữa 00000 và 10001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LZRFAUSRF' là bao nhiêu?
+A. 11
+B. 7
+C. 8
+D. 9
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'PLARSV':
+Output: 80 | Thêm từ điển: PL (Mã: 256)
+Output: 76 | Thêm từ điển: LA (Mã: 257)
+Output: 65 | Thêm từ điển: AR (Mã: 258)
+Output: 82 | Thêm từ điển: RS (Mã: 259)
+Output: 83 | Thêm từ điển: SV (Mã: 260)
+Output cuối: 86
+=> Dãy mã hóa: 80 76 65 82 83 86 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 80 76 65 82 83 86 
+Đọc 80 -> Xuất: P
+Đọc 76 -> Xuất: L | Thêm từ điển: PL (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: LA (Mã: 257)
+Đọc 82 -> Xuất: R | Thêm từ điển: AR (Mã: 258)
+Đọc 83 -> Xuất: S | Thêm từ điển: RS (Mã: 259)
+Đọc 86 -> Xuất: V | Thêm từ điển: SV (Mã: 260)
+=> Chuỗi giải mã thành công: PLARSV
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001, 000) = 1
+Khoảng cách d(001, 000) = 1
+Khoảng cách d(000, 000) = 0
+=> d_min = 0 (Giữa 000 và 000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0, 0.166667)
+- Ký tự 'E': [0.166667, 0.333333)
+- Ký tự 'I': [0.333333, 0.5)
+- Ký tự 'J': [0.5, 0.666667)
+- Ký tự 'L': [0.666667, 0.833333)
+- Ký tự 'P': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'JAPLIE':
+Đọc 'J' -> Khoảng: [0.500000, 0.666667)
+Đọc 'A' -> Khoảng: [0.500000, 0.527778)
+Đọc 'P' -> Khoảng: [0.523148, 0.527778)
+Đọc 'L' -> Khoảng: [0.526235, 0.527006)
+Đọc 'I' -> Khoảng: [0.526492, 0.526620)
+Đọc 'E' -> Khoảng: [0.526513, 0.526535)
+=> Giá trị mã hóa được chọn: 0.526524
+
+[3] Quá trình giải mã (từ 0.526524, độ dài 6):
+Giá trị 0.526524 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.159144 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.954861 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.729167 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.375000 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.250000 nằm trong khoảng của 'E' -> Giải mã: E
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(000, 101) = 2
+Khoảng cách d(000, 010) = 1
+Khoảng cách d(000, 111) = 3
+Khoảng cách d(101, 010) = 3
+Khoảng cách d(101, 111) = 1
+Khoảng cách d(010, 111) = 2
+=> d_min = 1 (Giữa 000 và 010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.200000)
+- Ký tự 'M': [0.200000, 0.400000)
+- Ký tự 'S': [0.400000, 0.600000)
+- Ký tự 'W': [0.600000, 0.800000)
+- Ký tự 'Z': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'SZMWA':
+Đọc 'S' -> Khoảng: [0.400000, 0.600000)
+Đọc 'Z' -> Khoảng: [0.560000, 0.600000)
+Đọc 'M' -> Khoảng: [0.568000, 0.576000)
+Đọc 'W' -> Khoảng: [0.572800, 0.574400)
+Đọc 'A' -> Khoảng: [0.572800, 0.573120)
+=> Giá trị mã hóa được chọn: 0.572960
+
+[3] Quá trình giải mã (từ 0.572960, độ dài 5):
+Giá trị 0.572960 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.864800 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.324000 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.620000 nằm trong khoảng của 'W' -> Giải mã: W
+Giá trị 0.100000 nằm trong khoảng của 'A' -> Giải mã: A
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1111, 0101) = 2
+Khoảng cách d(1111, 0011) = 2
+Khoảng cách d(0101, 0011) = 2
+=> d_min = 2 (Giữa 1111 và 0101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+4 3 1
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'CMDHJ':
+Output: 67 | Thêm từ điển: CM (Mã: 256)
+Output: 77 | Thêm từ điển: MD (Mã: 257)
+Output: 68 | Thêm từ điển: DH (Mã: 258)
+Output: 72 | Thêm từ điển: HJ (Mã: 259)
+Output cuối: 74
+=> Dãy mã hóa: 67 77 68 72 74 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 67 77 68 72 74 
+Đọc 67 -> Xuất: C
+Đọc 77 -> Xuất: M | Thêm từ điển: CM (Mã: 256)
+Đọc 68 -> Xuất: D | Thêm từ điển: MD (Mã: 257)
+Đọc 72 -> Xuất: H | Thêm từ điển: DH (Mã: 258)
+Đọc 74 -> Xuất: J | Thêm từ điển: HJ (Mã: 259)
+=> Chuỗi giải mã thành công: CMDHJ
+
+0.272644
+0.873800
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'IYIDZ' là bao nhiêu?
+A. 4
+B. 8
+C. 6
+D. 5
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 2 bit
+D. 0 bit
+Đáp án đúng: D
+
+0.532365

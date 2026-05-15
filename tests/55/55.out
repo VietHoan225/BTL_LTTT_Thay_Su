@@ -1,0 +1,107 @@
+0.922400
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: B
+
+69 78 84 86 72 
+84 79 89 81 86 75 86 89 74 
+2 1 0
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 2 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+89 73 65 65 89 89 
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'TXYSVD'?
+A. 0.593761
+B. 0.468761
+C. 0.418750
+D. 0.498771
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(01000, 01011) = 2
+Khoảng cách d(01000, 01101) = 2
+Khoảng cách d(01000, 11011) = 3
+Khoảng cách d(01011, 01101) = 2
+Khoảng cách d(01011, 11011) = 1
+Khoảng cách d(01101, 11011) = 3
+=> d_min = 1 (Giữa 01011 và 11011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+0 -1 0
+85 68 70 72 78 78 67 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WYFRIAWCA' là bao nhiêu?
+A. 8
+B. 9
+C. 10
+D. 12
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'OQAUROLF' là bao nhiêu?
+A. 9
+B. 11
+C. 8
+D. 7
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0.000000, 0.333333)
+- Ký tự 'I': [0.333333, 0.666667)
+- Ký tự 'Q': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'QIC':
+Đọc 'Q' -> Khoảng: [0.666667, 1.000000)
+Đọc 'I' -> Khoảng: [0.777778, 0.888889)
+Đọc 'C' -> Khoảng: [0.777778, 0.814815)
+=> Giá trị mã hóa được chọn: 0.796296
+
+[3] Quá trình giải mã (từ 0.796296, độ dài 3):
+Giá trị 0.796296 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.388889 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.166667 nằm trong khoảng của 'C' -> Giải mã: C
+
+0.689920
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'MEBURYLJQQ':
+Output: 77 | Thêm từ điển: ME (Mã: 256)
+Output: 69 | Thêm từ điển: EB (Mã: 257)
+Output: 66 | Thêm từ điển: BU (Mã: 258)
+Output: 85 | Thêm từ điển: UR (Mã: 259)
+Output: 82 | Thêm từ điển: RY (Mã: 260)
+Output: 89 | Thêm từ điển: YL (Mã: 261)
+Output: 76 | Thêm từ điển: LJ (Mã: 262)
+Output: 74 | Thêm từ điển: JQ (Mã: 263)
+Output: 81 | Thêm từ điển: QQ (Mã: 264)
+Output cuối: 81
+=> Dãy mã hóa: 77 69 66 85 82 89 76 74 81 81 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 77 69 66 85 82 89 76 74 81 81 
+Đọc 77 -> Xuất: M
+Đọc 69 -> Xuất: E | Thêm từ điển: ME (Mã: 256)
+Đọc 66 -> Xuất: B | Thêm từ điển: EB (Mã: 257)
+Đọc 85 -> Xuất: U | Thêm từ điển: BU (Mã: 258)
+Đọc 82 -> Xuất: R | Thêm từ điển: UR (Mã: 259)
+Đọc 89 -> Xuất: Y | Thêm từ điển: RY (Mã: 260)
+Đọc 76 -> Xuất: L | Thêm từ điển: YL (Mã: 261)
+Đọc 74 -> Xuất: J | Thêm từ điển: LJ (Mã: 262)
+Đọc 81 -> Xuất: Q | Thêm từ điển: JQ (Mã: 263)
+Đọc 81 -> Xuất: Q | Thêm từ điển: QQ (Mã: 264)
+=> Chuỗi giải mã thành công: MEBURYLJQQ
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'HHP'?
+A. 0.370370
+B. 0.474444
+C. 0.246296
+D. 0.495370
+Đáp án đúng: A
+
+2 1 0

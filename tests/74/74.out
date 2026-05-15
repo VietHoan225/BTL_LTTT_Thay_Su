@@ -1,0 +1,19 @@
+69 74 88 69 77 82 89 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0, 0.5)
+- Ký tự 'V': [0.5, 1)
+
+[2] Quá trình mã hóa chuỗi 'CVVC':
+Đọc 'C' -> Khoảng: [0.000000, 0.500000)
+Đọc 'V' -> Khoảng: [0.250000, 0.500000)
+Đọc 'V' -> Khoảng: [0.375000, 0.500000)
+Đọc 'C' -> Khoảng: [0.375000, 0.437500)
+=> Giá trị mã hóa được chọn: 0.406250
+
+[3] Quá trình giải mã (từ 0.406250, độ dài 4):
+Giá trị 0.406250 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.812500 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.625000 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.250000 nằm trong khoảng của 'C' -> Giải mã: C
+

@@ -1,0 +1,47 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'J': [0, 0.4)
+- Ký tự 'L': [0.4, 0.6)
+- Ký tự 'Q': [0.6, 0.8)
+- Ký tự 'R': [0.8, 1)
+
+[2] Quá trình mã hóa chuỗi 'LRJQJ':
+Đọc 'L' -> Khoảng: [0.400000, 0.600000)
+Đọc 'R' -> Khoảng: [0.560000, 0.600000)
+Đọc 'J' -> Khoảng: [0.560000, 0.576000)
+Đọc 'Q' -> Khoảng: [0.569600, 0.572800)
+Đọc 'J' -> Khoảng: [0.569600, 0.570880)
+=> Giá trị mã hóa được chọn: 0.570240
+
+[3] Quá trình giải mã (từ 0.570240, độ dài 5):
+Giá trị 0.570240 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.851200 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.256000 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.640000 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.200000 nằm trong khoảng của 'J' -> Giải mã: J
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'USAUH':
+Output: 85 | Thêm từ điển: US (Mã: 256)
+Output: 83 | Thêm từ điển: SA (Mã: 257)
+Output: 65 | Thêm từ điển: AU (Mã: 258)
+Output: 85 | Thêm từ điển: UH (Mã: 259)
+Output cuối: 72
+=> Dãy mã hóa: 85 83 65 85 72 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 85 83 65 85 72 
+Đọc 85 -> Xuất: U
+Đọc 83 -> Xuất: S | Thêm từ điển: US (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: SA (Mã: 257)
+Đọc 85 -> Xuất: U | Thêm từ điển: AU (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: UH (Mã: 259)
+=> Chuỗi giải mã thành công: USAUH
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: B
+

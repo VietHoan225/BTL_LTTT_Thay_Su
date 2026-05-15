@@ -1,0 +1,24 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'L': [0, 0.333333)
+- Ký tự 'M': [0.333333, 0.666667)
+- Ký tự 'P': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'LMP':
+Đọc 'L' -> Khoảng: [0.000000, 0.333333)
+Đọc 'M' -> Khoảng: [0.111111, 0.222222)
+Đọc 'P' -> Khoảng: [0.185185, 0.222222)
+=> Giá trị mã hóa được chọn: 0.203704
+
+[3] Quá trình giải mã (từ 0.203704, độ dài 3):
+Giá trị 0.203704 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.611111 nằm trong khoảng của 'M' -> Giải mã: M
+Giá trị 0.833333 nằm trong khoảng của 'P' -> Giải mã: P
+

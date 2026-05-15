@@ -1,0 +1,117 @@
+0 -1 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HKWXVJUQH' là bao nhiêu?
+A. 10
+B. 8
+C. 9
+D. 12
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(010, 101) = 3
+=> d_min = 3 (Giữa 010 và 101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+1 0 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'XQWBX' là bao nhiêu?
+A. 8
+B. 5
+C. 4
+D. 6
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111, 001) = 2
+Khoảng cách d(111, 101) = 1
+Khoảng cách d(001, 101) = 1
+=> d_min = 1 (Giữa 111 và 101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'TTTTMN'?
+A. 0.935700
+B. 0.810700
+C. 0.843443
+D. 0.757956
+Đáp án đúng: B
+
+0 -1 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WGNWIO' là bao nhiêu?
+A. 6
+B. 7
+C. 5
+D. 9
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NWUPJQJUFN' là bao nhiêu?
+A. 11
+B. 13
+C. 10
+D. 9
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0, 0.333333)
+- Ký tự 'H': [0.333333, 0.666667)
+- Ký tự 'P': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'HAP':
+Đọc 'H' -> Khoảng: [0.333333, 0.666667)
+Đọc 'A' -> Khoảng: [0.333333, 0.444444)
+Đọc 'P' -> Khoảng: [0.407407, 0.444444)
+=> Giá trị mã hóa được chọn: 0.425926
+
+[3] Quá trình giải mã (từ 0.425926, độ dài 3):
+Giá trị 0.425926 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.277778 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.833333 nằm trong khoảng của 'P' -> Giải mã: P
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111, 101) = 1
+Khoảng cách d(111, 010) = 2
+Khoảng cách d(111, 111) = 0
+Khoảng cách d(101, 010) = 3
+Khoảng cách d(101, 111) = 1
+Khoảng cách d(010, 111) = 2
+=> d_min = 0 (Giữa 111 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'EZDBFOQO' là bao nhiêu?
+A. 8
+B. 7
+C. 11
+D. 9
+Đáp án đúng: A
+
+0 -1 0
+1 0 0
+0.822266
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(11011, 11111) = 1
+=> d_min = 1 (Giữa 11011 và 11111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PAKRY' là bao nhiêu?
+A. 4
+B. 8
+C. 6
+D. 5
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'SFWHXKKROO' là bao nhiêu?
+A. 10
+B. 11
+C. 13
+D. 9
+Đáp án đúng: A
+

@@ -1,0 +1,118 @@
+80 65 72 67 84 77 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.166667)
+- Ký tự 'G': [0.166667, 0.333333)
+- Ký tự 'X': [0.333333, 0.5)
+- Ký tự 'Y': [0.5, 0.666667)
+- Ký tự 'Z': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'YZDGXZ':
+Đọc 'Y' -> Khoảng: [0.500000, 0.666667)
+Đọc 'Z' -> Khoảng: [0.611111, 0.666667)
+Đọc 'D' -> Khoảng: [0.611111, 0.620370)
+Đọc 'G' -> Khoảng: [0.612654, 0.614198)
+Đọc 'X' -> Khoảng: [0.613169, 0.613426)
+Đọc 'Z' -> Khoảng: [0.613340, 0.613426)
+=> Giá trị mã hóa được chọn: 0.613383
+
+[3] Quá trình giải mã (từ 0.613383, độ dài 6):
+Giá trị 0.613383 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.680298 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.040895 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.245370 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.472222 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.833333 nằm trong khoảng của 'Z' -> Giải mã: Z
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JFFHE' là bao nhiêu?
+A. 8
+B. 4
+C. 6
+D. 5
+Đáp án đúng: D
+
+4 3 1
+68 75 74 84 80 86 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'YUGLN':
+Output: 89 | Thêm từ điển: YU (Mã: 256)
+Output: 85 | Thêm từ điển: UG (Mã: 257)
+Output: 71 | Thêm từ điển: GL (Mã: 258)
+Output: 76 | Thêm từ điển: LN (Mã: 259)
+Output cuối: 78
+=> Dãy mã hóa: 89 85 71 76 78 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 89 85 71 76 78 
+Đọc 89 -> Xuất: Y
+Đọc 85 -> Xuất: U | Thêm từ điển: YU (Mã: 256)
+Đọc 71 -> Xuất: G | Thêm từ điển: UG (Mã: 257)
+Đọc 76 -> Xuất: L | Thêm từ điển: GL (Mã: 258)
+Đọc 78 -> Xuất: N | Thêm từ điển: LN (Mã: 259)
+=> Chuỗi giải mã thành công: YUGLN
+
+0.234240
+0 -1 0
+0 -1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'TYWJGWPKM':
+Output: 84 | Thêm từ điển: TY (Mã: 256)
+Output: 89 | Thêm từ điển: YW (Mã: 257)
+Output: 87 | Thêm từ điển: WJ (Mã: 258)
+Output: 74 | Thêm từ điển: JG (Mã: 259)
+Output: 71 | Thêm từ điển: GW (Mã: 260)
+Output: 87 | Thêm từ điển: WP (Mã: 261)
+Output: 80 | Thêm từ điển: PK (Mã: 262)
+Output: 75 | Thêm từ điển: KM (Mã: 263)
+Output cuối: 77
+=> Dãy mã hóa: 84 89 87 74 71 87 80 75 77 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 84 89 87 74 71 87 80 75 77 
+Đọc 84 -> Xuất: T
+Đọc 89 -> Xuất: Y | Thêm từ điển: TY (Mã: 256)
+Đọc 87 -> Xuất: W | Thêm từ điển: YW (Mã: 257)
+Đọc 74 -> Xuất: J | Thêm từ điển: WJ (Mã: 258)
+Đọc 71 -> Xuất: G | Thêm từ điển: JG (Mã: 259)
+Đọc 87 -> Xuất: W | Thêm từ điển: GW (Mã: 260)
+Đọc 80 -> Xuất: P | Thêm từ điển: WP (Mã: 261)
+Đọc 75 -> Xuất: K | Thêm từ điển: PK (Mã: 262)
+Đọc 77 -> Xuất: M | Thêm từ điển: KM (Mã: 263)
+=> Chuỗi giải mã thành công: TYWJGWPKM
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'KOGHBIERJ':
+Output: 75 | Thêm từ điển: KO (Mã: 256)
+Output: 79 | Thêm từ điển: OG (Mã: 257)
+Output: 71 | Thêm từ điển: GH (Mã: 258)
+Output: 72 | Thêm từ điển: HB (Mã: 259)
+Output: 66 | Thêm từ điển: BI (Mã: 260)
+Output: 73 | Thêm từ điển: IE (Mã: 261)
+Output: 69 | Thêm từ điển: ER (Mã: 262)
+Output: 82 | Thêm từ điển: RJ (Mã: 263)
+Output cuối: 74
+=> Dãy mã hóa: 75 79 71 72 66 73 69 82 74 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 75 79 71 72 66 73 69 82 74 
+Đọc 75 -> Xuất: K
+Đọc 79 -> Xuất: O | Thêm từ điển: KO (Mã: 256)
+Đọc 71 -> Xuất: G | Thêm từ điển: OG (Mã: 257)
+Đọc 72 -> Xuất: H | Thêm từ điển: GH (Mã: 258)
+Đọc 66 -> Xuất: B | Thêm từ điển: HB (Mã: 259)
+Đọc 73 -> Xuất: I | Thêm từ điển: BI (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: IE (Mã: 261)
+Đọc 82 -> Xuất: R | Thêm từ điển: ER (Mã: 262)
+Đọc 74 -> Xuất: J | Thêm từ điển: RJ (Mã: 263)
+=> Chuỗi giải mã thành công: KOGHBIERJ
+
+79 83 75 80 89 80 69 
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ABRG'?
+A. 0.119141
+B. 0.151094
+C. 0.244141
+D. 0.067187
+Đáp án đúng: A
+
+0.534560

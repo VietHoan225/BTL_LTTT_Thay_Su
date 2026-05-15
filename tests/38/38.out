@@ -1,0 +1,110 @@
+85 66 67 88 90 89 84 
+75 69 87 74 66 74 78 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'APCTOBTA':
+Output: 65 | Thêm từ điển: AP (Mã: 256)
+Output: 80 | Thêm từ điển: PC (Mã: 257)
+Output: 67 | Thêm từ điển: CT (Mã: 258)
+Output: 84 | Thêm từ điển: TO (Mã: 259)
+Output: 79 | Thêm từ điển: OB (Mã: 260)
+Output: 66 | Thêm từ điển: BT (Mã: 261)
+Output: 84 | Thêm từ điển: TA (Mã: 262)
+Output cuối: 65
+=> Dãy mã hóa: 65 80 67 84 79 66 84 65 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 65 80 67 84 79 66 84 65 
+Đọc 65 -> Xuất: A
+Đọc 80 -> Xuất: P | Thêm từ điển: AP (Mã: 256)
+Đọc 67 -> Xuất: C | Thêm từ điển: PC (Mã: 257)
+Đọc 84 -> Xuất: T | Thêm từ điển: CT (Mã: 258)
+Đọc 79 -> Xuất: O | Thêm từ điển: TO (Mã: 259)
+Đọc 66 -> Xuất: B | Thêm từ điển: OB (Mã: 260)
+Đọc 84 -> Xuất: T | Thêm từ điển: BT (Mã: 261)
+Đọc 65 -> Xuất: A | Thêm từ điển: TA (Mã: 262)
+=> Chuỗi giải mã thành công: APCTOBTA
+
+0.570312
+4 3 1
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'BEQ'?
+A. 0.252222
+B. 0.203704
+C. 0.135185
+D. 0.328704
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'AWZDBTYDVA' là bao nhiêu?
+A. 9
+B. 13
+C. 10
+D. 11
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0.000000, 0.166667)
+- Ký tự 'D': [0.166667, 0.333333)
+- Ký tự 'E': [0.333333, 0.500000)
+- Ký tự 'T': [0.500000, 0.666667)
+- Ký tự 'V': [0.666667, 0.833333)
+- Ký tự 'Z': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'VTEBDZ':
+Đọc 'V' -> Khoảng: [0.666667, 0.833333)
+Đọc 'T' -> Khoảng: [0.750000, 0.777778)
+Đọc 'E' -> Khoảng: [0.759259, 0.763889)
+Đọc 'B' -> Khoảng: [0.759259, 0.760031)
+Đọc 'D' -> Khoảng: [0.759388, 0.759516)
+Đọc 'Z' -> Khoảng: [0.759495, 0.759516)
+=> Giá trị mã hóa được chọn: 0.759506
+
+[3] Quá trình giải mã (từ 0.759506, độ dài 6):
+Giá trị 0.759506 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.557034 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.342207 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.053241 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.319444 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.916667 nằm trong khoảng của 'Z' -> Giải mã: Z
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JUMODRQY' là bao nhiêu?
+A. 9
+B. 11
+C. 7
+D. 8
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'MRVNRL' là bao nhiêu?
+A. 7
+B. 5
+C. 9
+D. 6
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'VBDPD'?
+A. 0.818880
+B. 0.768240
+C. 0.943880
+D. 0.849520
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'TVKOL'?
+A. 0.763680
+B. 0.793840
+C. 0.888680
+D. 0.713520
+Đáp án đúng: A
+

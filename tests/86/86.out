@@ -1,0 +1,95 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'CQDPBGZDSK' là bao nhiêu?
+A. 10
+B. 13
+C. 11
+D. 9
+Đáp án đúng: A
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'AUGMVRJO':
+Output: 65 | Thêm từ điển: AU (Mã: 256)
+Output: 85 | Thêm từ điển: UG (Mã: 257)
+Output: 71 | Thêm từ điển: GM (Mã: 258)
+Output: 77 | Thêm từ điển: MV (Mã: 259)
+Output: 86 | Thêm từ điển: VR (Mã: 260)
+Output: 82 | Thêm từ điển: RJ (Mã: 261)
+Output: 74 | Thêm từ điển: JO (Mã: 262)
+Output cuối: 79
+=> Dãy mã hóa: 65 85 71 77 86 82 74 79 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 65 85 71 77 86 82 74 79 
+Đọc 65 -> Xuất: A
+Đọc 85 -> Xuất: U | Thêm từ điển: AU (Mã: 256)
+Đọc 71 -> Xuất: G | Thêm từ điển: UG (Mã: 257)
+Đọc 77 -> Xuất: M | Thêm từ điển: GM (Mã: 258)
+Đọc 86 -> Xuất: V | Thêm từ điển: MV (Mã: 259)
+Đọc 82 -> Xuất: R | Thêm từ điển: VR (Mã: 260)
+Đọc 74 -> Xuất: J | Thêm từ điển: RJ (Mã: 261)
+Đọc 79 -> Xuất: O | Thêm từ điển: JO (Mã: 262)
+=> Chuỗi giải mã thành công: AUGMVRJO
+
+0.880859
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JLDR'?
+A. 0.513672
+B. 0.420625
+C. 0.388672
+D. 0.336719
+Đáp án đúng: C
+
+69 80 68 88 74 90 85 89 86 71 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'VDPBEIPBTF' là bao nhiêu?
+A. 8
+B. 10
+C. 12
+D. 9
+Đáp án đúng: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0010, 0111) = 2
+Khoảng cách d(0010, 0100) = 2
+Khoảng cách d(0010, 1110) = 2
+Khoảng cách d(0111, 0100) = 2
+Khoảng cách d(0111, 1110) = 2
+Khoảng cách d(0100, 1110) = 2
+=> d_min = 2 (Giữa 0010 và 0111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'XZMJOOFBCU':
+Output: 88 | Thêm từ điển: XZ (Mã: 256)
+Output: 90 | Thêm từ điển: ZM (Mã: 257)
+Output: 77 | Thêm từ điển: MJ (Mã: 258)
+Output: 74 | Thêm từ điển: JO (Mã: 259)
+Output: 79 | Thêm từ điển: OO (Mã: 260)
+Output: 79 | Thêm từ điển: OF (Mã: 261)
+Output: 70 | Thêm từ điển: FB (Mã: 262)
+Output: 66 | Thêm từ điển: BC (Mã: 263)
+Output: 67 | Thêm từ điển: CU (Mã: 264)
+Output cuối: 85
+=> Dãy mã hóa: 88 90 77 74 79 79 70 66 67 85 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 88 90 77 74 79 79 70 66 67 85 
+Đọc 88 -> Xuất: X
+Đọc 90 -> Xuất: Z | Thêm từ điển: XZ (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: ZM (Mã: 257)
+Đọc 74 -> Xuất: J | Thêm từ điển: MJ (Mã: 258)
+Đọc 79 -> Xuất: O | Thêm từ điển: JO (Mã: 259)
+Đọc 79 -> Xuất: O | Thêm từ điển: OO (Mã: 260)
+Đọc 70 -> Xuất: F | Thêm từ điển: OF (Mã: 261)
+Đọc 66 -> Xuất: B | Thêm từ điển: FB (Mã: 262)
+Đọc 67 -> Xuất: C | Thêm từ điển: BC (Mã: 263)
+Đọc 85 -> Xuất: U | Thêm từ điển: CU (Mã: 264)
+=> Chuỗi giải mã thành công: XZMJOOFBCU
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'THH'?
+A. 0.865741
+B. 0.844815
+C. 0.740741
+D. 0.616667
+Đáp án đúng: C
+
+1 0 0

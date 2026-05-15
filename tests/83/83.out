@@ -1,0 +1,119 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'HDMBTF'?
+A. 0.577004
+B. 0.671993
+C. 0.546993
+D. 0.496982
+Đáp án đúng: C
+
+0 -1 0
+1 0 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'GBSJQ' là bao nhiêu?
+A. 8
+B. 6
+C. 4
+D. 5
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'GFOUV' là bao nhiêu?
+A. 6
+B. 8
+C. 5
+D. 4
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'HVXIH'?
+A. 0.436040
+B. 0.311040
+C. 0.260400
+D. 0.341680
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111111, 101011) = 2
+=> d_min = 2 (Giữa 111111 và 101011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ETRHQH'?
+A. 0.284036
+B. 0.159036
+C. 0.189079
+D. 0.108993
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GOH'?
+A. 0.402778
+B. 0.326296
+C. 0.209259
+D. 0.277778
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.25)
+- Ký tự 'G': [0.25, 0.5)
+- Ký tự 'O': [0.5, 0.75)
+- Ký tự 'R': [0.75, 1)
+
+[2] Quá trình mã hóa chuỗi 'RDOG':
+Đọc 'R' -> Khoảng: [0.750000, 1.000000)
+Đọc 'D' -> Khoảng: [0.750000, 0.812500)
+Đọc 'O' -> Khoảng: [0.781250, 0.796875)
+Đọc 'G' -> Khoảng: [0.785156, 0.789062)
+=> Giá trị mã hóa được chọn: 0.787109
+
+[3] Quá trình giải mã (từ 0.787109, độ dài 4):
+Giá trị 0.787109 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.148438 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.593750 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.375000 nằm trong khoảng của 'G' -> Giải mã: G
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+0 -1 0
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'FTVJF'?
+A. 0.341680
+B. 0.436040
+C. 0.311040
+D. 0.260400
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'VZABOHKMF' là bao nhiêu?
+A. 9
+B. 10
+C. 12
+D. 8
+Đáp án đúng: A
+
+83 89 88 86 90 68 66 71 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'HSHQV'?
+A. 0.383560
+B. 0.258560
+C. 0.207920
+D. 0.289200
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(11100, 10000) = 2
+Khoảng cách d(11100, 01000) = 2
+Khoảng cách d(11100, 00011) = 5
+Khoảng cách d(10000, 01000) = 2
+Khoảng cách d(10000, 00011) = 3
+Khoảng cách d(01000, 00011) = 3
+=> d_min = 2 (Giữa 11100 và 10000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+77 74 79 67 76 80 66 77 73 69 

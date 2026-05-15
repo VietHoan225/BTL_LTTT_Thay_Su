@@ -1,0 +1,159 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'GROCYMIACW' là bao nhiêu?
+A. 13
+B. 11
+C. 10
+D. 9
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'RYVUU'?
+A. 0.186880
+B. 0.217520
+C. 0.311880
+D. 0.136240
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'MBEWF'?
+A. 0.565040
+B. 0.645360
+C. 0.740200
+D. 0.615200
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'EJVEAP'?
+A. 0.411602
+B. 0.381559
+C. 0.506559
+D. 0.331516
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'KHMBTRNFD' là bao nhiêu?
+A. 12
+B. 8
+C. 10
+D. 9
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'OSTBP'?
+A. 0.302640
+B. 0.382960
+C. 0.352800
+D. 0.477800
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'QVSBT' là bao nhiêu?
+A. 8
+B. 4
+C. 5
+D. 6
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.333333)
+- Ký tự 'L': [0.333333, 0.666667)
+- Ký tự 'Z': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'LZD':
+Đọc 'L' -> Khoảng: [0.333333, 0.666667)
+Đọc 'Z' -> Khoảng: [0.555556, 0.666667)
+Đọc 'D' -> Khoảng: [0.555556, 0.592593)
+=> Giá trị mã hóa được chọn: 0.574074
+
+[3] Quá trình giải mã (từ 0.574074, độ dài 3):
+Giá trị 0.574074 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.722222 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.166667 nằm trong khoảng của 'D' -> Giải mã: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111, 110) = 1
+Khoảng cách d(111, 100) = 2
+Khoảng cách d(111, 000) = 3
+Khoảng cách d(110, 100) = 1
+Khoảng cách d(110, 000) = 2
+Khoảng cách d(100, 000) = 1
+=> d_min = 1 (Giữa 111 và 110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QBEPRWBF':
+Output: 81 | Thêm từ điển: QB (Mã: 256)
+Output: 66 | Thêm từ điển: BE (Mã: 257)
+Output: 69 | Thêm từ điển: EP (Mã: 258)
+Output: 80 | Thêm từ điển: PR (Mã: 259)
+Output: 82 | Thêm từ điển: RW (Mã: 260)
+Output: 87 | Thêm từ điển: WB (Mã: 261)
+Output: 66 | Thêm từ điển: BF (Mã: 262)
+Output cuối: 70
+=> Dãy mã hóa: 81 66 69 80 82 87 66 70 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 66 69 80 82 87 66 70 
+Đọc 81 -> Xuất: Q
+Đọc 66 -> Xuất: B | Thêm từ điển: QB (Mã: 256)
+Đọc 69 -> Xuất: E | Thêm từ điển: BE (Mã: 257)
+Đọc 80 -> Xuất: P | Thêm từ điển: EP (Mã: 258)
+Đọc 82 -> Xuất: R | Thêm từ điển: PR (Mã: 259)
+Đọc 87 -> Xuất: W | Thêm từ điển: RW (Mã: 260)
+Đọc 66 -> Xuất: B | Thêm từ điển: WB (Mã: 261)
+Đọc 70 -> Xuất: F | Thêm từ điển: BF (Mã: 262)
+=> Chuỗi giải mã thành công: QBEPRWBF
+
+86 74 85 65 68 86 84 85 88 73 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'NPUFX':
+Output: 78 | Thêm từ điển: NP (Mã: 256)
+Output: 80 | Thêm từ điển: PU (Mã: 257)
+Output: 85 | Thêm từ điển: UF (Mã: 258)
+Output: 70 | Thêm từ điển: FX (Mã: 259)
+Output cuối: 88
+=> Dãy mã hóa: 78 80 85 70 88 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 78 80 85 70 88 
+Đọc 78 -> Xuất: N
+Đọc 80 -> Xuất: P | Thêm từ điển: NP (Mã: 256)
+Đọc 85 -> Xuất: U | Thêm từ điển: PU (Mã: 257)
+Đọc 70 -> Xuất: F | Thêm từ điển: UF (Mã: 258)
+Đọc 88 -> Xuất: X | Thêm từ điển: FX (Mã: 259)
+=> Chuỗi giải mã thành công: NPUFX
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'XQLVUKZVYM':
+Output: 88 | Thêm từ điển: XQ (Mã: 256)
+Output: 81 | Thêm từ điển: QL (Mã: 257)
+Output: 76 | Thêm từ điển: LV (Mã: 258)
+Output: 86 | Thêm từ điển: VU (Mã: 259)
+Output: 85 | Thêm từ điển: UK (Mã: 260)
+Output: 75 | Thêm từ điển: KZ (Mã: 261)
+Output: 90 | Thêm từ điển: ZV (Mã: 262)
+Output: 86 | Thêm từ điển: VY (Mã: 263)
+Output: 89 | Thêm từ điển: YM (Mã: 264)
+Output cuối: 77
+=> Dãy mã hóa: 88 81 76 86 85 75 90 86 89 77 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 88 81 76 86 85 75 90 86 89 77 
+Đọc 88 -> Xuất: X
+Đọc 81 -> Xuất: Q | Thêm từ điển: XQ (Mã: 256)
+Đọc 76 -> Xuất: L | Thêm từ điển: QL (Mã: 257)
+Đọc 86 -> Xuất: V | Thêm từ điển: LV (Mã: 258)
+Đọc 85 -> Xuất: U | Thêm từ điển: VU (Mã: 259)
+Đọc 75 -> Xuất: K | Thêm từ điển: UK (Mã: 260)
+Đọc 90 -> Xuất: Z | Thêm từ điển: KZ (Mã: 261)
+Đọc 86 -> Xuất: V | Thêm từ điển: ZV (Mã: 262)
+Đọc 89 -> Xuất: Y | Thêm từ điển: VY (Mã: 263)
+Đọc 77 -> Xuất: M | Thêm từ điển: YM (Mã: 264)
+=> Chuỗi giải mã thành công: XQLVUKZVYM
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1101, 1011) = 2
+Khoảng cách d(1101, 1111) = 1
+Khoảng cách d(1101, 1101) = 0
+Khoảng cách d(1011, 1111) = 1
+Khoảng cách d(1011, 1101) = 2
+Khoảng cách d(1111, 1101) = 1
+=> d_min = 0 (Giữa 1101 và 1101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+

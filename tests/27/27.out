@@ -1,0 +1,106 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ZQMDI' là bao nhiêu?
+A. 5
+B. 8
+C. 4
+D. 6
+Đáp án đúng: A
+
+0.177734
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'SDEUYFDRMA' là bao nhiêu?
+A. 11
+B. 10
+C. 9
+D. 13
+Đáp án đúng: B
+
+0.552734
+1 0 0
+1 0 0
+0.154297
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'QCR'?
+A. 0.425926
+B. 0.550926
+C. 0.357407
+D. 0.474444
+Đáp án đúng: A
+
+3 2 1
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GYJHPA'?
+A. 0.351523
+B. 0.446513
+C. 0.321513
+D. 0.271502
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QWOUJAFZJ':
+Output: 81 | Thêm từ điển: QW (Mã: 256)
+Output: 87 | Thêm từ điển: WO (Mã: 257)
+Output: 79 | Thêm từ điển: OU (Mã: 258)
+Output: 85 | Thêm từ điển: UJ (Mã: 259)
+Output: 74 | Thêm từ điển: JA (Mã: 260)
+Output: 65 | Thêm từ điển: AF (Mã: 261)
+Output: 70 | Thêm từ điển: FZ (Mã: 262)
+Output: 90 | Thêm từ điển: ZJ (Mã: 263)
+Output cuối: 74
+=> Dãy mã hóa: 81 87 79 85 74 65 70 90 74 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 87 79 85 74 65 70 90 74 
+Đọc 81 -> Xuất: Q
+Đọc 87 -> Xuất: W | Thêm từ điển: QW (Mã: 256)
+Đọc 79 -> Xuất: O | Thêm từ điển: WO (Mã: 257)
+Đọc 85 -> Xuất: U | Thêm từ điển: OU (Mã: 258)
+Đọc 74 -> Xuất: J | Thêm từ điển: UJ (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: JA (Mã: 260)
+Đọc 70 -> Xuất: F | Thêm từ điển: AF (Mã: 261)
+Đọc 90 -> Xuất: Z | Thêm từ điển: FZ (Mã: 262)
+Đọc 74 -> Xuất: J | Thêm từ điển: ZJ (Mã: 263)
+=> Chuỗi giải mã thành công: QWOUJAFZJ
+
+71 77 68 83 70 82 69 68 70 73 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'FMWJZCXXR':
+Output: 70 | Thêm từ điển: FM (Mã: 256)
+Output: 77 | Thêm từ điển: MW (Mã: 257)
+Output: 87 | Thêm từ điển: WJ (Mã: 258)
+Output: 74 | Thêm từ điển: JZ (Mã: 259)
+Output: 90 | Thêm từ điển: ZC (Mã: 260)
+Output: 67 | Thêm từ điển: CX (Mã: 261)
+Output: 88 | Thêm từ điển: XX (Mã: 262)
+Output: 88 | Thêm từ điển: XR (Mã: 263)
+Output cuối: 82
+=> Dãy mã hóa: 70 77 87 74 90 67 88 88 82 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 70 77 87 74 90 67 88 88 82 
+Đọc 70 -> Xuất: F
+Đọc 77 -> Xuất: M | Thêm từ điển: FM (Mã: 256)
+Đọc 87 -> Xuất: W | Thêm từ điển: MW (Mã: 257)
+Đọc 74 -> Xuất: J | Thêm từ điển: WJ (Mã: 258)
+Đọc 90 -> Xuất: Z | Thêm từ điển: JZ (Mã: 259)
+Đọc 67 -> Xuất: C | Thêm từ điển: ZC (Mã: 260)
+Đọc 88 -> Xuất: X | Thêm từ điển: CX (Mã: 261)
+Đọc 88 -> Xuất: X | Thêm từ điển: XX (Mã: 262)
+Đọc 82 -> Xuất: R | Thêm từ điển: XR (Mã: 263)
+=> Chuỗi giải mã thành công: FMWJZCXXR
+
+0.063743
+81 82 81 68 85 82 89 88 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'K': [0.000000, 0.333333)
+- Ký tự 'N': [0.333333, 0.666667)
+- Ký tự 'S': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'KSN':
+Đọc 'K' -> Khoảng: [0.000000, 0.333333)
+Đọc 'S' -> Khoảng: [0.222222, 0.333333)
+Đọc 'N' -> Khoảng: [0.259259, 0.296296)
+=> Giá trị mã hóa được chọn: 0.277778
+
+[3] Quá trình giải mã (từ 0.277778, độ dài 3):
+Giá trị 0.277778 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.833333 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.500000 nằm trong khoảng của 'N' -> Giải mã: N
+

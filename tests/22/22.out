@@ -1,0 +1,191 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'O': [0, 0.5)
+- Ký tự 'T': [0.5, 0.75)
+- Ký tự 'U': [0.75, 1)
+
+[2] Quá trình mã hóa chuỗi 'TOUO':
+Đọc 'T' -> Khoảng: [0.500000, 0.750000)
+Đọc 'O' -> Khoảng: [0.500000, 0.625000)
+Đọc 'U' -> Khoảng: [0.593750, 0.625000)
+Đọc 'O' -> Khoảng: [0.593750, 0.609375)
+=> Giá trị mã hóa được chọn: 0.601562
+
+[3] Quá trình giải mã (từ 0.601562, độ dài 4):
+Giá trị 0.601562 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.406250 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.812500 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.250000 nằm trong khoảng của 'O' -> Giải mã: O
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'OFP'?
+A. 0.425926
+B. 0.474444
+C. 0.357407
+D. 0.550926
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'A': [0.000000, 0.250000)
+- Ký tự 'K': [0.250000, 0.500000)
+- Ký tự 'R': [0.500000, 0.750000)
+- Ký tự 'U': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'RKAU':
+Đọc 'R' -> Khoảng: [0.500000, 0.750000)
+Đọc 'K' -> Khoảng: [0.562500, 0.625000)
+Đọc 'A' -> Khoảng: [0.562500, 0.578125)
+Đọc 'U' -> Khoảng: [0.574219, 0.578125)
+=> Giá trị mã hóa được chọn: 0.576172
+
+[3] Quá trình giải mã (từ 0.576172, độ dài 4):
+Giá trị 0.576172 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.304688 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.218750 nằm trong khoảng của 'A' -> Giải mã: A
+Giá trị 0.875000 nằm trong khoảng của 'U' -> Giải mã: U
+
+2 1 0
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'TWAH'?
+A. 0.693359
+B. 0.725312
+C. 0.641406
+D. 0.818359
+Đáp án đúng: A
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(000, 001) = 1
+Khoảng cách d(000, 110) = 2
+Khoảng cách d(001, 110) = 3
+=> d_min = 1 (Giữa 000 và 001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'SZCKVNROUE' là bao nhiêu?
+A. 10
+B. 9
+C. 11
+D. 13
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 3 bit
+C. 2 bit
+D. 2 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'OAYEISCL':
+Output: 79 | Thêm từ điển: OA (Mã: 256)
+Output: 65 | Thêm từ điển: AY (Mã: 257)
+Output: 89 | Thêm từ điển: YE (Mã: 258)
+Output: 69 | Thêm từ điển: EI (Mã: 259)
+Output: 73 | Thêm từ điển: IS (Mã: 260)
+Output: 83 | Thêm từ điển: SC (Mã: 261)
+Output: 67 | Thêm từ điển: CL (Mã: 262)
+Output cuối: 76
+=> Dãy mã hóa: 79 65 89 69 73 83 67 76 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 79 65 89 69 73 83 67 76 
+Đọc 79 -> Xuất: O
+Đọc 65 -> Xuất: A | Thêm từ điển: OA (Mã: 256)
+Đọc 89 -> Xuất: Y | Thêm từ điển: AY (Mã: 257)
+Đọc 69 -> Xuất: E | Thêm từ điển: YE (Mã: 258)
+Đọc 73 -> Xuất: I | Thêm từ điển: EI (Mã: 259)
+Đọc 83 -> Xuất: S | Thêm từ điển: IS (Mã: 260)
+Đọc 67 -> Xuất: C | Thêm từ điển: SC (Mã: 261)
+Đọc 76 -> Xuất: L | Thêm từ điển: CL (Mã: 262)
+=> Chuỗi giải mã thành công: OAYEISCL
+
+71 82 70 72 78 84 84 
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'JVGMBUR' là bao nhiêu?
+A. 6
+B. 7
+C. 10
+D. 8
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'CROG'?
+A. 0.349609
+B. 0.172656
+C. 0.224609
+D. 0.256562
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'BQHKSRXAW':
+Output: 66 | Thêm từ điển: BQ (Mã: 256)
+Output: 81 | Thêm từ điển: QH (Mã: 257)
+Output: 72 | Thêm từ điển: HK (Mã: 258)
+Output: 75 | Thêm từ điển: KS (Mã: 259)
+Output: 83 | Thêm từ điển: SR (Mã: 260)
+Output: 82 | Thêm từ điển: RX (Mã: 261)
+Output: 88 | Thêm từ điển: XA (Mã: 262)
+Output: 65 | Thêm từ điển: AW (Mã: 263)
+Output cuối: 87
+=> Dãy mã hóa: 66 81 72 75 83 82 88 65 87 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 66 81 72 75 83 82 88 65 87 
+Đọc 66 -> Xuất: B
+Đọc 81 -> Xuất: Q | Thêm từ điển: BQ (Mã: 256)
+Đọc 72 -> Xuất: H | Thêm từ điển: QH (Mã: 257)
+Đọc 75 -> Xuất: K | Thêm từ điển: HK (Mã: 258)
+Đọc 83 -> Xuất: S | Thêm từ điển: KS (Mã: 259)
+Đọc 82 -> Xuất: R | Thêm từ điển: SR (Mã: 260)
+Đọc 88 -> Xuất: X | Thêm từ điển: RX (Mã: 261)
+Đọc 65 -> Xuất: A | Thêm từ điển: XA (Mã: 262)
+Đọc 87 -> Xuất: W | Thêm từ điển: AW (Mã: 263)
+=> Chuỗi giải mã thành công: BQHKSRXAW
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'QQLGQLTX' là bao nhiêu?
+A. 8
+B. 7
+C. 10
+D. 6
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'NWQZTF'?
+A. 0.416292
+B. 0.321302
+C. 0.291292
+D. 0.241281
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011110, 001011) = 3
+Khoảng cách d(011110, 111100) = 2
+Khoảng cách d(001011, 111100) = 5
+=> d_min = 2 (Giữa 011110 và 111100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 2 bit
+D. 1 bit
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LNHHCOF' là bao nhiêu?
+A. 7
+B. 8
+C. 10
+D. 6
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'BNOWJF' là bao nhiêu?
+A. 6
+B. 5
+C. 9
+D. 7
+Đáp án đúng: A
+

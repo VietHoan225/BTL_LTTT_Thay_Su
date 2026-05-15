@@ -1,0 +1,32 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'FQIQAX'?
+A. 0.303663
+B. 0.223577
+C. 0.273620
+D. 0.398620
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101011, 101001) = 1
+Khoảng cách d(101011, 111000) = 3
+Khoảng cách d(101001, 111000) = 2
+=> d_min = 1 (Giữa 101011 và 101001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+66 83 88 89 89 75 70 
+2 1 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'IYEDNVQO' là bao nhiêu?
+A. 7
+B. 9
+C. 8
+D. 11
+Đáp án đúng: C
+
+0.364320
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NVGDIVPY' là bao nhiêu?
+A. 9
+B. 7
+C. 11
+D. 8
+Đáp án đúng: D
+

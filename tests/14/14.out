@@ -1,0 +1,73 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'EOTQBPU' là bao nhiêu?
+A. 7
+B. 6
+C. 8
+D. 10
+Đáp án đúng: A
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0, 0.166667)
+- Ký tự 'E': [0.166667, 0.333333)
+- Ký tự 'F': [0.333333, 0.5)
+- Ký tự 'N': [0.5, 0.666667)
+- Ký tự 'R': [0.666667, 0.833333)
+- Ký tự 'Y': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'YRFNDE':
+Đọc 'Y' -> Khoảng: [0.833333, 1.000000)
+Đọc 'R' -> Khoảng: [0.944444, 0.972222)
+Đọc 'F' -> Khoảng: [0.953704, 0.958333)
+Đọc 'N' -> Khoảng: [0.956019, 0.956790)
+Đọc 'D' -> Khoảng: [0.956019, 0.956147)
+Đọc 'E' -> Khoảng: [0.956040, 0.956061)
+=> Giá trị mã hóa được chọn: 0.956051
+
+[3] Quá trình giải mã (từ 0.956051, độ dài 6):
+Giá trị 0.956051 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.736304 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.417824 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.506944 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.041667 nằm trong khoảng của 'D' -> Giải mã: D
+Giá trị 0.250000 nằm trong khoảng của 'E' -> Giải mã: E
+
+90 78 69 83 84 72 79 80 71 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 3 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(01010, 11010) = 1
+Khoảng cách d(01010, 10010) = 2
+Khoảng cách d(01010, 11011) = 2
+Khoảng cách d(11010, 10010) = 1
+Khoảng cách d(11010, 11011) = 1
+Khoảng cách d(10010, 11011) = 2
+=> d_min = 1 (Giữa 01010 và 11010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'HNXOGS':
+Output: 72 | Thêm từ điển: HN (Mã: 256)
+Output: 78 | Thêm từ điển: NX (Mã: 257)
+Output: 88 | Thêm từ điển: XO (Mã: 258)
+Output: 79 | Thêm từ điển: OG (Mã: 259)
+Output: 71 | Thêm từ điển: GS (Mã: 260)
+Output cuối: 83
+=> Dãy mã hóa: 72 78 88 79 71 83 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 72 78 88 79 71 83 
+Đọc 72 -> Xuất: H
+Đọc 78 -> Xuất: N | Thêm từ điển: HN (Mã: 256)
+Đọc 88 -> Xuất: X | Thêm từ điển: NX (Mã: 257)
+Đọc 79 -> Xuất: O | Thêm từ điển: XO (Mã: 258)
+Đọc 71 -> Xuất: G | Thêm từ điển: OG (Mã: 259)
+Đọc 83 -> Xuất: S | Thêm từ điển: GS (Mã: 260)
+=> Chuỗi giải mã thành công: HNXOGS
+

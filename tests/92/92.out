@@ -1,0 +1,145 @@
+81 76 65 73 76 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'C': [0, 0.333333)
+- Ký tự 'E': [0.333333, 0.666667)
+- Ký tự 'H': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'HCE':
+Đọc 'H' -> Khoảng: [0.666667, 1.000000)
+Đọc 'C' -> Khoảng: [0.666667, 0.777778)
+Đọc 'E' -> Khoảng: [0.703704, 0.740741)
+=> Giá trị mã hóa được chọn: 0.722222
+
+[3] Quá trình giải mã (từ 0.722222, độ dài 3):
+Giá trị 0.722222 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.166667 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.500000 nằm trong khoảng của 'E' -> Giải mã: E
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(110, 100) = 1
+=> d_min = 1 (Giữa 110 và 100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'PVWW'?
+A. 0.155000
+B. 0.059375
+C. 0.117188
+D. 0.242188
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QZPEME':
+Output: 81 | Thêm từ điển: QZ (Mã: 256)
+Output: 90 | Thêm từ điển: ZP (Mã: 257)
+Output: 80 | Thêm từ điển: PE (Mã: 258)
+Output: 69 | Thêm từ điển: EM (Mã: 259)
+Output: 77 | Thêm từ điển: ME (Mã: 260)
+Output cuối: 69
+=> Dãy mã hóa: 81 90 80 69 77 69 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 90 80 69 77 69 
+Đọc 81 -> Xuất: Q
+Đọc 90 -> Xuất: Z | Thêm từ điển: QZ (Mã: 256)
+Đọc 80 -> Xuất: P | Thêm từ điển: ZP (Mã: 257)
+Đọc 69 -> Xuất: E | Thêm từ điển: PE (Mã: 258)
+Đọc 77 -> Xuất: M | Thêm từ điển: EM (Mã: 259)
+Đọc 69 -> Xuất: E | Thêm từ điển: ME (Mã: 260)
+=> Chuỗi giải mã thành công: QZPEME
+
+88 82 81 78 78 87 74 82 68 
+3 2 1
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'E': [0.000000, 0.250000)
+- Ký tự 'H': [0.250000, 0.500000)
+- Ký tự 'L': [0.500000, 0.750000)
+- Ký tự 'Q': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'LEHQ':
+Đọc 'L' -> Khoảng: [0.500000, 0.750000)
+Đọc 'E' -> Khoảng: [0.500000, 0.562500)
+Đọc 'H' -> Khoảng: [0.515625, 0.531250)
+Đọc 'Q' -> Khoảng: [0.527344, 0.531250)
+=> Giá trị mã hóa được chọn: 0.529297
+
+[3] Quá trình giải mã (từ 0.529297, độ dài 4):
+Giá trị 0.529297 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.117188 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.468750 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.875000 nằm trong khoảng của 'Q' -> Giải mã: Q
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'I': [0.000000, 0.400000)
+- Ký tự 'L': [0.400000, 0.600000)
+- Ký tự 'V': [0.600000, 0.800000)
+- Ký tự 'Z': [0.800000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'IZVIL':
+Đọc 'I' -> Khoảng: [0.000000, 0.400000)
+Đọc 'Z' -> Khoảng: [0.320000, 0.400000)
+Đọc 'V' -> Khoảng: [0.368000, 0.384000)
+Đọc 'I' -> Khoảng: [0.368000, 0.374400)
+Đọc 'L' -> Khoảng: [0.370560, 0.371840)
+=> Giá trị mã hóa được chọn: 0.371200
+
+[3] Quá trình giải mã (từ 0.371200, độ dài 5):
+Giá trị 0.371200 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.928000 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.640000 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.200000 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.500000 nằm trong khoảng của 'L' -> Giải mã: L
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'LMDNIHGWLY':
+Output: 76 | Thêm từ điển: LM (Mã: 256)
+Output: 77 | Thêm từ điển: MD (Mã: 257)
+Output: 68 | Thêm từ điển: DN (Mã: 258)
+Output: 78 | Thêm từ điển: NI (Mã: 259)
+Output: 73 | Thêm từ điển: IH (Mã: 260)
+Output: 72 | Thêm từ điển: HG (Mã: 261)
+Output: 71 | Thêm từ điển: GW (Mã: 262)
+Output: 87 | Thêm từ điển: WL (Mã: 263)
+Output: 76 | Thêm từ điển: LY (Mã: 264)
+Output cuối: 89
+=> Dãy mã hóa: 76 77 68 78 73 72 71 87 76 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 76 77 68 78 73 72 71 87 76 89 
+Đọc 76 -> Xuất: L
+Đọc 77 -> Xuất: M | Thêm từ điển: LM (Mã: 256)
+Đọc 68 -> Xuất: D | Thêm từ điển: MD (Mã: 257)
+Đọc 78 -> Xuất: N | Thêm từ điển: DN (Mã: 258)
+Đọc 73 -> Xuất: I | Thêm từ điển: NI (Mã: 259)
+Đọc 72 -> Xuất: H | Thêm từ điển: IH (Mã: 260)
+Đọc 71 -> Xuất: G | Thêm từ điển: HG (Mã: 261)
+Đọc 87 -> Xuất: W | Thêm từ điển: GW (Mã: 262)
+Đọc 76 -> Xuất: L | Thêm từ điển: WL (Mã: 263)
+Đọc 89 -> Xuất: Y | Thêm từ điển: LY (Mã: 264)
+=> Chuỗi giải mã thành công: LMDNIHGWLY
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GLNLG'?
+A. 0.250800
+B. 0.335920
+C. 0.303360
+D. 0.428360
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'DXHYNKE' là bao nhiêu?
+A. 8
+B. 10
+C. 7
+D. 6
+Đáp án đúng: C
+
+85 74 90 71 67 80 83 

@@ -1,0 +1,55 @@
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001100, 101000) = 2
+=> d_min = 2 (Giữa 001100 và 101000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 2 bit
+C. 4 bit
+D. 3 bit
+Đáp án đúng: A
+
+0.277778
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+1 0 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'H': [0.000000, 0.166667)
+- Ký tự 'I': [0.166667, 0.333333)
+- Ký tự 'J': [0.333333, 0.500000)
+- Ký tự 'S': [0.500000, 0.666667)
+- Ký tự 'X': [0.666667, 0.833333)
+- Ký tự 'Y': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'IXSYHJ':
+Đọc 'I' -> Khoảng: [0.166667, 0.333333)
+Đọc 'X' -> Khoảng: [0.277778, 0.305556)
+Đọc 'S' -> Khoảng: [0.291667, 0.296296)
+Đọc 'Y' -> Khoảng: [0.295525, 0.296296)
+Đọc 'H' -> Khoảng: [0.295525, 0.295653)
+Đọc 'J' -> Khoảng: [0.295568, 0.295589)
+=> Giá trị mã hóa được chọn: 0.295578
+
+[3] Quá trình giải mã (từ 0.295578, độ dài 6):
+Giá trị 0.295578 nằm trong khoảng của 'I' -> Giải mã: I
+Giá trị 0.773470 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.640818 nằm trong khoảng của 'S' -> Giải mã: S
+Giá trị 0.844907 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.069444 nằm trong khoảng của 'H' -> Giải mã: H
+Giá trị 0.416667 nằm trong khoảng của 'J' -> Giải mã: J
+

@@ -1,0 +1,133 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'BVUKTXGVMD':
+Output: 66 | Thêm từ điển: BV (Mã: 256)
+Output: 86 | Thêm từ điển: VU (Mã: 257)
+Output: 85 | Thêm từ điển: UK (Mã: 258)
+Output: 75 | Thêm từ điển: KT (Mã: 259)
+Output: 84 | Thêm từ điển: TX (Mã: 260)
+Output: 88 | Thêm từ điển: XG (Mã: 261)
+Output: 71 | Thêm từ điển: GV (Mã: 262)
+Output: 86 | Thêm từ điển: VM (Mã: 263)
+Output: 77 | Thêm từ điển: MD (Mã: 264)
+Output cuối: 68
+=> Dãy mã hóa: 66 86 85 75 84 88 71 86 77 68 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 66 86 85 75 84 88 71 86 77 68 
+Đọc 66 -> Xuất: B
+Đọc 86 -> Xuất: V | Thêm từ điển: BV (Mã: 256)
+Đọc 85 -> Xuất: U | Thêm từ điển: VU (Mã: 257)
+Đọc 75 -> Xuất: K | Thêm từ điển: UK (Mã: 258)
+Đọc 84 -> Xuất: T | Thêm từ điển: KT (Mã: 259)
+Đọc 88 -> Xuất: X | Thêm từ điển: TX (Mã: 260)
+Đọc 71 -> Xuất: G | Thêm từ điển: XG (Mã: 261)
+Đọc 86 -> Xuất: V | Thêm từ điển: GV (Mã: 262)
+Đọc 77 -> Xuất: M | Thêm từ điển: VM (Mã: 263)
+Đọc 68 -> Xuất: D | Thêm từ điển: MD (Mã: 264)
+=> Chuỗi giải mã thành công: BVUKTXGVMD
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'IANULLSTO' là bao nhiêu?
+A. 8
+B. 12
+C. 9
+D. 10
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'FDEUL' là bao nhiêu?
+A. 5
+B. 4
+C. 6
+D. 8
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ISIMZHAX' là bao nhiêu?
+A. 9
+B. 11
+C. 8
+D. 7
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LFPLC' là bao nhiêu?
+A. 8
+B. 6
+C. 5
+D. 4
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 2 bit
+D. 0 bit
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'UFIGWWYIRB':
+Output: 85 | Thêm từ điển: UF (Mã: 256)
+Output: 70 | Thêm từ điển: FI (Mã: 257)
+Output: 73 | Thêm từ điển: IG (Mã: 258)
+Output: 71 | Thêm từ điển: GW (Mã: 259)
+Output: 87 | Thêm từ điển: WW (Mã: 260)
+Output: 87 | Thêm từ điển: WY (Mã: 261)
+Output: 89 | Thêm từ điển: YI (Mã: 262)
+Output: 73 | Thêm từ điển: IR (Mã: 263)
+Output: 82 | Thêm từ điển: RB (Mã: 264)
+Output cuối: 66
+=> Dãy mã hóa: 85 70 73 71 87 87 89 73 82 66 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 85 70 73 71 87 87 89 73 82 66 
+Đọc 85 -> Xuất: U
+Đọc 70 -> Xuất: F | Thêm từ điển: UF (Mã: 256)
+Đọc 73 -> Xuất: I | Thêm từ điển: FI (Mã: 257)
+Đọc 71 -> Xuất: G | Thêm từ điển: IG (Mã: 258)
+Đọc 87 -> Xuất: W | Thêm từ điển: GW (Mã: 259)
+Đọc 87 -> Xuất: W | Thêm từ điển: WW (Mã: 260)
+Đọc 89 -> Xuất: Y | Thêm từ điển: WY (Mã: 261)
+Đọc 73 -> Xuất: I | Thêm từ điển: YI (Mã: 262)
+Đọc 82 -> Xuất: R | Thêm từ điển: IR (Mã: 263)
+Đọc 66 -> Xuất: B | Thêm từ điển: RB (Mã: 264)
+=> Chuỗi giải mã thành công: UFIGWWYIRB
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'YQK'?
+A. 0.727778
+B. 0.796296
+C. 0.844815
+D. 0.921296
+Đáp án đúng: B
+
+0 -1 0
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'QRKCU'?
+A. 0.654440
+B. 0.479280
+C. 0.529440
+D. 0.559600
+Đáp án đúng: C
+
+0.845703
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'TUDETXWEI':
+Output: 84 | Thêm từ điển: TU (Mã: 256)
+Output: 85 | Thêm từ điển: UD (Mã: 257)
+Output: 68 | Thêm từ điển: DE (Mã: 258)
+Output: 69 | Thêm từ điển: ET (Mã: 259)
+Output: 84 | Thêm từ điển: TX (Mã: 260)
+Output: 88 | Thêm từ điển: XW (Mã: 261)
+Output: 87 | Thêm từ điển: WE (Mã: 262)
+Output: 69 | Thêm từ điển: EI (Mã: 263)
+Output cuối: 73
+=> Dãy mã hóa: 84 85 68 69 84 88 87 69 73 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 84 85 68 69 84 88 87 69 73 
+Đọc 84 -> Xuất: T
+Đọc 85 -> Xuất: U | Thêm từ điển: TU (Mã: 256)
+Đọc 68 -> Xuất: D | Thêm từ điển: UD (Mã: 257)
+Đọc 69 -> Xuất: E | Thêm từ điển: DE (Mã: 258)
+Đọc 84 -> Xuất: T | Thêm từ điển: ET (Mã: 259)
+Đọc 88 -> Xuất: X | Thêm từ điển: TX (Mã: 260)
+Đọc 87 -> Xuất: W | Thêm từ điển: XW (Mã: 261)
+Đọc 69 -> Xuất: E | Thêm từ điển: WE (Mã: 262)
+Đọc 73 -> Xuất: I | Thêm từ điển: EI (Mã: 263)
+=> Chuỗi giải mã thành công: TUDETXWEI
+

@@ -1,0 +1,56 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: B
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'AYULR':
+Output: 65 | Thêm từ điển: AY (Mã: 256)
+Output: 89 | Thêm từ điển: YU (Mã: 257)
+Output: 85 | Thêm từ điển: UL (Mã: 258)
+Output: 76 | Thêm từ điển: LR (Mã: 259)
+Output cuối: 82
+=> Dãy mã hóa: 65 89 85 76 82 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 65 89 85 76 82 
+Đọc 65 -> Xuất: A
+Đọc 89 -> Xuất: Y | Thêm từ điển: AY (Mã: 256)
+Đọc 85 -> Xuất: U | Thêm từ điển: YU (Mã: 257)
+Đọc 76 -> Xuất: L | Thêm từ điển: UL (Mã: 258)
+Đọc 82 -> Xuất: R | Thêm từ điển: LR (Mã: 259)
+=> Chuỗi giải mã thành công: AYULR
+
+0.135200
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ARXZG'?
+A. 0.110880
+B. 0.235880
+C. 0.141040
+D. 0.060720
+Đáp án đúng: A
+
+0.427040
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'NMYYLAODDP' là bao nhiêu?
+A. 13
+B. 10
+C. 9
+D. 11
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'IMWFIO'?
+A. 0.330230
+B. 0.410316
+C. 0.380273
+D. 0.505273
+Đáp án đúng: C
+
+87 72 76 85 69 81 73 85 68 81 

@@ -1,0 +1,21 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'JMVRUG':
+Output: 74 | Thêm từ điển: JM (Mã: 256)
+Output: 77 | Thêm từ điển: MV (Mã: 257)
+Output: 86 | Thêm từ điển: VR (Mã: 258)
+Output: 82 | Thêm từ điển: RU (Mã: 259)
+Output: 85 | Thêm từ điển: UG (Mã: 260)
+Output cuối: 71
+=> Dãy mã hóa: 74 77 86 82 85 71 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 74 77 86 82 85 71 
+Đọc 74 -> Xuất: J
+Đọc 77 -> Xuất: M | Thêm từ điển: JM (Mã: 256)
+Đọc 86 -> Xuất: V | Thêm từ điển: MV (Mã: 257)
+Đọc 82 -> Xuất: R | Thêm từ điển: VR (Mã: 258)
+Đọc 85 -> Xuất: U | Thêm từ điển: RU (Mã: 259)
+Đọc 71 -> Xuất: G | Thêm từ điển: UG (Mã: 260)
+=> Chuỗi giải mã thành công: JMVRUG
+
+90 82 72 73 79 71 84 84 75 

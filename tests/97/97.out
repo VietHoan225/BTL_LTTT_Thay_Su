@@ -1,0 +1,68 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'FZHHQX'?
+A. 0.146991
+B. 0.096948
+C. 0.177034
+D. 0.271991
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WEYKUWSZQU' là bao nhiêu?
+A. 13
+B. 9
+C. 11
+D. 10
+Đáp án đúng: D
+
+79 76 86 74 89 69 84 85 86 
+86 77 69 75 79 72 65 85 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'WOLFYMTG':
+Output: 87 | Thêm từ điển: WO (Mã: 256)
+Output: 79 | Thêm từ điển: OL (Mã: 257)
+Output: 76 | Thêm từ điển: LF (Mã: 258)
+Output: 70 | Thêm từ điển: FY (Mã: 259)
+Output: 89 | Thêm từ điển: YM (Mã: 260)
+Output: 77 | Thêm từ điển: MT (Mã: 261)
+Output: 84 | Thêm từ điển: TG (Mã: 262)
+Output cuối: 71
+=> Dãy mã hóa: 87 79 76 70 89 77 84 71 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 87 79 76 70 89 77 84 71 
+Đọc 87 -> Xuất: W
+Đọc 79 -> Xuất: O | Thêm từ điển: WO (Mã: 256)
+Đọc 76 -> Xuất: L | Thêm từ điển: OL (Mã: 257)
+Đọc 70 -> Xuất: F | Thêm từ điển: LF (Mã: 258)
+Đọc 89 -> Xuất: Y | Thêm từ điển: FY (Mã: 259)
+Đọc 77 -> Xuất: M | Thêm từ điển: YM (Mã: 260)
+Đọc 84 -> Xuất: T | Thêm từ điển: MT (Mã: 261)
+Đọc 71 -> Xuất: G | Thêm từ điển: TG (Mã: 262)
+=> Chuỗi giải mã thành công: WOLFYMTG
+
+86 84 85 89 79 90 72 
+69 66 78 81 86 68 67 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111001, 001000) = 3
+Khoảng cách d(111001, 101111) = 3
+Khoảng cách d(111001, 001010) = 4
+Khoảng cách d(001000, 101111) = 4
+Khoảng cách d(001000, 001010) = 1
+Khoảng cách d(101111, 001010) = 3
+=> d_min = 1 (Giữa 001000 và 001010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(10100, 11010) = 3
+Khoảng cách d(10100, 10001) = 2
+Khoảng cách d(11010, 10001) = 3
+=> d_min = 2 (Giữa 10100 và 10001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'YUPJVIIE' là bao nhiêu?
+A. 7
+B. 8
+C. 11
+D. 9
+Đáp án đúng: B
+

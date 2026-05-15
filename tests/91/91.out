@@ -1,0 +1,32 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WEWRYOCMNE' là bao nhiêu?
+A. 9
+B. 13
+C. 11
+D. 10
+Đáp án đúng: D
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'J': [0, 0.333333)
+- Ký tự 'L': [0.333333, 0.666667)
+- Ký tự 'R': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'JLR':
+Đọc 'J' -> Khoảng: [0.000000, 0.333333)
+Đọc 'L' -> Khoảng: [0.111111, 0.222222)
+Đọc 'R' -> Khoảng: [0.185185, 0.222222)
+=> Giá trị mã hóa được chọn: 0.203704
+
+[3] Quá trình giải mã (từ 0.203704, độ dài 3):
+Giá trị 0.203704 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.611111 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.833333 nằm trong khoảng của 'R' -> Giải mã: R
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'AKHFQC'?
+A. 0.077208
+B. 0.252218
+C. 0.127218
+D. 0.157229
+Đáp án đúng: C
+

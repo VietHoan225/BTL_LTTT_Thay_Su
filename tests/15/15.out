@@ -1,0 +1,41 @@
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(01111, 11000) = 4
+Khoảng cách d(01111, 10111) = 2
+Khoảng cách d(01111, 00000) = 4
+Khoảng cách d(11000, 10111) = 4
+Khoảng cách d(11000, 00000) = 2
+Khoảng cách d(10111, 00000) = 4
+=> d_min = 2 (Giữa 01111 và 10111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'BZCENV'?
+A. 0.175555
+B. 0.095533
+C. 0.145544
+D. 0.270544
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(10011, 01110) = 4
+Khoảng cách d(10011, 10101) = 2
+Khoảng cách d(01110, 10101) = 4
+=> d_min = 2 (Giữa 10011 và 10101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'EFFPC' là bao nhiêu?
+A. 4
+B. 5
+C. 6
+D. 8
+Đáp án đúng: B
+
+81 88 65 90 74 

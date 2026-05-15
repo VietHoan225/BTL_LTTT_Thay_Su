@@ -1,0 +1,111 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'ZCICC'?
+A. 0.876320
+B. 0.910640
+C. 0.822000
+D. 1.001320
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'CTC'?
+A. 0.518519
+B. 0.622593
+C. 0.643519
+D. 0.394444
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'UJIIXA' là bao nhiêu?
+A. 6
+B. 5
+C. 9
+D. 7
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'XDBLY'?
+A. 0.769640
+B. 0.594480
+C. 0.644640
+D. 0.674800
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'KKDBTPQH' là bao nhiêu?
+A. 8
+B. 9
+C. 7
+D. 11
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'HROSYKV' là bao nhiêu?
+A. 7
+B. 10
+C. 6
+D. 8
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PMVGEVRULG' là bao nhiêu?
+A. 13
+B. 10
+C. 9
+D. 11
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111, 101) = 1
+=> d_min = 1 (Giữa 111 và 101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'VEHUL' là bao nhiêu?
+A. 4
+B. 6
+C. 8
+D. 5
+Đáp án đúng: D
+
+0.207465
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'LFZUYAE':
+Output: 76 | Thêm từ điển: LF (Mã: 256)
+Output: 70 | Thêm từ điển: FZ (Mã: 257)
+Output: 90 | Thêm từ điển: ZU (Mã: 258)
+Output: 85 | Thêm từ điển: UY (Mã: 259)
+Output: 89 | Thêm từ điển: YA (Mã: 260)
+Output: 65 | Thêm từ điển: AE (Mã: 261)
+Output cuối: 69
+=> Dãy mã hóa: 76 70 90 85 89 65 69 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 76 70 90 85 89 65 69 
+Đọc 76 -> Xuất: L
+Đọc 70 -> Xuất: F | Thêm từ điển: LF (Mã: 256)
+Đọc 90 -> Xuất: Z | Thêm từ điển: FZ (Mã: 257)
+Đọc 85 -> Xuất: U | Thêm từ điển: ZU (Mã: 258)
+Đọc 89 -> Xuất: Y | Thêm từ điển: UY (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: YA (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: AE (Mã: 261)
+=> Chuỗi giải mã thành công: LFZUYAE
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GCMODD'?
+A. 0.647591
+B. 0.522591
+C. 0.552634
+D. 0.472548
+Đáp án đúng: B
+
+85 87 81 81 78 
+1 0 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'F': [0.000000, 0.333333)
+- Ký tự 'G': [0.333333, 0.666667)
+- Ký tự 'P': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'GFP':
+Đọc 'G' -> Khoảng: [0.333333, 0.666667)
+Đọc 'F' -> Khoảng: [0.333333, 0.444444)
+Đọc 'P' -> Khoảng: [0.407407, 0.444444)
+=> Giá trị mã hóa được chọn: 0.425926
+
+[3] Quá trình giải mã (từ 0.425926, độ dài 3):
+Giá trị 0.425926 nằm trong khoảng của 'G' -> Giải mã: G
+Giá trị 0.277778 nằm trong khoảng của 'F' -> Giải mã: F
+Giá trị 0.833333 nằm trong khoảng của 'P' -> Giải mã: P
+

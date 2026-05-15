@@ -1,0 +1,115 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'WDO'?
+A. 0.847222
+B. 0.770741
+C. 0.653704
+D. 0.722222
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'HZPTOHXRMM':
+Output: 72 | Thêm từ điển: HZ (Mã: 256)
+Output: 90 | Thêm từ điển: ZP (Mã: 257)
+Output: 80 | Thêm từ điển: PT (Mã: 258)
+Output: 84 | Thêm từ điển: TO (Mã: 259)
+Output: 79 | Thêm từ điển: OH (Mã: 260)
+Output: 72 | Thêm từ điển: HX (Mã: 261)
+Output: 88 | Thêm từ điển: XR (Mã: 262)
+Output: 82 | Thêm từ điển: RM (Mã: 263)
+Output: 77 | Thêm từ điển: MM (Mã: 264)
+Output cuối: 77
+=> Dãy mã hóa: 72 90 80 84 79 72 88 82 77 77 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 72 90 80 84 79 72 88 82 77 77 
+Đọc 72 -> Xuất: H
+Đọc 90 -> Xuất: Z | Thêm từ điển: HZ (Mã: 256)
+Đọc 80 -> Xuất: P | Thêm từ điển: ZP (Mã: 257)
+Đọc 84 -> Xuất: T | Thêm từ điển: PT (Mã: 258)
+Đọc 79 -> Xuất: O | Thêm từ điển: TO (Mã: 259)
+Đọc 72 -> Xuất: H | Thêm từ điển: OH (Mã: 260)
+Đọc 88 -> Xuất: X | Thêm từ điển: HX (Mã: 261)
+Đọc 82 -> Xuất: R | Thêm từ điển: XR (Mã: 262)
+Đọc 77 -> Xuất: M | Thêm từ điển: RM (Mã: 263)
+Đọc 77 -> Xuất: M | Thêm từ điển: MM (Mã: 264)
+=> Chuỗi giải mã thành công: HZPTOHXRMM
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'VSYQCODWIQ':
+Output: 86 | Thêm từ điển: VS (Mã: 256)
+Output: 83 | Thêm từ điển: SY (Mã: 257)
+Output: 89 | Thêm từ điển: YQ (Mã: 258)
+Output: 81 | Thêm từ điển: QC (Mã: 259)
+Output: 67 | Thêm từ điển: CO (Mã: 260)
+Output: 79 | Thêm từ điển: OD (Mã: 261)
+Output: 68 | Thêm từ điển: DW (Mã: 262)
+Output: 87 | Thêm từ điển: WI (Mã: 263)
+Output: 73 | Thêm từ điển: IQ (Mã: 264)
+Output cuối: 81
+=> Dãy mã hóa: 86 83 89 81 67 79 68 87 73 81 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 86 83 89 81 67 79 68 87 73 81 
+Đọc 86 -> Xuất: V
+Đọc 83 -> Xuất: S | Thêm từ điển: VS (Mã: 256)
+Đọc 89 -> Xuất: Y | Thêm từ điển: SY (Mã: 257)
+Đọc 81 -> Xuất: Q | Thêm từ điển: YQ (Mã: 258)
+Đọc 67 -> Xuất: C | Thêm từ điển: QC (Mã: 259)
+Đọc 79 -> Xuất: O | Thêm từ điển: CO (Mã: 260)
+Đọc 68 -> Xuất: D | Thêm từ điển: OD (Mã: 261)
+Đọc 87 -> Xuất: W | Thêm từ điển: DW (Mã: 262)
+Đọc 73 -> Xuất: I | Thêm từ điển: WI (Mã: 263)
+Đọc 81 -> Xuất: Q | Thêm từ điển: IQ (Mã: 264)
+=> Chuỗi giải mã thành công: VSYQCODWIQ
+
+0.381440
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'J': [0.000000, 0.166667)
+- Ký tự 'N': [0.166667, 0.333333)
+- Ký tự 'P': [0.333333, 0.500000)
+- Ký tự 'Q': [0.500000, 0.666667)
+- Ký tự 'U': [0.666667, 0.833333)
+- Ký tự 'X': [0.833333, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'UNXQJP':
+Đọc 'U' -> Khoảng: [0.666667, 0.833333)
+Đọc 'N' -> Khoảng: [0.694444, 0.722222)
+Đọc 'X' -> Khoảng: [0.717593, 0.722222)
+Đọc 'Q' -> Khoảng: [0.719907, 0.720679)
+Đọc 'J' -> Khoảng: [0.719907, 0.720036)
+Đọc 'P' -> Khoảng: [0.719950, 0.719972)
+=> Giá trị mã hóa được chọn: 0.719961
+
+[3] Quá trình giải mã (từ 0.719961, độ dài 6):
+Giá trị 0.719961 nằm trong khoảng của 'U' -> Giải mã: U
+Giá trị 0.319766 nằm trong khoảng của 'N' -> Giải mã: N
+Giá trị 0.918596 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.511574 nằm trong khoảng của 'Q' -> Giải mã: Q
+Giá trị 0.069444 nằm trong khoảng của 'J' -> Giải mã: J
+Giá trị 0.416667 nằm trong khoảng của 'P' -> Giải mã: P
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ZTCXGAZY':
+Output: 90 | Thêm từ điển: ZT (Mã: 256)
+Output: 84 | Thêm từ điển: TC (Mã: 257)
+Output: 67 | Thêm từ điển: CX (Mã: 258)
+Output: 88 | Thêm từ điển: XG (Mã: 259)
+Output: 71 | Thêm từ điển: GA (Mã: 260)
+Output: 65 | Thêm từ điển: AZ (Mã: 261)
+Output: 90 | Thêm từ điển: ZY (Mã: 262)
+Output cuối: 89
+=> Dãy mã hóa: 90 84 67 88 71 65 90 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 90 84 67 88 71 65 90 89 
+Đọc 90 -> Xuất: Z
+Đọc 84 -> Xuất: T | Thêm từ điển: ZT (Mã: 256)
+Đọc 67 -> Xuất: C | Thêm từ điển: TC (Mã: 257)
+Đọc 88 -> Xuất: X | Thêm từ điển: CX (Mã: 258)
+Đọc 71 -> Xuất: G | Thêm từ điển: XG (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: GA (Mã: 260)
+Đọc 90 -> Xuất: Z | Thêm từ điển: AZ (Mã: 261)
+Đọc 89 -> Xuất: Y | Thêm từ điển: ZY (Mã: 262)
+=> Chuỗi giải mã thành công: ZTCXGAZY
+
+0.421071

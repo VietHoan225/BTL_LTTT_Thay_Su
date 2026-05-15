@@ -1,0 +1,215 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QSMMNWEOSQ':
+Output: 81 | Thêm từ điển: QS (Mã: 256)
+Output: 83 | Thêm từ điển: SM (Mã: 257)
+Output: 77 | Thêm từ điển: MM (Mã: 258)
+Output: 77 | Thêm từ điển: MN (Mã: 259)
+Output: 78 | Thêm từ điển: NW (Mã: 260)
+Output: 87 | Thêm từ điển: WE (Mã: 261)
+Output: 69 | Thêm từ điển: EO (Mã: 262)
+Output: 79 | Thêm từ điển: OS (Mã: 263)
+Output: 83 | Thêm từ điển: SQ (Mã: 264)
+Output cuối: 81
+=> Dãy mã hóa: 81 83 77 77 78 87 69 79 83 81 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 83 77 77 78 87 69 79 83 81 
+Đọc 81 -> Xuất: Q
+Đọc 83 -> Xuất: S | Thêm từ điển: QS (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: SM (Mã: 257)
+Đọc 77 -> Xuất: M | Thêm từ điển: MM (Mã: 258)
+Đọc 78 -> Xuất: N | Thêm từ điển: MN (Mã: 259)
+Đọc 87 -> Xuất: W | Thêm từ điển: NW (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: WE (Mã: 261)
+Đọc 79 -> Xuất: O | Thêm từ điển: EO (Mã: 262)
+Đọc 83 -> Xuất: S | Thêm từ điển: OS (Mã: 263)
+Đọc 81 -> Xuất: Q | Thêm từ điển: SQ (Mã: 264)
+=> Chuỗi giải mã thành công: QSMMNWEOSQ
+
+84 71 66 76 79 87 89 75 67 69 
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'VQA'?
+A. 0.796296
+B. 0.844815
+C. 0.727778
+D. 0.921296
+Đáp án đúng: A
+
+0.388672
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'VBMPQMJREY':
+Output: 86 | Thêm từ điển: VB (Mã: 256)
+Output: 66 | Thêm từ điển: BM (Mã: 257)
+Output: 77 | Thêm từ điển: MP (Mã: 258)
+Output: 80 | Thêm từ điển: PQ (Mã: 259)
+Output: 81 | Thêm từ điển: QM (Mã: 260)
+Output: 77 | Thêm từ điển: MJ (Mã: 261)
+Output: 74 | Thêm từ điển: JR (Mã: 262)
+Output: 82 | Thêm từ điển: RE (Mã: 263)
+Output: 69 | Thêm từ điển: EY (Mã: 264)
+Output cuối: 89
+=> Dãy mã hóa: 86 66 77 80 81 77 74 82 69 89 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 86 66 77 80 81 77 74 82 69 89 
+Đọc 86 -> Xuất: V
+Đọc 66 -> Xuất: B | Thêm từ điển: VB (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: BM (Mã: 257)
+Đọc 80 -> Xuất: P | Thêm từ điển: MP (Mã: 258)
+Đọc 81 -> Xuất: Q | Thêm từ điển: PQ (Mã: 259)
+Đọc 77 -> Xuất: M | Thêm từ điển: QM (Mã: 260)
+Đọc 74 -> Xuất: J | Thêm từ điển: MJ (Mã: 261)
+Đọc 82 -> Xuất: R | Thêm từ điển: JR (Mã: 262)
+Đọc 69 -> Xuất: E | Thêm từ điển: RE (Mã: 263)
+Đọc 89 -> Xuất: Y | Thêm từ điển: EY (Mã: 264)
+=> Chuỗi giải mã thành công: VBMPQMJREY
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'EAQADN':
+Output: 69 | Thêm từ điển: EA (Mã: 256)
+Output: 65 | Thêm từ điển: AQ (Mã: 257)
+Output: 81 | Thêm từ điển: QA (Mã: 258)
+Output: 65 | Thêm từ điển: AD (Mã: 259)
+Output: 68 | Thêm từ điển: DN (Mã: 260)
+Output cuối: 78
+=> Dãy mã hóa: 69 65 81 65 68 78 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 69 65 81 65 68 78 
+Đọc 69 -> Xuất: E
+Đọc 65 -> Xuất: A | Thêm từ điển: EA (Mã: 256)
+Đọc 81 -> Xuất: Q | Thêm từ điển: AQ (Mã: 257)
+Đọc 65 -> Xuất: A | Thêm từ điển: QA (Mã: 258)
+Đọc 68 -> Xuất: D | Thêm từ điển: AD (Mã: 259)
+Đọc 78 -> Xuất: N | Thêm từ điển: DN (Mã: 260)
+=> Chuỗi giải mã thành công: EAQADN
+
+82 76 68 70 81 69 90 71 
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'NZPWY'?
+A. 0.122160
+B. 0.202480
+C. 0.297320
+D. 0.172320
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'QDLQYI'?
+A. 0.650849
+B. 0.475806
+C. 0.525849
+D. 0.555892
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0000, 1000) = 1
+=> d_min = 1 (Giữa 0000 và 1000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'WOQF'?
+A. 0.970703
+B. 0.877656
+C. 0.793750
+D. 0.845703
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'UKMEVX':
+Output: 85 | Thêm từ điển: UK (Mã: 256)
+Output: 75 | Thêm từ điển: KM (Mã: 257)
+Output: 77 | Thêm từ điển: ME (Mã: 258)
+Output: 69 | Thêm từ điển: EV (Mã: 259)
+Output: 86 | Thêm từ điển: VX (Mã: 260)
+Output cuối: 88
+=> Dãy mã hóa: 85 75 77 69 86 88 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 85 75 77 69 86 88 
+Đọc 85 -> Xuất: U
+Đọc 75 -> Xuất: K | Thêm từ điển: UK (Mã: 256)
+Đọc 77 -> Xuất: M | Thêm từ điển: KM (Mã: 257)
+Đọc 69 -> Xuất: E | Thêm từ điển: ME (Mã: 258)
+Đọc 86 -> Xuất: V | Thêm từ điển: EV (Mã: 259)
+Đọc 88 -> Xuất: X | Thêm từ điển: VX (Mã: 260)
+=> Chuỗi giải mã thành công: UKMEVX
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'JECY'?
+A. 0.576172
+B. 0.524219
+C. 0.701172
+D. 0.608125
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'RAHHFXUXO':
+Output: 82 | Thêm từ điển: RA (Mã: 256)
+Output: 65 | Thêm từ điển: AH (Mã: 257)
+Output: 72 | Thêm từ điển: HH (Mã: 258)
+Output: 72 | Thêm từ điển: HF (Mã: 259)
+Output: 70 | Thêm từ điển: FX (Mã: 260)
+Output: 88 | Thêm từ điển: XU (Mã: 261)
+Output: 85 | Thêm từ điển: UX (Mã: 262)
+Output: 88 | Thêm từ điển: XO (Mã: 263)
+Output cuối: 79
+=> Dãy mã hóa: 82 65 72 72 70 88 85 88 79 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 82 65 72 72 70 88 85 88 79 
+Đọc 82 -> Xuất: R
+Đọc 65 -> Xuất: A | Thêm từ điển: RA (Mã: 256)
+Đọc 72 -> Xuất: H | Thêm từ điển: AH (Mã: 257)
+Đọc 72 -> Xuất: H | Thêm từ điển: HH (Mã: 258)
+Đọc 70 -> Xuất: F | Thêm từ điển: HF (Mã: 259)
+Đọc 88 -> Xuất: X | Thêm từ điển: FX (Mã: 260)
+Đọc 85 -> Xuất: U | Thêm từ điển: XU (Mã: 261)
+Đọc 88 -> Xuất: X | Thêm từ điển: UX (Mã: 262)
+Đọc 79 -> Xuất: O | Thêm từ điển: XO (Mã: 263)
+=> Chuỗi giải mã thành công: RAHHFXUXO
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'WMZXEFA' là bao nhiêu?
+A. 8
+B. 7
+C. 10
+D. 6
+Đáp án đúng: B
+
+75 88 65 79 80 85 68 84 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ELIXHAAAPM':
+Output: 69 | Thêm từ điển: EL (Mã: 256)
+Output: 76 | Thêm từ điển: LI (Mã: 257)
+Output: 73 | Thêm từ điển: IX (Mã: 258)
+Output: 88 | Thêm từ điển: XH (Mã: 259)
+Output: 72 | Thêm từ điển: HA (Mã: 260)
+Output: 65 | Thêm từ điển: AA (Mã: 261)
+Output: 261 | Thêm từ điển: AAP (Mã: 262)
+Output: 80 | Thêm từ điển: PM (Mã: 263)
+Output cuối: 77
+=> Dãy mã hóa: 69 76 73 88 72 65 261 80 77 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 69 76 73 88 72 65 261 80 77 
+Đọc 69 -> Xuất: E
+Đọc 76 -> Xuất: L | Thêm từ điển: EL (Mã: 256)
+Đọc 73 -> Xuất: I | Thêm từ điển: LI (Mã: 257)
+Đọc 88 -> Xuất: X | Thêm từ điển: IX (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: XH (Mã: 259)
+Đọc 65 -> Xuất: A | Thêm từ điển: HA (Mã: 260)
+Đọc 261 -> Xuất: AA | Thêm từ điển: AA (Mã: 261)
+Đọc 80 -> Xuất: P | Thêm từ điển: AAP (Mã: 262)
+Đọc 77 -> Xuất: M | Thêm từ điển: PM (Mã: 263)
+=> Chuỗi giải mã thành công: ELIXHAAAPM
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+0.695312

@@ -1,0 +1,126 @@
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'FVTZLEB':
+Output: 70 | Thêm từ điển: FV (Mã: 256)
+Output: 86 | Thêm từ điển: VT (Mã: 257)
+Output: 84 | Thêm từ điển: TZ (Mã: 258)
+Output: 90 | Thêm từ điển: ZL (Mã: 259)
+Output: 76 | Thêm từ điển: LE (Mã: 260)
+Output: 69 | Thêm từ điển: EB (Mã: 261)
+Output cuối: 66
+=> Dãy mã hóa: 70 86 84 90 76 69 66 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 70 86 84 90 76 69 66 
+Đọc 70 -> Xuất: F
+Đọc 86 -> Xuất: V | Thêm từ điển: FV (Mã: 256)
+Đọc 84 -> Xuất: T | Thêm từ điển: VT (Mã: 257)
+Đọc 90 -> Xuất: Z | Thêm từ điển: TZ (Mã: 258)
+Đọc 76 -> Xuất: L | Thêm từ điển: ZL (Mã: 259)
+Đọc 69 -> Xuất: E | Thêm từ điển: LE (Mã: 260)
+Đọc 66 -> Xuất: B | Thêm từ điển: EB (Mã: 261)
+=> Chuỗi giải mã thành công: FVTZLEB
+
+74 71 89 72 79 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'FWFAQVUGB':
+Output: 70 | Thêm từ điển: FW (Mã: 256)
+Output: 87 | Thêm từ điển: WF (Mã: 257)
+Output: 70 | Thêm từ điển: FA (Mã: 258)
+Output: 65 | Thêm từ điển: AQ (Mã: 259)
+Output: 81 | Thêm từ điển: QV (Mã: 260)
+Output: 86 | Thêm từ điển: VU (Mã: 261)
+Output: 85 | Thêm từ điển: UG (Mã: 262)
+Output: 71 | Thêm từ điển: GB (Mã: 263)
+Output cuối: 66
+=> Dãy mã hóa: 70 87 70 65 81 86 85 71 66 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 70 87 70 65 81 86 85 71 66 
+Đọc 70 -> Xuất: F
+Đọc 87 -> Xuất: W | Thêm từ điển: FW (Mã: 256)
+Đọc 70 -> Xuất: F | Thêm từ điển: WF (Mã: 257)
+Đọc 65 -> Xuất: A | Thêm từ điển: FA (Mã: 258)
+Đọc 81 -> Xuất: Q | Thêm từ điển: AQ (Mã: 259)
+Đọc 86 -> Xuất: V | Thêm từ điển: QV (Mã: 260)
+Đọc 85 -> Xuất: U | Thêm từ điển: VU (Mã: 261)
+Đọc 71 -> Xuất: G | Thêm từ điển: UG (Mã: 262)
+Đọc 66 -> Xuất: B | Thêm từ điển: GB (Mã: 263)
+=> Chuỗi giải mã thành công: FWFAQVUGB
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0000, 1000) = 1
+Khoảng cách d(0000, 1100) = 2
+Khoảng cách d(1000, 1100) = 1
+=> d_min = 1 (Giữa 0000 và 1000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: B
+
+0.203704
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ZGZIPIHYXR':
+Output: 90 | Thêm từ điển: ZG (Mã: 256)
+Output: 71 | Thêm từ điển: GZ (Mã: 257)
+Output: 90 | Thêm từ điển: ZI (Mã: 258)
+Output: 73 | Thêm từ điển: IP (Mã: 259)
+Output: 80 | Thêm từ điển: PI (Mã: 260)
+Output: 73 | Thêm từ điển: IH (Mã: 261)
+Output: 72 | Thêm từ điển: HY (Mã: 262)
+Output: 89 | Thêm từ điển: YX (Mã: 263)
+Output: 88 | Thêm từ điển: XR (Mã: 264)
+Output cuối: 82
+=> Dãy mã hóa: 90 71 90 73 80 73 72 89 88 82 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 90 71 90 73 80 73 72 89 88 82 
+Đọc 90 -> Xuất: Z
+Đọc 71 -> Xuất: G | Thêm từ điển: ZG (Mã: 256)
+Đọc 90 -> Xuất: Z | Thêm từ điển: GZ (Mã: 257)
+Đọc 73 -> Xuất: I | Thêm từ điển: ZI (Mã: 258)
+Đọc 80 -> Xuất: P | Thêm từ điển: IP (Mã: 259)
+Đọc 73 -> Xuất: I | Thêm từ điển: PI (Mã: 260)
+Đọc 72 -> Xuất: H | Thêm từ điển: IH (Mã: 261)
+Đọc 89 -> Xuất: Y | Thêm từ điển: HY (Mã: 262)
+Đọc 88 -> Xuất: X | Thêm từ điển: YX (Mã: 263)
+Đọc 82 -> Xuất: R | Thêm từ điển: XR (Mã: 264)
+=> Chuỗi giải mã thành công: ZGZIPIHYXR
+
+73 67 71 65 83 79 84 68 69 78 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(01110, 00101) = 3
+Khoảng cách d(01110, 00110) = 1
+Khoảng cách d(01110, 01011) = 2
+Khoảng cách d(00101, 00110) = 2
+Khoảng cách d(00101, 01011) = 3
+Khoảng cách d(00110, 01011) = 3
+=> d_min = 1 (Giữa 01110 và 00110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(1111, 0100) = 3
+=> d_min = 3 (Giữa 1111 và 0100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 2 bit
+B. 1 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'VUBQOZ'?
+A. 0.781800
+B. 0.751790
+C. 0.876790
+D. 0.701779
+Đáp án đúng: B
+
+0.693359

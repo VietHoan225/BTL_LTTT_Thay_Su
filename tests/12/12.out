@@ -1,0 +1,53 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'NGVRZ':
+Output: 78 | Thêm từ điển: NG (Mã: 256)
+Output: 71 | Thêm từ điển: GV (Mã: 257)
+Output: 86 | Thêm từ điển: VR (Mã: 258)
+Output: 82 | Thêm từ điển: RZ (Mã: 259)
+Output cuối: 90
+=> Dãy mã hóa: 78 71 86 82 90 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 78 71 86 82 90 
+Đọc 78 -> Xuất: N
+Đọc 71 -> Xuất: G | Thêm từ điển: NG (Mã: 256)
+Đọc 86 -> Xuất: V | Thêm từ điển: GV (Mã: 257)
+Đọc 82 -> Xuất: R | Thêm từ điển: VR (Mã: 258)
+Đọc 90 -> Xuất: Z | Thêm từ điển: RZ (Mã: 259)
+=> Chuỗi giải mã thành công: NGVRZ
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QHPRXYNSCS':
+Output: 81 | Thêm từ điển: QH (Mã: 256)
+Output: 72 | Thêm từ điển: HP (Mã: 257)
+Output: 80 | Thêm từ điển: PR (Mã: 258)
+Output: 82 | Thêm từ điển: RX (Mã: 259)
+Output: 88 | Thêm từ điển: XY (Mã: 260)
+Output: 89 | Thêm từ điển: YN (Mã: 261)
+Output: 78 | Thêm từ điển: NS (Mã: 262)
+Output: 83 | Thêm từ điển: SC (Mã: 263)
+Output: 67 | Thêm từ điển: CS (Mã: 264)
+Output cuối: 83
+=> Dãy mã hóa: 81 72 80 82 88 89 78 83 67 83 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 72 80 82 88 89 78 83 67 83 
+Đọc 81 -> Xuất: Q
+Đọc 72 -> Xuất: H | Thêm từ điển: QH (Mã: 256)
+Đọc 80 -> Xuất: P | Thêm từ điển: HP (Mã: 257)
+Đọc 82 -> Xuất: R | Thêm từ điển: PR (Mã: 258)
+Đọc 88 -> Xuất: X | Thêm từ điển: RX (Mã: 259)
+Đọc 89 -> Xuất: Y | Thêm từ điển: XY (Mã: 260)
+Đọc 78 -> Xuất: N | Thêm từ điển: YN (Mã: 261)
+Đọc 83 -> Xuất: S | Thêm từ điển: NS (Mã: 262)
+Đọc 67 -> Xuất: C | Thêm từ điển: SC (Mã: 263)
+Đọc 83 -> Xuất: S | Thêm từ điển: CS (Mã: 264)
+=> Chuỗi giải mã thành công: QHPRXYNSCS
+

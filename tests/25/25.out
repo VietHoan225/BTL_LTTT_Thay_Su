@@ -1,0 +1,23 @@
+0.740741
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'KMBHKVR':
+Output: 75 | Thêm từ điển: KM (Mã: 256)
+Output: 77 | Thêm từ điển: MB (Mã: 257)
+Output: 66 | Thêm từ điển: BH (Mã: 258)
+Output: 72 | Thêm từ điển: HK (Mã: 259)
+Output: 75 | Thêm từ điển: KV (Mã: 260)
+Output: 86 | Thêm từ điển: VR (Mã: 261)
+Output cuối: 82
+=> Dãy mã hóa: 75 77 66 72 75 86 82 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 75 77 66 72 75 86 82 
+Đọc 75 -> Xuất: K
+Đọc 77 -> Xuất: M | Thêm từ điển: KM (Mã: 256)
+Đọc 66 -> Xuất: B | Thêm từ điển: MB (Mã: 257)
+Đọc 72 -> Xuất: H | Thêm từ điển: BH (Mã: 258)
+Đọc 75 -> Xuất: K | Thêm từ điển: HK (Mã: 259)
+Đọc 86 -> Xuất: V | Thêm từ điển: KV (Mã: 260)
+Đọc 82 -> Xuất: R | Thêm từ điển: VR (Mã: 261)
+=> Chuỗi giải mã thành công: KMBHKVR
+

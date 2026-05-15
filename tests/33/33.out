@@ -1,0 +1,95 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0100, 1110) = 2
+Khoảng cách d(0100, 1110) = 2
+Khoảng cách d(1110, 1110) = 0
+=> d_min = 0 (Giữa 1110 và 1110)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'VXEK'?
+A. 0.693359
+B. 0.725312
+C. 0.641406
+D. 0.818359
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'ASDFFBVLQL':
+Output: 65 | Thêm từ điển: AS (Mã: 256)
+Output: 83 | Thêm từ điển: SD (Mã: 257)
+Output: 68 | Thêm từ điển: DF (Mã: 258)
+Output: 70 | Thêm từ điển: FF (Mã: 259)
+Output: 70 | Thêm từ điển: FB (Mã: 260)
+Output: 66 | Thêm từ điển: BV (Mã: 261)
+Output: 86 | Thêm từ điển: VL (Mã: 262)
+Output: 76 | Thêm từ điển: LQ (Mã: 263)
+Output: 81 | Thêm từ điển: QL (Mã: 264)
+Output cuối: 76
+=> Dãy mã hóa: 65 83 68 70 70 66 86 76 81 76 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 65 83 68 70 70 66 86 76 81 76 
+Đọc 65 -> Xuất: A
+Đọc 83 -> Xuất: S | Thêm từ điển: AS (Mã: 256)
+Đọc 68 -> Xuất: D | Thêm từ điển: SD (Mã: 257)
+Đọc 70 -> Xuất: F | Thêm từ điển: DF (Mã: 258)
+Đọc 70 -> Xuất: F | Thêm từ điển: FF (Mã: 259)
+Đọc 66 -> Xuất: B | Thêm từ điển: FB (Mã: 260)
+Đọc 86 -> Xuất: V | Thêm từ điển: BV (Mã: 261)
+Đọc 76 -> Xuất: L | Thêm từ điển: VL (Mã: 262)
+Đọc 81 -> Xuất: Q | Thêm từ điển: LQ (Mã: 263)
+Đọc 76 -> Xuất: L | Thêm từ điển: QL (Mã: 264)
+=> Chuỗi giải mã thành công: ASDFFBVLQL
+
+0.574074
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 2 bit
+D. 1 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(00111, 10011) = 2
+Khoảng cách d(00111, 00000) = 3
+Khoảng cách d(10011, 00000) = 3
+=> d_min = 2 (Giữa 00111 và 10011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(110, 111) = 1
+Khoảng cách d(110, 010) = 1
+Khoảng cách d(111, 010) = 2
+=> d_min = 1 (Giữa 110 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'IHV'?
+A. 0.425926
+B. 0.357407
+C. 0.474444
+D. 0.550926
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'KJSDJB'?
+A. 0.720576
+B. 0.895619
+C. 0.800662
+D. 0.770619
+Đáp án đúng: D
+

@@ -1,0 +1,106 @@
+89 77 87 85 85 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'TUHZBQ':
+Output: 84 | Thêm từ điển: TU (Mã: 256)
+Output: 85 | Thêm từ điển: UH (Mã: 257)
+Output: 72 | Thêm từ điển: HZ (Mã: 258)
+Output: 90 | Thêm từ điển: ZB (Mã: 259)
+Output: 66 | Thêm từ điển: BQ (Mã: 260)
+Output cuối: 81
+=> Dãy mã hóa: 84 85 72 90 66 81 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 84 85 72 90 66 81 
+Đọc 84 -> Xuất: T
+Đọc 85 -> Xuất: U | Thêm từ điển: TU (Mã: 256)
+Đọc 72 -> Xuất: H | Thêm từ điển: UH (Mã: 257)
+Đọc 90 -> Xuất: Z | Thêm từ điển: HZ (Mã: 258)
+Đọc 66 -> Xuất: B | Thêm từ điển: ZB (Mã: 259)
+Đọc 81 -> Xuất: Q | Thêm từ điển: BQ (Mã: 260)
+=> Chuỗi giải mã thành công: TUHZBQ
+
+2 1 0
+81 79 73 72 69 81 75 85 
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101, 111) = 1
+Khoảng cách d(101, 010) = 3
+Khoảng cách d(111, 010) = 2
+=> d_min = 1 (Giữa 101 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+2 1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'AEVSANBL':
+Output: 65 | Thêm từ điển: AE (Mã: 256)
+Output: 69 | Thêm từ điển: EV (Mã: 257)
+Output: 86 | Thêm từ điển: VS (Mã: 258)
+Output: 83 | Thêm từ điển: SA (Mã: 259)
+Output: 65 | Thêm từ điển: AN (Mã: 260)
+Output: 78 | Thêm từ điển: NB (Mã: 261)
+Output: 66 | Thêm từ điển: BL (Mã: 262)
+Output cuối: 76
+=> Dãy mã hóa: 65 69 86 83 65 78 66 76 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 65 69 86 83 65 78 66 76 
+Đọc 65 -> Xuất: A
+Đọc 69 -> Xuất: E | Thêm từ điển: AE (Mã: 256)
+Đọc 86 -> Xuất: V | Thêm từ điển: EV (Mã: 257)
+Đọc 83 -> Xuất: S | Thêm từ điển: VS (Mã: 258)
+Đọc 65 -> Xuất: A | Thêm từ điển: SA (Mã: 259)
+Đọc 78 -> Xuất: N | Thêm từ điển: AN (Mã: 260)
+Đọc 66 -> Xuất: B | Thêm từ điển: NB (Mã: 261)
+Đọc 76 -> Xuất: L | Thêm từ điển: BL (Mã: 262)
+=> Chuỗi giải mã thành công: AEVSANBL
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'AIACLJT':
+Output: 65 | Thêm từ điển: AI (Mã: 256)
+Output: 73 | Thêm từ điển: IA (Mã: 257)
+Output: 65 | Thêm từ điển: AC (Mã: 258)
+Output: 67 | Thêm từ điển: CL (Mã: 259)
+Output: 76 | Thêm từ điển: LJ (Mã: 260)
+Output: 74 | Thêm từ điển: JT (Mã: 261)
+Output cuối: 84
+=> Dãy mã hóa: 65 73 65 67 76 74 84 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 65 73 65 67 76 74 84 
+Đọc 65 -> Xuất: A
+Đọc 73 -> Xuất: I | Thêm từ điển: AI (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: IA (Mã: 257)
+Đọc 67 -> Xuất: C | Thêm từ điển: AC (Mã: 258)
+Đọc 76 -> Xuất: L | Thêm từ điển: CL (Mã: 259)
+Đọc 74 -> Xuất: J | Thêm từ điển: LJ (Mã: 260)
+Đọc 84 -> Xuất: T | Thêm từ điển: JT (Mã: 261)
+=> Chuỗi giải mã thành công: AIACLJT
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(0011, 1110) = 3
+Khoảng cách d(0011, 1100) = 4
+Khoảng cách d(1110, 1100) = 1
+=> d_min = 1 (Giữa 1110 và 1100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(111, 001) = 2
+=> d_min = 2 (Giữa 111 và 001)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+

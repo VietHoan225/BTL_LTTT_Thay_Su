@@ -1,0 +1,117 @@
+0 -1 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(101, 100) = 1
+Khoảng cách d(101, 100) = 1
+Khoảng cách d(101, 101) = 0
+Khoảng cách d(100, 100) = 0
+Khoảng cách d(100, 101) = 1
+Khoảng cách d(100, 101) = 1
+=> d_min = 0 (Giữa 101 và 101)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: A
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GBNON'?
+A. 0.180080
+B. 0.355720
+C. 0.261360
+D. 0.230720
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 0 bit
+C. 1 bit
+D. 1 bit
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'BDAVX':
+Output: 66 | Thêm từ điển: BD (Mã: 256)
+Output: 68 | Thêm từ điển: DA (Mã: 257)
+Output: 65 | Thêm từ điển: AV (Mã: 258)
+Output: 86 | Thêm từ điển: VX (Mã: 259)
+Output cuối: 88
+=> Dãy mã hóa: 66 68 65 86 88 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 66 68 65 86 88 
+Đọc 66 -> Xuất: B
+Đọc 68 -> Xuất: D | Thêm từ điển: BD (Mã: 256)
+Đọc 65 -> Xuất: A | Thêm từ điển: DA (Mã: 257)
+Đọc 86 -> Xuất: V | Thêm từ điển: AV (Mã: 258)
+Đọc 88 -> Xuất: X | Thêm từ điển: VX (Mã: 259)
+=> Chuỗi giải mã thành công: BDAVX
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'WBFBICAJVL':
+Output: 87 | Thêm từ điển: WB (Mã: 256)
+Output: 66 | Thêm từ điển: BF (Mã: 257)
+Output: 70 | Thêm từ điển: FB (Mã: 258)
+Output: 66 | Thêm từ điển: BI (Mã: 259)
+Output: 73 | Thêm từ điển: IC (Mã: 260)
+Output: 67 | Thêm từ điển: CA (Mã: 261)
+Output: 65 | Thêm từ điển: AJ (Mã: 262)
+Output: 74 | Thêm từ điển: JV (Mã: 263)
+Output: 86 | Thêm từ điển: VL (Mã: 264)
+Output cuối: 76
+=> Dãy mã hóa: 87 66 70 66 73 67 65 74 86 76 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 87 66 70 66 73 67 65 74 86 76 
+Đọc 87 -> Xuất: W
+Đọc 66 -> Xuất: B | Thêm từ điển: WB (Mã: 256)
+Đọc 70 -> Xuất: F | Thêm từ điển: BF (Mã: 257)
+Đọc 66 -> Xuất: B | Thêm từ điển: FB (Mã: 258)
+Đọc 73 -> Xuất: I | Thêm từ điển: BI (Mã: 259)
+Đọc 67 -> Xuất: C | Thêm từ điển: IC (Mã: 260)
+Đọc 65 -> Xuất: A | Thêm từ điển: CA (Mã: 261)
+Đọc 74 -> Xuất: J | Thêm từ điển: AJ (Mã: 262)
+Đọc 86 -> Xuất: V | Thêm từ điển: JV (Mã: 263)
+Đọc 76 -> Xuất: L | Thêm từ điển: VL (Mã: 264)
+=> Chuỗi giải mã thành công: WBFBICAJVL
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 1 bit
+D. 2 bit
+Đáp án đúng: A
+
+84 75 78 70 66 67 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0, 0.2)
+- Ký tự 'C': [0.2, 0.4)
+- Ký tự 'L': [0.4, 0.6)
+- Ký tự 'O': [0.6, 0.8)
+- Ký tự 'X': [0.8, 1)
+
+[2] Quá trình mã hóa chuỗi 'CBLOX':
+Đọc 'C' -> Khoảng: [0.200000, 0.400000)
+Đọc 'B' -> Khoảng: [0.200000, 0.240000)
+Đọc 'L' -> Khoảng: [0.216000, 0.224000)
+Đọc 'O' -> Khoảng: [0.220800, 0.222400)
+Đọc 'X' -> Khoảng: [0.222080, 0.222400)
+=> Giá trị mã hóa được chọn: 0.222240
+
+[3] Quá trình giải mã (từ 0.222240, độ dài 5):
+Giá trị 0.222240 nằm trong khoảng của 'C' -> Giải mã: C
+Giá trị 0.111200 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.556000 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.780000 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.900000 nằm trong khoảng của 'X' -> Giải mã: X
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'MBFVEGFUHG' là bao nhiêu?
+A. 9
+B. 10
+C. 11
+D. 13
+Đáp án đúng: B
+

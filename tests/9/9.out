@@ -1,0 +1,156 @@
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'FWVEY' là bao nhiêu?
+A. 5
+B. 8
+C. 4
+D. 6
+Đáp án đúng: A
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'J': [0, 0.333333)
+- Ký tự 'Y': [0.333333, 1)
+
+[2] Quá trình mã hóa chuỗi 'YYJ':
+Đọc 'Y' -> Khoảng: [0.333333, 1.000000)
+Đọc 'Y' -> Khoảng: [0.555556, 1.000000)
+Đọc 'J' -> Khoảng: [0.555556, 0.703704)
+=> Giá trị mã hóa được chọn: 0.629630
+
+[3] Quá trình giải mã (từ 0.629630, độ dài 3):
+Giá trị 0.629630 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.444444 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.166667 nằm trong khoảng của 'J' -> Giải mã: J
+
+82 85 73 86 80 79 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'RUBDGMEC':
+Output: 82 | Thêm từ điển: RU (Mã: 256)
+Output: 85 | Thêm từ điển: UB (Mã: 257)
+Output: 66 | Thêm từ điển: BD (Mã: 258)
+Output: 68 | Thêm từ điển: DG (Mã: 259)
+Output: 71 | Thêm từ điển: GM (Mã: 260)
+Output: 77 | Thêm từ điển: ME (Mã: 261)
+Output: 69 | Thêm từ điển: EC (Mã: 262)
+Output cuối: 67
+=> Dãy mã hóa: 82 85 66 68 71 77 69 67 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 82 85 66 68 71 77 69 67 
+Đọc 82 -> Xuất: R
+Đọc 85 -> Xuất: U | Thêm từ điển: RU (Mã: 256)
+Đọc 66 -> Xuất: B | Thêm từ điển: UB (Mã: 257)
+Đọc 68 -> Xuất: D | Thêm từ điển: BD (Mã: 258)
+Đọc 71 -> Xuất: G | Thêm từ điển: DG (Mã: 259)
+Đọc 77 -> Xuất: M | Thêm từ điển: GM (Mã: 260)
+Đọc 69 -> Xuất: E | Thêm từ điển: ME (Mã: 261)
+Đọc 67 -> Xuất: C | Thêm từ điển: EC (Mã: 262)
+=> Chuỗi giải mã thành công: RUBDGMEC
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.333333)
+- Ký tự 'L': [0.333333, 0.666667)
+- Ký tự 'X': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'XLD':
+Đọc 'X' -> Khoảng: [0.666667, 1.000000)
+Đọc 'L' -> Khoảng: [0.777778, 0.888889)
+Đọc 'D' -> Khoảng: [0.777778, 0.814815)
+=> Giá trị mã hóa được chọn: 0.796296
+
+[3] Quá trình giải mã (từ 0.796296, độ dài 3):
+Giá trị 0.796296 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.388889 nằm trong khoảng của 'L' -> Giải mã: L
+Giá trị 0.166667 nằm trong khoảng của 'D' -> Giải mã: D
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(00110, 11010) = 3
+=> d_min = 3 (Giữa 00110 và 11010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'YTAFD'?
+A. 1.048680
+B. 0.873520
+C. 0.923680
+D. 0.953840
+Đáp án đúng: C
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GFDAY'?
+A. 0.639280
+B. 0.689440
+C. 0.719600
+D. 0.814440
+Đáp án đúng: B
+
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'DGBZI'?
+A. 0.412520
+B. 0.237360
+C. 0.317680
+D. 0.287520
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 1 bit
+D. 0 bit
+Đáp án đúng: D
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'DQXWHCJ':
+Output: 68 | Thêm từ điển: DQ (Mã: 256)
+Output: 81 | Thêm từ điển: QX (Mã: 257)
+Output: 88 | Thêm từ điển: XW (Mã: 258)
+Output: 87 | Thêm từ điển: WH (Mã: 259)
+Output: 72 | Thêm từ điển: HC (Mã: 260)
+Output: 67 | Thêm từ điển: CJ (Mã: 261)
+Output cuối: 74
+=> Dãy mã hóa: 68 81 88 87 72 67 74 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 68 81 88 87 72 67 74 
+Đọc 68 -> Xuất: D
+Đọc 81 -> Xuất: Q | Thêm từ điển: DQ (Mã: 256)
+Đọc 88 -> Xuất: X | Thêm từ điển: QX (Mã: 257)
+Đọc 87 -> Xuất: W | Thêm từ điển: XW (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: WH (Mã: 259)
+Đọc 67 -> Xuất: C | Thêm từ điển: HC (Mã: 260)
+Đọc 74 -> Xuất: J | Thêm từ điển: CJ (Mã: 261)
+=> Chuỗi giải mã thành công: DQXWHCJ
+
+0.423828
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'RGMNLHER' là bao nhiêu?
+A. 11
+B. 7
+C. 9
+D. 8
+Đáp án đúng: D
+
+4 3 1
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'UOFXD':
+Output: 85 | Thêm từ điển: UO (Mã: 256)
+Output: 79 | Thêm từ điển: OF (Mã: 257)
+Output: 70 | Thêm từ điển: FX (Mã: 258)
+Output: 88 | Thêm từ điển: XD (Mã: 259)
+Output cuối: 68
+=> Dãy mã hóa: 85 79 70 88 68 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 85 79 70 88 68 
+Đọc 85 -> Xuất: U
+Đọc 79 -> Xuất: O | Thêm từ điển: UO (Mã: 256)
+Đọc 70 -> Xuất: F | Thêm từ điển: OF (Mã: 257)
+Đọc 88 -> Xuất: X | Thêm từ điển: FX (Mã: 258)
+Đọc 68 -> Xuất: D | Thêm từ điển: XD (Mã: 259)
+=> Chuỗi giải mã thành công: UOFXD
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 0 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: B
+
+1 0 0

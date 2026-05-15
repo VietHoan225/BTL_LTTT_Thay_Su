@@ -1,0 +1,90 @@
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(000, 101) = 2
+Khoảng cách d(000, 111) = 3
+Khoảng cách d(000, 010) = 1
+Khoảng cách d(101, 111) = 1
+Khoảng cách d(101, 010) = 3
+Khoảng cách d(111, 010) = 2
+=> d_min = 1 (Giữa 000 và 010)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'Q': [0, 0.333333)
+- Ký tự 'V': [0.333333, 0.666667)
+- Ký tự 'Z': [0.666667, 1)
+
+[2] Quá trình mã hóa chuỗi 'VZQ':
+Đọc 'V' -> Khoảng: [0.333333, 0.666667)
+Đọc 'Z' -> Khoảng: [0.555556, 0.666667)
+Đọc 'Q' -> Khoảng: [0.555556, 0.592593)
+=> Giá trị mã hóa được chọn: 0.574074
+
+[3] Quá trình giải mã (từ 0.574074, độ dài 3):
+Giá trị 0.574074 nằm trong khoảng của 'V' -> Giải mã: V
+Giá trị 0.722222 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.166667 nằm trong khoảng của 'Q' -> Giải mã: Q
+
+0.796296
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'PJBGS' là bao nhiêu?
+A. 8
+B. 4
+C. 5
+D. 6
+Đáp án đúng: C
+
+81 83 79 89 80 85 
+70 76 80 71 76 
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(100, 000) = 1
+=> d_min = 1 (Giữa 100 và 000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'CSYBWUTX' là bao nhiêu?
+A. 7
+B. 9
+C. 11
+D. 8
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'KDFXHBF' là bao nhiêu?
+A. 8
+B. 6
+C. 10
+D. 7
+Đáp án đúng: D
+
+0.722222
+81 65 83 79 85 82 75 72 
+75 88 80 74 73 
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'D': [0.000000, 0.250000)
+- Ký tự 'E': [0.250000, 0.500000)
+- Ký tự 'K': [0.500000, 0.750000)
+- Ký tự 'Y': [0.750000, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'YEKD':
+Đọc 'Y' -> Khoảng: [0.750000, 1.000000)
+Đọc 'E' -> Khoảng: [0.812500, 0.875000)
+Đọc 'K' -> Khoảng: [0.843750, 0.859375)
+Đọc 'D' -> Khoảng: [0.843750, 0.847656)
+=> Giá trị mã hóa được chọn: 0.845703
+
+[3] Quá trình giải mã (từ 0.845703, độ dài 4):
+Giá trị 0.845703 nằm trong khoảng của 'Y' -> Giải mã: Y
+Giá trị 0.382812 nằm trong khoảng của 'E' -> Giải mã: E
+Giá trị 0.531250 nằm trong khoảng của 'K' -> Giải mã: K
+Giá trị 0.125000 nằm trong khoảng của 'D' -> Giải mã: D
+
+1 0 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(010010, 010111) = 2
+=> d_min = 2 (Giữa 010010 và 010111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+3 2 1
+0.203704

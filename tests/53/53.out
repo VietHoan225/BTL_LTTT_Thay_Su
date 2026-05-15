@@ -1,0 +1,82 @@
+0.178880
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'R': [0.000000, 0.666667)
+- Ký tự 'T': [0.666667, 1.000000)
+
+[2] Quá trình mã hóa chuỗi 'TRR':
+Đọc 'T' -> Khoảng: [0.666667, 1.000000)
+Đọc 'R' -> Khoảng: [0.666667, 0.888889)
+Đọc 'R' -> Khoảng: [0.666667, 0.814815)
+=> Giá trị mã hóa được chọn: 0.740741
+
+[3] Quá trình giải mã (từ 0.740741, độ dài 3):
+Giá trị 0.740741 nằm trong khoảng của 'T' -> Giải mã: T
+Giá trị 0.222222 nằm trong khoảng của 'R' -> Giải mã: R
+Giá trị 0.333333 nằm trong khoảng của 'R' -> Giải mã: R
+
+0.629630
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'CXRFJLNH':
+Output: 67 | Thêm từ điển: CX (Mã: 256)
+Output: 88 | Thêm từ điển: XR (Mã: 257)
+Output: 82 | Thêm từ điển: RF (Mã: 258)
+Output: 70 | Thêm từ điển: FJ (Mã: 259)
+Output: 74 | Thêm từ điển: JL (Mã: 260)
+Output: 76 | Thêm từ điển: LN (Mã: 261)
+Output: 78 | Thêm từ điển: NH (Mã: 262)
+Output cuối: 72
+=> Dãy mã hóa: 67 88 82 70 74 76 78 72 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 67 88 82 70 74 76 78 72 
+Đọc 67 -> Xuất: C
+Đọc 88 -> Xuất: X | Thêm từ điển: CX (Mã: 256)
+Đọc 82 -> Xuất: R | Thêm từ điển: XR (Mã: 257)
+Đọc 70 -> Xuất: F | Thêm từ điển: RF (Mã: 258)
+Đọc 74 -> Xuất: J | Thêm từ điển: FJ (Mã: 259)
+Đọc 76 -> Xuất: L | Thêm từ điển: JL (Mã: 260)
+Đọc 78 -> Xuất: N | Thêm từ điển: LN (Mã: 261)
+Đọc 72 -> Xuất: H | Thêm từ điển: NH (Mã: 262)
+=> Chuỗi giải mã thành công: CXRFJLNH
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(011, 111) = 1
+Khoảng cách d(011, 100) = 3
+Khoảng cách d(011, 000) = 2
+Khoảng cách d(111, 100) = 2
+Khoảng cách d(111, 000) = 3
+Khoảng cách d(100, 000) = 1
+=> d_min = 1 (Giữa 011 và 111)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 0 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'QCJEWMNQGE':
+Output: 81 | Thêm từ điển: QC (Mã: 256)
+Output: 67 | Thêm từ điển: CJ (Mã: 257)
+Output: 74 | Thêm từ điển: JE (Mã: 258)
+Output: 69 | Thêm từ điển: EW (Mã: 259)
+Output: 87 | Thêm từ điển: WM (Mã: 260)
+Output: 77 | Thêm từ điển: MN (Mã: 261)
+Output: 78 | Thêm từ điển: NQ (Mã: 262)
+Output: 81 | Thêm từ điển: QG (Mã: 263)
+Output: 71 | Thêm từ điển: GE (Mã: 264)
+Output cuối: 69
+=> Dãy mã hóa: 81 67 74 69 87 77 78 81 71 69 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 81 67 74 69 87 77 78 81 71 69 
+Đọc 81 -> Xuất: Q
+Đọc 67 -> Xuất: C | Thêm từ điển: QC (Mã: 256)
+Đọc 74 -> Xuất: J | Thêm từ điển: CJ (Mã: 257)
+Đọc 69 -> Xuất: E | Thêm từ điển: JE (Mã: 258)
+Đọc 87 -> Xuất: W | Thêm từ điển: EW (Mã: 259)
+Đọc 77 -> Xuất: M | Thêm từ điển: WM (Mã: 260)
+Đọc 78 -> Xuất: N | Thêm từ điển: MN (Mã: 261)
+Đọc 81 -> Xuất: Q | Thêm từ điển: NQ (Mã: 262)
+Đọc 71 -> Xuất: G | Thêm từ điển: QG (Mã: 263)
+Đọc 69 -> Xuất: E | Thêm từ điển: GE (Mã: 264)
+=> Chuỗi giải mã thành công: QCJEWMNQGE
+
+75 65 75 75 86 77 74 67 78 74 

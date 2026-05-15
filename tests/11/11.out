@@ -1,0 +1,46 @@
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 1 bit
+B. 1 bit
+C. 0 bit
+D. 0 bit
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'DCPEJPV':
+Output: 68 | Thêm từ điển: DC (Mã: 256)
+Output: 67 | Thêm từ điển: CP (Mã: 257)
+Output: 80 | Thêm từ điển: PE (Mã: 258)
+Output: 69 | Thêm từ điển: EJ (Mã: 259)
+Output: 74 | Thêm từ điển: JP (Mã: 260)
+Output: 80 | Thêm từ điển: PV (Mã: 261)
+Output cuối: 86
+=> Dãy mã hóa: 68 67 80 69 74 80 86 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 68 67 80 69 74 80 86 
+Đọc 68 -> Xuất: D
+Đọc 67 -> Xuất: C | Thêm từ điển: DC (Mã: 256)
+Đọc 80 -> Xuất: P | Thêm từ điển: CP (Mã: 257)
+Đọc 69 -> Xuất: E | Thêm từ điển: PE (Mã: 258)
+Đọc 74 -> Xuất: J | Thêm từ điển: EJ (Mã: 259)
+Đọc 80 -> Xuất: P | Thêm từ điển: JP (Mã: 260)
+Đọc 86 -> Xuất: V | Thêm từ điển: PV (Mã: 261)
+=> Chuỗi giải mã thành công: DCPEJPV
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. 1 bit
+C. 2 bit
+D. 1 bit
+Đáp án đúng: A
+
+2 1 0
+0 -1 0
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(100101, 000011) = 3
+=> d_min = 3 (Giữa 100101 và 000011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+0.338240
+1 0 0

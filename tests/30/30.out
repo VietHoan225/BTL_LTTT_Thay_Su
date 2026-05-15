@@ -1,0 +1,27 @@
+0 -1 0
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ LZW ---
+[1] Quá trình mã hóa chuỗi 'VWIWHNRNP':
+Output: 86 | Thêm từ điển: VW (Mã: 256)
+Output: 87 | Thêm từ điển: WI (Mã: 257)
+Output: 73 | Thêm từ điển: IW (Mã: 258)
+Output: 87 | Thêm từ điển: WH (Mã: 259)
+Output: 72 | Thêm từ điển: HN (Mã: 260)
+Output: 78 | Thêm từ điển: NR (Mã: 261)
+Output: 82 | Thêm từ điển: RN (Mã: 262)
+Output: 78 | Thêm từ điển: NP (Mã: 263)
+Output cuối: 80
+=> Dãy mã hóa: 86 87 73 87 72 78 82 78 80 
+
+[2] Quá trình giải mã:
+Chuỗi mã đầu vào: 86 87 73 87 72 78 82 78 80 
+Đọc 86 -> Xuất: V
+Đọc 87 -> Xuất: W | Thêm từ điển: VW (Mã: 256)
+Đọc 73 -> Xuất: I | Thêm từ điển: WI (Mã: 257)
+Đọc 87 -> Xuất: W | Thêm từ điển: IW (Mã: 258)
+Đọc 72 -> Xuất: H | Thêm từ điển: WH (Mã: 259)
+Đọc 78 -> Xuất: N | Thêm từ điển: HN (Mã: 260)
+Đọc 82 -> Xuất: R | Thêm từ điển: NR (Mã: 261)
+Đọc 78 -> Xuất: N | Thêm từ điển: RN (Mã: 262)
+Đọc 80 -> Xuất: P | Thêm từ điển: NP (Mã: 263)
+=> Chuỗi giải mã thành công: VWIWHNRNP
+

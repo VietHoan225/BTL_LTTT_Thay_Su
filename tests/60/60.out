@@ -1,0 +1,48 @@
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(11100, 00000) = 3
+Khoảng cách d(11100, 01110) = 2
+Khoảng cách d(11100, 11100) = 0
+Khoảng cách d(00000, 01110) = 3
+Khoảng cách d(00000, 11100) = 3
+Khoảng cách d(01110, 11100) = 2
+=> d_min = 0 (Giữa 11100 và 11100)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = -1 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 0 bit.
+
+[Câu hỏi MCQ] Khả năng sửa lỗi tối đa (t) của bộ mã đầu vào là bao nhiêu bit?
+A. 0 bit
+B. -1 bit
+C. 0 bit
+D. 1 bit
+Đáp án đúng: A
+
+2 1 0
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'DBLQKOFFGM' là bao nhiêu?
+A. 9
+B. 11
+C. 13
+D. 10
+Đáp án đúng: D
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'LSDLI' là bao nhiêu?
+A. 8
+B. 5
+C. 6
+D. 4
+Đáp án đúng: B
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(000101, 110000) = 4
+Khoảng cách d(000101, 001011) = 3
+Khoảng cách d(110000, 001011) = 5
+=> d_min = 3 (Giữa 000101 và 001011)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+[Câu hỏi MCQ] Số lượng từ mã sinh ra sau khi nén LZW chuỗi 'ISNBZLT' là bao nhiêu?
+A. 6
+B. 8
+C. 10
+D. 7
+Đáp án đúng: D
+

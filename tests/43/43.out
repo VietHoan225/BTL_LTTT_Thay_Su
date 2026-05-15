@@ -1,0 +1,47 @@
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'XWTFBK'?
+A. 0.909148
+B. 1.084159
+C. 0.959159
+D. 0.989169
+Đáp án đúng: C
+
+--- LỜI GIẢI: KHẢ NĂNG PHÁT HIỆN & SỬA LỖI ---
+Khoảng cách d(001100, 100000) = 3
+=> d_min = 3 (Giữa 001100 và 100000)
+=> Khả năng phát hiện lỗi (e) = d_min - 1 = 2 bit.
+=> Khả năng sửa lỗi (t) = floor((d_min - 1) / 2) = 1 bit.
+
+1 0 0
+[Câu hỏi MCQ] Đâu là giá trị mã hóa số học hợp lệ của chuỗi 'GPRGW'?
+A. 0.338760
+B. 0.244400
+C. 0.213760
+D. 0.163120
+Đáp án đúng: C
+
+--- LỜI GIẢI: MÃ HÓA & GIẢI MÃ SỐ HỌC ---
+[1] Bảng phân bổ xác suất:
+- Ký tự 'B': [0, 0.166667)
+- Ký tự 'O': [0.166667, 0.333333)
+- Ký tự 'P': [0.333333, 0.5)
+- Ký tự 'X': [0.5, 0.833333)
+- Ký tự 'Z': [0.833333, 1)
+
+[2] Quá trình mã hóa chuỗi 'OXBPZX':
+Đọc 'O' -> Khoảng: [0.166667, 0.333333)
+Đọc 'X' -> Khoảng: [0.250000, 0.305556)
+Đọc 'B' -> Khoảng: [0.250000, 0.259259)
+Đọc 'P' -> Khoảng: [0.253086, 0.254630)
+Đọc 'Z' -> Khoảng: [0.254372, 0.254630)
+Đọc 'X' -> Khoảng: [0.254501, 0.254587)
+=> Giá trị mã hóa được chọn: 0.254544
+
+[3] Quá trình giải mã (từ 0.254544, độ dài 6):
+Giá trị 0.254544 nằm trong khoảng của 'O' -> Giải mã: O
+Giá trị 0.527263 nằm trong khoảng của 'X' -> Giải mã: X
+Giá trị 0.081790 nằm trong khoảng của 'B' -> Giải mã: B
+Giá trị 0.490741 nằm trong khoảng của 'P' -> Giải mã: P
+Giá trị 0.944444 nằm trong khoảng của 'Z' -> Giải mã: Z
+Giá trị 0.666667 nằm trong khoảng của 'X' -> Giải mã: X
+
+2 1 0
