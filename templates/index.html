@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Theory & Coding Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            background-attachment: fixed;
+        }
+        
+        .glass-panel { 
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.4); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .terminal-bg { background-color: #24273A; }
+        .terminal-header { background-color: #1E2030; }
+        
+        .output-box { 
+            font-family: 'JetBrains Mono', monospace; 
+            white-space: pre; 
+            color: #CAD3F5; 
+            line-height: 1.6;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #494D64; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #5B6078; }
+
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .input-modern {
+            background: #f8fafc;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .input-modern:focus {
+            background: #ffffff;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+    </style>
+</head>
+<body class="h-screen flex overflow-hidden text-gray-800">
+
+    <aside class="w-72 bg-slate-900 text-white flex flex-col shadow-2xl z-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -mr-10 -mt-10"></div>
+        <div class="p-8 text-center border-b border-slate-800 relative z-10">
+            <div class="bg-gradient-to-br from-blue-400 to-indigo-500 w-12 h-12 rounded-xl mx-auto flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30">
+                <i class="fa-solid fa-microchip text-2xl text-white"></i>
+            </div>
+            <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-300">LTTT Engine</h1>
+            <p class="text-xs text-slate-400 mt-1 font-medium tracking-wide">Khoa CNTT - D24 PTIT</p>
+        </div>
+        <nav class="flex-1 p-5 space-y-3 relative z-10">
+            <button onclick="switchTab(1, 'Mã Hóa Số Học (Arithmetic)')" id="tab-1" class="w-full flex items-center px-5 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium transition-all shadow-md shadow-blue-500/20 group">
+                <i class="fa-solid fa-calculator w-6 opacity-80 group-hover:opacity-100 transition-opacity"></i> 
+                <span>Mã Hóa Số Học</span>
+            </button>
+            <button onclick="switchTab(2, 'Mã Hóa LZW (Lempel-Ziv)')" id="tab-2" class="w-full flex items-center px-5 py-3.5 rounded-xl hover:bg-slate-800 text-slate-300 transition-all font-medium group">
+                <i class="fa-solid fa-file-zipper w-6 opacity-60 group-hover:opacity-100 transition-opacity text-indigo-400"></i> 
+                <span>Mã Hóa LZW</span>
+            </button>
+            <button onclick="switchTab(3, 'Khoảng Cách Hamming & Sửa Lỗi')" id="tab-3" class="w-full flex items-center px-5 py-3.5 rounded-xl hover:bg-slate-800 text-slate-300 transition-all font-medium group">
+                <i class="fa-solid fa-shield-halved w-6 opacity-60 group-hover:opacity-100 transition-opacity text-emerald-400"></i> 
+                <span>Hamming & Sửa lỗi</span>
+            </button>
+        </nav>
+    </aside>
+
+    <main class="flex-1 flex flex-col h-full overflow-y-auto relative z-0">
+        <header class="glass-panel px-10 py-6 flex justify-between items-center z-10 border-b border-white/20 sticky top-0">
+            <h2 id="page-title" class="text-2xl font-bold text-gray-800 tracking-tight">Mã Hóa Số Học (Arithmetic)</h2>
+            
+            <div class="flex items-center bg-white/50 px-4 py-2 rounded-xl border border-white/60 shadow-sm backdrop-blur-md">
+                <i class="fa-solid fa-sliders text-blue-500 mr-3"></i>
+                <label class="text-sm font-semibold text-gray-600 mr-2">Chế độ Output:</label>
+                <select id="modeSelect" class="bg-transparent text-gray-900 text-sm font-bold outline-none cursor-pointer">
+                    <option value="0">Standard Mode</option>
+                    <option value="1" selected>Detailed Mode</option>
+                    <option value="2">MCQ Generator</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="p-8 md:p-10 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <div class="glass-panel rounded-3xl p-7 h-fit">
+                    <div class="flex items-center mb-6">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">
+                            <i class="fa-solid fa-keyboard text-sm"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Dữ liệu đầu vào</h3>
+                    </div>
+                    
+                    <div id="input-string-group" class="mb-5 fade-in">
+                        <label class="block text-sm font-semibold text-gray-600 mb-2">Nhập chuỗi S:</label>
+                        <input type="text" id="inputString" value="ABABABA" class="input-modern w-full px-5 py-3.5 rounded-xl font-mono text-gray-800 text-lg outline-none">
+                    </div>
+
+                    <div id="input-array-group" class="mb-5 hidden fade-in">
+                        <label class="block text-sm font-semibold text-gray-600 mb-2">Nhập các từ mã (Mỗi mã 1 dòng):</label>
+                        <textarea id="inputArray" rows="6" class="input-modern w-full px-5 py-3.5 rounded-xl font-mono text-gray-800 text-lg outline-none resize-none">00000&#10;01011&#10;10101</textarea>
+                    </div>
+
+                    <button id="execBtn" onclick="sendToCppEngine()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-blue-500/30 transition-all transform hover:-translate-y-1 flex items-center justify-center group mt-2">
+                        <svg id="btnIcon" class="w-5 h-5 mr-2 text-blue-200 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <svg id="btnSpinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span id="btnText">Thực Thi C++ Engine</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8">
+                <div class="terminal-bg rounded-3xl shadow-2xl shadow-indigo-900/20 border border-white/10 flex flex-col h-full min-h-[600px] max-h-[85vh] overflow-hidden">
+                    <div class="terminal-header flex items-center justify-between px-5 py-3.5 border-b border-white/5 relative">
+                        <div class="flex space-x-2 absolute left-5">
+                            <div class="w-3.5 h-3.5 rounded-full bg-[#ED6A5E] shadow-sm border border-[#ce5347]"></div>
+                            <div class="w-3.5 h-3.5 rounded-full bg-[#F4BF4F] shadow-sm border border-[#d6a23b]"></div>
+                            <div class="w-3.5 h-3.5 rounded-full bg-[#61C554] shadow-sm border border-[#50a845]"></div>
+                        </div>
+                        <span class="w-full text-center text-xs text-[#8AADF4] font-medium tracking-widest uppercase">bash - root@viethoan</span>
+                        <div class="absolute right-5 text-[#494D64] hover:text-[#8AADF4] cursor-pointer transition-colors" onclick="document.getElementById('outputConsole').innerHTML=''">
+                            <i class="fa-solid fa-trash-can text-sm" title="Clear Terminal"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 md:p-8 overflow-y-auto flex-1 custom-scrollbar text-sm md:text-base" id="terminalContainer">
+                        <div id="outputConsole" class="output-box tracking-wide w-full h-full fade-in">
+<span class="text-[#A6DA95]">LTTT Engine v2.0 ready.</span>
+Waiting for execution command...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let currentType = 1;
+
+        function switchTab(type, title) {
+            currentType = type;
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.className = "w-full flex items-center px-5 py-3.5 rounded-xl hover:bg-slate-800 text-slate-300 transition-all font-medium group";
+                btn.querySelector('i').className = btn.querySelector('i').className.replace('opacity-100', 'opacity-60').replace('text-white', '');
+            });
+            
+            let activeBtn = document.getElementById(`tab-${type}`);
+            activeBtn.className = "w-full flex items-center px-5 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium transition-all shadow-md shadow-blue-500/20 group";
+            activeBtn.querySelector('i').classList.add('opacity-100', 'text-white');
+            activeBtn.querySelector('i').classList.remove('opacity-60');
+
+            document.getElementById('page-title').innerText = title;
+            
+            const strGroup = document.getElementById('input-string-group');
+            const arrGroup = document.getElementById('input-array-group');
+            
+            strGroup.classList.remove('fade-in');
+            arrGroup.classList.remove('fade-in');
+            
+            void strGroup.offsetWidth; 
+
+            if (type === 3) {
+                strGroup.classList.add('hidden');
+                arrGroup.classList.remove('hidden');
+                arrGroup.classList.add('fade-in');
+            } else {
+                strGroup.classList.remove('hidden');
+                strGroup.classList.add('fade-in');
+                arrGroup.classList.add('hidden');
+            }
+        }
+
+        function formatOutput(rawText, mode) {
+            const consoleBox = document.getElementById('outputConsole');
+            
+            consoleBox.classList.remove('fade-in');
+            void consoleBox.offsetWidth;
+            consoleBox.classList.add('fade-in');
+
+            if (mode !== "2") {
+                consoleBox.className = "output-box tracking-wide w-full h-full fade-in";
+                return rawText.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            }
+
+            if (!rawText.includes("===MCQ_START===")) {
+                consoleBox.className = "output-box tracking-wide w-full h-full fade-in text-[#EED49F]";
+                return "[WARNING C++]\n" + rawText;
+            }
+
+            consoleBox.className = "font-sans w-full block whitespace-normal fade-in";
+            let htmlOut = `<div class="space-y-5 w-full pb-4">`;
+            let blocks = rawText.split("===MCQ_START===");
+            
+            let qCount = 1;
+            blocks.forEach((block) => {
+                if (!block.includes("===MCQ_END===")) return;
+                
+                let mainContent = block.split("===MCQ_END===")[0].trim();
+                let content = mainContent.split('\n').map(line => line.trim()).filter(line => line !== "");
+                if (content.length < 6) return; 
+                
+                let question = content[0];
+                let options = content.slice(1, 5);
+                let answer = content[5]; 
+
+                htmlOut += `
+                    <div class="bg-[#303446] p-6 rounded-2xl border border-[#414559] shadow-lg relative w-full block group hover:border-[#8AADF4] transition-colors duration-300">
+                        <span class="absolute top-0 right-0 bg-[#8CA4F5] text-[#1E2030] text-xs font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-2xl tracking-wider">CÂU ${qCount++}</span>
+                        <h4 class="text-[#CAD3F5] font-semibold mb-4 text-base leading-relaxed pr-12">${question}</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 mb-4">
+                            ${options.map(opt => `<div class="bg-[#232634] border border-[#414559] px-4 py-3 rounded-xl text-[#A5ADCE] font-medium text-sm transition hover:bg-[#292C3C] cursor-default">${opt}</div>`).join('')}
+                        </div>
+                        <div class="text-[#A6DA95] text-sm font-bold mt-4 pt-4 border-t border-[#414559] flex items-center bg-[#24273A]/50 -mx-6 -mb-6 px-6 py-4 rounded-b-2xl">
+                            <i class="fa-solid fa-check-circle mr-2 text-lg"></i> ${answer}
+                        </div>
+                    </div>
+                `;
+            });
+            htmlOut += `</div>`;
+            return htmlOut;
+        }
+
+        async function sendToCppEngine() {
+            const consoleBox = document.getElementById('outputConsole');
+            const btn = document.getElementById('execBtn');
+            const btnIcon = document.getElementById('btnIcon');
+            const btnSpinner = document.getElementById('btnSpinner');
+            const btnText = document.getElementById('btnText');
+
+            btn.classList.add('cursor-not-allowed', 'opacity-90');
+            btnIcon.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+            btnText.innerText = "Đang xử lý...";
+            consoleBox.innerHTML = `<span class="text-[#F5A97F] flex items-center"><i class="fa-solid fa-spinner fa-spin mr-2"></i>Compiling and executing...</span>`;
+
+            let modeSelect = document.getElementById('modeSelect').value;
+            let payload = { type: currentType, mode: modeSelect };
+
+            if (currentType === 1 || currentType === 2) {
+                payload.input_string = document.getElementById('inputString').value.trim();
+            } else {
+                payload.input_codes = document.getElementById('inputArray').value.trim().split('\n').map(c => c.trim()).filter(c => c !== "");
+            }
+
+            try {
+                const response = await fetch('/run', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                
+                if (result.success) {
+                    consoleBox.innerHTML = formatOutput(result.output, modeSelect);
+                } else {
+                    consoleBox.className = "output-box text-[#ED8796] tracking-wide fade-in";
+                    consoleBox.innerHTML = `[RUNTIME ERROR]\n${result.output}`;
+                }
+            } catch (error) {
+                consoleBox.className = "output-box text-[#ED8796] tracking-wide fade-in";
+                consoleBox.innerHTML = `[CONNECTION ERROR]\nCannot connect to Flask server (127.0.0.1:5000).\nDetails: ${error.message}`;
+            } finally {
+                btn.classList.remove('cursor-not-allowed', 'opacity-90');
+                btnIcon.classList.remove('hidden');
+                btnSpinner.classList.add('hidden');
+                btnText.innerText = "Thực Thi C++ Engine";
+            }
+        }
+    </script>
+</body>
+</html>
