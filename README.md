@@ -2,7 +2,7 @@
 * **Tên dự án:** Công cụ mô phỏng Mã hóa Số học, LZW và Khoảng cách Hamming 
 * **Mã môn học:** ELE1319 - Lý thuyết thông tin
 * **Lớp:** D24CTCN01-B
-* **Repository Git:** [https://github.com/viethoan/BTL_LTTT_Thay_Su](https://github.com/VietHoan225/BTL_LTTT_Thay_Su)
+* **Repository Git:** [https://github.com/VietHoan225/BTL_LTTT_Thay_Su](https://github.com/VietHoan225/BTL_LTTT_Thay_Su)
 
 ---
 
@@ -11,8 +11,8 @@
 | STT | Họ và Tên | Mã Sinh Viên | Lớp | 
 |-----|-----------|--------------|-----|
 | 1 | Viết Hoàn | B24DCCN229 | D24CTCN01-B |
-| 2 | Nguyễn Đức Anh | B24DCCN028 | D24CTCN01-B 
-| 3 | Nguyễn Văn Quang | B24DCCN478 | D24CTCN01-B 
+| 2 | Nguyễn Đức Anh | B24DCCN028 | D24CTCN01-B |
+| 3 | Nguyễn Văn Quang | B24DCCN478 | D24CTCN01-B |
 
 ---
 
