@@ -94,25 +94,34 @@ Tất cả lệnh bên dưới giả định bạn đang đứng **ở thư mụ
 ### 2. Biên dịch chương trình C++
 
 ```bash
-g++ -O3 -std=c++17 main.cpp -o main
+g++ -O3 -std=c++17 main.cpp -o main # Linux / macOS
+# g++ -O3 -std=c++17 main.cpp -o main.exe   # Windows (cmd/PowerShell)
 ```
 
 Sau khi biên dịch thành công, trong thư mục gốc sẽ có file thực thi `main` (trên Windows sau bước tương tự sẽ là `main.exe`)
 
-### 3. Cài đặt Flask (chỉ cần nếu dùng giao diện web)
+### 3. Cài đặt Flask 
 
-Cách đơn giản (cài cho user hiện tại):
-
-```bash
-python3 -m pip install --user flask
-```
-
-Hoặc dùng môi trường ảo (khuyến nghị nếu nhiều dự án):
-
+Khuyến nghị sử dụng môi trường ảo (venv) để tránh xung đột thư viện:
+- Linux: 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate   # Linux / macOS
-# .venv\Scripts\activate    # Windows (cmd/PowerShell)
+source .venv/bin/activate
+pip install flask
+```
+- Windows (Command Prompt - CMD):
+```
+python -m venv .venv
+.venv\Scripts\activate.bat
+pip install flask
+```
+
+- Windows (PowerShell):
+Nếu PowerShell chặn không cho chạy script kích hoạt, hãy dùng lệnh sau để khởi chạy:
+
+```
+python -m venv .venv
+powershell -ExecutionPolicy Bypass -File .venv\Scripts\Activate.ps1
 pip install flask
 ```
 
@@ -120,43 +129,12 @@ pip install flask
 
 ## 6. CHẠY PROJECT
 
-### A. Chạy từ dòng lệnh (stdin/stdout)
-
-**Không** chuyển hướng output thẳng vào `tests/{ID}/{ID}.out` — đó là file đáp án để đối chiếu.
-
-Chạy một testcase và lưu kết quả tạm để so sánh:
-- Linux:
-```bash
-./main < tests/1/1.in > /tmp/run1.out
-diff -u tests/1/1.out /tmp/run1.out
-```
-- Windows Command Prompt:
-```cmd
-main.exe < tests\1\1.in > run1.out
-fc tests\1\1.out run1.out
-```
-
-* Nếu không có khác biệt: output trùng hoàn toàn với file đáp án đính kèm.
-* Có thể thay `1` bằng bất kỳ `ID` từ `1` đến `100`.
-
-**Lưu ý khi so sánh với `tests/{ID}/{ID}.out`:**
-
-- Các file `.out` trong `tests/` là **bản tham chiếu** (có thể được tạo khi format in chi tiết / MCQ khác phiên bản hiện tại). Nếu `diff` báo khác toàn bộ cấu trúc chữ nhưng thuật toán vẫn đúng, cần **tạo lại expected** hoặc đối chiếu thủ công phần kết quả số học/LZW/Hamming.
-- Các testcase có **MODE = 2 (MCQ)** dùng cơ chế xáo trộn thứ tự đáp án ngẫu nhiên bằng `std::shuffle` kết hợp bộ lọc trùng `std::set`, nên **không** kỳ vọng khớp từng byte với một file `.out` cố định trên mọi lần chạy.
-
-Chỉ xem output trên terminal (không lưu file):
-
-```bash
-./main < tests/1/1.in
-```
-
-### B. Chạy giao diện web (Flask)
-
 1. Đảm bảo đã biên dịch xong và tồn tại file `./main` **cùng thư mục** với `app.py`.
 2. Khởi động server:
 
 ```bash
-python3 app.py
+python3 app.py # Linux
+# python app.py # Windows (cmd/PowerShell)
 ```
 
 3. Mở trình duyệt tại: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
