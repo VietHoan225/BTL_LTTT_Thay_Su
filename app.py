@@ -35,7 +35,7 @@ def run_algo():
 
     try:
         process = subprocess.Popen(
-            ['./main'],
+            [BINARY_PATH],
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
