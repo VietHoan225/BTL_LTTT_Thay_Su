@@ -39,7 +39,9 @@ def run_algo():
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            text=True
+            text=True,
+            encoding='utf-8',      
+            errors='ignore'        
         )
         
         stdout, stderr = process.communicate(input=input_data)
